@@ -14,7 +14,7 @@ type Stat = {
 
 const STATS: Stat[] = [
   { value: 15, suffix: "+", label: "Years of experience" },
-  { value: 20000, suffix: "", label: "Procedures performed" },
+  { value: 20000, suffix: "+", label: "Procedures performed" },
   { value: "NABH", label: "Accredited" },
   { value: 2, suffix: "", label: "Centres in Mumbai" },
 ];

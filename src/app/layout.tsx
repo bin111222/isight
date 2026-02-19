@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
@@ -10,6 +10,10 @@ const plusJakarta = Plus_Jakarta_Sans({
   variable: "--font-sans",
   display: "swap",
 });
+
+export const viewport: Viewport = {
+  themeColor: "#0a0f1a",
+};
 
 export const metadata: Metadata = {
   title: "Best Eye Doctor in Mumbai | iSight Eye Care – Dr. Nikhil Nasta",
