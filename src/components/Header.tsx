@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { Phone } from "lucide-react";
 import { NAV_LINKS, TREATMENT_LINKS } from "@/lib/sitemap";
 
 const PHONE = "918692986033";
@@ -18,13 +19,37 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-navy-950/95 backdrop-blur-md border-b border-white/5 overflow-visible">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16 overflow-visible">
-        <Link
-          href="/"
-          className="flex items-center transition-transform hover:scale-[1.02]"
-          aria-label="iSight Eye Care – Home"
-        >
-          <Image src="/icon-logo.png" alt="iSight Eye Care" width={48} height={48} className="h-9 w-auto" priority />
-        </Link>
+        {/* Mobile: menu left, logo center, call right. Desktop: logo left only (menu/call in nav or hidden) */}
+        <div className="relative flex flex-1 lg:flex-initial justify-center lg:justify-start items-center min-w-0">
+          <button
+            type="button"
+            onClick={() => setOpen(!open)}
+            className="lg:hidden absolute left-0 top-1/2 -translate-y-1/2 p-2 text-white"
+            aria-label="Menu"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {open ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
+          <Link
+            href="/"
+            className="flex items-center transition-transform hover:scale-[1.02] shrink-0"
+            aria-label="iSight Eye Care – Home"
+          >
+            <Image src="/icon-logo.png" alt="iSight Eye Care" width={48} height={48} className="h-9 w-auto" priority />
+          </Link>
+          <a
+            href={`tel:+${PHONE}`}
+            className="lg:hidden absolute right-0 top-1/2 -translate-y-1/2 p-2 text-white hover:text-clinical-400 transition-colors"
+            aria-label={`Call ${PHONE_DISPLAY}`}
+          >
+            <Phone className="w-6 h-6" strokeWidth={2} aria-hidden />
+          </a>
+        </div>
 
         <nav className="hidden lg:flex items-center gap-8 overflow-visible">
           {NAV_LINKS.map(({ href, label }) => {
@@ -88,26 +113,6 @@ export default function Header() {
             Book Consultation
           </a>
         </nav>
-
-        <div className="flex items-center gap-4 lg:hidden">
-          <a href={`tel:+${PHONE}`} className="text-clinical-400 font-medium text-sm">
-            {PHONE_DISPLAY}
-          </a>
-          <button
-            type="button"
-            onClick={() => setOpen(!open)}
-            className="p-2 text-white"
-            aria-label="Menu"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {open ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
-          </button>
-        </div>
       </div>
 
       {open && (

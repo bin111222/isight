@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Phone, Stethoscope } from "lucide-react";
 import CountUpStat from "@/components/CountUpStat";
 import UnderstandYourEye from "@/components/UnderstandYourEye";
+import { TREATMENT_LINKS } from "@/lib/sitemap";
 
 const PHONE = "918692986033";
 const PHONE_DISPLAY = "8692986033";
@@ -16,6 +17,9 @@ const FEATURED_TREATMENTS = [
   { title: "Glaucoma & Retina", excerpt: "From monitoring to advanced laser and microsurgery.", href: "/glaucoma-treatment-mumbai", tag: "Medical & Surgical" },
   { title: "Dry Eye & More", excerpt: "Specialist care for dry eye, pediatric, and corneal conditions.", href: "/dry-eye-treatment-mumbai", tag: "Medical" },
 ];
+
+const FEATURED_HREFS = new Set(FEATURED_TREATMENTS.map((t) => t.href));
+const OTHER_TREATMENTS = TREATMENT_LINKS.filter(({ href }) => !FEATURED_HREFS.has(href));
 
 const WHY_ITEMS = [
   { title: "Board-certified specialist", desc: "Dr. Nikhil Nasta, award-winning ophthalmologist" },
@@ -49,7 +53,7 @@ export default function HomePageClient({ images }: Props) {
     <>
       {/* Hero */}
       <section className="relative min-h-[100vh] flex flex-col justify-center mesh-bg overflow-hidden">
-        <div className="absolute inset-0 bg-hero-glow opacity-90 pointer-events-none" />
+        <div className="absolute inset-0 bg-hero-glow opacity-50 pointer-events-none" />
         <div className="absolute inset-0 hero-grain" aria-hidden />
         <div className="absolute top-1/4 left-1/4 w-[420px] h-[420px] rounded-full bg-clinical-400/12 blur-[100px] animate-float pointer-events-none" />
         <div className="absolute bottom-1/4 right-1/5 w-[380px] h-[380px] rounded-full bg-clinical-500/10 blur-[90px] animate-float pointer-events-none" style={{ animationDelay: "2s" }} />
@@ -148,36 +152,36 @@ export default function HomePageClient({ images }: Props) {
             </p>
           </div>
 
-          <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          <div className="mt-16 grid sm:grid-cols-2 gap-6 sm:gap-8 lg:gap-10">
             {FEATURED_TREATMENTS.map((item) => (
               <Link
                 key={item.title}
                 href={item.href}
-                className="group relative flex flex-col rounded-2xl bg-white overflow-hidden shadow-[0_4px_24px_-4px_rgba(10,15,26,0.12)] border border-silver-200/60 hover:shadow-[0_12px_40px_-12px_rgba(10,15,26,0.2)] hover:border-clinical-500/20 transition-all duration-300 hover:-translate-y-1.5 text-left"
+                className="group relative flex flex-col rounded-2xl lg:rounded-3xl bg-white overflow-hidden shadow-[0_4px_24px_-4px_rgba(10,15,26,0.12)] border border-silver-200/60 hover:shadow-[0_12px_40px_-12px_rgba(10,15,26,0.2)] hover:border-clinical-500/20 transition-all duration-300 hover:-translate-y-1.5 text-left"
               >
-                <div className="relative w-full aspect-[5/4] overflow-hidden">
+                <div className="relative w-full aspect-[5/4] lg:aspect-[4/3] overflow-hidden">
                   <Image
                     src={getServiceImage(item.href)}
                     alt=""
                     fill
                     className="object-cover transition-transform duration-500 ease-out group-hover:scale-110"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    sizes="(max-width: 640px) 100vw, 50vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-900/95 via-navy-900/40 to-transparent" />
-                  <span className="absolute top-4 left-4 px-2.5 py-1 rounded-md bg-white/15 backdrop-blur-sm text-white text-[11px] font-semibold uppercase tracking-wider">
+                  <span className="absolute top-4 left-4 lg:top-6 lg:left-6 px-2.5 py-1 lg:px-3 lg:py-1.5 rounded-md bg-white/15 backdrop-blur-sm text-white text-[11px] lg:text-xs font-semibold uppercase tracking-wider">
                     {item.tag}
                   </span>
-                  <div className="absolute bottom-0 left-0 right-0 p-5 pt-12">
-                    <h3 className="font-display text-xl font-bold text-white leading-tight">
+                  <div className="absolute bottom-0 left-0 right-0 p-5 pt-12 lg:p-6 lg:pt-14">
+                    <h3 className="font-display text-xl lg:text-2xl font-bold text-white leading-tight">
                       {item.title}
                     </h3>
-                    <p className="mt-2 text-white/90 text-sm leading-snug line-clamp-2">
+                    <p className="mt-2 text-white/90 text-sm lg:text-base leading-snug line-clamp-2">
                       {item.excerpt}
                     </p>
                   </div>
                 </div>
-                <div className="flex items-center justify-between px-5 py-4 border-t border-silver-200/80 bg-silver-50/50 group-hover:bg-clinical-50/50 transition-colors duration-300">
-                  <span className="text-clinical-500 font-semibold text-sm group-hover:text-clinical-600 transition-colors">
+                <div className="flex items-center justify-between px-5 py-4 lg:px-6 lg:py-5 border-t border-silver-200/80 bg-silver-50/50 group-hover:bg-clinical-50/50 transition-colors duration-300">
+                  <span className="text-clinical-500 font-semibold text-sm lg:text-base group-hover:text-clinical-600 transition-colors">
                     Learn more
                   </span>
                   <span className="text-clinical-500 transition-transform duration-300 group-hover:translate-x-1" aria-hidden>
@@ -271,6 +275,68 @@ export default function HomePageClient({ images }: Props) {
                 </a>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* More treatments — with images, below Why Choose Us */}
+      <section className="bg-silver-100 py-24 lg:py-32 border-t border-silver-200">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="text-center max-w-2xl mx-auto">
+            <p className="font-display text-sm font-semibold uppercase tracking-[0.25em] text-clinical-500">
+              Full range
+            </p>
+            <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-900 mt-3">
+              More treatments we offer
+            </h2>
+            <p className="mt-3 text-navy-600">
+              From premium lens options and retinal care to pediatric, squint, corneal transplant, and aesthetic services.
+            </p>
+          </div>
+          <ul className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 lg:gap-6">
+            {OTHER_TREATMENTS.map(({ href, label }) => {
+              const displayLabel = label.replace(/\s+Mumbai\s*$/i, "").trim();
+              return (
+                <li key={href}>
+                  <Link
+                    href={href}
+                    className="group relative flex flex-col rounded-2xl bg-white overflow-hidden shadow-[0_4px_24px_-4px_rgba(10,15,26,0.12)] border border-silver-200/60 hover:shadow-[0_12px_40px_-12px_rgba(10,15,26,0.2)] hover:border-clinical-500/20 transition-all duration-300 hover:-translate-y-1 text-left"
+                  >
+                    <div className="relative w-full aspect-[4/3] overflow-hidden">
+                      <Image
+                        src={getServiceImage(href)}
+                        alt=""
+                        fill
+                        className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-navy-900/90 via-navy-900/30 to-transparent" />
+                      <div className="absolute bottom-0 left-0 right-0 p-4 pt-10">
+                        <h3 className="font-display text-lg font-bold text-white leading-tight">
+                          {displayLabel}
+                        </h3>
+                      </div>
+                    </div>
+                    <div className="flex items-center justify-between px-4 py-3 border-t border-silver-200/80 bg-silver-50/50 group-hover:bg-clinical-50/50 transition-colors duration-300">
+                      <span className="text-clinical-500 font-semibold text-sm group-hover:text-clinical-600 transition-colors">
+                        Learn more
+                      </span>
+                      <span className="text-clinical-500 transition-transform duration-300 group-hover:translate-x-1" aria-hidden>
+                        →
+                      </span>
+                    </div>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+          <div className="mt-12 text-center">
+            <Link
+              href="/treatments"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-navy-900 text-white font-semibold hover:bg-navy-800 transition-colors"
+            >
+              See full treatments page →
+            </Link>
           </div>
         </div>
       </section>

@@ -1,4 +1,5 @@
 import { getTreatmentImagePaths } from "@/lib/treatmentImages";
+import { TREATMENT_SLUGS } from "@/lib/sitemap";
 import HomePageClient, { type HomePageImages } from "@/components/HomePageClient";
 
 const SERVICE_SLUGS = [
@@ -17,7 +18,7 @@ function getFirstImage(slug: string): string {
 
 export default function HomePage() {
   const serviceImages: Record<string, string> = {};
-  for (const slug of SERVICE_SLUGS) {
+  for (const slug of TREATMENT_SLUGS) {
     serviceImages[slug] = getFirstImage(slug);
   }
 

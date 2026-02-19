@@ -57,7 +57,7 @@ export default function TreatmentsPage({ content }: Props) {
     <>
       {/* Hero — aligned with homepage */}
       <section className="relative min-h-[50vh] flex flex-col justify-center mesh-bg overflow-hidden">
-        <div className="absolute inset-0 bg-hero-glow opacity-90 pointer-events-none" />
+        <div className="absolute inset-0 bg-hero-glow opacity-50 pointer-events-none" />
         <div className="absolute inset-0 hero-grain" aria-hidden />
         <div className="absolute top-1/4 left-1/4 w-[320px] h-[320px] rounded-full bg-clinical-400/12 blur-[80px] animate-float pointer-events-none" />
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 py-24 text-center">
