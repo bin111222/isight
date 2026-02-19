@@ -6,6 +6,7 @@ import { Phone, Stethoscope, ClipboardList, ArrowRight } from "lucide-react";
 import CountUpStat from "@/components/CountUpStat";
 import UnderstandYourEye from "@/components/UnderstandYourEye";
 import GoogleReviewsSection from "@/components/GoogleReviewsSection";
+import EyeFollowCursor from "@/components/EyeFollowCursor";
 import { TREATMENT_LINKS } from "@/lib/sitemap";
 
 const PHONE = "918692986033";
@@ -56,17 +57,20 @@ export default function HomePageClient({ images }: Props) {
           <p className="font-display text-sm font-semibold uppercase tracking-[0.35em] text-clinical-400/90 animate-fade-in opacity-0 [animation-fill-mode:forwards]">
             iSight Eye Care · Mumbai
           </p>
-          <h1 className="mt-6 font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold text-white tracking-tight animate-fade-in opacity-0 [animation-fill-mode:forwards] [animation-delay:0.08s]">
+          <h1 className="mt-4 font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold text-white tracking-tight leading-[0.95] animate-fade-in opacity-0 [animation-fill-mode:forwards] [animation-delay:0.08s]">
             Vision
             <br />
             <span className="bg-gradient-to-r from-clinical-200 via-clinical-400 to-clinical-300 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-shift">
               Restored
             </span>
           </h1>
-          <p className="mt-8 text-lg sm:text-xl text-white/80 max-w-xl mx-auto leading-relaxed animate-fade-in opacity-0 stagger-1 [animation-fill-mode:forwards]">
+          <div className="mt-8 flex justify-center animate-fade-in opacity-0 [animation-fill-mode:forwards] [animation-delay:0.12s]">
+            <EyeFollowCursor />
+          </div>
+          <p className="mt-6 text-lg sm:text-xl text-white/80 max-w-lg mx-auto leading-relaxed text-balance animate-fade-in opacity-0 stagger-1 [animation-fill-mode:forwards]">
             Expert eye care for a clearer tomorrow. Led by Dr. Nikhil Nasta.
           </p>
-          <div className="mt-14 flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in opacity-0 stagger-2 [animation-fill-mode:forwards]">
+          <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in opacity-0 stagger-2 [animation-fill-mode:forwards]">
             <a
               href={`tel:+${PHONE}`}
               className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-white text-navy-900 font-semibold text-base shadow-xl hover:shadow-2xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 border-0"

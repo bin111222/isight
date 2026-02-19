@@ -137,6 +137,18 @@ body {
   }
 }
 
+/* Eye follow cursor – blink */
+.eye-blink-open {
+  transform-origin: center;
+  transform: scaleY(0);
+  transition: transform 0.12s ease-in;
+}
+.eye-blink-shut {
+  transform-origin: center;
+  transform: scaleY(1);
+  transition: transform 0.06s ease-out;
+}
+
 /* Home: stat counter look */
 .stat-value {
   @apply font-display font-extrabold tabular-nums tracking-tight text-white;
