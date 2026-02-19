@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: "Expert eye care for a clearer tomorrow. Dr. Nikhil Nasta.",
   },
   icons: {
-    icon: [{ url: "/icon-logo.png", sizes: "any" }],
+    icon: [{ url: "/favicon/favicon.ico", sizes: "any" }],
     apple: "/favicon/apple-touch-icon.png",
   },
   manifest: "/favicon/site.webmanifest",

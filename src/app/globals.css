@@ -46,7 +46,7 @@ body {
   mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black, transparent);
 }
 
-/* Eye anatomy hover */
+/* Eye anatomy hover + selected */
 .eye-part {
   transition: transform 0.25s ease, filter 0.25s ease, opacity 0.25s ease;
 }
@@ -54,6 +54,18 @@ body {
   filter: drop-shadow(0 0 16px rgba(92, 139, 201, 0.6));
   transform: scale(1.15);
   opacity: 1 !important;
+}
+
+/* Understand Your Eye section */
+.understand-eye-card {
+  transition: box-shadow 0.35s ease, border-color 0.35s ease;
+}
+.understand-eye-card:focus-within,
+.understand-eye-card:hover {
+  box-shadow: 0 0 0 1px rgba(92, 139, 201, 0.2), 0 8px 32px -8px rgba(0, 0, 0, 0.3);
+}
+.understand-eye-panel {
+  transition: background-color 0.3s ease;
 }
 
 /* Nav link underline */

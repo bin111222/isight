@@ -2,56 +2,13 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
 import { Phone, Stethoscope } from "lucide-react";
 import CountUpStat from "@/components/CountUpStat";
+import UnderstandYourEye from "@/components/UnderstandYourEye";
 
 const PHONE = "918692986033";
 const PHONE_DISPLAY = "8692986033";
 const FALLBACK_IMAGE = "/hero.webp";
-
-const EYE_PARTS_DATA = [
-  {
-    id: "cornea",
-    name: "Cornea",
-    cx: 50,
-    cy: 42,
-    r: 12,
-    what: "The cornea is the clear, dome-shaped front surface of your eye. It acts like a window, bending light as it enters and helping your eye focus.",
-    conditions: "Infections, keratoconus (thinning and bulging), dystrophies, and injuries can affect the cornea.",
-    care: "Treatments range from medicated drops and cross-linking to corneal transplant (DMEK, DSAEK) when needed. We use precise microsurgical techniques to restore clarity.",
-  },
-  {
-    id: "lens",
-    name: "Lens",
-    cx: 50,
-    cy: 50,
-    r: 10,
-    what: "The lens sits behind the iris and works with the cornea to focus light onto the retina. It can change shape to help you focus on near and far objects.",
-    conditions: "Cataract—clouding of the lens with age—is the most common condition. It can cause blurry vision, glare, and difficulty with night driving.",
-    care: "Cataract surgery removes the cloudy lens and replaces it with a clear artificial lens (IOL). We offer no-patch, no-stitch, no-injection surgery with premium lens options including multifocal and toric IOLs.",
-  },
-  {
-    id: "retina",
-    name: "Retina",
-    cx: 50,
-    cy: 72,
-    r: 14,
-    what: "The retina is the light-sensitive layer at the back of the eye. It converts light into signals that travel through the optic nerve to your brain, where they become the images you see.",
-    conditions: "Diabetic retinopathy, retinal detachment, age-related macular degeneration (ARMD), and macular holes can threaten central or peripheral vision.",
-    care: "We offer laser treatment, intravitreal injections for ARMD and diabetic macular edema, and advanced retinal surgery using our Turbovit system to repair detachments and other conditions.",
-  },
-  {
-    id: "optic-nerve",
-    name: "Optic nerve",
-    cx: 50,
-    cy: 88,
-    r: 8,
-    what: "The optic nerve carries visual signals from the retina to the brain. It is often described as the cable that connects the eye to the brain.",
-    conditions: "Glaucoma—damage to the optic nerve, often linked to high eye pressure—is a leading cause of irreversible vision loss. It can progress with few symptoms until later stages.",
-    care: "We manage glaucoma with regular monitoring, prescription eye drops, laser procedures (e.g. SLT), and surgery when needed. Early detection and treatment help protect your vision.",
-  },
-];
 
 const FEATURED_TREATMENTS = [
   { title: "LASIK Surgery", excerpt: "Freedom from glasses with Contoura LASIK. Quick, precise, life-changing.", href: "/lasik-surgery-mumbai", tag: "Refractive" },
@@ -83,9 +40,6 @@ type Props = {
 };
 
 export default function HomePageClient({ images }: Props) {
-  const [selectedPart, setSelectedPart] = useState<string | null>(null);
-  const selectedData = selectedPart ? EYE_PARTS_DATA.find((p) => p.id === selectedPart) : null;
-
   const getServiceImage = (href: string) => {
     const slug = href.replace(/^\//, "");
     return images.serviceImages[slug] ?? FALLBACK_IMAGE;
@@ -176,81 +130,7 @@ export default function HomePageClient({ images }: Props) {
         </div>
       </section>
 
-      {/* Understand Your Eye */}
-      <section className="bg-navy-900 py-24 lg:py-32">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <h2 className="font-display text-3xl sm:text-4xl font-bold text-white text-center">Understand Your Eye</h2>
-          <p className="mt-3 text-white/70 text-center max-w-xl mx-auto">
-            Click or hover a part of the eye to learn what it does, what can go wrong, and how we help.
-          </p>
-
-          <div className="mt-16 flex flex-col lg:flex-row items-stretch gap-10 lg:gap-12">
-            <div className="relative w-full lg:w-[380px] h-[380px] flex-shrink-0 rounded-3xl bg-white/5 border border-white/10 p-6 shadow-2xl flex items-center justify-center">
-              <svg viewBox="0 0 100 100" className="w-full h-full max-w-[280px] max-h-[280px] text-clinical-400/90">
-                <defs>
-                  <linearGradient id="eyeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="rgba(92,139,201,0.5)" />
-                    <stop offset="100%" stopColor="rgba(45,90,158,0.7)" />
-                  </linearGradient>
-                </defs>
-                <ellipse cx="50" cy="50" rx="42" ry="28" fill="none" stroke="url(#eyeGrad)" strokeWidth="2" className="opacity-80" />
-                {EYE_PARTS_DATA.map((part) => (
-                  <g
-                    key={part.id}
-                    onMouseEnter={() => setSelectedPart(part.id)}
-                    onMouseLeave={() => setSelectedPart(null)}
-                    onClick={() => setSelectedPart(selectedPart === part.id ? null : part.id)}
-                    className="cursor-pointer"
-                  >
-                    <circle
-                      cx={part.cx}
-                      cy={part.cy}
-                      r={part.r}
-                      fill="currentColor"
-                      className={`eye-part opacity-50 ${selectedPart === part.id ? "opacity-100" : ""}`}
-                    />
-                    <title>{part.name}</title>
-                  </g>
-                ))}
-              </svg>
-            </div>
-            <div className="flex-1 min-h-[320px] rounded-3xl bg-white/5 border border-white/10 p-6 sm:p-8 flex flex-col justify-center">
-              {selectedData ? (
-                <div className="animate-fade-in">
-                  <h3 className="font-display text-xl sm:text-2xl font-bold text-white">{selectedData.name}</h3>
-                  <p className="mt-4 text-white/90 leading-relaxed">{selectedData.what}</p>
-                  <p className="mt-4 text-sm font-semibold text-clinical-300 uppercase tracking-wider">Common conditions</p>
-                  <p className="mt-1 text-white/80 leading-relaxed">{selectedData.conditions}</p>
-                  <p className="mt-4 text-sm font-semibold text-clinical-300 uppercase tracking-wider">How we help</p>
-                  <p className="mt-1 text-white/80 leading-relaxed">{selectedData.care}</p>
-                </div>
-              ) : (
-                <div className="text-center text-white/50 py-8">
-                  <p className="text-lg">Select a part of the eye above to read about it.</p>
-                  <p className="mt-2 text-sm">You can click or hover each circle.</p>
-                </div>
-              )}
-            </div>
-          </div>
-
-          <div className="mt-10 flex flex-wrap justify-center gap-3">
-            {EYE_PARTS_DATA.map((part) => (
-              <button
-                key={part.id}
-                type="button"
-                onClick={() => setSelectedPart(selectedPart === part.id ? null : part.id)}
-                className={`px-5 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
-                  selectedPart === part.id
-                    ? "bg-clinical-500 text-white border border-clinical-400"
-                    : "bg-white/10 text-white border border-white/10 hover:bg-white/20 hover:border-white/20"
-                }`}
-              >
-                {part.name}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
+      <UnderstandYourEye />
 
       {/* Our Services — editorial cards */}
       <section className="relative py-24 lg:py-32 overflow-hidden">
