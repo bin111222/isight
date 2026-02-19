@@ -2,9 +2,10 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, Stethoscope } from "lucide-react";
+import { Phone, Stethoscope, ClipboardList, ArrowRight } from "lucide-react";
 import CountUpStat from "@/components/CountUpStat";
 import UnderstandYourEye from "@/components/UnderstandYourEye";
+import GoogleReviewsSection from "@/components/GoogleReviewsSection";
 import { TREATMENT_LINKS } from "@/lib/sitemap";
 
 const PHONE = "918692986033";
@@ -25,12 +26,6 @@ const WHY_ITEMS = [
   { title: "Board-certified specialist", desc: "Dr. Nikhil Nasta, award-winning ophthalmologist" },
   { title: "Cutting-edge technology", desc: "Contoura LASIK, Alcon Phaco, Turbovit retinal" },
   { title: "Patient-first care", desc: "NABH-accredited centres, clear communication" },
-];
-
-const TESTIMONIALS = [
-  { quote: "Getting LASIK done by Dr. Nikhil Nasta was the best decision of my life! I had been wearing glasses for over 12 years and now I wake up with perfect vision. The procedure was quick, painless, and Dr. Nasta made me feel completely comfortable.", author: "Rohan S." },
-  { quote: "I was struggling with severe dry eyes for months. Dr. Nikhil diagnosed the root cause in my first visit. Within weeks, my eyes feel normal again. Highly recommend him if you suffer from dry eyes in Mumbai.", author: "Neha M." },
-  { quote: "My father had cataracts in both eyes and was very nervous about surgery. Dr. Nikhil Nasta explained everything with such patience. The cataract surgery was smooth, recovery was fast. Truly the best cataract surgeon in Mumbai!", author: "Anil K." },
 ];
 
 export type HomePageImages = {
@@ -135,6 +130,38 @@ export default function HomePageClient({ images }: Props) {
       </section>
 
       <UnderstandYourEye />
+
+      {/* Eye Health Self-Assessments */}
+      <section className="relative py-16 lg:py-20 overflow-hidden bg-navy-800/80 border-y border-white/5">
+        {/* Ambient glow behind card — vivid teal */}
+        <div className="absolute inset-0 flex justify-center items-center pointer-events-none" aria-hidden>
+          <div className="w-full max-w-3xl h-64 bg-[#14b8a6]/20 blur-[80px] rounded-full -translate-y-1/2" />
+        </div>
+        <div className="relative max-w-5xl mx-auto px-4 sm:px-6">
+          <Link
+            href="/eye-quiz"
+            className="group group/card flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-8 rounded-3xl overflow-hidden border border-[#2dd4bf]/35 bg-gradient-to-br from-white/[0.06] via-[#14b8a6]/15 to-[#0d9488]/10 backdrop-blur-sm p-6 sm:p-8 lg:p-10 shadow-[0_0_0_1px_rgba(255,255,255,0.05)_inset,0_4px_24px_-4px_rgba(0,0,0,0.2),0_0_48px_-12px_rgba(20,184,166,0.25)] hover:shadow-[0_0_0_1px_rgba(255,255,255,0.08)_inset,0_8px_32px_-8px_rgba(0,0,0,0.25),0_0_64px_-16px_rgba(20,184,166,0.35)] hover:border-[#2dd4bf]/50 transition-all duration-400 ease-out hover:-translate-y-0.5"
+          >
+            {/* Left accent bar — teal gradient */}
+            <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#2dd4bf] via-[#14b8a6] to-[#0d9488] rounded-l-3xl" />
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 flex-1 min-w-0 pl-4 sm:pl-5">
+              {/* Icon */}
+              <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-[#14b8a6]/25 border border-[#2dd4bf]/40 flex items-center justify-center text-[#5eead4] group-hover/card:bg-[#14b8a6]/35 group-hover/card:border-[#2dd4bf]/50 transition-colors duration-300">
+                <ClipboardList className="w-7 h-7" strokeWidth={1.75} aria-hidden />
+              </div>
+              <div className="min-w-0">
+                <p className="font-display text-xs sm:text-sm font-semibold uppercase tracking-[0.22em] text-[#5eead4]">Screening tools</p>
+                <h2 className="font-display text-2xl sm:text-3xl lg:text-[1.75rem] font-bold text-white mt-2 bg-gradient-to-r from-white to-white/90 bg-clip-text text-transparent">Eye Health Self-Assessments</h2>
+                <p className="mt-3 text-white/80 text-base sm:text-[0.9375rem] max-w-md leading-relaxed">Dry eye, digital strain & vision wellness. Symptom questions, optional Amsler grid, and a printable report with next steps.</p>
+              </div>
+            </div>
+            <span className="shrink-0 inline-flex items-center gap-2.5 px-6 py-4 rounded-2xl bg-[#14b8a6] text-white font-semibold shadow-[0_0_28px_-6px_rgba(13,148,136,0.55)] group-hover/card:bg-[#2dd4bf] group-hover/card:shadow-[0_0_36px_-8px_rgba(45,212,191,0.5)] group-hover/card:scale-[1.02] transition-all duration-300 ease-out">
+              Start an assessment
+              <ArrowRight className="w-5 h-5 group-hover/card:translate-x-0.5 transition-transform duration-300" aria-hidden />
+            </span>
+          </Link>
+        </div>
+      </section>
 
       {/* Our Services — editorial cards */}
       <section className="relative py-24 lg:py-32 overflow-hidden">
@@ -341,26 +368,8 @@ export default function HomePageClient({ images }: Props) {
         </div>
       </section>
 
-      {/* Testimonials — no images */}
-      <section className="bg-silver-100 py-24 lg:py-32">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          <h2 className="font-display text-3xl sm:text-4xl font-bold text-navy-900">What Our Patients Say</h2>
-          <p className="mt-2 text-navy-600">Real stories from iSight Eye Care.</p>
-
-          <div className="mt-14 grid md:grid-cols-3 gap-8">
-            {TESTIMONIALS.map((t, i) => (
-              <blockquote
-                key={i}
-                className="relative rounded-2xl bg-white p-6 sm:p-8 border border-silver-200/80 shadow-soft hover-lift"
-              >
-                <span className="absolute top-5 left-6 text-4xl text-clinical-200/50 font-serif leading-none">"</span>
-                <p className="relative text-navy-700 leading-relaxed pt-4">{t.quote}</p>
-                <footer className="mt-6 font-semibold text-navy-900">— {t.author}</footer>
-              </blockquote>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Google reviews (real) with fallback to static testimonials */}
+      <GoogleReviewsSection />
 
       {/* Final CTA with background */}
       <section className="relative bg-navy-900 py-24 overflow-hidden">

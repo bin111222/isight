@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { GraduationCap, Award, Stethoscope } from "lucide-react";
 import { TREATMENT_LINKS } from "@/lib/sitemap";
 import BookAppointmentCTA from "@/components/BookAppointmentCTA";
 
@@ -39,24 +40,24 @@ const EXPERTISE = [
 export default function DoctorsPage() {
   return (
     <div className="min-h-screen bg-silver-100">
-      {/* Hero */}
-      <section className="relative min-h-[70vh] flex flex-col justify-end mesh-bg overflow-hidden">
-        <div className="absolute inset-0 bg-navy-900/60" aria-hidden />
+      {/* Hero — full-bleed image */}
+      <section className="relative min-h-[70vh] flex flex-col justify-end overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src={ABOUT_IMAGES.hero.src}
+            alt={ABOUT_IMAGES.hero.alt}
+            fill
+            className="object-cover object-[center_30%]"
+            sizes="100vw"
+            priority
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-navy-900/30 to-navy-900/90" aria-hidden />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy-900/70 via-transparent to-transparent" aria-hidden />
         <div className="relative max-w-6xl mx-auto w-full px-4 sm:px-6 pb-12 lg:pb-16 pt-24 lg:pt-28">
           <div className="flex flex-col md:flex-row md:items-end gap-8 md:gap-12">
-            <div className="relative flex-shrink-0 rounded-2xl overflow-hidden border-2 border-white/20 shadow-2xl w-48 sm:w-56 md:w-64">
-              <Image
-                src={ABOUT_IMAGES.hero.src}
-                alt={ABOUT_IMAGES.hero.alt}
-                width={ABOUT_IMAGES.hero.width}
-                height={ABOUT_IMAGES.hero.height}
-                className="w-full h-auto block"
-                sizes="(max-width: 640px) 192px, (max-width: 768px) 224px, 256px"
-                priority
-              />
-            </div>
-            <div className="text-white">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-clinical-400 mb-2">Our Doctors</p>
+            <div className="text-white max-w-xl md:ml-auto md:mr-0">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-clinical-400 mb-2">Our Doctor</p>
               <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight drop-shadow-sm">
                 Dr. Nikhil Nasta
               </h1>
@@ -103,46 +104,67 @@ export default function DoctorsPage() {
       </section>
 
       {/* Qualifications & expertise */}
-      <section className="py-14 lg:py-18 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-clinical-500">02</span>
-          <h2 className="font-display text-2xl sm:text-3xl font-bold text-navy-900 mt-2">
-            Qualifications & experience
-          </h2>
-          <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
-            <div>
-              <h3 className="font-display text-lg font-semibold text-navy-900 mb-3">Education & certifications</h3>
-              <ul className="space-y-2.5">
+      <section className="relative py-16 lg:py-24 overflow-hidden bg-gradient-to-b from-silver-100 via-white to-silver-100">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_0%,rgba(92,139,201,0.06),transparent)] pointer-events-none" aria-hidden />
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="flex flex-wrap items-baseline gap-3">
+            <span className="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-clinical-500 text-white text-sm font-bold">02</span>
+            <h2 className="font-display text-2xl sm:text-3xl font-bold text-navy-900">
+              Qualifications & experience
+            </h2>
+          </div>
+          <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            <article className="group relative rounded-2xl border border-silver-200/80 bg-white p-6 sm:p-7 shadow-[0_2px_12px_-4px_rgba(10,15,26,0.06)] hover:shadow-[0_8px_24px_-8px_rgba(10,15,26,0.12)] hover:border-clinical-200/60 transition-all duration-300">
+              <div className="absolute left-0 top-0 bottom-0 w-1 rounded-l-2xl bg-gradient-to-b from-clinical-400 to-clinical-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="flex items-center gap-3 mb-4">
+                <span className="flex items-center justify-center w-11 h-11 rounded-xl bg-clinical-100 text-clinical-500">
+                  <GraduationCap className="w-5 h-5" strokeWidth={2} aria-hidden />
+                </span>
+                <h3 className="font-display text-lg font-semibold text-navy-900">Education & certifications</h3>
+              </div>
+              <ul className="space-y-3">
                 {QUALIFICATIONS.map((item, i) => (
                   <li key={i} className="flex gap-3 text-navy-700 text-[15px] leading-relaxed">
-                    <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-clinical-400 mt-2" />
+                    <span className="flex-shrink-0 mt-1.5 w-1.5 h-1.5 rounded-full bg-clinical-400 ring-4 ring-clinical-100" />
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
-            </div>
-            <div>
-              <h3 className="font-display text-lg font-semibold text-navy-900 mb-3">Awards & recognition</h3>
-              <ul className="space-y-2.5">
+            </article>
+            <article className="group relative rounded-2xl border border-silver-200/80 bg-white p-6 sm:p-7 shadow-[0_2px_12px_-4px_rgba(10,15,26,0.06)] hover:shadow-[0_8px_24px_-8px_rgba(10,15,26,0.12)] hover:border-clinical-200/60 transition-all duration-300">
+              <div className="absolute left-0 top-0 bottom-0 w-1 rounded-l-2xl bg-gradient-to-b from-clinical-400 to-clinical-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="flex items-center gap-3 mb-4">
+                <span className="flex items-center justify-center w-11 h-11 rounded-xl bg-amber-50 text-amber-600">
+                  <Award className="w-5 h-5" strokeWidth={2} aria-hidden />
+                </span>
+                <h3 className="font-display text-lg font-semibold text-navy-900">Awards & recognition</h3>
+              </div>
+              <ul className="space-y-3">
                 {AWARDS.map((item, i) => (
                   <li key={i} className="flex gap-3 text-navy-700 text-[15px] leading-relaxed">
-                    <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-clinical-400 mt-2" />
+                    <span className="flex-shrink-0 mt-1.5 w-1.5 h-1.5 rounded-full bg-amber-500 ring-4 ring-amber-50" />
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
-            </div>
-            <div>
-              <h3 className="font-display text-lg font-semibold text-navy-900 mb-3">Clinical expertise</h3>
-              <ul className="space-y-2.5">
+            </article>
+            <article className="group relative rounded-2xl border border-silver-200/80 bg-white p-6 sm:p-7 shadow-[0_2px_12px_-4px_rgba(10,15,26,0.06)] hover:shadow-[0_8px_24px_-8px_rgba(10,15,26,0.12)] hover:border-clinical-200/60 transition-all duration-300">
+              <div className="absolute left-0 top-0 bottom-0 w-1 rounded-l-2xl bg-gradient-to-b from-clinical-400 to-clinical-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="flex items-center gap-3 mb-4">
+                <span className="flex items-center justify-center w-11 h-11 rounded-xl bg-emerald-50 text-emerald-600">
+                  <Stethoscope className="w-5 h-5" strokeWidth={2} aria-hidden />
+                </span>
+                <h3 className="font-display text-lg font-semibold text-navy-900">Clinical expertise</h3>
+              </div>
+              <ul className="space-y-3">
                 {EXPERTISE.map((item, i) => (
                   <li key={i} className="flex gap-3 text-navy-700 text-[15px] leading-relaxed">
-                    <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-clinical-400 mt-2" />
+                    <span className="flex-shrink-0 mt-1.5 w-1.5 h-1.5 rounded-full bg-emerald-500 ring-4 ring-emerald-50" />
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
-            </div>
+            </article>
           </div>
         </div>
       </section>
@@ -193,11 +215,11 @@ export default function DoctorsPage() {
             <div>
               <span className="text-xs font-semibold uppercase tracking-[0.2em] text-clinical-500">04</span>
               <h2 className="font-display text-2xl sm:text-3xl font-bold text-navy-900 mt-2">
-                Pet friendly clinic
+                Pet friendly eye clinic
               </h2>
               <p className="mt-5 text-navy-700 leading-relaxed text-base sm:text-lg">
-                We welcome your furry companions. At iSight Eye Care we want you to feel at ease—whether that means
-                bringing your pet along or simply knowing you’re in a warm, human-centred environment.
+                We welcome your furry companions. At iSight Eye Care we want you to feel at ease, whether that means
+                bringing your pet along or simply knowing you’re in a warm, human-centred environment. So if you're looking for a pet friendly eye clinic in Mumbai, look no further than iSight Eye Care.
               </p>
             </div>
           </div>

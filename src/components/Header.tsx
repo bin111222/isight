@@ -40,7 +40,15 @@ export default function Header() {
             className="flex items-center transition-transform hover:scale-[1.02] shrink-0"
             aria-label="iSight Eye Care – Home"
           >
-            <Image src="/icon-logo.png" alt="iSight Eye Care" width={48} height={48} className="h-9 w-auto" priority />
+            <Image
+              src="/icon-logo.png"
+              alt="iSight Eye Care"
+              width={700}
+              height={200}
+              sizes="126px"
+              className="h-9 w-auto"
+              priority
+            />
           </Link>
           <a
             href={`tel:+${PHONE}`}
