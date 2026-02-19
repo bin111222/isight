@@ -1,0 +1,451 @@
+"use client";
+
+import Link from "next/link";
+import Image from "next/image";
+import { useState } from "react";
+import { Phone, Stethoscope } from "lucide-react";
+import CountUpStat from "@/components/CountUpStat";
+
+const PHONE = "918692986033";
+const PHONE_DISPLAY = "8692986033";
+const FALLBACK_IMAGE = "/hero.webp";
+
+const EYE_PARTS_DATA = [
+  {
+    id: "cornea",
+    name: "Cornea",
+    cx: 50,
+    cy: 42,
+    r: 12,
+    what: "The cornea is the clear, dome-shaped front surface of your eye. It acts like a window, bending light as it enters and helping your eye focus.",
+    conditions: "Infections, keratoconus (thinning and bulging), dystrophies, and injuries can affect the cornea.",
+    care: "Treatments range from medicated drops and cross-linking to corneal transplant (DMEK, DSAEK) when needed. We use precise microsurgical techniques to restore clarity.",
+  },
+  {
+    id: "lens",
+    name: "Lens",
+    cx: 50,
+    cy: 50,
+    r: 10,
+    what: "The lens sits behind the iris and works with the cornea to focus light onto the retina. It can change shape to help you focus on near and far objects.",
+    conditions: "Cataract—clouding of the lens with age—is the most common condition. It can cause blurry vision, glare, and difficulty with night driving.",
+    care: "Cataract surgery removes the cloudy lens and replaces it with a clear artificial lens (IOL). We offer no-patch, no-stitch, no-injection surgery with premium lens options including multifocal and toric IOLs.",
+  },
+  {
+    id: "retina",
+    name: "Retina",
+    cx: 50,
+    cy: 72,
+    r: 14,
+    what: "The retina is the light-sensitive layer at the back of the eye. It converts light into signals that travel through the optic nerve to your brain, where they become the images you see.",
+    conditions: "Diabetic retinopathy, retinal detachment, age-related macular degeneration (ARMD), and macular holes can threaten central or peripheral vision.",
+    care: "We offer laser treatment, intravitreal injections for ARMD and diabetic macular edema, and advanced retinal surgery using our Turbovit system to repair detachments and other conditions.",
+  },
+  {
+    id: "optic-nerve",
+    name: "Optic nerve",
+    cx: 50,
+    cy: 88,
+    r: 8,
+    what: "The optic nerve carries visual signals from the retina to the brain. It is often described as the cable that connects the eye to the brain.",
+    conditions: "Glaucoma—damage to the optic nerve, often linked to high eye pressure—is a leading cause of irreversible vision loss. It can progress with few symptoms until later stages.",
+    care: "We manage glaucoma with regular monitoring, prescription eye drops, laser procedures (e.g. SLT), and surgery when needed. Early detection and treatment help protect your vision.",
+  },
+];
+
+const FEATURED_TREATMENTS = [
+  { title: "LASIK Surgery", excerpt: "Freedom from glasses with Contoura LASIK. Quick, precise, life-changing.", href: "/lasik-surgery-mumbai", tag: "Refractive" },
+  { title: "Cataract Surgery", excerpt: "No patch, no stitch, no injection. Back to life in 24–48 hours.", href: "/cataract-surgery-mumbai", tag: "Surgery" },
+  { title: "Glaucoma & Retina", excerpt: "From monitoring to advanced laser and microsurgery.", href: "/glaucoma-treatment-mumbai", tag: "Medical & Surgical" },
+  { title: "Dry Eye & More", excerpt: "Specialist care for dry eye, pediatric, and corneal conditions.", href: "/dry-eye-treatment-mumbai", tag: "Medical" },
+];
+
+const WHY_ITEMS = [
+  { title: "Board-certified specialist", desc: "Dr. Nikhil Nasta, award-winning ophthalmologist" },
+  { title: "Cutting-edge technology", desc: "Contoura LASIK, Alcon Phaco, Turbovit retinal" },
+  { title: "Patient-first care", desc: "NABH-accredited centres, clear communication" },
+];
+
+const TESTIMONIALS = [
+  { quote: "Getting LASIK done by Dr. Nikhil Nasta was the best decision of my life! I had been wearing glasses for over 12 years and now I wake up with perfect vision. The procedure was quick, painless, and Dr. Nasta made me feel completely comfortable.", author: "Rohan S." },
+  { quote: "I was struggling with severe dry eyes for months. Dr. Nikhil diagnosed the root cause in my first visit. Within weeks, my eyes feel normal again. Highly recommend him if you suffer from dry eyes in Mumbai.", author: "Neha M." },
+  { quote: "My father had cataracts in both eyes and was very nervous about surgery. Dr. Nikhil Nasta explained everything with such patience. The cataract surgery was smooth, recovery was fast. Truly the best cataract surgeon in Mumbai!", author: "Anil K." },
+];
+
+export type HomePageImages = {
+  serviceImages: Record<string, string>;
+  spotlightCataractImage: string;
+  spotlightLasikImage: string;
+};
+
+type Props = {
+  images: HomePageImages;
+};
+
+export default function HomePageClient({ images }: Props) {
+  const [selectedPart, setSelectedPart] = useState<string | null>(null);
+  const selectedData = selectedPart ? EYE_PARTS_DATA.find((p) => p.id === selectedPart) : null;
+
+  const getServiceImage = (href: string) => {
+    const slug = href.replace(/^\//, "");
+    return images.serviceImages[slug] ?? FALLBACK_IMAGE;
+  };
+
+  return (
+    <>
+      {/* Hero */}
+      <section className="relative min-h-[100vh] flex flex-col justify-center mesh-bg overflow-hidden">
+        <div className="absolute inset-0 bg-hero-glow opacity-90 pointer-events-none" />
+        <div className="absolute inset-0 hero-grain" aria-hidden />
+        <div className="absolute top-1/4 left-1/4 w-[420px] h-[420px] rounded-full bg-clinical-400/12 blur-[100px] animate-float pointer-events-none" />
+        <div className="absolute bottom-1/4 right-1/5 w-[380px] h-[380px] rounded-full bg-clinical-500/10 blur-[90px] animate-float pointer-events-none" style={{ animationDelay: "2s" }} />
+        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 py-28 text-center">
+          <p className="font-display text-sm font-semibold uppercase tracking-[0.35em] text-clinical-400/90 animate-fade-in opacity-0 [animation-fill-mode:forwards]">
+            iSight Eye Care · Mumbai
+          </p>
+          <h1 className="mt-6 font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold text-white tracking-tight animate-fade-in opacity-0 [animation-fill-mode:forwards] [animation-delay:0.08s]">
+            Vision
+            <br />
+            <span className="bg-gradient-to-r from-clinical-200 via-clinical-400 to-clinical-300 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-shift">
+              Restored
+            </span>
+          </h1>
+          <p className="mt-8 text-lg sm:text-xl text-white/80 max-w-xl mx-auto leading-relaxed animate-fade-in opacity-0 stagger-1 [animation-fill-mode:forwards]">
+            Expert eye care for a clearer tomorrow. Led by Dr. Nikhil Nasta.
+          </p>
+          <div className="mt-14 flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in opacity-0 stagger-2 [animation-fill-mode:forwards]">
+            <a
+              href={`tel:+${PHONE}`}
+              className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-white text-navy-900 font-semibold text-base shadow-xl hover:shadow-2xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 border-0"
+            >
+              <Phone className="w-5 h-5 shrink-0" strokeWidth={2.25} aria-hidden />
+              Book Consultation
+            </a>
+            <Link
+              href="/treatments"
+              className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl border-2 border-white/40 text-white font-semibold text-base bg-transparent hover:bg-white/10 hover:border-white/60 transition-all duration-300"
+            >
+              <Stethoscope className="w-5 h-5 shrink-0 opacity-90" strokeWidth={2.25} aria-hidden />
+              Explore Treatments
+            </Link>
+          </div>
+        </div>
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-clinical-400/40 to-transparent" />
+      </section>
+
+      {/* Trust strip with count-up */}
+      <section className="relative bg-navy-800/90 backdrop-blur-md border-b border-white/5 py-14 -mt-px">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+          <CountUpStat />
+        </div>
+      </section>
+
+      {/* Mission */}
+      <section className="bg-silver-100 py-24 lg:py-32">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+          <div className="relative overflow-hidden rounded-3xl bg-white shadow-soft border border-silver-200/80 flex flex-col lg:flex-row">
+            <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-clinical-500 to-clinical-400 rounded-l-3xl" />
+            <div className="relative flex-shrink-0 w-full lg:w-80 h-64 lg:h-auto lg:min-h-[360px] rounded-t-3xl lg:rounded-l-none lg:rounded-r-none overflow-hidden">
+              <Image
+                src="/hero.webp"
+                alt="Dr. Nikhil Nasta"
+                fill
+                className="object-cover object-[center_28%]"
+                sizes="(max-width: 1024px) 100vw, 320px"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-white/90 via-white/40 to-transparent lg:from-transparent lg:via-transparent lg:to-transparent" />
+            </div>
+            <div className="relative flex-1 p-8 sm:p-10 lg:p-12 flex flex-col justify-center">
+              <h2 className="font-display text-2xl sm:text-3xl font-bold text-navy-900">Our Mission</h2>
+              <p className="mt-5 text-navy-700 text-lg leading-relaxed">
+                <Link href="/awards-eye-surgeon-mumbai" className="text-clinical-500 hover:text-clinical-400 font-semibold underline decoration-clinical-400/50 underline-offset-2">
+                  Award-winning
+                </Link>{" "}
+                ophthalmologist Dr. Nikhil Nasta is dedicated to restoring the one sense we rely on every day. Why struggle with poor eyesight when expert care is within reach?
+              </p>
+              <Link
+                href="/isight-eye-care-doctors"
+                className="inline-flex items-center gap-2 mt-8 text-clinical-500 font-semibold hover:text-clinical-400 transition-colors group"
+              >
+                About Dr. Nikhil Nasta
+                <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Understand Your Eye */}
+      <section className="bg-navy-900 py-24 lg:py-32">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <h2 className="font-display text-3xl sm:text-4xl font-bold text-white text-center">Understand Your Eye</h2>
+          <p className="mt-3 text-white/70 text-center max-w-xl mx-auto">
+            Click or hover a part of the eye to learn what it does, what can go wrong, and how we help.
+          </p>
+
+          <div className="mt-16 flex flex-col lg:flex-row items-stretch gap-10 lg:gap-12">
+            <div className="relative w-full lg:w-[380px] h-[380px] flex-shrink-0 rounded-3xl bg-white/5 border border-white/10 p-6 shadow-2xl flex items-center justify-center">
+              <svg viewBox="0 0 100 100" className="w-full h-full max-w-[280px] max-h-[280px] text-clinical-400/90">
+                <defs>
+                  <linearGradient id="eyeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="rgba(92,139,201,0.5)" />
+                    <stop offset="100%" stopColor="rgba(45,90,158,0.7)" />
+                  </linearGradient>
+                </defs>
+                <ellipse cx="50" cy="50" rx="42" ry="28" fill="none" stroke="url(#eyeGrad)" strokeWidth="2" className="opacity-80" />
+                {EYE_PARTS_DATA.map((part) => (
+                  <g
+                    key={part.id}
+                    onMouseEnter={() => setSelectedPart(part.id)}
+                    onMouseLeave={() => setSelectedPart(null)}
+                    onClick={() => setSelectedPart(selectedPart === part.id ? null : part.id)}
+                    className="cursor-pointer"
+                  >
+                    <circle
+                      cx={part.cx}
+                      cy={part.cy}
+                      r={part.r}
+                      fill="currentColor"
+                      className={`eye-part opacity-50 ${selectedPart === part.id ? "opacity-100" : ""}`}
+                    />
+                    <title>{part.name}</title>
+                  </g>
+                ))}
+              </svg>
+            </div>
+            <div className="flex-1 min-h-[320px] rounded-3xl bg-white/5 border border-white/10 p-6 sm:p-8 flex flex-col justify-center">
+              {selectedData ? (
+                <div className="animate-fade-in">
+                  <h3 className="font-display text-xl sm:text-2xl font-bold text-white">{selectedData.name}</h3>
+                  <p className="mt-4 text-white/90 leading-relaxed">{selectedData.what}</p>
+                  <p className="mt-4 text-sm font-semibold text-clinical-300 uppercase tracking-wider">Common conditions</p>
+                  <p className="mt-1 text-white/80 leading-relaxed">{selectedData.conditions}</p>
+                  <p className="mt-4 text-sm font-semibold text-clinical-300 uppercase tracking-wider">How we help</p>
+                  <p className="mt-1 text-white/80 leading-relaxed">{selectedData.care}</p>
+                </div>
+              ) : (
+                <div className="text-center text-white/50 py-8">
+                  <p className="text-lg">Select a part of the eye above to read about it.</p>
+                  <p className="mt-2 text-sm">You can click or hover each circle.</p>
+                </div>
+              )}
+            </div>
+          </div>
+
+          <div className="mt-10 flex flex-wrap justify-center gap-3">
+            {EYE_PARTS_DATA.map((part) => (
+              <button
+                key={part.id}
+                type="button"
+                onClick={() => setSelectedPart(selectedPart === part.id ? null : part.id)}
+                className={`px-5 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
+                  selectedPart === part.id
+                    ? "bg-clinical-500 text-white border border-clinical-400"
+                    : "bg-white/10 text-white border border-white/10 hover:bg-white/20 hover:border-white/20"
+                }`}
+              >
+                {part.name}
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Our Services — editorial cards */}
+      <section className="relative py-24 lg:py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-silver-100 via-white to-silver-100" aria-hidden />
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="text-center max-w-2xl mx-auto">
+            <p className="font-display text-sm font-semibold uppercase tracking-[0.25em] text-clinical-500">
+              Treatments
+            </p>
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-900 mt-3">
+              Our Services
+            </h2>
+            <p className="mt-4 text-navy-600 text-lg">
+              Expert care across the full spectrum of eye health—from vision correction to surgery and medical management.
+            </p>
+          </div>
+
+          <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+            {FEATURED_TREATMENTS.map((item) => (
+              <Link
+                key={item.title}
+                href={item.href}
+                className="group relative flex flex-col rounded-2xl bg-white overflow-hidden shadow-[0_4px_24px_-4px_rgba(10,15,26,0.12)] border border-silver-200/60 hover:shadow-[0_12px_40px_-12px_rgba(10,15,26,0.2)] hover:border-clinical-500/20 transition-all duration-300 hover:-translate-y-1.5 text-left"
+              >
+                <div className="relative w-full aspect-[5/4] overflow-hidden">
+                  <Image
+                    src={getServiceImage(item.href)}
+                    alt=""
+                    fill
+                    className="object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-900/95 via-navy-900/40 to-transparent" />
+                  <span className="absolute top-4 left-4 px-2.5 py-1 rounded-md bg-white/15 backdrop-blur-sm text-white text-[11px] font-semibold uppercase tracking-wider">
+                    {item.tag}
+                  </span>
+                  <div className="absolute bottom-0 left-0 right-0 p-5 pt-12">
+                    <h3 className="font-display text-xl font-bold text-white leading-tight">
+                      {item.title}
+                    </h3>
+                    <p className="mt-2 text-white/90 text-sm leading-snug line-clamp-2">
+                      {item.excerpt}
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center justify-between px-5 py-4 border-t border-silver-200/80 bg-silver-50/50 group-hover:bg-clinical-50/50 transition-colors duration-300">
+                  <span className="text-clinical-500 font-semibold text-sm group-hover:text-clinical-600 transition-colors">
+                    Learn more
+                  </span>
+                  <span className="text-clinical-500 transition-transform duration-300 group-hover:translate-x-1" aria-hidden>
+                    →
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          <div className="mt-14 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link
+              href="/treatments"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-navy-900 text-white font-semibold hover:bg-navy-800 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"
+            >
+              View all treatments
+            </Link>
+            <a
+              href={`tel:+${PHONE}`}
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-clinical-500 text-white font-semibold hover:bg-clinical-400 transition-all duration-300 shadow-[0_4px_20px_-4px_rgba(45,90,158,0.4)] hover:shadow-glow hover:scale-[1.02] active:scale-[0.98]"
+            >
+              Book Consultation
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose + spotlight cards with correct images */}
+      <section className="bg-white py-24 lg:py-32 border-t border-silver-200">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+          <h2 className="font-display text-3xl sm:text-4xl font-bold text-navy-900">Why Choose Us</h2>
+          <p className="mt-3 text-navy-600 max-w-2xl">Expertise, technology, and care that put your vision first.</p>
+
+          <div className="mt-12 grid sm:grid-cols-3 gap-6">
+            {WHY_ITEMS.map((item) => (
+              <div
+                key={item.title}
+                className="flex items-start gap-4 p-6 rounded-2xl bg-silver-100/80 border border-silver-200/60"
+              >
+                <span className="flex-shrink-0 w-12 h-12 rounded-xl bg-clinical-500/10 text-clinical-500 flex items-center justify-center text-xl font-bold">✓</span>
+                <div>
+                  <span className="font-semibold text-navy-900">{item.title}</span>
+                  <p className="mt-1 text-sm text-navy-600">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-16 grid md:grid-cols-2 gap-8">
+            <div className="group relative overflow-hidden rounded-3xl min-h-[320px] flex flex-col justify-end p-8 sm:p-10 text-white shadow-soft-lg hover:shadow-card-hover transition-all duration-300">
+              <Image
+                src={images.spotlightCataractImage}
+                alt=""
+                fill
+                className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/80 to-navy-900/50" />
+              <div className="relative z-10">
+                <h3 className="font-display text-xl sm:text-2xl font-bold">No patch, no stitch cataract surgery</h3>
+                <p className="mt-5 text-white/90 leading-relaxed text-sm sm:text-base">
+                  Advanced Alcon Laureate Phaco. No injections, minimal discomfort. Most patients are back to normal within 24–48 hours.
+                </p>
+                <a
+                  href={`tel:+${PHONE}`}
+                  className="mt-8 inline-flex items-center gap-2 px-6 py-3.5 bg-clinical-500 hover:bg-clinical-400 rounded-full font-semibold transition-all hover:shadow-glow"
+                >
+                  Consult
+                </a>
+              </div>
+            </div>
+            <div className="group relative overflow-hidden rounded-3xl min-h-[320px] flex flex-col justify-end p-8 sm:p-10 text-white shadow-soft-lg hover:shadow-card-hover transition-all duration-300">
+              <Image
+                src={images.spotlightLasikImage}
+                alt=""
+                fill
+                className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/80 to-navy-900/50" />
+              <div className="relative z-10">
+                <h3 className="font-display text-xl sm:text-2xl font-bold">Contoura LASIK & Turbovit retinal surgery</h3>
+                <p className="mt-5 text-white/90 leading-relaxed text-sm sm:text-base">
+                  Precision vision correction and expert retinal care. From LASIK to complex retinal procedures.
+                </p>
+                <a
+                  href={`tel:+${PHONE}`}
+                  className="mt-8 inline-flex items-center gap-2 px-6 py-3.5 bg-clinical-500 hover:bg-clinical-400 rounded-full font-semibold transition-all hover:shadow-glow"
+                >
+                  Book now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials — no images */}
+      <section className="bg-silver-100 py-24 lg:py-32">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+          <h2 className="font-display text-3xl sm:text-4xl font-bold text-navy-900">What Our Patients Say</h2>
+          <p className="mt-2 text-navy-600">Real stories from iSight Eye Care.</p>
+
+          <div className="mt-14 grid md:grid-cols-3 gap-8">
+            {TESTIMONIALS.map((t, i) => (
+              <blockquote
+                key={i}
+                className="relative rounded-2xl bg-white p-6 sm:p-8 border border-silver-200/80 shadow-soft hover-lift"
+              >
+                <span className="absolute top-5 left-6 text-4xl text-clinical-200/50 font-serif leading-none">"</span>
+                <p className="relative text-navy-700 leading-relaxed pt-4">{t.quote}</p>
+                <footer className="mt-6 font-semibold text-navy-900">— {t.author}</footer>
+              </blockquote>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA with background */}
+      <section className="relative bg-navy-900 py-24 overflow-hidden">
+        <Image
+          src="/hero.webp"
+          alt=""
+          fill
+          className="object-cover object-center opacity-20"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-navy-900/85" />
+        <div className="absolute inset-0 bg-gradient-to-b from-clinical-500/10 to-transparent pointer-events-none" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-clinical-400/40 to-transparent" />
+        <div className="relative max-w-3xl mx-auto px-4 sm:px-6 text-center">
+          <h2 className="font-display text-3xl sm:text-4xl font-bold text-white">Schedule your appointment</h2>
+          <p className="mt-5 text-white/90 text-lg">
+            Good vision matters for life. Contact us to book your next eye check-up.
+          </p>
+          <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href={`tel:+${PHONE}`}
+              className="inline-flex justify-center items-center gap-2 px-8 py-4 bg-white text-navy-900 font-semibold rounded-2xl hover:bg-white/95 transition-all shadow-xl hover:scale-[1.02]"
+            >
+              Book now
+            </a>
+            <a href={`tel:+${PHONE}`} className="btn-glass inline-flex justify-center px-8 py-4 rounded-2xl border-2 border-white/30">
+              Call {PHONE_DISPLAY}
+            </a>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
