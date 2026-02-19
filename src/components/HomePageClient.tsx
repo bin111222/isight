@@ -8,10 +8,11 @@ import UnderstandYourEye from "@/components/UnderstandYourEye";
 import GoogleReviewsSection from "@/components/GoogleReviewsSection";
 import EyeFollowCursor from "@/components/EyeFollowCursor";
 import { TREATMENT_LINKS } from "@/lib/sitemap";
+import { getImageUrl } from "@/lib/imageUrl";
 
 const PHONE = "918692986033";
 const PHONE_DISPLAY = "8692986033";
-const FALLBACK_IMAGE = "/hero.webp";
+const FALLBACK_IMAGE = getImageUrl("/hero.webp");
 
 const FEATURED_TREATMENTS = [
   { title: "LASIK Surgery", excerpt: "Freedom from glasses with Contoura LASIK. Quick, precise, life-changing.", href: "/lasik-surgery-mumbai", tag: "Refractive" },
@@ -104,7 +105,7 @@ export default function HomePageClient({ images }: Props) {
             <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-clinical-500 to-clinical-400 rounded-l-3xl" />
             <div className="relative flex-shrink-0 w-full lg:w-80 h-64 lg:h-auto lg:min-h-[360px] rounded-t-3xl lg:rounded-l-none lg:rounded-r-none overflow-hidden">
               <Image
-                src="/hero.webp"
+                src={getImageUrl("/hero.webp")}
                 alt="Dr. Nikhil Nasta"
                 fill
                 className="object-cover object-[center_28%]"
@@ -378,7 +379,7 @@ export default function HomePageClient({ images }: Props) {
       {/* Final CTA with background */}
       <section className="relative bg-navy-900 py-24 overflow-hidden">
         <Image
-          src="/hero.webp"
+          src={getImageUrl("/hero.webp")}
           alt=""
           fill
           className="object-cover object-center opacity-20"

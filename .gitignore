@@ -9,6 +9,9 @@ out
 build
 dist
 
+# Public assets
+public
+
 # Env
 .env
 .env.local

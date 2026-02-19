@@ -2,9 +2,11 @@ import { notFound } from "next/navigation";
 import { ALL_PAGE_SLUGS, TREATMENT_SLUGS } from "@/lib/sitemap";
 import { getPageContent } from "@/lib/content";
 import { getTreatmentImagePaths } from "@/lib/treatmentImages";
+import { getImageUrl } from "@/lib/imageUrl";
 import TreatmentPageLayout from "@/components/TreatmentPageLayout";
 import TreatmentsPage from "@/components/TreatmentsPage";
 import DoctorsPage from "@/components/DoctorsPage";
+import AwardsPage from "@/components/AwardsPage";
 import ConsultPage from "@/components/ConsultPage";
 import BookAppointmentCTA from "@/components/BookAppointmentCTA";
 
@@ -32,7 +34,7 @@ export default async function SlugPage({ params }: Props) {
   const isTreatmentPage = TREATMENT_SLUGS.includes(slug);
 
   if (isTreatmentPage) {
-    const treatmentImages = getTreatmentImagePaths(slug);
+    const treatmentImages = getTreatmentImagePaths(slug).map(getImageUrl);
     return <TreatmentPageLayout slug={slug} content={content} imagePaths={treatmentImages} />;
   }
 
@@ -48,7 +50,11 @@ export default async function SlugPage({ params }: Props) {
     return <TreatmentsPage content={content} />;
   }
 
-  /* Other non-treatment pages: blog, awards */
+  if (slug === "awards-eye-surgeon-mumbai") {
+    return <AwardsPage />;
+  }
+
+  /* Other non-treatment pages: blog */
   return (
     <article className="min-h-screen bg-silver-100">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12 lg:py-16">

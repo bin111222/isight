@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { getImageUrl } from "@/lib/imageUrl";
 import { Phone } from "lucide-react";
 import { NAV_LINKS, TREATMENT_LINKS } from "@/lib/sitemap";
 
@@ -18,7 +19,7 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-navy-950/95 backdrop-blur-md border-b border-white/5 overflow-visible">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16 overflow-visible">
+      <div className="max-w-6xl mx-auto px-3 sm:px-4 flex items-center justify-between h-16 overflow-visible">
         {/* Mobile: menu left, logo center, call right. Desktop: logo left only (menu/call in nav or hidden) */}
         <div className="relative flex flex-1 lg:flex-initial justify-center lg:justify-start items-center min-w-0">
           <button
@@ -41,12 +42,12 @@ export default function Header() {
             aria-label="iSight Eye Care – Home"
           >
             <Image
-              src="/icon-logo.png"
+              src={getImageUrl("/icon-logo.png")}
               alt="iSight Eye Care"
               width={700}
               height={200}
               sizes="126px"
-              className="h-9 w-auto"
+              className="h-[2.925rem] w-auto"
               priority
             />
           </Link>

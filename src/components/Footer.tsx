@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Instagram, Youtube, Linkedin } from "lucide-react";
+import { getImageUrl } from "@/lib/imageUrl";
 import { NAV_LINKS, TREATMENT_LINKS } from "@/lib/sitemap";
 
 const PHONE = "918692986033";
@@ -23,7 +24,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           <div className="space-y-5">
             <Link href="/" className="inline-block hover:opacity-90 transition-opacity" aria-label="iSight Eye Care – Home">
-              <Image src="/icon-logo.png" alt="iSight Eye Care" width={700} height={200} sizes="140px" className="h-10 w-auto" />
+              <Image src={getImageUrl("/icon-logo.png")} alt="iSight Eye Care" width={700} height={200} sizes="140px" className="h-10 w-auto" />
             </Link>
             <p className="text-sm text-silver-200/85 max-w-xs leading-relaxed">
               Led by Dr. Nikhil Nasta. Expert eye care for a clearer tomorrow in Mumbai.

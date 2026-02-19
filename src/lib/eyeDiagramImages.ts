@@ -1,3 +1,5 @@
+import { getImageUrl } from "@/lib/imageUrl";
+
 /**
  * Optional images for the "Understand Your Eye" section.
  * Add paths here when you generate custom layers; leave empty string to use SVG only.
@@ -9,10 +11,8 @@
  *   - retina.webp
  *   - optic-nerve.webp
  */
-export const EYE_DIAGRAM_IMAGES = {
-  /** Full diagram background (same aspect as SVG viewBox ~100x100). Optional. */
+const EYE_DIAGRAM_PATHS = {
   base: "/eye-diagram/base.webp",
-  /** Per-part images shown in the info panel when that part is selected. Optional. */
   parts: {
     cornea: "/eye-diagram/cornea.webp",
     lens: "/eye-diagram/lens.webp",
@@ -22,9 +22,10 @@ export const EYE_DIAGRAM_IMAGES = {
 };
 
 export function getEyePartImage(partId: string): string {
-  return EYE_DIAGRAM_IMAGES.parts[partId] ?? "";
+  const path = EYE_DIAGRAM_PATHS.parts[partId];
+  return path ? getImageUrl(path) : "";
 }
 
 export function getEyeDiagramBase(): string {
-  return EYE_DIAGRAM_IMAGES.base;
+  return getImageUrl(EYE_DIAGRAM_PATHS.base);
 }

@@ -2,12 +2,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { TREATMENT_LINKS } from "@/lib/sitemap";
 import { getTreatmentImagePaths } from "@/lib/treatmentImages";
+import { getImageUrl } from "@/lib/imageUrl";
 import { TREATMENT_PAGES } from "@/content/treatments";
 import type { PageContent } from "@/types/content";
 import CountUpStat from "@/components/CountUpStat";
 import BookAppointmentCTA from "@/components/BookAppointmentCTA";
-
-const FALLBACK_IMAGE = "/hero.webp";
 
 /** Short category tags for treatment cards, aligned with homepage style */
 const SLUG_TO_TAG: Record<string, string> = {
@@ -42,7 +41,7 @@ function getExcerpt(slug: string): string {
 
 function getFirstImage(slug: string): string {
   const paths = getTreatmentImagePaths(slug);
-  return paths[0] ?? FALLBACK_IMAGE;
+  return getImageUrl(paths[0] ?? "/hero.webp");
 }
 
 type Props = {

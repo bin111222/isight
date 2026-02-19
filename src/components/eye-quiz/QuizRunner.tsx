@@ -149,8 +149,12 @@ export default function QuizRunner({ quiz, onBack }: Props) {
               <li key={choice.value}>
                 <button
                   type="button"
-                  onClick={() => handleChoice(currentQuestion.id, choice.value)}
-                  className="w-full text-left px-5 py-4 rounded-2xl border-2 border-white/15 bg-white/5 text-white font-medium hover:border-clinical-400/50 hover:bg-clinical-500/10 focus:border-clinical-400 focus:bg-clinical-500/15 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-clinical-400/30"
+                  onClick={(e) => {
+                    handleChoice(currentQuestion.id, choice.value);
+                    (e.currentTarget as HTMLElement).blur();
+                  }}
+                  onMouseLeave={(e) => (e.currentTarget as HTMLElement).blur()}
+                  className="w-full text-left px-5 py-4 rounded-2xl border-2 border-white/15 bg-white/5 text-white font-medium hover:border-clinical-400/50 hover:bg-clinical-500/10 focus:border-clinical-400 focus:bg-clinical-500/15 focus:outline-none focus:ring-2 focus:ring-clinical-400/30 transition-all duration-200"
                 >
                   {choice.label}
                 </button>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Sparkles, Droplets, Monitor, Eye } from "lucide-react";
 import { ALL_QUIZZES, getQuiz, type QuizId, type QuizDef } from "@/lib/eyeQuizzes";
 import QuizRunner from "./QuizRunner";
@@ -14,9 +14,21 @@ const ICONS: Record<QuizId, React.ReactNode> = {
 export default function EyeQuizHub() {
   const [activeQuizId, setActiveQuizId] = useState<QuizId | null>(null);
   const activeQuiz = activeQuizId ? getQuiz(activeQuizId) : null;
+  const sectionRef = useRef<HTMLElement>(null);
+
+  // When user selects a test, scroll so the quiz content is at the top
+  useEffect(() => {
+    if (activeQuizId && sectionRef.current) {
+      sectionRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, [activeQuizId]);
+
+  const handleSelectQuiz = (id: QuizId) => {
+    setActiveQuizId(id);
+  };
 
   return (
-    <section className="bg-navy-900 py-20 lg:py-28 relative overflow-hidden">
+    <section ref={sectionRef} className="bg-navy-900 py-20 lg:py-28 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-clinical-500/8 via-transparent to-transparent pointer-events-none" />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 relative">
         {!activeQuiz ? (
@@ -37,7 +49,7 @@ export default function EyeQuizHub() {
                 <button
                   key={quiz.id}
                   type="button"
-                  onClick={() => setActiveQuizId(quiz.id)}
+                  onClick={() => handleSelectQuiz(quiz.id)}
                   className="group text-left p-6 sm:p-7 rounded-3xl bg-white/5 border border-white/10 hover:border-clinical-400/40 hover:bg-clinical-500/10 transition-all duration-300 hover:shadow-[0_0_32px_rgba(92,139,201,0.15)]"
                 >
                   <span className="flex items-center justify-center w-14 h-14 rounded-2xl bg-clinical-500/20 text-clinical-300 group-hover:bg-clinical-500/30 group-hover:text-clinical-200 transition-colors">

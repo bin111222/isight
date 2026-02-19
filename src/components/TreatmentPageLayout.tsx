@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { PageContent } from "@/lib/content";
+import { getImageUrl } from "@/lib/imageUrl";
 import { TREATMENT_LINKS } from "@/lib/sitemap";
 import { FAQAccordion } from "@/components/ui/faq-accordion";
 import BookAppointmentCTA from "@/components/BookAppointmentCTA";
@@ -257,7 +258,7 @@ export default function TreatmentPageLayout({ slug, content, imagePaths = [] }: 
             <div className="absolute inset-0 bg-treatment-hero-glow opacity-30" aria-hidden />
             <div className="relative flex flex-col sm:flex-row gap-8 items-start">
               <div className="relative flex-shrink-0 w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden border border-white/20 shadow-lg">
-                <Image src="/hero.webp" alt="Dr. Nikhil Nasta" fill className="object-cover" sizes="112px" />
+                <Image src={getImageUrl("/hero.webp")} alt="Dr. Nikhil Nasta" fill className="object-cover" sizes="112px" />
               </div>
               <div className="min-w-0">
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-clinical-300">

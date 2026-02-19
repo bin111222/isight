@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { Phone, MessageCircle, ArrowRight } from "lucide-react";
+import { getImageUrl } from "@/lib/imageUrl";
 
 const PHONE = "918692986033";
 const PHONE_DISPLAY = "8692986033";
@@ -46,7 +47,7 @@ export default function BookAppointmentCTA({
         {/* Image side – doctor visible; gradient only where it meets content */}
         <div className="relative w-full lg:w-[48%] min-h-[200px] sm:min-h-[240px] lg:min-h-full order-2 lg:order-1">
           <Image
-            src="/hero.webp"
+            src={getImageUrl("/hero.webp")}
             alt=""
             fill
             className="object-cover object-[center_28%]"

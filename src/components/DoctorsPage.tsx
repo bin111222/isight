@@ -3,13 +3,16 @@ import Link from "next/link";
 import { GraduationCap, Award, Stethoscope } from "lucide-react";
 import { TREATMENT_LINKS } from "@/lib/sitemap";
 import BookAppointmentCTA from "@/components/BookAppointmentCTA";
+import ClinicBrickGallery from "@/components/ClinicBrickGallery";
+import { CLINIC_IMAGES, GALLERY_IMAGES } from "@/lib/galleryAssets";
+import { getImageUrl } from "@/lib/imageUrl";
 
 /** About page images with intrinsic dimensions – display at original aspect ratio */
 const ABOUT_IMAGES = {
-  hero: { src: "/hero.webp", width: 4165, height: 4133, alt: "Dr. Nikhil Nasta – Ophthalmologist, iSight Eye Care Mumbai" },
-  publications: { src: "/publications.jpg", width: 1179, height: 1163, alt: "iSight Eye Care – Publications and recognition" },
-  coffee: { src: "/coffee.png", width: 1104, height: 1110, alt: "Coffee consultation at iSight Eye Care" },
-  pet: { src: "/pet.jpg", width: 5712, height: 4284, alt: "Pet friendly eye clinic – iSight Eye Care Mumbai" },
+  hero: { src: getImageUrl("/hero.webp"), width: 4165, height: 4133, alt: "Dr. Nikhil Nasta – Ophthalmologist, iSight Eye Care Mumbai" },
+  publications: { src: getImageUrl("/publications.jpg"), width: 1179, height: 1163, alt: "iSight Eye Care – Publications and recognition" },
+  coffee: { src: getImageUrl("/coffee.png"), width: 1104, height: 1110, alt: "Coffee consultation at iSight Eye Care" },
+  pet: { src: getImageUrl("/pet.jpg"), width: 5712, height: 4284, alt: "Pet friendly eye clinic – iSight Eye Care Mumbai" },
 } as const;
 
 const QUALIFICATIONS = [
@@ -226,10 +229,56 @@ export default function DoctorsPage() {
         </div>
       </section>
 
-      {/* Staff & philosophy */}
+      {/* Gallery — Dr. Nikhil: OT, portrait, TEDx */}
       <section className="py-14 lg:py-18 bg-silver-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-clinical-500">05</span>
+          <h2 className="font-display text-2xl sm:text-3xl font-bold text-navy-900 mt-2">
+            Behind the scenes
+          </h2>
+          <p className="mt-4 text-navy-700 leading-relaxed text-base sm:text-lg max-w-2xl">
+            From the operating theatre to the stage—meet Dr. Nikhil Nasta in practice, in portrait, and at TEDx.
+          </p>
+          <div className="mt-10 grid sm:grid-cols-3 gap-6 lg:gap-8">
+            {GALLERY_IMAGES.map((img, i) => (
+              <div
+                key={img.src}
+                className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-[0_4px_24px_-4px_rgba(10,15,26,0.15)] ring-1 ring-black/5 hover:shadow-[0_12px_40px_-8px_rgba(10,15,26,0.2)] transition-shadow duration-300"
+              >
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, 33vw"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Clinic photos — brick wall gallery */}
+      <section className="relative py-14 lg:py-18 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-silver-100/50 to-white pointer-events-none" aria-hidden />
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-clinical-500">06</span>
+          <h2 className="font-display text-2xl sm:text-3xl font-bold text-navy-900 mt-2">
+            Our clinic & facilities
+          </h2>
+          <p className="mt-4 text-navy-700 leading-relaxed text-base sm:text-lg max-w-2xl">
+            iSight Eye Care centres in Khar and Dadar—modern equipment, comfortable spaces, and a team dedicated to your vision.
+          </p>
+          <div className="mt-10">
+            <ClinicBrickGallery images={CLINIC_IMAGES} />
+          </div>
+        </div>
+      </section>
+
+      {/* Staff & philosophy */}
+      <section className="py-14 lg:py-18 bg-silver-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-clinical-500">07</span>
           <h2 className="font-display text-2xl sm:text-3xl font-bold text-navy-900 mt-2">
             Continuous learning & care
           </h2>

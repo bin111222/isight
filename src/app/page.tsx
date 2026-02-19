@@ -1,4 +1,5 @@
 import { getTreatmentImagePaths } from "@/lib/treatmentImages";
+import { getImageUrl } from "@/lib/imageUrl";
 import { TREATMENT_SLUGS } from "@/lib/sitemap";
 import HomePageClient, { type HomePageImages } from "@/components/HomePageClient";
 
@@ -9,11 +10,9 @@ const SERVICE_SLUGS = [
   "dry-eye-treatment-mumbai",
 ] as const;
 
-const FALLBACK_IMAGE = "/hero.webp";
-
 function getFirstImage(slug: string): string {
   const paths = getTreatmentImagePaths(slug);
-  return paths[0] ?? FALLBACK_IMAGE;
+  return getImageUrl(paths[0] ?? "/hero.webp");
 }
 
 export default function HomePage() {
