@@ -55,16 +55,16 @@ export default function DoctorsPage() {
             priority
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-navy-900/30 to-navy-900/90" aria-hidden />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy-900/70 via-transparent to-transparent" aria-hidden />
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-navy-900/40 to-navy-900/95" aria-hidden />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/40 to-transparent" aria-hidden />
         <div className="relative max-w-6xl mx-auto w-full px-4 sm:px-6 pb-12 lg:pb-16 pt-24 lg:pt-28">
           <div className="flex flex-col md:flex-row md:items-end gap-8 md:gap-12">
             <div className="text-white max-w-xl md:ml-auto md:mr-0">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-clinical-400 mb-2">Our Doctor</p>
-              <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight drop-shadow-sm">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-clinical-400 mb-2 [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_6px_rgba(0,0,0,0.7)]">Our Doctor</p>
+              <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight [text-shadow:0_1px_2px_rgba(0,0,0,0.9),0_2px_8px_rgba(0,0,0,0.8),0_4px_16px_rgba(0,0,0,0.6)]">
                 Dr. Nikhil Nasta
               </h1>
-              <p className="mt-3 text-silver-200 text-lg sm:text-xl max-w-xl">
+              <p className="mt-3 text-silver-200 text-lg sm:text-xl max-w-xl [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_6px_rgba(0,0,0,0.7)]">
                 Award-winning ophthalmologist · Founder of iSight Eye Care · Over 15 years of experience
               </p>
             </div>

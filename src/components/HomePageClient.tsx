@@ -7,6 +7,7 @@ import CountUpStat from "@/components/CountUpStat";
 import UnderstandYourEye from "@/components/UnderstandYourEye";
 import GoogleReviewsSection from "@/components/GoogleReviewsSection";
 import EyeFollowCursor from "@/components/EyeFollowCursor";
+import HeroParticles from "@/components/HeroParticles";
 import { TREATMENT_LINKS } from "@/lib/sitemap";
 import { getImageUrl } from "@/lib/imageUrl";
 
@@ -52,6 +53,7 @@ export default function HomePageClient({ images }: Props) {
       <section className="relative min-h-[100vh] flex flex-col justify-center mesh-bg overflow-hidden">
         <div className="absolute inset-0 bg-hero-glow opacity-50 pointer-events-none" />
         <div className="absolute inset-0 hero-grain" aria-hidden />
+        <HeroParticles />
         <div className="absolute top-1/4 left-1/4 w-[420px] h-[420px] rounded-full bg-clinical-400/12 blur-[100px] animate-float pointer-events-none" />
         <div className="absolute bottom-1/4 right-1/5 w-[380px] h-[380px] rounded-full bg-clinical-500/10 blur-[90px] animate-float pointer-events-none" style={{ animationDelay: "2s" }} />
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 py-28 text-center">
