@@ -128,6 +128,9 @@ export default function NewsBrickGallery({
                 src={src}
                 alt={`${altPrefix} ${i + 1}`}
                 className="w-full h-auto block object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                decoding="async"
+                sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
               />
             </span>
           </button>
@@ -136,7 +139,7 @@ export default function NewsBrickGallery({
 
       {selected && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6"
+          className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6"
           role="dialog"
           aria-modal="true"
           aria-label="View article"
@@ -149,11 +152,12 @@ export default function NewsBrickGallery({
 
           <div
             ref={containerRef}
-            className="relative w-full max-w-5xl max-h-[90vh] rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10 bg-navy-900 flex flex-col"
+            className="relative w-full max-w-5xl max-h-[90vh] rounded-2xl overflow-y-auto overflow-x-hidden shadow-2xl ring-1 ring-white/10 bg-navy-900 flex flex-col"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Zoom controls */}
-            <div className="absolute top-3 left-1/2 -translate-x-1/2 z-10 flex items-center gap-1 p-1.5 rounded-xl bg-navy-950/80 border border-white/10 shadow-lg">
+            {/* Zoom controls — above image */}
+            <div className="sticky top-0 left-0 right-0 z-10 flex justify-center p-2 sm:p-3 bg-navy-900/95 backdrop-blur-sm border-b border-white/5 shrink-0">
+              <div className="flex items-center gap-1 p-1.5 rounded-xl bg-navy-950/80 border border-white/10 shadow-lg">
               <button
                 type="button"
                 onClick={zoomOut}
@@ -185,10 +189,11 @@ export default function NewsBrickGallery({
                 <RotateCcw className="w-4 h-4" strokeWidth={2.5} />
               </button>
             </div>
+            </div>
 
-            {/* Image area — pannable when zoomed */}
+            {/* Image area — pannable when zoomed; capped on mobile */}
             <div
-              className="flex-1 flex items-center justify-center min-h-[280px] overflow-hidden touch-none select-none cursor-grab active:cursor-grabbing"
+              className="flex-1 flex items-center justify-center min-h-[200px] sm:min-h-[280px] overflow-hidden touch-none select-none cursor-grab active:cursor-grabbing"
               onMouseDown={handleMouseDown}
               style={{ cursor: scale > 1 && isDragging ? "grabbing" : scale > 1 ? "grab" : "default" }}
             >
@@ -201,9 +206,10 @@ export default function NewsBrickGallery({
                 <img
                   src={selected}
                   alt={altPrefix}
-                  className="max-w-full max-h-[80vh] w-auto h-auto object-contain pointer-events-none"
+                  className="max-w-full max-h-[55vh] sm:max-h-[80vh] w-auto h-auto object-contain pointer-events-none"
                   draggable={false}
-                  style={{ maxHeight: "80vh" }}
+                  loading="eager"
+                  decoding="async"
                 />
               </div>
             </div>
@@ -212,7 +218,7 @@ export default function NewsBrickGallery({
           <button
             type="button"
             onClick={close}
-            className="absolute top-4 right-4 z-20 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+            className="absolute top-3 right-3 sm:top-4 sm:right-4 z-[60] p-2 rounded-full bg-navy-900/90 hover:bg-navy-800/90 text-white backdrop-blur-sm border border-white/10 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
             aria-label="Close"
           >
             <X className="w-5 h-5" strokeWidth={2.5} />

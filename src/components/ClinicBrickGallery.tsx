@@ -46,16 +46,19 @@ export default function ClinicBrickGallery({ images }: ClinicBrickGalleryProps) 
                 src={src}
                 alt={`iSight Eye Care clinic, view ${i + 1}`}
                 className="w-full h-auto block object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                decoding="async"
+                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
               />
             </span>
           </button>
         ))}
       </div>
 
-      {/* Modal */}
+      {/* Modal — scrollable on mobile to prevent overlap */}
       {selected && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6"
+          className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6"
           role="dialog"
           aria-modal="true"
           aria-label="View clinic image"
@@ -67,21 +70,21 @@ export default function ClinicBrickGallery({ images }: ClinicBrickGalleryProps) 
             aria-hidden
           />
 
-          {/* Content card — gradient frame */}
+          {/* Content card — scrollable on mobile */}
           <div
-            className="relative w-full max-w-5xl max-h-[90vh] flex flex-col sm:flex-row rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10"
+            className="relative w-full max-w-5xl max-h-[90vh] flex flex-col sm:flex-row rounded-2xl overflow-y-auto overflow-x-hidden shadow-2xl ring-1 ring-white/10"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Rich gradient base */}
-            <div className="absolute inset-0 bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 pointer-events-none" />
-            <div className="absolute inset-0 bg-gradient-to-tr from-clinical-500/25 via-transparent to-transparent pointer-events-none" />
-            <div className="absolute inset-0 bg-gradient-to-bl from-clinical-400/15 via-transparent to-transparent pointer-events-none" />
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[90%] h-[50%] bg-clinical-500/20 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-navy-700/30 rounded-full blur-2xl pointer-events-none" />
+            {/* Rich gradient base — behind content */}
+            <div className="absolute inset-0 bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 pointer-events-none z-0" />
+            <div className="absolute inset-0 bg-gradient-to-tr from-clinical-500/25 via-transparent to-transparent pointer-events-none z-0" />
+            <div className="absolute inset-0 bg-gradient-to-bl from-clinical-400/15 via-transparent to-transparent pointer-events-none z-0" />
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[90%] h-[50%] bg-clinical-500/20 rounded-full blur-3xl pointer-events-none z-0" />
+            <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-navy-700/30 rounded-full blur-2xl pointer-events-none z-0" />
 
-            {/* Image area — true aspect ratio container */}
-            <div className="relative flex-1 flex items-center justify-center min-h-[240px] sm:min-w-[280px] p-4 sm:p-6">
-              <div className="relative w-full max-w-2xl aspect-[4/3] rounded-xl overflow-hidden bg-navy-950/50 shadow-inner">
+            {/* Image area — capped height on mobile to avoid overlap */}
+            <div className="relative flex-shrink-0 flex-1 flex items-center justify-center min-h-[200px] min-w-0 sm:min-w-[280px] p-3 sm:p-6 z-10">
+              <div className="relative w-full max-w-2xl aspect-[4/3] max-h-[50vh] sm:max-h-none rounded-xl overflow-hidden bg-navy-950/50 shadow-inner">
                 <Image
                   src={selected}
                   alt="iSight Eye Care clinic"
@@ -93,8 +96,8 @@ export default function ClinicBrickGallery({ images }: ClinicBrickGalleryProps) 
             </div>
 
             {/* Side panel — iSight branding + CTA */}
-            <div className="relative flex flex-col justify-between w-full sm:w-80 lg:w-96 p-6 sm:p-8 bg-gradient-to-b from-navy-900/98 via-navy-950/95 to-navy-950 border-t sm:border-t-0 sm:border-l border-white/10">
-              <div className="absolute inset-0 bg-gradient-to-b from-clinical-500/5 to-transparent pointer-events-none rounded-r-2xl" />
+            <div className="relative flex flex-col justify-between w-full sm:w-80 lg:w-96 flex-shrink-0 p-4 sm:p-8 bg-gradient-to-b from-navy-900/98 via-navy-950/95 to-navy-950 border-t sm:border-t-0 sm:border-l border-white/10 z-10">
+              <div className="absolute inset-0 bg-gradient-to-b from-clinical-500/5 to-transparent pointer-events-none rounded-b-2xl sm:rounded-r-2xl sm:rounded-b-none z-0" />
               <div className="relative">
                 <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-clinical-400">
                   Our spaces
@@ -141,11 +144,11 @@ export default function ClinicBrickGallery({ images }: ClinicBrickGalleryProps) 
             </div>
           </div>
 
-          {/* Close button */}
+          {/* Close button — above card on mobile */}
           <button
             type="button"
             onClick={close}
-            className="absolute top-4 right-4 z-10 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+            className="absolute top-3 right-3 sm:top-4 sm:right-4 z-[60] p-2 rounded-full bg-navy-900/90 hover:bg-navy-800/90 text-white backdrop-blur-sm border border-white/10 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
             aria-label="Close"
           >
             <X className="w-5 h-5" strokeWidth={2.5} />
