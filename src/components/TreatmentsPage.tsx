@@ -77,8 +77,9 @@ export default function TreatmentsPage({ content }: Props) {
       </section>
 
       {/* Trust strip — same as homepage */}
-      <section className="relative bg-navy-800/90 backdrop-blur-md border-b border-white/5 py-14 -mt-px">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+      <section className="relative bg-navy-800/90 backdrop-blur-md border-b border-white/5 py-16 lg:py-20 -mt-px">
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" aria-hidden />
+        <div className="relative max-w-5xl mx-auto px-4 sm:px-6">
           <CountUpStat />
         </div>
       </section>

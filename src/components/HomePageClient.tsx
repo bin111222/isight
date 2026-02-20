@@ -49,8 +49,8 @@ export default function HomePageClient({ images }: Props) {
 
   return (
     <>
-      {/* Hero */}
-      <section className="relative min-h-[100vh] flex flex-col justify-center mesh-bg overflow-hidden">
+      {/* Hero — extends to top of viewport; dark bg so no white shows on overscroll */}
+      <section className="relative -mt-16 min-h-[100vh] flex flex-col justify-center mesh-bg overflow-hidden overscroll-none pt-16 bg-[var(--navy-950)]">
         <div className="absolute inset-0 bg-hero-glow opacity-50 pointer-events-none" />
         <div className="absolute inset-0 hero-grain" aria-hidden />
         <HeroParticles />
@@ -94,8 +94,9 @@ export default function HomePageClient({ images }: Props) {
       </section>
 
       {/* Trust strip with count-up */}
-      <section className="relative bg-navy-800/90 backdrop-blur-md border-b border-white/5 py-14 -mt-px">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+      <section className="relative bg-navy-800/90 backdrop-blur-md border-b border-white/5 py-16 lg:py-20 -mt-px">
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" aria-hidden />
+        <div className="relative max-w-5xl mx-auto px-4 sm:px-6">
           <CountUpStat />
         </div>
       </section>
@@ -114,7 +115,7 @@ export default function HomePageClient({ images }: Props) {
                 sizes="(max-width: 1024px) 100vw, 320px"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-white/90 via-white/40 to-transparent lg:from-transparent lg:via-transparent lg:to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-white/25 via-white/15 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-transparent lg:to-transparent" />
             </div>
             <div className="relative flex-1 p-8 sm:p-10 lg:p-12 flex flex-col justify-center">
               <h2 className="font-display text-2xl sm:text-3xl font-bold text-navy-900">Our Mission</h2>
@@ -139,31 +140,31 @@ export default function HomePageClient({ images }: Props) {
       <UnderstandYourEye />
 
       {/* Eye Health Self-Assessments */}
-      <section className="relative py-16 lg:py-20 overflow-hidden bg-navy-800/80 border-y border-white/5">
-        {/* Ambient glow behind card — vivid teal */}
+      <section className="relative py-16 lg:py-20 overflow-hidden bg-navy-800/90 border-y border-white/5">
+        {/* Ambient glow behind card — clinical blue */}
         <div className="absolute inset-0 flex justify-center items-center pointer-events-none" aria-hidden>
-          <div className="w-full max-w-3xl h-64 bg-[#14b8a6]/20 blur-[80px] rounded-full -translate-y-1/2" />
+          <div className="w-full max-w-3xl h-64 bg-clinical-400/20 blur-[80px] rounded-full -translate-y-1/2" />
         </div>
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6">
           <Link
             href="/eye-quiz"
-            className="group group/card flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-8 rounded-3xl overflow-hidden border border-[#2dd4bf]/35 bg-gradient-to-br from-white/[0.06] via-[#14b8a6]/15 to-[#0d9488]/10 backdrop-blur-sm p-6 sm:p-8 lg:p-10 shadow-[0_0_0_1px_rgba(255,255,255,0.05)_inset,0_4px_24px_-4px_rgba(0,0,0,0.2),0_0_48px_-12px_rgba(20,184,166,0.25)] hover:shadow-[0_0_0_1px_rgba(255,255,255,0.08)_inset,0_8px_32px_-8px_rgba(0,0,0,0.25),0_0_64px_-16px_rgba(20,184,166,0.35)] hover:border-[#2dd4bf]/50 transition-all duration-400 ease-out hover:-translate-y-0.5"
+            className="group group/card flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-8 rounded-3xl overflow-hidden border border-clinical-400/35 bg-gradient-to-br from-white/[0.06] via-clinical-500/15 to-navy-800/80 backdrop-blur-sm p-6 sm:p-8 lg:p-10 shadow-[0_0_0_1px_rgba(255,255,255,0.05)_inset,0_4px_24px_-4px_rgba(0,0,0,0.2),0_0_48px_-12px_rgba(45,90,158,0.25)] hover:shadow-[0_0_0_1px_rgba(255,255,255,0.08)_inset,0_8px_32px_-8px_rgba(0,0,0,0.25),0_0_64px_-16px_rgba(92,139,201,0.35)] hover:border-clinical-400/50 transition-all duration-400 ease-out hover:-translate-y-0.5"
           >
-            {/* Left accent bar — teal gradient */}
-            <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#2dd4bf] via-[#14b8a6] to-[#0d9488] rounded-l-3xl" />
+            {/* Left accent bar — clinical gradient */}
+            <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-clinical-300 via-clinical-400 to-clinical-500 rounded-l-3xl" />
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 flex-1 min-w-0 pl-4 sm:pl-5">
               {/* Icon */}
-              <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-[#14b8a6]/25 border border-[#2dd4bf]/40 flex items-center justify-center text-[#5eead4] group-hover/card:bg-[#14b8a6]/35 group-hover/card:border-[#2dd4bf]/50 transition-colors duration-300">
+              <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-clinical-500/25 border border-clinical-400/40 flex items-center justify-center text-clinical-300 group-hover/card:bg-clinical-500/35 group-hover/card:border-clinical-400/50 transition-colors duration-300">
                 <ClipboardList className="w-7 h-7" strokeWidth={1.75} aria-hidden />
               </div>
               <div className="min-w-0">
-                <p className="font-display text-xs sm:text-sm font-semibold uppercase tracking-[0.22em] text-[#5eead4]">Screening tools</p>
-                <h2 className="font-display text-2xl sm:text-3xl lg:text-[1.75rem] font-bold text-white mt-2 bg-gradient-to-r from-white to-white/90 bg-clip-text text-transparent">Eye Health Self-Assessments</h2>
+                <p className="font-display text-xs sm:text-sm font-semibold uppercase tracking-[0.22em] text-clinical-300">Screening tools</p>
+                <h2 className="font-display text-2xl sm:text-3xl lg:text-[1.75rem] font-bold text-white mt-2 bg-gradient-to-r from-white to-white/90 bg-clip-text text-transparent">Let's do an Eye Test</h2>
                 <p className="mt-3 text-white/80 text-base sm:text-[0.9375rem] max-w-md leading-relaxed">Dry eye, digital strain & vision wellness. Symptom questions, optional Amsler grid, and a printable report with next steps.</p>
               </div>
             </div>
-            <span className="shrink-0 inline-flex items-center gap-2.5 px-6 py-4 rounded-2xl bg-[#14b8a6] text-white font-semibold shadow-[0_0_28px_-6px_rgba(13,148,136,0.55)] group-hover/card:bg-[#2dd4bf] group-hover/card:shadow-[0_0_36px_-8px_rgba(45,212,191,0.5)] group-hover/card:scale-[1.02] transition-all duration-300 ease-out">
-              Start an assessment
+            <span className="shrink-0 inline-flex items-center gap-2.5 px-6 py-4 rounded-2xl bg-clinical-500 text-white font-semibold shadow-[0_0_28px_-6px_rgba(45,90,158,0.55)] group-hover/card:bg-clinical-400 group-hover/card:shadow-[0_0_36px_-8px_rgba(92,139,201,0.5)] group-hover/card:scale-[1.02] transition-all duration-300 ease-out">
+              Start a test
               <ArrowRight className="w-5 h-5 group-hover/card:translate-x-0.5 transition-transform duration-300" aria-hidden />
             </span>
           </Link>

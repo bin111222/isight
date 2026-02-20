@@ -12,10 +12,12 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: var(--navy-950);
 }
 
 body {
-  @apply bg-silver-100 text-navy-900 antialiased font-sans;
+  @apply text-navy-900 antialiased font-sans;
+  background-color: var(--navy-950);
 }
 
 /* Custom cursor: hide default on desktop (keep for touch) */

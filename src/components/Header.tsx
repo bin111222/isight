@@ -87,8 +87,8 @@ export default function Header() {
   const [mobileTreatmentsOpen, setMobileTreatmentsOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-navy-950/95 backdrop-blur-md border-b border-white/5 overflow-visible">
-      <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between lg:grid lg:grid-cols-[1fr_auto_1fr] lg:gap-x-10 lg:gap-y-0 h-16 overflow-visible">
+    <header className="fixed top-3 left-3 right-3 sm:top-4 sm:left-6 sm:right-6 z-50 max-w-[1600px] mx-auto rounded-2xl bg-navy-950/50 backdrop-blur-xl border border-white/10 shadow-xl shadow-black/20 overflow-visible">
+      <div className="w-full px-4 sm:px-6 lg:px-8 flex items-center justify-between lg:grid lg:grid-cols-[1fr_auto_1fr] lg:gap-x-10 lg:gap-y-0 h-16 overflow-visible">
         {/* Left: mobile hamburger | desktop left nav */}
         <div className="flex flex-1 lg:flex-initial items-center justify-start lg:justify-end min-w-0">
           <button
@@ -167,7 +167,7 @@ export default function Header() {
       </div>
 
       {open && (
-        <div className="lg:hidden border-t border-white/10 bg-navy-900 py-4 px-4">
+        <div className="lg:hidden rounded-b-2xl border-t border-white/10 bg-navy-950/70 backdrop-blur-md py-4 px-4">
           <nav className="flex flex-col gap-2">
             {NAV_LINKS.map(({ href, label }) => {
               if (href === TREATMENTS_HREF) {

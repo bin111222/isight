@@ -5,7 +5,7 @@ export const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/treatments", label: "Treatments" },
   { href: "/international-patients", label: "International Patients" },
-  { href: "/eye-quiz", label: "Eye Quiz" },
+  { href: "/eye-quiz", label: "Eye Test" },
   { href: "/isight-eye-care-doctors", label: "Our Doctor" },
   { href: "/blog", label: "Blog" },
   { href: "/consult", label: "Consult" },

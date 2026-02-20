@@ -6,12 +6,17 @@ const PARTICLE_COUNT = 42;
 const CURSOR_RADIUS = 220;
 const CURSOR_STRENGTH = 0.9;
 const DAMPING = 0.91;
-const CENTER_ATTRACT = 0.0018;
+const CENTER_ATTRACT = 0.0008;
 const MIN_RADIUS = 64;
 const MAX_RADIUS = 160;
 const CONNECT_THRESHOLD = 280;
-const LINE_OPACITY = 0.07;
+const LINE_OPACITY = 0.17;
 const DRIFT = 0.015;
+
+// Theme blues: clinical-500 #2d5a9e, clinical-400 #5c8bc9, soft blue for highlights
+const BLUE_DEEP = { r: 45, g: 90, b: 158 };
+const BLUE_MID = { r: 92, g: 139, b: 201 };
+const BLUE_SOFT = { r: 160, g: 195, b: 245 };
 
 type Particle = {
   x: number;
@@ -20,7 +25,7 @@ type Particle = {
   vy: number;
   r: number;
   opacity: number;
-  hue: number; // 0 = blue, 1 = white
+  hue: number; // 0 = deep blue, 1 = soft blue (theme range only)
 };
 
 function lerp(a: number, b: number, t: number) {
@@ -46,8 +51,8 @@ export default function HeroParticles() {
         vx: (Math.random() - 0.5) * 0.8,
         vy: (Math.random() - 0.5) * 0.8,
         r: lerp(MIN_RADIUS, MAX_RADIUS, Math.random() ** 1.2),
-        opacity: lerp(0.06, 0.18, Math.random()),
-        hue: Math.random() * 0.4,
+        opacity: lerp(0.08, 0.22, Math.random()),
+        hue: Math.random(),
       });
     }
     return particles;
@@ -121,7 +126,7 @@ export default function HeroParticles() {
           const d = dist(p1.x, p1.y, p2.x, p2.y);
           if (d < CONNECT_THRESHOLD) {
             const alpha = (1 - d / CONNECT_THRESHOLD) * LINE_OPACITY;
-            ctx.strokeStyle = `rgba(92, 139, 201, ${alpha})`;
+            ctx.strokeStyle = `rgba(45, 90, 158, ${alpha})`;
             ctx.beginPath();
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
@@ -168,21 +173,22 @@ export default function HeroParticles() {
         if (p.y > ch + margin) p.y = -margin;
       }
 
-      // Draw particles on top of lines (big soft glows)
+      // Draw particles on top of lines (big soft glows) — theme blue range only
       for (const p of particles) {
         const r = p.r;
-        const blue = Math.round(lerp(92, 255, p.hue));
-        const green = Math.round(lerp(139, 255, p.hue));
-        const red = Math.round(lerp(201, 255, p.hue));
+        const t = p.hue;
+        const red = Math.round(lerp(BLUE_DEEP.r, BLUE_SOFT.r, t));
+        const green = Math.round(lerp(BLUE_DEEP.g, BLUE_SOFT.g, t));
+        const blue = Math.round(lerp(BLUE_DEEP.b, BLUE_SOFT.b, t));
 
         const gradient = ctx.createRadialGradient(
           p.x, p.y, 0,
           p.x, p.y, r
         );
         gradient.addColorStop(0, `rgba(${red}, ${green}, ${blue}, ${p.opacity * 0.9})`);
-        gradient.addColorStop(0.4, `rgba(${red}, ${green}, ${blue}, ${p.opacity * 0.4})`);
-        gradient.addColorStop(0.7, `rgba(${red}, ${green}, ${blue}, ${p.opacity * 0.12})`);
-        gradient.addColorStop(1, "rgba(92, 139, 201, 0)");
+        gradient.addColorStop(0.4, `rgba(${red}, ${green}, ${blue}, ${p.opacity * 0.45})`);
+        gradient.addColorStop(0.7, `rgba(${red}, ${green}, ${blue}, ${p.opacity * 0.14})`);
+        gradient.addColorStop(1, "rgba(45, 90, 158, 0)");
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, r, 0, Math.PI * 2);
