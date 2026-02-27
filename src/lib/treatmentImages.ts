@@ -25,25 +25,32 @@ const SLUG_TO_FOLDER: Record<string, string> = {
 const IMAGE_EXT = new Set([".jpg", ".jpeg", ".png", ".webp", ".avif", ".gif"]);
 
 /**
- * Returns public URLs for all images in this treatment's folder.
- * Used in server components only (reads filesystem at build/request time).
+ * Default first image filename when folder can't be read (e.g. public not deployed).
+ * Production uses ImageKit; this path is requested from CDN so no filesystem needed.
+ */
+const DEFAULT_FIRST_IMAGE = "1.webp";
+
+/**
+ * Returns paths for images in this treatment's folder.
+ * Reads filesystem when public/ exists (local/build with assets). When public/ is
+ * missing (e.g. production deploy with public gitignored), returns a default path
+ * so ImageKit URLs are still built correctly instead of falling back to hero.
  */
 export function getTreatmentImagePaths(slug: string): string[] {
   const folderName = SLUG_TO_FOLDER[slug];
   if (!folderName) return [];
 
   const dir = join(TREATMENT_IMAGES_BASE, folderName);
-  let files: string[];
   try {
-    files = readdirSync(dir);
+    const files = readdirSync(dir);
+    const images = files
+      .filter((f) => IMAGE_EXT.has(f.slice(f.lastIndexOf(".")).toLowerCase()))
+      .sort()
+      .map((f) => `/Treatment Images/${folderName}/${f}`);
+    if (images.length > 0) return images;
   } catch {
-    return [];
+    /* public/ not present (e.g. production); use default path for ImageKit */
   }
 
-  const images = files
-    .filter((f) => IMAGE_EXT.has(f.slice(f.lastIndexOf(".")).toLowerCase()))
-    .sort()
-    .map((f) => `/Treatment Images/${folderName}/${f}`);
-
-  return images;
+  return [`/Treatment Images/${folderName}/${DEFAULT_FIRST_IMAGE}`];
 }
