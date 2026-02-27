@@ -40,11 +40,10 @@ export function getTreatmentImagePaths(slug: string): string[] {
     return [];
   }
 
-  const base = encodeURIComponent("Treatment Images");
   const images = files
     .filter((f) => IMAGE_EXT.has(f.slice(f.lastIndexOf(".")).toLowerCase()))
     .sort()
-    .map((f) => `/${base}/${encodeURIComponent(folderName)}/${encodeURIComponent(f)}`);
+    .map((f) => `/Treatment Images/${folderName}/${f}`);
 
   return images;
 }
