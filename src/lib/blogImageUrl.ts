@@ -8,8 +8,9 @@ const BASE =
 
 /**
  * Returns the full image URL for a blog post. Pass the slug only (e.g. "cataract-surgery-cost-mumbai").
+ * Returns "" when slug is missing or undefined.
  */
-export function getBlogImageUrl(slug: string): string {
+export function getBlogImageUrl(slug: string | undefined): string {
   if (!slug) return "";
   const clean = slug.replace(/\.(webp|png|jpg|jpeg)$/i, "");
   const base = BASE.replace(/\/$/, "");
