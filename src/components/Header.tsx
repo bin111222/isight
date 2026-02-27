@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useState } from "react";
 import { getImageUrl } from "@/lib/imageUrl";
 import { Phone } from "lucide-react";
@@ -125,14 +124,15 @@ export default function Header() {
             className="flex items-center transition-transform hover:scale-[1.02] shrink-0"
             aria-label="iSight Eye Care – Home"
           >
-            <Image
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src={getImageUrl("/icon-logo.webp")}
               alt="iSight Eye Care"
               width={700}
               height={200}
-              sizes="126px"
               className="h-[2.925rem] w-auto"
-              priority
+              loading="eager"
+              decoding="async"
             />
           </Link>
         </div>
