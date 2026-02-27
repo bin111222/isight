@@ -48,7 +48,7 @@ export default function BookAppointmentCTA({
         <div className="relative w-full lg:w-[48%] min-h-[200px] sm:min-h-[240px] lg:min-h-full order-2 lg:order-1">
           <Image
             src={getImageUrl("/hero.webp")}
-            alt=""
+            alt="Dr. Nikhil Nasta – Ophthalmologist, iSight Eye Care Mumbai"
             fill
             className="object-cover object-[center_28%]"
             sizes={isFullBleed ? "50vw" : "(max-width: 1024px) 100vw, 550px"}

@@ -74,7 +74,7 @@ export default function ConsultPage() {
       <section className="relative min-h-[50vh] flex flex-col justify-center py-24 lg:py-32 overflow-hidden">
         <Image
           src={getImageUrl("/hero.webp")}
-          alt=""
+          alt="Dr. Nikhil Nasta – iSight Eye Care Mumbai consultation"
           fill
           className="object-cover object-[center_28%]"
           sizes="100vw"

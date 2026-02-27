@@ -200,7 +200,7 @@ export default function HomePageClient({ images }: Props) {
                   <ImageWithFallback
                     src={getServiceImage(item.href)}
                     fallbackSrc={FALLBACK_IMAGE}
-                    alt=""
+                    alt={item.title}
                     fill
                     className="object-cover transition-transform duration-500 ease-out group-hover:scale-110"
                     sizes="(max-width: 640px) 100vw, 50vw"
@@ -273,7 +273,7 @@ export default function HomePageClient({ images }: Props) {
             <div className="group relative overflow-hidden rounded-3xl min-h-[320px] flex flex-col justify-end p-8 sm:p-10 text-white shadow-soft-lg hover:shadow-card-hover transition-all duration-300">
               <Image
                 src={images.spotlightCataractImage}
-                alt=""
+                alt="Cataract surgery at iSight Eye Care Mumbai – no patch, no stitch"
                 fill
                 className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -295,7 +295,7 @@ export default function HomePageClient({ images }: Props) {
             <div className="group relative overflow-hidden rounded-3xl min-h-[320px] flex flex-col justify-end p-8 sm:p-10 text-white shadow-soft-lg hover:shadow-card-hover transition-all duration-300">
               <Image
                 src={images.spotlightLasikImage}
-                alt=""
+                alt="Contoura LASIK eye surgery at iSight Eye Care Mumbai"
                 fill
                 className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -345,6 +345,7 @@ export default function HomePageClient({ images }: Props) {
                       <TreatmentCardImage
                         src={getServiceImage(href)}
                         fallbackSrc={FALLBACK_IMAGE}
+                        alt={displayLabel}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-navy-900/90 via-navy-900/30 to-transparent" />
                       <div className="absolute bottom-0 left-0 right-0 p-4 pt-10">

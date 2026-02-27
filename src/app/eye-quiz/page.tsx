@@ -1,11 +1,32 @@
 import type { Metadata } from "next";
+import { SITE_URL } from "@/lib/sitemap";
 import EyeQuizHub from "@/components/eye-quiz/EyeQuizHub";
 import BookAppointmentCTA from "@/components/BookAppointmentCTA";
 
+const canonical = `${SITE_URL}/eye-quiz`;
+const title = "Eye Health Self-Assessments | Dry Eye, Digital Strain & Vision Screening | iSight Mumbai";
+const description =
+  "Screening tools for dry eye, digital eye strain, and vision wellness. Symptom questions, Amsler grid check, and a printable report with next steps. iSight Eye Care.";
+
 export const metadata: Metadata = {
-  title: "Eye Health Self-Assessments | Dry Eye, Digital Strain & Vision Screening | iSight Mumbai",
-  description:
-    "Screening tools for dry eye, digital eye strain, and vision wellness. Symptom questions, Amsler grid check, and a printable report with next steps. iSight Eye Care.",
+  title,
+  description,
+  alternates: { canonical },
+  openGraph: {
+    title,
+    description,
+    url: canonical,
+    siteName: "iSight Eye Care",
+    locale: "en_IN",
+    type: "website",
+    images: [{ url: "/og-image.webp", width: 1200, height: 630, alt: "iSight Eye Care Eye Health Self-Assessments" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: ["/og-image.webp"],
+  },
 };
 
 export default function EyeQuizPage() {

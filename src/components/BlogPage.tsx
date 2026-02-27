@@ -25,7 +25,7 @@ function PostThumbnail({ post }: { post: BlogPost }) {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={getBlogImageUrl(post.image)}
-          alt=""
+          alt={post.title}
           className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
           loading="lazy"
           decoding="async"

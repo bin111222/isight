@@ -21,13 +21,26 @@ export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const post = getPostBySlug(slug);
   if (!post) return { title: "Blog | iSight Eye Care Mumbai" };
+  const canonical = `${SITE_URL}/post/${slug}`;
+  const ogImage = post.image ? getBlogImageUrl(post.image) : `${SITE_URL}/og-image.webp`;
   return {
     title: post.title,
     description: post.description ?? undefined,
+    alternates: { canonical },
     openGraph: {
       title: post.title,
       description: post.description ?? undefined,
-      images: post.image ? [getBlogImageUrl(post.image)] : undefined,
+      url: canonical,
+      siteName: "iSight Eye Care",
+      locale: "en_IN",
+      type: "article",
+      images: [{ url: ogImage, width: 1200, height: 630, alt: post.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.description ?? undefined,
+      images: [ogImage],
     },
   };
 }
@@ -56,7 +69,7 @@ export default async function PostPage({ params }: Props) {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={getBlogImageUrl(post.image)}
-                alt=""
+                alt={post.title}
                 className="h-auto w-full object-contain"
                 loading="lazy"
                 decoding="async"
@@ -158,7 +171,7 @@ export default async function PostPage({ params }: Props) {
               author: { "@type": "Person", name: "Dr. Nikhil Nasta" },
               publisher: { "@type": "Organization", name: "iSight Eye Care", url: SITE_URL },
               mainEntityOfPage: { "@id": canonical },
-              image: getBlogImageUrl(post.image),
+              image: post.image ? getBlogImageUrl(post.image) : `${SITE_URL}/og-image.webp`,
             }),
           }}
         />

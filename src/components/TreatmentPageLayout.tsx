@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import type { PageContent } from "@/lib/content";
 import { getImageUrl } from "@/lib/imageUrl";
-import { TREATMENT_LINKS } from "@/lib/sitemap";
+import { TREATMENT_LINKS, SITE_URL } from "@/lib/sitemap";
 import { FAQAccordion } from "@/components/ui/faq-accordion";
 import BookAppointmentCTA from "@/components/BookAppointmentCTA";
 import TreatmentCardImage from "@/components/TreatmentCardImage";
@@ -99,11 +99,11 @@ function SectionContent({
 }
 
 /** Rich image block: native img + fallback so same-origin treatment images load without Next/Image. */
-function ImageBlock({ srcs, variant }: { srcs: string[]; variant: "first" | "even" | "odd" }) {
+function ImageBlock({ srcs, variant, alt }: { srcs: string[]; variant: "first" | "even" | "odd"; alt?: string }) {
   if (srcs.length === 0) return null;
   const Img = (p: { src: string }) => (
     <div className="absolute inset-0">
-      <TreatmentCardImage src={p.src} fallbackSrc={HERO_FALLBACK} />
+      <TreatmentCardImage src={p.src} fallbackSrc={HERO_FALLBACK} alt={alt ?? ""} />
     </div>
   );
   if (variant === "first" && srcs.length === 1) {
@@ -166,7 +166,35 @@ export default function TreatmentPageLayout({ slug, content, imagePaths = [] }: 
   const relatedTreatments = TREATMENT_LINKS.filter((l) => l.href !== `/${slug}`).slice(0, 8);
   const imagesBySlot = distributeImages(imagePaths, content.sections.length);
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+      { "@type": "ListItem", position: 2, name: "Treatments", item: `${SITE_URL}/treatments` },
+      { "@type": "ListItem", position: 3, name: breadcrumbLabel, item: `${SITE_URL}/${slug}` },
+    ],
+  };
+
+  const faqJsonLd =
+    content.faqs && content.faqs.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: content.faqs.map((faq) => ({
+            "@type": "Question",
+            name: faq.q,
+            acceptedAnswer: { "@type": "Answer", text: faq.a },
+          })),
+        }
+      : null;
+
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      {faqJsonLd && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      )}
     <article className="min-h-screen bg-white">
       {/* Hero */}
       <header className="relative overflow-hidden bg-navy-900 pt-8 pb-16 sm:pt-10 sm:pb-20 lg:pt-12 lg:pb-24">
@@ -251,6 +279,7 @@ export default function TreatmentPageLayout({ slug, content, imagePaths = [] }: 
                       <ImageBlock
                         srcs={images}
                         variant={isLead ? "first" : i % 2 === 0 ? "even" : "odd"}
+                        alt={content.title}
                       />
                     </div>
                   )}
@@ -350,5 +379,6 @@ export default function TreatmentPageLayout({ slug, content, imagePaths = [] }: 
         </div>
       </div>
     </article>
+    </>
   );
 }

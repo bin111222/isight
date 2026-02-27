@@ -1,11 +1,60 @@
 import Image from "next/image";
 import Link from "next/link";
 import { GraduationCap, Award, Stethoscope } from "lucide-react";
-import { TREATMENT_LINKS } from "@/lib/sitemap";
+import { TREATMENT_LINKS, SITE_URL } from "@/lib/sitemap";
 import BookAppointmentCTA from "@/components/BookAppointmentCTA";
 import ClinicBrickGallery from "@/components/ClinicBrickGallery";
 import { CLINIC_IMAGES, GALLERY_IMAGES } from "@/lib/galleryAssets";
 import { getImageUrl } from "@/lib/imageUrl";
+
+const physicianJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Physician",
+  name: "Dr. Nikhil Nasta",
+  description:
+    "Award-winning ophthalmologist with over 15 years of experience in cataract surgery, LASIK, retinal surgery, dry eye management, and ocular aesthetics. Founder of iSight Eye Care, Mumbai.",
+  url: `${SITE_URL}/isight-eye-care-doctors`,
+  image: `${SITE_URL}/hero.webp`,
+  telephone: "+918692986033",
+  medicalSpecialty: "Ophthalmology",
+  hasCredential: [
+    {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "degree",
+      name: "MBBS",
+      educationalLevel: "undergraduate",
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "degree",
+      name: "MS Ophthalmology",
+      recognizedBy: { "@type": "Organization", name: "J.N. Medical College, Belgaum" },
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "degree",
+      name: "DNB Ophthalmology",
+      recognizedBy: { "@type": "Organization", name: "National Board of Examinations, India" },
+    },
+  ],
+  award: [
+    "Ophthall Hall of Vision Recognition Award",
+    "Pfizer Gold Medallion and Plaque",
+  ],
+  worksFor: {
+    "@type": "MedicalClinic",
+    name: "iSight Eye Care & Surgery",
+    url: SITE_URL,
+  },
+  alumniOf: [
+    { "@type": "EducationalOrganization", name: "Padmashree Dr. D.Y. Patil Medical College" },
+    { "@type": "EducationalOrganization", name: "J.N. Medical College, Belgaum" },
+  ],
+  knowsAbout: [
+    "Cataract Surgery", "LASIK", "Contoura Vision", "Retinal Surgery",
+    "Glaucoma Treatment", "Dry Eye", "Pediatric Ophthalmology", "Ocular Aesthetics",
+  ],
+};
 
 /** About page images with intrinsic dimensions – display at original aspect ratio */
 const ABOUT_IMAGES = {
@@ -42,6 +91,11 @@ const EXPERTISE = [
 
 export default function DoctorsPage() {
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(physicianJsonLd) }}
+      />
     <div className="min-h-screen bg-silver-100">
       {/* Hero — full-bleed image */}
       <section className="relative min-h-[70vh] flex flex-col justify-end overflow-hidden">
@@ -318,5 +372,6 @@ export default function DoctorsPage() {
         for personalised advice.
       </p>
     </div>
+    </>
   );
 }

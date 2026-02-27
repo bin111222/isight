@@ -134,6 +134,7 @@ export default function TreatmentsPage({ content }: Props) {
                     <TreatmentCardImage
                       src={imageSrc}
                       fallbackSrc={getImageUrl("/hero.webp")}
+                      alt={label.replace(" Mumbai", "")}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-navy-900/95 via-navy-900/40 to-transparent" />
                     <span className="absolute top-4 left-4 px-2.5 py-1 rounded-md bg-white/15 backdrop-blur-sm text-white text-[11px] font-semibold uppercase tracking-wider">

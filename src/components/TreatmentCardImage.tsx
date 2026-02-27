@@ -10,16 +10,18 @@ import { useState } from "react";
 export default function TreatmentCardImage({
   src,
   fallbackSrc,
+  alt = "",
 }: {
   src: string;
   fallbackSrc: string;
+  alt?: string;
 }) {
   const [currentSrc, setCurrentSrc] = useState(src);
   return (
     /* eslint-disable-next-line @next/next/no-img-element */
     <img
       src={currentSrc}
-      alt=""
+      alt={alt}
       className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
       loading="lazy"
       decoding="async"

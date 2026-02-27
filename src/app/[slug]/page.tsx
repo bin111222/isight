@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { ALL_PAGE_SLUGS, TREATMENT_SLUGS } from "@/lib/sitemap";
+import { ALL_PAGE_SLUGS, TREATMENT_SLUGS, SITE_URL } from "@/lib/sitemap";
 import { getPageContent } from "@/lib/content";
 import { getTreatmentImagePaths } from "@/lib/treatmentImages";
 import { getImageUrl } from "@/lib/imageUrl";
@@ -21,9 +21,33 @@ export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const content = getPageContent(slug);
   if (!content) return { title: "iSight Eye Care | Mumbai" };
+  const canonical = `${SITE_URL}/${slug}`;
   return {
     title: content.title,
     description: content.description,
+    alternates: { canonical },
+    openGraph: {
+      title: content.title,
+      description: content.description,
+      url: canonical,
+      siteName: "iSight Eye Care",
+      locale: "en_IN",
+      type: "website",
+      images: [
+        {
+          url: "/og-image.webp",
+          width: 1200,
+          height: 630,
+          alt: content.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: content.title,
+      description: content.description,
+      images: ["/og-image.webp"],
+    },
   };
 }
 
