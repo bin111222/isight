@@ -5,7 +5,7 @@ import { getImageUrl } from "@/lib/imageUrl";
 import { TREATMENT_LINKS } from "@/lib/sitemap";
 import { FAQAccordion } from "@/components/ui/faq-accordion";
 import BookAppointmentCTA from "@/components/BookAppointmentCTA";
-import ImageWithFallback from "@/components/ImageWithFallback";
+import TreatmentCardImage from "@/components/TreatmentCardImage";
 
 const HERO_FALLBACK = getImageUrl("/hero.webp");
 
@@ -98,16 +98,18 @@ function SectionContent({
   );
 }
 
-/** Rich image block: first slot = hero or 1 large + small; others = asymmetric or grid. Uses fallback when CDN image 404s. */
+/** Rich image block: native img + fallback so same-origin treatment images load without Next/Image. */
 function ImageBlock({ srcs, variant }: { srcs: string[]; variant: "first" | "even" | "odd" }) {
   if (srcs.length === 0) return null;
-  const Img = (p: { src: string; sizes: string; priority?: boolean }) => (
-    <ImageWithFallback src={p.src} fallbackSrc={HERO_FALLBACK} alt="" fill className="object-cover" sizes={p.sizes} priority={p.priority} />
+  const Img = (p: { src: string }) => (
+    <div className="absolute inset-0">
+      <TreatmentCardImage src={p.src} fallbackSrc={HERO_FALLBACK} />
+    </div>
   );
   if (variant === "first" && srcs.length === 1) {
     return (
       <div className="relative w-full aspect-[16/10] sm:aspect-[2/1] rounded-2xl overflow-hidden shadow-soft-lg ring-1 ring-black/5">
-        <Img src={srcs[0]} sizes="(max-width: 1024px) 100vw, 45vw" priority />
+        <Img src={srcs[0]} />
       </div>
     );
   }
@@ -115,12 +117,12 @@ function ImageBlock({ srcs, variant }: { srcs: string[]; variant: "first" | "eve
     return (
       <div className="grid grid-cols-1 sm:grid-cols-5 gap-3">
         <div className="relative sm:col-span-3 aspect-[4/3] rounded-2xl overflow-hidden shadow-soft-lg ring-1 ring-black/5">
-          <Img src={srcs[0]} sizes="(max-width: 640px) 100vw, 60vw" priority />
+          <Img src={srcs[0]} />
         </div>
         <div className="relative sm:col-span-2 grid grid-cols-2 sm:grid-cols-1 gap-3">
           {srcs.slice(1, 3).map((src) => (
             <div key={src} className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-soft ring-1 ring-black/5">
-              <Img src={src} sizes="(max-width: 640px) 50vw, 25vw" />
+              <Img src={src} />
             </div>
           ))}
         </div>
@@ -130,7 +132,7 @@ function ImageBlock({ srcs, variant }: { srcs: string[]; variant: "first" | "eve
   if (srcs.length === 1) {
     return (
       <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-soft-lg ring-1 ring-black/5">
-        <Img src={srcs[0]} sizes="(max-width: 1024px) 100vw, 45vw" />
+        <Img src={srcs[0]} />
       </div>
     );
   }
@@ -139,7 +141,7 @@ function ImageBlock({ srcs, variant }: { srcs: string[]; variant: "first" | "eve
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         {srcs.map((src) => (
           <div key={src} className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-soft ring-1 ring-black/5">
-            <Img src={src} sizes="(max-width: 640px) 100vw, 45vw" />
+            <Img src={src} />
           </div>
         ))}
       </div>
@@ -148,11 +150,11 @@ function ImageBlock({ srcs, variant }: { srcs: string[]; variant: "first" | "eve
   return (
     <div className="grid grid-cols-2 gap-3">
       <div className="relative col-span-2 sm:col-span-1 aspect-[4/3] rounded-2xl overflow-hidden shadow-soft ring-1 ring-black/5">
-        <Img src={srcs[0]} sizes="(max-width: 640px) 100vw, 45vw" />
+        <Img src={srcs[0]} />
       </div>
       {srcs.slice(1, 4).map((src) => (
         <div key={src} className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-soft ring-1 ring-black/5">
-          <Img src={src} sizes="(max-width: 640px) 50vw, 22vw" />
+          <Img src={src} />
         </div>
       ))}
     </div>
