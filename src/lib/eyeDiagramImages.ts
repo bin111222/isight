@@ -5,7 +5,7 @@ import { getImageUrl } from "@/lib/imageUrl";
  * Add paths here when you generate custom layers; leave empty string to use SVG only.
  *
  * Suggested assets (place in public/eye-diagram/):
- *   - base.webp or base.png   → full eye diagram background
+ *   - base.webp   → full eye diagram background
  *   - cornea.webp             → cornea layer or info-panel illustration
  *   - lens.webp
  *   - retina.webp

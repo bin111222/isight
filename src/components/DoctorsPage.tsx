@@ -11,7 +11,7 @@ import { getImageUrl } from "@/lib/imageUrl";
 const ABOUT_IMAGES = {
   hero: { src: getImageUrl("/hero.webp"), width: 4165, height: 4133, alt: "Dr. Nikhil Nasta – Ophthalmologist, iSight Eye Care Mumbai" },
   publications: { src: getImageUrl("/publications.jpg"), width: 1179, height: 1163, alt: "iSight Eye Care – Publications and recognition" },
-  coffee: { src: getImageUrl("/coffee.png"), width: 1104, height: 1110, alt: "Coffee consultation at iSight Eye Care" },
+  coffee: { src: getImageUrl("/coffee.webp"), width: 1104, height: 1110, alt: "Coffee consultation at iSight Eye Care" },
   pet: { src: getImageUrl("/pet.jpg"), width: 5712, height: 4284, alt: "Pet friendly eye clinic – iSight Eye Care Mumbai" },
 } as const;
 

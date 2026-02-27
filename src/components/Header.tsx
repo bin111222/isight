@@ -126,7 +126,7 @@ export default function Header() {
             aria-label="iSight Eye Care – Home"
           >
             <Image
-              src={getImageUrl("/icon-logo.png")}
+              src={getImageUrl("/icon-logo.webp")}
               alt="iSight Eye Care"
               width={700}
               height={200}

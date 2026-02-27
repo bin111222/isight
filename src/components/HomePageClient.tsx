@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import ImageWithFallback from "@/components/ImageWithFallback";
 import { Phone, Stethoscope, ClipboardList, ArrowRight } from "lucide-react";
 import CountUpStat from "@/components/CountUpStat";
 import UnderstandYourEye from "@/components/UnderstandYourEye";
@@ -195,8 +196,9 @@ export default function HomePageClient({ images }: Props) {
                 className="group relative flex flex-col rounded-2xl lg:rounded-3xl bg-white overflow-hidden shadow-[0_4px_24px_-4px_rgba(10,15,26,0.12)] border border-silver-200/60 hover:shadow-[0_12px_40px_-12px_rgba(10,15,26,0.2)] hover:border-clinical-500/20 transition-all duration-300 hover:-translate-y-1.5 text-left"
               >
                 <div className="relative w-full aspect-[5/4] lg:aspect-[4/3] overflow-hidden">
-                  <Image
+                  <ImageWithFallback
                     src={getServiceImage(item.href)}
+                    fallbackSrc={FALLBACK_IMAGE}
                     alt=""
                     fill
                     className="object-cover transition-transform duration-500 ease-out group-hover:scale-110"

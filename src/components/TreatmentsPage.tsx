@@ -1,8 +1,8 @@
 import Link from "next/link";
-import Image from "next/image";
 import { TREATMENT_LINKS } from "@/lib/sitemap";
 import { getTreatmentImagePaths } from "@/lib/treatmentImages";
 import { getImageUrl } from "@/lib/imageUrl";
+import ImageWithFallback from "@/components/ImageWithFallback";
 import { TREATMENT_PAGES } from "@/content/treatments";
 import type { PageContent } from "@/types/content";
 import CountUpStat from "@/components/CountUpStat";
@@ -131,8 +131,9 @@ export default function TreatmentsPage({ content }: Props) {
                   className="group relative flex flex-col rounded-2xl bg-white overflow-hidden shadow-[0_4px_24px_-4px_rgba(10,15,26,0.12)] border border-silver-200/60 hover:shadow-[0_12px_40px_-12px_rgba(10,15,26,0.2)] hover:border-clinical-500/20 transition-all duration-300 hover:-translate-y-1.5 text-left"
                 >
                   <div className="relative w-full aspect-[5/4] overflow-hidden">
-                    <Image
+                    <ImageWithFallback
                       src={imageSrc}
+                      fallbackSrc={getImageUrl("/hero.webp")}
                       alt=""
                       fill
                       className="object-cover transition-transform duration-500 ease-out group-hover:scale-110"

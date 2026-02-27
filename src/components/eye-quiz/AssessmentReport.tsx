@@ -50,8 +50,8 @@ export default function AssessmentReport({
       });
       const link = document.createElement("a");
       const date = new Date().toISOString().slice(0, 10);
-      link.download = `isight-${quiz.title.replace(/\s+/g, "-").toLowerCase()}-report-${date}.png`;
-      link.href = canvas.toDataURL("image/png");
+      link.download = `isight-${quiz.title.replace(/\s+/g, "-").toLowerCase()}-report-${date}.webp`;
+      link.href = canvas.toDataURL("image/webp");
       link.click();
     } finally {
       setSaving(false);
