@@ -9,8 +9,11 @@ out
 build
 dist
 
-# Public assets
-public
+# Public assets (except Treatment Images so they deploy to Vercel and load on treatment pages)
+public/*
+!public/Treatment Images
+!public/Treatment Images/
+!public/Treatment Images/**
 
 # Env
 .env
