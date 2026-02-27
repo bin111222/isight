@@ -1,12 +1,12 @@
 /**
- * Resolves image URLs from the CDN. Paths match public/, e.g. "/hero.webp", "/clinic/DSC04995.webp".
- * Set NEXT_PUBLIC_IMAGE_CDN_BASE in env (local and production); otherwise falls back to ImageKit
- * so images still work when public/ is not deployed (e.g. public is gitignored).
- * Path segments are encoded once here so CDN URLs are valid and not double-encoded.
+ * Resolves image URLs. Paths match public/, e.g. "/hero.webp", "/Treatment Images/Lasik/1.webp".
+ *
+ * - When NEXT_PUBLIC_IMAGE_CDN_BASE is set: returns full CDN URL (path segments encoded).
+ * - When not set: returns same-origin path so Next serves from public/ (avoids 404s when
+ *   treatment images exist in public/ but are not yet on ImageKit).
  */
-const BASE =
-  (typeof process !== "undefined" && process.env.NEXT_PUBLIC_IMAGE_CDN_BASE) ||
-  "https://ik.imagekit.io/jaishreeskinfinitii/isighteyecare/public";
+const CDN_BASE =
+  typeof process !== "undefined" ? process.env.NEXT_PUBLIC_IMAGE_CDN_BASE : undefined;
 
 function encodePathSegments(path: string): string {
   return path
@@ -18,7 +18,10 @@ function encodePathSegments(path: string): string {
 
 export function getImageUrl(path: string): string {
   const clean = path.startsWith("/") ? path.slice(1) : path;
-  const base = BASE.replace(/\/$/, "");
   const encoded = encodePathSegments(clean);
-  return `${base}/${encoded}`;
+  if (CDN_BASE) {
+    const base = CDN_BASE.replace(/\/$/, "");
+    return `${base}/${encoded}`;
+  }
+  return `/${encoded}`;
 }
