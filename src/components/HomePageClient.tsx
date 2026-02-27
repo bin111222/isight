@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import ImageWithFallback from "@/components/ImageWithFallback";
+import TreatmentCardImage from "@/components/TreatmentCardImage";
 import { Phone, Stethoscope, ClipboardList, ArrowRight } from "lucide-react";
 import CountUpStat from "@/components/CountUpStat";
 import UnderstandYourEye from "@/components/UnderstandYourEye";
@@ -341,12 +342,9 @@ export default function HomePageClient({ images }: Props) {
                     className="group relative flex flex-col rounded-2xl bg-white overflow-hidden shadow-[0_4px_24px_-4px_rgba(10,15,26,0.12)] border border-silver-200/60 hover:shadow-[0_12px_40px_-12px_rgba(10,15,26,0.2)] hover:border-clinical-500/20 transition-all duration-300 hover:-translate-y-1 text-left"
                   >
                     <div className="relative w-full aspect-[4/3] overflow-hidden">
-                      <Image
+                      <TreatmentCardImage
                         src={getServiceImage(href)}
-                        alt=""
-                        fill
-                        className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                        fallbackSrc={FALLBACK_IMAGE}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-navy-900/90 via-navy-900/30 to-transparent" />
                       <div className="absolute bottom-0 left-0 right-0 p-4 pt-10">
