@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { getBlogImageUrl } from "@/lib/blogImageUrl";
 import type { PageContent } from "@/types/content";
 import type { BlogPost } from "@/types/content";
@@ -22,11 +21,14 @@ function PostThumbnail({ post }: { post: BlogPost }) {
   if (post.image) {
     return (
       <div className="relative aspect-[16/10] w-full overflow-hidden bg-navy-800">
-        <Image
+        {/* Native img so CDN URLs (including blog thumbnails) load directly like on individual post page */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
           src={getBlogImageUrl(post.image)}
           alt=""
-          fill
-          className="object-cover transition-transform duration-300 group-hover:scale-105"
+          className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+          loading="lazy"
+          decoding="async"
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
         <div className="absolute bottom-2 right-2 rounded bg-navy-900/80 px-2 py-0.5 text-xs font-medium text-white backdrop-blur-sm">
