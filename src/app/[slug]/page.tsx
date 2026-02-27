@@ -9,6 +9,7 @@ import DoctorsPage from "@/components/DoctorsPage";
 import AwardsPage from "@/components/AwardsPage";
 import ConsultPage from "@/components/ConsultPage";
 import BookAppointmentCTA from "@/components/BookAppointmentCTA";
+import BlogPage from "@/components/BlogPage";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -54,7 +55,11 @@ export default async function SlugPage({ params }: Props) {
     return <AwardsPage />;
   }
 
-  /* Other non-treatment pages: blog */
+  if (slug === "blog") {
+    return <BlogPage content={content} />;
+  }
+
+  /* Other non-treatment pages */
   return (
     <article className="min-h-screen bg-silver-100">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12 lg:py-16">

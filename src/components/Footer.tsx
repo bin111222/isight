@@ -8,9 +8,9 @@ const PHONE = "918692986033";
 const PHONE_DISPLAY = "8692986033";
 
 const SOCIAL_LINKS = [
-  { href: "https://instagram.com/isighteyecare", label: "Instagram", Icon: Instagram },
-  { href: "https://youtube.com/@isighteyecare", label: "YouTube", Icon: Youtube },
-  { href: "https://linkedin.com/company/isighteyecare", label: "LinkedIn", Icon: Linkedin },
+  { href: "https://www.linkedin.com/in/nikhil-nasta-72724644/", label: "LinkedIn", Icon: Linkedin },
+  { href: "https://www.youtube.com/@isighteyecaresurgery3296", label: "YouTube", Icon: Youtube },
+  { href: "https://www.instagram.com/nikhilnasta/", label: "Instagram", Icon: Instagram },
 ] as const;
 
 export default function Footer() {

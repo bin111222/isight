@@ -15,3 +15,10 @@ export type PageContent = {
   sections: ContentSection[];
   faqs?: FAQ[];
 };
+
+/** Blog post – same URL as old Wix (/post/[slug]) for SEO */
+export type BlogPost = PageContent & {
+  slug: string;
+  date: string; // YYYY-MM-DD
+  image?: string; // hero image URL
+};
