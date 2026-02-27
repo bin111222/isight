@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "When Floaters Mean Trouble: Understanding Retina Health",
   description: "Key Takeaways • Floaters and flashes are often harmless but in some cases, they can signal retinal tears or detachment, an eye emergency. • Retina health is cru",
   date: "2025-10-14",
-  image: "https://static.wixstatic.com/media/1231c0_8b59b78811e841fab2c77f323cca6616~mv2.png",
+  image: "when-floaters-mean-trouble-understanding-retina-health",
   sections: [
     {
       

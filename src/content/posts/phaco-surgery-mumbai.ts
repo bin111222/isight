@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Phaco Surgery in Mumbai",
   description: "IntroCataracts are one of the most common reasons for blurred, cloudy vision as we age. The good news is that modern eye surgery has made cataract removal a qui",
   date: "2025-12-11",
-  image: "https://static.wixstatic.com/media/1231c0_96e5c4f71acb435890253c57c2eb101c~mv2.webp",
+  image: "phaco-surgery-mumbai",
   sections: [
     {
       

@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Best Fruits for Eyesight Improvement – Natural Vision Boosters",
   description: "👀 Can Fruits Really Improve Eyesight?If you’ve ever heard that “carrots improve eyesight,” you’ll be glad to know fruits can too. While no fruit can magically ",
   date: "2025-09-01",
-  image: "https://static.wixstatic.com/media/1231c0_5ab3ef4e388048a7a34d860f09933030~mv2.webp",
+  image: "best-fruits-for-eyesight-improvement-natural-vision-boosters",
   sections: [
     {
       

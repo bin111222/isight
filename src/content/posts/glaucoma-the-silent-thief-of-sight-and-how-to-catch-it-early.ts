@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Glaucoma: The Silent Thief of Sight (and How to Catch It Early)",
   description: "Key Takeaways • Glaucoma is a progressive disease that damages the optic nerve, often without pain or early warning. • High eye pressure (intraocular pressure) ",
   date: "2025-10-14",
-  image: "https://static.wixstatic.com/media/1231c0_2f73538b3c754df086ab163235754c01~mv2.jpg",
+  image: "glaucoma-the-silent-thief-of-sight-and-how-to-catch-it-early",
   sections: [
     {
       

@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Dry Eye Treatment in Mumbai",
   description: "Dry eye disease is a chronic condition that affects the tear film and the ocular surface, leading to symptoms such as dryness, burning, irritation, and fluctuat",
   date: "2025-11-13",
-  image: "https://static.wixstatic.com/media/1231c0_8f04762072394a0ca026d9c83290921c~mv2.png",
+  image: "dry-eye-disease-treatment-mumbai",
   sections: [
     {
       

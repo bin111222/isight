@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Pediatric Eye Doctor India: 12 Signs Your Child Needs an Eye Exam",
   description: "A child should visit a pediatric eye doctor if they show signs such as squinting, excessive blinking, headaches, difficulty seeing the board, holding books too ",
   date: "2025-11-13",
-  image: "https://static.wixstatic.com/media/1231c0_22933d313d63408698c79c4574dbb0da~mv2.png",
+  image: "pediatric-eye-doctor-india",
   sections: [
     {
       

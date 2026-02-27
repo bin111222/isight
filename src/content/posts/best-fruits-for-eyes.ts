@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "10 Best Fruits for Healthy Eyes – Expert Tips",
   description: "Want healthy eyes naturally? Discover the top 10 fruits for better vision, packed with vitamins and antioxidants. Expert guide from Mumbai’s leading eye special",
   date: "2025-09-01",
-  image: "https://static.wixstatic.com/media/1231c0_1e98374061f9416f912f3693fd521323~mv2.webp",
+  image: "best-fruits-for-eyes",
   sections: [
     {
       

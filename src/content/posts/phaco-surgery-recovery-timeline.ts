@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Phaco Surgery Recovery Timeline Explained",
   description: "According to Dr. Nikhil Nasta, Cataract Surgeon at I-Sight Eye Care, Mumbai, recovery after phacoemulsification cataract surgery is rapid and predictable. Most ",
   date: "2026-01-19",
-  image: "https://static.wixstatic.com/media/1231c0_ee825bb5f653420fbed19136432baa5c~mv2.webp",
+  image: "phaco-surgery-recovery-timeline",
   sections: [
     {
       

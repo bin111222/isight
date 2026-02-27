@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "EDOF IOL and Night Driving",
   description: "IntroductionNight driving becomes challenging for many people as cataracts progress. After cataract surgery, your choice of lens implant plays a big role in how",
   date: "2025-12-11",
-  image: "https://static.wixstatic.com/media/1231c0_a5c303a0a3ac494ea8b9d2aef2cc3f00~mv2.webp",
+  image: "edof-lens-night-driving-mumbai",
   sections: [
     {
       

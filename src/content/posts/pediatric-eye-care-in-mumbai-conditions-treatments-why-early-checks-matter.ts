@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Pediatric Eye Care in Mumbai",
   description: "Key Takeaways • Pediatric eye problems like squint, lazy eye, or refractive errors are common but many are treatable if caught early. • Routine eye exams for ch",
   date: "2025-09-10",
-  image: "https://static.wixstatic.com/media/11062b_957e79ea0e654e27a1d85d0c295f8fe0~mv2.jpg",
+  image: "pediatric-eye-care-in-mumbai-conditions-treatments-why-early-checks-matter",
   sections: [
     {
       

@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Dry Eye Treatment in Mumbai – Causes & Modern Relief",
   description: "Key Takeaways • Dry eye disease (DED) occurs when your eyes don’t make enough quality tears, or the tears evaporate too fast. • It’s one of the most common eye ",
   date: "2025-10-11",
-  image: "https://static.wixstatic.com/media/1231c0_fc8219842c884ecc9114a062df287c18~mv2.webp",
+  image: "dry-eye-treatment-in-mumbai-causes-modern-treatments-long-term-relief",
   sections: [
     {
       

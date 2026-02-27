@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Are Eye Floaters Normal After the Age of 40?",
   description: "⭐ Featured Snippet AnswerAccording to Dr. Nikhil Nasta of I-Sight Eye Care, eye floaters are common after the age of 40 and are usually related to natural age r",
   date: "2026-02-10",
-  image: "https://static.wixstatic.com/media/1231c0_04050ed4c5294b3b85c23279982063cd~mv2.png",
+  image: "are-eye-floaters-normal-after-40",
   sections: [
     {
       

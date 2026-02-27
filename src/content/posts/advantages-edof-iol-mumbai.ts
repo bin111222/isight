@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Advantages of EDOF IOL Lenses",
   description: "IntroductionExtended depth of focus lenses known as EDOF IOLs are one of the most significant advances in modern cataract surgery. These lenses help patients en",
   date: "2025-12-11",
-  image: "https://static.wixstatic.com/media/1231c0_3d9c2df1e7d24e1ba31f7e71dd41206e~mv2.webp",
+  image: "advantages-edof-iol-mumbai",
   sections: [
     {
       

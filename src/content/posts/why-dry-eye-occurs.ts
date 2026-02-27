@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Why Dry Eye Occurs: 14 Common Medical Causes & How to Prevent It",
   description: "Dry eye occurs due to reduced tear production, rapid tear evaporation, or poor-quality tears. Common causes include prolonged screen use, ageing, Meibomian Glan",
   date: "2025-12-04",
-  image: "https://static.wixstatic.com/media/1231c0_29367c9b5dff4b7c962edcda076d2dea~mv2.png",
+  image: "why-dry-eye-occurs",
   sections: [
     {
       

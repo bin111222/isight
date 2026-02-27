@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Do EDOF Lenses Cause Halos or Glare at Night?",
   description: "⭐ Featured Snippet AnswerAccording to Dr. Nikhil Nasta of I-Sight Eye Care, EDOF lenses may cause mild halos or glare in some patients, but significantly less t",
   date: "2026-02-12",
-  image: "https://static.wixstatic.com/media/1231c0_949ecdbb6eac4d95bf943ddab66eefa5~mv2.png",
+  image: "do-edof-lenses-cause-halos-or-glare",
   sections: [
     {
       

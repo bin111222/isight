@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "IPL Treatment for Dry Eye in Mumbai",
   description: "IntroductionIf you suffer from chronic dry eyes that do not improve with drops alone, you may benefit from IPL therapy. IPL or Intense Pulsed Light is one of th",
   date: "2025-12-14",
-  image: "https://static.wixstatic.com/media/1231c0_264adc49ed654180ae8037686e50c8ce~mv2.webp",
+  image: "ipl-treatment-dry-eye-mumbai-guide",
   sections: [
     {
       

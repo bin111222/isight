@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Phaco vs Traditional Cataract Surgery in Mumbai",
   description: "IntroductionCataract surgery has evolved dramatically over the last few decades. Earlier, cataracts were removed through large incisions and required stitches, ",
   date: "2025-11-30",
-  image: "https://static.wixstatic.com/media/1231c0_bd0a46cfb0a44d76870601967b075658~mv2.webp",
+  image: "phaco-vs-traditional-cataract-surgery-which-technique-gives-better-results-in-mumbai",
   sections: [
     {
       

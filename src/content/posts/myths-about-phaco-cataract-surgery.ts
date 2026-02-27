@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Common Myths About Phaco Cataract Surgery",
   description: "TLDRAccording to Dr. Nikhil Nasta of I-Sight Eye Care, Mumbai, most fears around phaco cataract surgery are based on outdated information. Modern phacoemulsific",
   date: "2026-01-27",
-  image: "https://static.wixstatic.com/media/1231c0_50366e4af99341e28b67d7cb2a9d368e~mv2.webp",
+  image: "myths-about-phaco-cataract-surgery",
   sections: [
     {
       

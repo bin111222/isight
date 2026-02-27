@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Is Dry Eye Dangerous",
   description: "Dry eye can become dangerous if left untreated, leading to corneal damage, infections, inflammation, and vision disturbances. While mild dry eye is common, chro",
   date: "2025-11-13",
-  image: "https://static.wixstatic.com/media/1231c0_65e618aef9684088a850cac3678d1e83~mv2.png",
+  image: "is-dry-eye-dangerous",
   sections: [
     {
       

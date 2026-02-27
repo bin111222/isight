@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Phaco vs Traditional Cataract Surgery: What Has Changed",
   description: "⭐ Featured Snippet AnswerAccording to Dr. Nikhil Nasta of I-Sight Eye Care, Mumbai, phacoemulsification cataract surgery has replaced traditional cataract surge",
   date: "2026-01-15",
-  image: "https://static.wixstatic.com/media/1231c0_26325b93292d400e91abff8f81fd7434~mv2.webp",
+  image: "phaco-vs-traditional-cataract-surgery",
   sections: [
     {
       

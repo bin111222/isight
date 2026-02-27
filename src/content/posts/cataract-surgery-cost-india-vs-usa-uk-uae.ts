@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Cost of Cataract Surgery in India vs USA, UK & UAE",
   description: "According to Dr. Nikhil Nasta of I-Sight Eye Care, cataract surgery in India costs 60 to 80 percent less than in the USA, UK, or UAE while offering the same mod",
   date: "2026-01-29",
-  image: "https://static.wixstatic.com/media/1231c0_f900ae433e0f4327a50acdeeb19abead~mv2.webp",
+  image: "cataract-surgery-cost-india-vs-usa-uk-uae",
   sections: [
     {
       

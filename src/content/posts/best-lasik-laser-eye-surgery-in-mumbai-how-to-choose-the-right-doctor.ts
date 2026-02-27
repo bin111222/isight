@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Best LASIK Surgery in Mumbai – Choosing the Right Eye Surgeon",
   description: "Key Takeaways • Mumbai offers world-class LASIK and laser eye surgery options—Contoura, SMILE, PRK, and ICL are all available. • The best eye doctor in Mumbai i",
   date: "2025-09-23",
-  image: "https://static.wixstatic.com/media/1231c0_2e79206c9692428ab5d0d00ea642d259~mv2.jpg",
+  image: "best-lasik-laser-eye-surgery-in-mumbai-how-to-choose-the-right-doctor",
   sections: [
     {
       

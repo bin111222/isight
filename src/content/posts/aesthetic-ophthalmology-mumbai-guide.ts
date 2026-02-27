@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Aesthetic Ophthalmology in Mumbai",
   description: "IntroductionYour eyes express emotion, confidence and identity. Over time, changes like under eye hollows, wrinkles, droopy eyelids or puffiness can make you lo",
   date: "2025-12-11",
-  image: "https://static.wixstatic.com/media/1231c0_5064e1e7b9ea43b98090459bbd82e274~mv2.webp",
+  image: "aesthetic-ophthalmology-mumbai-guide",
   sections: [
     {
       

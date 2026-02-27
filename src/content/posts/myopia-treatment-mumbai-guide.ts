@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Myopia Treatment in Mumbai",
   description: "IntroductionMyopia, commonly known as short sightedness, is one of the fastest growing eye conditions worldwide. It affects children, teenagers and adults, and ",
   date: "2025-12-14",
-  image: "https://static.wixstatic.com/media/1231c0_b5ebb4d67ac6446d8e330c2985230f23~mv2.webp",
+  image: "myopia-treatment-mumbai-guide",
   sections: [
     {
       

@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Unlocking Clarity: Understanding the Cornea of the Eye",
   description: "Cornea of the eye explained—layers, functions, common diseases, and modern treatments. Protect clarity with expert Mumbai care.",
   date: "2025-09-28",
-  image: "https://static.wixstatic.com/media/nsplsh_496e3458564b6859616949~mv2_d_5920_3784_s_4_2.jpg",
+  image: "unlocking-clarity-understanding-the-cornea-of-the-eye-and-its-vital-role-in-vision",
   sections: [
     {
       

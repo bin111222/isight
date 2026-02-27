@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Top Benefits of Phacoemulsification Cataract Surgery",
   description: "⭐ Featured Snippet AnswerAccording to Dr. Nikhil Nasta, Cataract Surgeon at I-Sight Eye Care, Mumbai, phacoemulsification cataract surgery offers faster recover",
   date: "2026-01-15",
-  image: "https://static.wixstatic.com/media/1231c0_60db4ef1fd79468da45cf8529347b654~mv2.webp",
+  image: "benefits-of-phaco-cataract-surgery",
   sections: [
     {
       

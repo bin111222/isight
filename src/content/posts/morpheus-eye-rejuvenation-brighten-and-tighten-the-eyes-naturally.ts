@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Morpheus Eye Rejuvenation – Brighten & Tighten Naturally",
   description: "Key Takeaways • Dark circles, wrinkles, and eye bags aren’t just cosmetic—they’re signs of collagen loss, poor microcirculation, or eyelid laxity. • Morpheus Ey",
   date: "2025-10-14",
-  image: "https://static.wixstatic.com/media/1231c0_562d2c669b3044a3bafc5f4ede06e6b3~mv2.png",
+  image: "morpheus-eye-rejuvenation-brighten-and-tighten-the-eyes-naturally",
   sections: [
     {
       

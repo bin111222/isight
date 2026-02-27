@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Contoura Vision in Mumbai",
   description: "IntroductionNot all eyes are the same, and not all LASIK procedures should be either. Contoura Vision is an advanced form of laser vision correction that custom",
   date: "2025-12-14",
-  image: "https://static.wixstatic.com/media/1231c0_b9000e92e70442a8be21116a582b7d2a~mv2.webp",
+  image: "contoura-vision-mumbai-bandra-guide",
   sections: [
     {
       

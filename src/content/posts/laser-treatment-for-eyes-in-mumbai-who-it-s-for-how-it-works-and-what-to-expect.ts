@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Laser Treatment for Eyes in Mumbai: What to Expect",
   description: "Key Takeaways • Laser treatment for eyes (LASIK/PRK/Contoura) reshapes the cornea to correct myopia, hyperopia, and astigmatism; most people see 20/40 or better",
   date: "2025-09-28",
-  image: "https://static.wixstatic.com/media/1231c0_8d152de1d27c469bab6bff07b4dc9d6b~mv2.jpg",
+  image: "laser-treatment-for-eyes-in-mumbai-who-it-s-for-how-it-works-and-what-to-expect",
   sections: [
     {
       

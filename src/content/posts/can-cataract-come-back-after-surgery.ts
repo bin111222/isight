@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Can Cataract Come Back After Surgery?",
   description: "⭐ Featured Snippet AnswerAccording to Dr. Nikhil Nasta of I-Sight Eye Care, a cataract cannot come back once it has been surgically removed. However, some patie",
   date: "2026-02-12",
-  image: "https://static.wixstatic.com/media/1231c0_895f13ec4a454352a450e40eb6500688~mv2.png",
+  image: "can-cataract-come-back-after-surgery",
   sections: [
     {
       

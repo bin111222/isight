@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Who Should Perform Aesthetic Treatments Around the Eyes?",
   description: "⭐ Featured Snippet AnswerAccording to Dr. Nikhil Nasta of I-Sight Eye Care, aesthetic treatments around the eyes should ideally be performed by an ophthalmic sp",
   date: "2026-02-10",
-  image: "https://static.wixstatic.com/media/1231c0_407b59e886a84f93be4eec2d146d0138~mv2.png",
+  image: "who-should-perform-eye-aesthetic-treatments",
   sections: [
     {
       

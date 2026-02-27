@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Top Rated LASIK Surgeons in Bandra and What Sets Them Apart",
   description: "Featured Snippet AnswerTop rated LASIK surgeons in Bandra are distinguished by careful patient selection, advanced diagnostic testing, and long term visual outc",
   date: "2026-01-15",
-  image: "https://static.wixstatic.com/media/1231c0_2b89ca1ccb104c4488e64f98fcf91f78~mv2.webp",
+  image: "top-rated-lasik-surgeons-in-bandra",
   sections: [
     {
       

@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "How Often Should a Child’s Eyes Be Checked?",
   description: "⭐ Featured Snippet AnswerAccording to Dr. Nikhil Nasta of I-Sight Eye Care, a child’s eyes should be checked at birth, again before starting school, and then ev",
   date: "2026-02-10",
-  image: "https://static.wixstatic.com/media/1231c0_81fec4710a624abb9d83b40d25ff1238~mv2.png",
+  image: "how-often-should-child-eye-checkup",
   sections: [
 
   ],

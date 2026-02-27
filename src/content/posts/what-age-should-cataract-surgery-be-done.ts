@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "At What Age Should Cataract Surgery Be Done?",
   description: "⭐ Featured Snippet AnswerAccording to Dr. Nikhil Nasta of I-Sight Eye Care, cataract surgery does not depend on a fixed age. It should be done when cataracts st",
   date: "2026-02-10",
-  image: "https://static.wixstatic.com/media/1231c0_3c64cf7ab1784f619bfb7bda65b5f2c3~mv2.png",
+  image: "what-age-should-cataract-surgery-be-done",
   sections: [
     {
       

@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Pediatric Eye Doctor Near Me",
   description: "A pediatric eye doctor near you should be experienced in examining children, diagnosing issues like refractive errors, squint, lazy eye, infections, and allergi",
   date: "2025-12-11",
-  image: "https://static.wixstatic.com/media/1231c0_c0670919f0a045e790dcb82d3c84a8ef~mv2.webp",
+  image: "pediatric-eye-doctor-near-me",
   sections: [
     {
       

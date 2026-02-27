@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Dry Eye Home Treatment",
   description: "Dry eye is one of the most common eye concerns, especially among office workers, students, and individuals spending long hours on digital screens. While moderat",
   date: "2025-12-11",
-  image: "https://static.wixstatic.com/media/1231c0_485256af75334152847aa39d68ad210c~mv2.png",
+  image: "dry-eye-home-treatment",
   sections: [
     {
       

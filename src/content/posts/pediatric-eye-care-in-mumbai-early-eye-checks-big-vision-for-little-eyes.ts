@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Pediatric Eye Care in Mumbai: Early Eye Checks",
   description: "Best pediatric eye doctor in Mumbai : expert care for kids’ vision, myopia, lazy eye & squint at I-Sight Eye Care.",
   date: "2025-10-14",
-  image: "https://static.wixstatic.com/media/1231c0_c0670919f0a045e790dcb82d3c84a8ef~mv2.webp",
+  image: "pediatric-eye-care-in-mumbai-early-eye-checks-big-vision-for-little-eyes",
   sections: [
     {
       

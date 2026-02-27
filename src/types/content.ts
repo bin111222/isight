@@ -20,5 +20,5 @@ export type PageContent = {
 export type BlogPost = PageContent & {
   slug: string;
   date: string; // YYYY-MM-DD
-  image?: string; // hero image URL
+  image?: string; // hero image slug (resolved via getBlogImageUrl)
 };

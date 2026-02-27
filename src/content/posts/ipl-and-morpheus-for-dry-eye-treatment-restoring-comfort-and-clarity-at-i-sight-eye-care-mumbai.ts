@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "IPL & Morpheus Dry Eye Treatment in Mumbai",
   description: "Discover IPL & Morpheus for dry eye at I-Sight Eye Care. Long-lasting comfort by Dr. Nikhil Nasta.",
   date: "2025-10-12",
-  image: "https://static.wixstatic.com/media/1231c0_fc8219842c884ecc9114a062df287c18~mv2.webp",
+  image: "ipl-and-morpheus-for-dry-eye-treatment-restoring-comfort-and-clarity-at-i-sight-eye-care-mumbai",
   sections: [
     {
       

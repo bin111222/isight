@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Why Some Patients Are Advised ICL Instead of LASIK",
   description: "⭐ Featured Snippet AnswerAccording to Dr. Nikhil Nasta of I-Sight Eye Care, some patients are advised ICL instead of LASIK due to high eye power, thin corneas, ",
   date: "2026-02-12",
-  image: "https://static.wixstatic.com/media/1231c0_a5c303bf16dc46859e2d7f6262fbf566~mv2.png",
+  image: "why-icl-instead-of-lasik",
   sections: [
     {
       

@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Robotic Cataract Surgery in Mumbai – Complete Guide",
   description: "Key Takeaways • Cataracts are a natural part of ageing but with modern technology, vision restoration is safer, faster, and more precise than ever. • Robotic ca",
   date: "2025-10-14",
-  image: "https://static.wixstatic.com/media/1231c0_49fdbebfd6ce40c08f85a247d2f2c824~mv2.jpg",
+  image: "everything-you-need-to-know-about-robotic-cataract-surgery-in-mumbai",
   sections: [
     {
       

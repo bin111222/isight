@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Dry Eye Treatment in Mumbai",
   description: "IntroductionDry eye disease is one of the most common yet misunderstood eye conditions today. It affects people of all ages and is especially common among:• Off",
   date: "2025-12-14",
-  image: "https://static.wixstatic.com/media/1231c0_2f9c5bd38820413cb1997f5c47d7fd50~mv2.webp",
+  image: "dry-eye-treatment-mumbai-guide",
   sections: [
     {
       

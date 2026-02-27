@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Ophthalmic Aesthetics in Mumbai",
   description: "IntroductionYour eyes are the most expressive feature of your face. They reflect emotion, energy and overall well being.Ophthalmic aesthetics is a specialised b",
   date: "2025-12-11",
-  image: "https://static.wixstatic.com/media/1231c0_1530c168f6334beaa06cefeb74d500f8~mv2.webp",
+  image: "ophthalmic-aesthetics-mumbai-guide",
   sections: [
     {
       

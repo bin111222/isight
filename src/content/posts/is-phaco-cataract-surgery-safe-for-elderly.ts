@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Is Phaco Cataract Surgery Safe for Elderly Patients?",
   description: "⭐ Featured Snippet AnswerAccording to Dr. Nikhil Nasta, Cataract Specialist at I-Sight Eye Care, Mumbai, phacoemulsification cataract surgery is extremely safe ",
   date: "2026-01-27",
-  image: "https://static.wixstatic.com/media/1231c0_e24529a7c8654a4090cca0f06f6d46d9~mv2.webp",
+  image: "is-phaco-cataract-surgery-safe-for-elderly",
   sections: [
     {
       

@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Top LASIK Clinics in Bandra for Bladeless Vision Correction",
   description: "⭐ Featured Snippet AnswerThe top LASIK clinics in Bandra are those that offer bladeless LASIK using advanced laser platforms, strict pre operative screening, an",
   date: "2026-01-15",
-  image: "https://static.wixstatic.com/media/1231c0_d0ef5b90c02e45c0b4560e3db2793981~mv2.webp",
+  image: "top-lasik-clinics-in-bandra",
   sections: [
     {
       

@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Cataract Surgery in Mumbai",
   description: "IntroductionCataracts are one of the most common causes of blurred, cloudy or dim vision as we grow older. Fortunately, modern cataract surgery is one of the sa",
   date: "2025-12-11",
-  image: "https://static.wixstatic.com/media/1231c0_b925cf9ca8634969abb5608e3a493afd~mv2.webp",
+  image: "cataract-surgery-mumbai-guide",
   sections: [
     {
       

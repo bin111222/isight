@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "scrape-blogs": "node scripts/scrape-wix-blogs.mjs"
+    "scrape-blogs": "node scripts/scrape-wix-blogs.mjs",
+    "download-blog-images": "node scripts/download-blog-images.mjs",
+    "update-blog-images-imagekit": "node scripts/update-blog-images-to-imagekit.mjs"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.12",

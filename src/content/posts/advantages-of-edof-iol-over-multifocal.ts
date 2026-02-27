@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Top Advantages of EDOF IOL Over Multifocal Lenses",
   description: "TLDRAccording to Dr. Nikhil Nasta of I-Sight Eye Care, Mumbai, EDOF intraocular lenses offer smoother vision, fewer visual disturbances, and better contrast sen",
   date: "2026-01-19",
-  image: "https://static.wixstatic.com/media/1231c0_e2dd66409cc045538ccf11b11ce52456~mv2.webp",
+  image: "advantages-of-edof-iol-over-multifocal",
   sections: [
     {
       

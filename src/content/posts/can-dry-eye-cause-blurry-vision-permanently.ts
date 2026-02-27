@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Can Dry Eye Cause Blurry Vision Permanently?",
   description: "⭐ Featured Snippet AnswerAccording to Dr. Nikhil Nasta of I-Sight Eye Care, dry eye usually causes temporary blurry vision, but if left untreated for a long tim",
   date: "2026-02-10",
-  image: "https://static.wixstatic.com/media/1231c0_9b0417b0878241b69edb867ddd3063f9~mv2.png",
+  image: "can-dry-eye-cause-blurry-vision-permanently",
   sections: [
     {
       

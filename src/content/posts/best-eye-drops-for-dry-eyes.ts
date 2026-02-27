@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Best Eye Drops for Dry Eyes in India (Doctor Recommended 2025)",
   description: "This blog is written for website only and is very generic. Each and every patient needs special attention and you should consult before taking anything. Dry eye",
   date: "2025-11-13",
-  image: "https://static.wixstatic.com/media/1231c0_63cb02dbf82f4eda9a8f7fcd3b3670ef~mv2.png",
+  image: "best-eye-drops-for-dry-eyes",
   sections: [
     {
       

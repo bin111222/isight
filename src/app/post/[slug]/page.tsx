@@ -9,6 +9,7 @@ import { LinkifiedText } from "@/lib/linkify";
 import BookAppointmentCTA from "@/components/BookAppointmentCTA";
 import { BlogFAQAccordion } from "@/components/ui/blog-faq-accordion";
 import { SITE_URL } from "@/lib/sitemap";
+import { getBlogImageUrl } from "@/lib/blogImageUrl";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -26,7 +27,7 @@ export async function generateMetadata({ params }: Props) {
     openGraph: {
       title: post.title,
       description: post.description ?? undefined,
-      images: post.image ? [post.image] : undefined,
+      images: post.image ? [getBlogImageUrl(post.image)] : undefined,
     },
   };
 }
@@ -54,7 +55,7 @@ export default async function PostPage({ params }: Props) {
               {/* Native img so container keeps the image’s own aspect ratio */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={post.image}
+                src={getBlogImageUrl(post.image)}
                 alt=""
                 className="h-auto w-full object-contain"
                 loading="lazy"
@@ -157,7 +158,7 @@ export default async function PostPage({ params }: Props) {
               author: { "@type": "Person", name: "Dr. Nikhil Nasta" },
               publisher: { "@type": "Organization", name: "iSight Eye Care", url: SITE_URL },
               mainEntityOfPage: { "@id": canonical },
-              image: post.image,
+              image: getBlogImageUrl(post.image),
             }),
           }}
         />

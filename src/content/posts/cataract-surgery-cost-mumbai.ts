@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Cataract Operation Cost in Mumbai (2026)",
   description: "The cost of cataract surgery in Mumbai in 2025 ranges from ₹25,000 to ₹1,60,000 per eye, depending on the type of surgery (phaco / micro-incision / femtosecond-",
   date: "2025-11-13",
-  image: "https://static.wixstatic.com/media/1231c0_8837d6f6c6bf4e22a928cfe1e31e0fb8~mv2.png",
+  image: "cataract-surgery-cost-mumbai",
   sections: [
     {
       

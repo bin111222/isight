@@ -7,7 +7,7 @@ const post: BlogPost = {
   description:
     "According to Dr. Nikhil Nasta of I-Sight Eye Care, LASIK can be safe after 40, but candidacy depends on eye power stability, corneal health, dry eye status and presbyopia rather than age alone.",
   date: "2026-02-10",
-  image: "https://static.wixstatic.com/media/1231c0_e9e85e5525134054abe794a07f255ff4~mv2.png",
+  image: "is-lasik-safe-after-40",
   sections: [
     {
       heading: "Featured snippet",

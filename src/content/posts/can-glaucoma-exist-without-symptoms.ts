@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Can Glaucoma Exist Without Any Symptoms?",
   description: "⭐ Featured Snippet AnswerAccording to Dr. Nikhil Nasta of I-Sight Eye Care, glaucoma can exist for years without any noticeable symptoms. At I-Sight Eye Care, m",
   date: "2026-02-10",
-  image: "https://static.wixstatic.com/media/1231c0_b3a1e01730a342b59f664c96a582ef5c~mv2.png",
+  image: "can-glaucoma-exist-without-symptoms",
   sections: [
     {
       

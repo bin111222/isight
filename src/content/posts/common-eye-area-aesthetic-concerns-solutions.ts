@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Common Eye Area Aesthetic Concerns and Solutions",
   description: "According to Dr. Nikhil Nasta of I-Sight Eye Care, Mumbai, the most common eye area aesthetic concerns include dark circles, under eye hollows, eye bags, fine l",
   date: "2026-01-21",
-  image: "https://static.wixstatic.com/media/1231c0_8cd39ea24ccf49d7a677e8931d2e46ef~mv2.webp",
+  image: "common-eye-area-aesthetic-concerns-solutions",
   sections: [
     {
       

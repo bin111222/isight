@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "LASIK in Khar & Laser Eye Surgery in Mumbai",
   description: "Looking for safe and effective LASIK in Khar or laser eye surgery in Mumbai? Here’s everything you need to know about eligibility, cost, procedure, and recovery",
   date: "2025-09-03",
-  image: "https://static.wixstatic.com/media/1231c0_31086a34991542b4be3e07f73fc9022f~mv2.webp",
+  image: "lasik-in-khar-mumbai",
   sections: [
     {
       

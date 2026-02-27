@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "EDOF IOL vs Trifocal IOL: Which Is Better After Cataract Surgery?",
   description: "According to Dr. Nikhil Nasta of I-Sight Eye Care, EDOF IOLs are better for patients who prioritise visual comfort, night driving, and screen use, while trifoca",
   date: "2026-01-27",
-  image: "https://static.wixstatic.com/media/1231c0_8f8a6c24d6934be2a77de63d76ba6cda~mv2.webp",
+  image: "edof-iol-vs-trifocal-iol",
   sections: [
     {
       

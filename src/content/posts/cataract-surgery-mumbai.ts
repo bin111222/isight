@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Cataract Surgery in Mumbai",
   description: "Cataracts are one of the most common causes of blurred vision after the age of 40. If you are experiencing cloudy vision, glare while driving at night, faded co",
   date: "2026-02-16",
-  image: "https://static.wixstatic.com/media/1231c0_172bbbe7587c4ff9a89d8b02e7f42a95~mv2.png",
+  image: "cataract-surgery-mumbai",
   sections: [
     {
       

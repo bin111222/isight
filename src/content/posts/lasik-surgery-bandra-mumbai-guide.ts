@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "LASIK Surgery in Bandra",
   description: "IntroductionIf you are tired of glasses or contact lenses and searching for LASIK surgery in Bandra, you are not alone. Bandra has become one of Mumbai’s most s",
   date: "2025-12-14",
-  image: "https://static.wixstatic.com/media/1231c0_9d7ac877c162454f9e8bd794049f65c4~mv2.webp",
+  image: "lasik-surgery-bandra-mumbai-guide",
   sections: [
     {
       

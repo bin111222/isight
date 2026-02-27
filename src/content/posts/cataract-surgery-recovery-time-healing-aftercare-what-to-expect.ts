@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Cataract Surgery Recovery – Timeline & Aftercare Tips",
   description: "Key Takeaways • Most people resume daily activities within 1–3 days after cataract surgery, but full healing takes 4–6 weeks. • Blurred vision, light sensitivit",
   date: "2025-09-10",
-  image: "https://static.wixstatic.com/media/1231c0_49fdbebfd6ce40c08f85a247d2f2c824~mv2.jpg",
+  image: "cataract-surgery-recovery-time-healing-aftercare-what-to-expect",
   sections: [
     {
       

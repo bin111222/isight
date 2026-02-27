@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Who Is the Ideal Candidate for Phaco Cataract Surgery?",
   description: "TLDR: According to Dr. Nikhil Nasta of I-Sight Eye Care, the ideal candidate for phaco cataract surgery is someone whose cataract is affecting daily vision, has",
   date: "2026-01-27",
-  image: "https://static.wixstatic.com/media/1231c0_bdb96cba35ce4ff28f3390c96d73c53b~mv2.webp",
+  image: "ideal-candidate-for-phaco-cataract-surgery",
   sections: [
     {
       

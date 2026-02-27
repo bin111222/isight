@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { getBlogImageUrl } from "@/lib/blogImageUrl";
 import type { PageContent } from "@/types/content";
 import type { BlogPost } from "@/types/content";
 import { getAllPosts, getReadingTimeMinutes } from "@/lib/posts";
@@ -22,7 +23,7 @@ function PostThumbnail({ post }: { post: BlogPost }) {
     return (
       <div className="relative aspect-[16/10] w-full overflow-hidden bg-navy-800">
         <Image
-          src={post.image}
+          src={getBlogImageUrl(post.image)}
           alt=""
           fill
           className="object-cover transition-transform duration-300 group-hover:scale-105"

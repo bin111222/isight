@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Which Fruits Are Good for Eyesight? Mumbai Eye Specialist",
   description: "👀 Why Mumbai Patients Need Eye-Friendly DietsLiving in Mumbai means long hours of screen time, pollution, and constant exposure to UV rays. All of these accele",
   date: "2025-09-01",
-  image: "https://static.wixstatic.com/media/1231c0_0cdde499d3bf43958e8c2876b4138796~mv2.webp",
+  image: "which-fruits-good-for-eyesight",
   sections: [
     {
       

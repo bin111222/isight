@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "ICL Surgery in Mumbai",
   description: "IntroductionIf you have been told that LASIK is not suitable for your eyes, or you have very high power or thin corneas, ICL surgery may be the ideal solution.I",
   date: "2025-12-14",
-  image: "https://static.wixstatic.com/media/1231c0_adc87801f62343b79144392c08c11ebf~mv2.webp",
+  image: "icl-surgery-mumbai-india-guide",
   sections: [
     {
       

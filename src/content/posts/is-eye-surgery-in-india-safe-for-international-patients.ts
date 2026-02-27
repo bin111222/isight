@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Is Eye Surgery in India Safe for International Patients?",
   description: "⭐ Featured Snippet AnswerAccording to Dr. Nikhil Nasta of I-Sight Eye Care, eye surgery in India is very safe for international patients when performed at speci",
   date: "2026-01-29",
-  image: "https://static.wixstatic.com/media/1231c0_f988316c44ce4695b5aed829b2fca5b3~mv2.png",
+  image: "is-eye-surgery-in-india-safe-for-international-patients",
   sections: [
     {
       

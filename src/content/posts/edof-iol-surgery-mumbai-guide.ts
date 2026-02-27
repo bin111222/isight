@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "EDOF IOL Surgery in Mumbai",
   description: "IntroductionModern cataract surgery is no longer only about removing a cloudy lens. Today, patients want brighter vision, clearer focus and reduced dependence o",
   date: "2025-12-11",
-  image: "https://static.wixstatic.com/media/1231c0_f8cd8d4ec1d143e08e0b94bda91a65ba~mv2.webp",
+  image: "edof-iol-surgery-mumbai-guide",
   sections: [
     {
       

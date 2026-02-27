@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Best Glaucoma Treatment in Mumbai",
   description: "Key Takeaways • Glaucoma = silent thief of sight, often no symptoms until advanced damage. Regular screening is key. • Best glaucoma specialists in Mumbai use a",
   date: "2025-09-10",
-  image: "https://static.wixstatic.com/media/1231c0_2f8ef0d680cd449ab4da6cc9debab785~mv2.jpg",
+  image: "best-glaucoma-treatment-in-mumbai-early-detection-specialists-laser-surgery-options",
   sections: [
     {
       

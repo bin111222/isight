@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Blepharoplasty in Mumbai",
   description: "IntroductionYour eyelids play a major role in how youthful, fresh and expressive you appear.With age, the skin around the eyes becomes thinner, fat may protrude",
   date: "2025-12-11",
-  image: "https://static.wixstatic.com/media/1231c0_6faaf6ad73c5451b89b3e3204beef30d~mv2.webp",
+  image: "blepharoplasty-eyelid-surgery-mumbai",
   sections: [
     {
       

@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Eye Treatment in Mumbai International Patients Dr. Nikhil Nasta",
   description: "TLDR:According to Dr. Nikhil Nasta of I-Sight Eye Care, Mumbai is one of the safest and most advanced destinations in India for international eye patients, offe",
   date: "2026-02-10",
-  image: "https://static.wixstatic.com/media/1231c0_b9bd37c8ea25420788fa33908b81c06a~mv2.png",
+  image: "eye-treatment-mumbai-international-patients",
   sections: [
     {
       

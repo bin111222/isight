@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Dry Eye Therapy: Latest Treatments That Actually Work",
   description: "The most effective dry eye therapy in 2025 includes a combination of diagnostic testing, anti-inflammatory drops, lubricants, Meibomian gland therapy, warm comp",
   date: "2025-11-13",
-  image: "https://static.wixstatic.com/media/1231c0_9f702866f6234547983e2ec3497cd16e~mv2.png",
+  image: "dry-eye-therapy-mumbai",
   sections: [
     {
       

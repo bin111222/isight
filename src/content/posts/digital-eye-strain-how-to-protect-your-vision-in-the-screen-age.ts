@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Digital Eye Strain: How to Protect Your Vision in the Screen Age",
   description: "Key Takeaways • Digital eye strain (computer vision syndrome) affects both adults and kids due to prolonged screen time. • Symptoms include eye fatigue, headach",
   date: "2025-10-14",
-  image: "https://static.wixstatic.com/media/11062b_b6c2e479316e480696a4cb23b98059f8~mv2.jpg",
+  image: "digital-eye-strain-how-to-protect-your-vision-in-the-screen-age",
   sections: [
     {
       

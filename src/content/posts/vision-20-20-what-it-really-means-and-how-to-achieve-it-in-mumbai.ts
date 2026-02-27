@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Vision 20/20: How to Achieve It in Mumbai",
   description: "Introduction: The Dream of Clear Vision“20/20 vision” is often called “perfect eyesight.” In Mumbai, where daily life involves traffic stress, long work hours, ",
   date: "2025-09-03",
-  image: "https://static.wixstatic.com/media/1231c0_b1c8f9b8adbc4ded95d82865af27a959~mv2.webp",
+  image: "vision-20-20-what-it-really-means-and-how-to-achieve-it-in-mumbai",
   sections: [
     {
       

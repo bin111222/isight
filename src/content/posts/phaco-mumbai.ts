@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Phaco Cataract Surgery Myths versus Facts",
   description: "IntroductionPhaco cataract surgery is one of the safest and most successful eye procedures performed today. Despite this, many patients still feel anxious becau",
   date: "2025-12-11",
-  image: "https://static.wixstatic.com/media/1231c0_5fc4f1e5d12a47fd9710e45dbdc8fa7f~mv2.webp",
+  image: "phaco-mumbai",
   sections: [
     {
       

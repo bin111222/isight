@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "Pediatric Eye Doctor: When Your Child Needs an Eye Specialist",
   description: "A pediatric eye doctor (paediatric ophthalmologist) specialises in diagnosing and treating eye conditions in children, including lazy eye, refractive errors, sq",
   date: "2025-11-13",
-  image: "https://static.wixstatic.com/media/1231c0_400e5bd2abfd463b82d949cedb2c7703~mv2.png",
+  image: "pediatric-eye-doctor",
   sections: [
     {
       

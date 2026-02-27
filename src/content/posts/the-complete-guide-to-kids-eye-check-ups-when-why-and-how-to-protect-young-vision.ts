@@ -6,7 +6,7 @@ const post: BlogPost = {
   title: "The Complete Guide to Kids’ Eye Check-Ups: How to Protect Vision",
   description: "Key Takeaways • 1 in 5 children has an undiagnosed vision issue that affects learning or confidence. • Early kids’ eye check-ups can detect problems like myopia",
   date: "2025-10-14",
-  image: "https://static.wixstatic.com/media/1231c0_0386d0691aa34478829dbd036f265010~mv2.png",
+  image: "the-complete-guide-to-kids-eye-check-ups-when-why-and-how-to-protect-young-vision",
   sections: [
     {
       
