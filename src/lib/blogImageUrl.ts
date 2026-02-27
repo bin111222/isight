@@ -1,10 +1,9 @@
-/**
- * Resolves blog hero image URL from slug so the repo only stores the slug.
- * Set NEXT_PUBLIC_BLOG_IMAGE_BASE in env, or it falls back to the current ImageKit path.
- */
-const BASE =
-  (typeof process !== "undefined" && process.env.NEXT_PUBLIC_BLOG_IMAGE_BASE) ||
-  "https://ik.imagekit.io/jaishreeskinfinitii/isighteyecare/public/blog";
+/** Same ImageKit public path as site images (NEXT_PUBLIC_IMAGE_CDN_BASE). Blog images live at {base}/blog/ */
+const IMAGE_CDN_BASE =
+  (typeof process !== "undefined" && process.env.NEXT_PUBLIC_IMAGE_CDN_BASE) ||
+  "https://ik.imagekit.io/jaishreeskinfinitii/isighteyecare/public";
+
+const BASE = IMAGE_CDN_BASE.replace(/\/$/, "") + "/blog";
 
 /**
  * Returns the full image URL for a blog post. Pass the slug only (e.g. "cataract-surgery-cost-mumbai").

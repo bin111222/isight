@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 /**
  * Updates all blog post files to use ImageKit URLs for the title image.
- * Assumes images are uploaded as {slug}.webp under your ImageKit path.
+ * Uses the same public slug as the site (NEXT_PUBLIC_IMAGE_CDN_BASE). Blog images at {base}/blog/{slug}.webp.
  *
  * Usage (from project root):
- *   IMAGEKIT_BASE_URL=https://ik.imagekit.io/your_id/blog node scripts/update-blog-images-to-imagekit.mjs
- *   node scripts/update-blog-images-to-imagekit.mjs https://ik.imagekit.io/your_id/blog
+ *   IMAGEKIT_BASE_URL=https://ik.imagekit.io/your_id/public node scripts/update-blog-images-to-imagekit.mjs
+ *   node scripts/update-blog-images-to-imagekit.mjs https://ik.imagekit.io/your_id/public
  *
- * Base URL should NOT have a trailing slash (e.g. https://ik.imagekit.io/xxx/blog).
+ * Base URL = ImageKit public path (no trailing slash), e.g. https://ik.imagekit.io/xxx/isighteyecare/public
  */
 
 import fs from "fs";
@@ -18,17 +18,18 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
 const POSTS_DIR = path.join(ROOT, "src", "content", "posts");
 
-const BASE_URL =
+const PUBLIC_BASE =
   process.env.IMAGEKIT_BASE_URL ||
+  process.env.NEXT_PUBLIC_IMAGE_CDN_BASE ||
   process.argv.find((a) => a.startsWith("https://"));
-if (!BASE_URL || !BASE_URL.startsWith("https://")) {
-  console.error("Usage: IMAGEKIT_BASE_URL=<url> node scripts/update-blog-images-to-imagekit.mjs");
-  console.error("   or: node scripts/update-blog-images-to-imagekit.mjs <base-url>");
-  console.error("Example: node scripts/update-blog-images-to-imagekit.mjs https://ik.imagekit.io/your_id/blog");
+if (!PUBLIC_BASE || !PUBLIC_BASE.startsWith("https://")) {
+  console.error("Usage: IMAGEKIT_BASE_URL=<public-base> node scripts/update-blog-images-to-imagekit.mjs");
+  console.error("   or: node scripts/update-blog-images-to-imagekit.mjs <public-base>");
+  console.error("Example: node scripts/update-blog-images-to-imagekit.mjs https://ik.imagekit.io/your_id/public");
   process.exit(1);
 }
 
-const baseUrl = BASE_URL.replace(/\/$/, "");
+const baseUrl = PUBLIC_BASE.replace(/\/$/, "") + "/blog";
 
 function getSlugAndImageLine(content) {
   const slugMatch = content.match(/slug:\s*["']([^"']+)["']/);
