@@ -13,6 +13,7 @@ type BaseProps = {
   className?: string;
   sizes?: string;
   priority?: boolean;
+  unoptimized?: boolean;
 };
 
 type FillProps = BaseProps & { fill: true; width?: never; height?: never };
@@ -22,7 +23,7 @@ export type ImageWithFallbackProps = FillProps | SizeProps;
 
 /** Renders Next Image with fallback when primary src fails (e.g. CDN 404). */
 export function ImageWithFallback(props: ImageWithFallbackProps) {
-  const { src, fallbackSrc = DEFAULT_FALLBACK, alt = "", className, sizes, priority } = props;
+  const { src, fallbackSrc = DEFAULT_FALLBACK, alt = "", className, sizes, priority, unoptimized } = props;
   const [currentSrc, setCurrentSrc] = useState(src);
   const useFallback = currentSrc === fallbackSrc;
 
@@ -39,6 +40,7 @@ export function ImageWithFallback(props: ImageWithFallbackProps) {
         className={className}
         sizes={sizes}
         priority={priority}
+        unoptimized={unoptimized}
         onError={handleError}
       />
     );
@@ -53,6 +55,7 @@ export function ImageWithFallback(props: ImageWithFallbackProps) {
       className={className}
       sizes={sizes}
       priority={priority}
+      unoptimized={unoptimized}
       onError={handleError}
     />
   );
