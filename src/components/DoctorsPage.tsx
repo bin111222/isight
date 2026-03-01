@@ -1,9 +1,9 @@
-import Image from "next/image";
 import Link from "next/link";
 import { GraduationCap, Award, Stethoscope } from "lucide-react";
 import { TREATMENT_LINKS, SITE_URL } from "@/lib/sitemap";
 import BookAppointmentCTA from "@/components/BookAppointmentCTA";
 import ClinicBrickGallery from "@/components/ClinicBrickGallery";
+import { ImageWithFallback } from "@/components/ImageWithFallback";
 import { CLINIC_IMAGES, GALLERY_IMAGES } from "@/lib/galleryAssets";
 import { getImageUrl } from "@/lib/imageUrl";
 
@@ -59,9 +59,9 @@ const physicianJsonLd = {
 /** About page images with intrinsic dimensions – display at original aspect ratio */
 const ABOUT_IMAGES = {
   hero: { src: getImageUrl("/hero.webp"), width: 4165, height: 4133, alt: "Dr. Nikhil Nasta – Ophthalmologist, iSight Eye Care Mumbai" },
-  publications: { src: getImageUrl("/publications.jpg"), width: 1179, height: 1163, alt: "iSight Eye Care – Publications and recognition" },
+  publications: { src: getImageUrl("/publications.webp"), width: 1179, height: 1163, alt: "iSight Eye Care – Publications and recognition" },
   coffee: { src: getImageUrl("/coffee.webp"), width: 1104, height: 1110, alt: "Coffee consultation at iSight Eye Care" },
-  pet: { src: getImageUrl("/pet.jpg"), width: 5712, height: 4284, alt: "Pet friendly eye clinic – iSight Eye Care Mumbai" },
+  pet: { src: getImageUrl("/pet.webp"), width: 5712, height: 4284, alt: "Pet friendly eye clinic – iSight Eye Care Mumbai" },
 } as const;
 
 const QUALIFICATIONS = [
@@ -100,7 +100,7 @@ export default function DoctorsPage() {
       {/* Hero — full-bleed image */}
       <section className="relative min-h-[70vh] flex flex-col justify-end overflow-hidden">
         <div className="absolute inset-0">
-          <Image
+          <ImageWithFallback
             src={ABOUT_IMAGES.hero.src}
             alt={ABOUT_IMAGES.hero.alt}
             fill
@@ -147,7 +147,7 @@ export default function DoctorsPage() {
               </p>
             </div>
             <div className="relative max-w-lg rounded-2xl overflow-hidden shadow-soft-lg ring-1 ring-black/5">
-              <Image
+              <ImageWithFallback
                 src={ABOUT_IMAGES.publications.src}
                 alt={ABOUT_IMAGES.publications.alt}
                 width={ABOUT_IMAGES.publications.width}
@@ -242,7 +242,7 @@ export default function DoctorsPage() {
               </p>
             </div>
             <div className="order-1 lg:order-2 relative max-w-sm mx-auto rounded-2xl overflow-hidden shadow-soft-lg ring-1 ring-black/5 bg-navy-50 p-6">
-              <Image
+              <ImageWithFallback
                 src={ABOUT_IMAGES.coffee.src}
                 alt={ABOUT_IMAGES.coffee.alt}
                 width={ABOUT_IMAGES.coffee.width}
@@ -260,7 +260,7 @@ export default function DoctorsPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
             <div className="relative max-w-lg rounded-2xl overflow-hidden shadow-soft-lg ring-1 ring-black/5">
-              <Image
+              <ImageWithFallback
                 src={ABOUT_IMAGES.pet.src}
                 alt={ABOUT_IMAGES.pet.alt}
                 width={ABOUT_IMAGES.pet.width}
@@ -299,7 +299,7 @@ export default function DoctorsPage() {
                 key={img.src}
                 className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-[0_4px_24px_-4px_rgba(10,15,26,0.15)] ring-1 ring-black/5 hover:shadow-[0_12px_40px_-8px_rgba(10,15,26,0.2)] transition-shadow duration-300"
               >
-                <Image
+                <ImageWithFallback
                   src={img.src}
                   alt={img.alt}
                   fill

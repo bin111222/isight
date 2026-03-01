@@ -1,31 +1,59 @@
 "use client";
 
 import { useState } from "react";
-import Image, { ImageProps } from "next/image";
+import Image from "next/image";
+import { getImageUrl } from "@/lib/imageUrl";
 
-type Props = ImageProps & { fallbackSrc: string };
+const DEFAULT_FALLBACK = getImageUrl("/hero.webp");
 
-/**
- * Next/Image that switches to fallbackSrc when the primary image fails to load (e.g. 404 on CDN).
- * Use for treatment cards and any CDN image that might be missing.
- */
-export default function ImageWithFallback({ src, fallbackSrc, alt, ...rest }: Props) {
+type BaseProps = {
+  src: string;
+  fallbackSrc?: string;
+  alt?: string;
+  className?: string;
+  sizes?: string;
+  priority?: boolean;
+};
+
+type FillProps = BaseProps & { fill: true; width?: never; height?: never };
+type SizeProps = BaseProps & { width: number; height: number; fill?: false };
+
+export type ImageWithFallbackProps = FillProps | SizeProps;
+
+/** Renders Next Image with fallback when primary src fails (e.g. CDN 404). */
+export function ImageWithFallback(props: ImageWithFallbackProps) {
+  const { src, fallbackSrc = DEFAULT_FALLBACK, alt = "", className, sizes, priority } = props;
   const [currentSrc, setCurrentSrc] = useState(src);
-  const [errored, setErrored] = useState(false);
+  const useFallback = currentSrc === fallbackSrc;
 
   const handleError = () => {
-    if (!errored) {
-      setErrored(true);
-      setCurrentSrc(fallbackSrc);
-    }
+    if (!useFallback) setCurrentSrc(fallbackSrc);
   };
+
+  if (props.fill) {
+    return (
+      <Image
+        src={currentSrc}
+        alt={alt}
+        fill
+        className={className}
+        sizes={sizes}
+        priority={priority}
+        onError={handleError}
+      />
+    );
+  }
 
   return (
     <Image
       src={currentSrc}
       alt={alt}
+      width={props.width}
+      height={props.height}
+      className={className}
+      sizes={sizes}
+      priority={priority}
       onError={handleError}
-      {...rest}
     />
   );
 }

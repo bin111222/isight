@@ -4,10 +4,13 @@ import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { X, Phone, MessageCircle, ArrowRight } from "lucide-react";
+import { getImageUrl } from "@/lib/imageUrl";
+import { ImageWithFallback } from "@/components/ImageWithFallback";
 
 const PHONE = "918692986033";
 const PHONE_DISPLAY = "8692986033";
 const WHATSAPP_URL = `https://wa.me/${PHONE}`;
+const FALLBACK_IMAGE = getImageUrl("/hero.webp");
 
 type ClinicBrickGalleryProps = {
   images: readonly string[];
@@ -49,6 +52,10 @@ export default function ClinicBrickGallery({ images }: ClinicBrickGalleryProps) 
                 loading="lazy"
                 decoding="async"
                 sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                onError={(e) => {
+                  const el = e.currentTarget;
+                  if (el.src !== FALLBACK_IMAGE) el.src = FALLBACK_IMAGE;
+                }}
               />
             </span>
           </button>
@@ -85,10 +92,11 @@ export default function ClinicBrickGallery({ images }: ClinicBrickGalleryProps) 
             {/* Image area — capped height on mobile to avoid overlap */}
             <div className="relative flex-shrink-0 flex-1 flex items-center justify-center min-h-[200px] min-w-0 sm:min-w-[280px] p-3 sm:p-6 z-10">
               <div className="relative w-full max-w-2xl aspect-[4/3] max-h-[50vh] sm:max-h-none rounded-xl overflow-hidden bg-navy-950/50 shadow-inner">
-                <Image
+                <ImageWithFallback
                   src={selected}
                   alt="iSight Eye Care clinic"
                   fill
+                  fallbackSrc={FALLBACK_IMAGE}
                   className="object-contain"
                   sizes="(max-width: 640px) 100vw, 60vw"
                 />
