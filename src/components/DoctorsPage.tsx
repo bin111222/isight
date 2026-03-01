@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { GraduationCap, Award, Stethoscope } from "lucide-react";
+import { GraduationCap, Award, Stethoscope, ArrowRight } from "lucide-react";
 import { TREATMENT_LINKS, SITE_URL } from "@/lib/sitemap";
 import BookAppointmentCTA from "@/components/BookAppointmentCTA";
 import ClinicBrickGallery from "@/components/ClinicBrickGallery";
@@ -350,21 +350,35 @@ export default function DoctorsPage() {
         <BookAppointmentCTA variant="card" />
       </section>
 
-      {/* Treatments quick links */}
+      {/* Treatments quick links — same pattern as InternationalPatientsPage: Link for internal, a for external */}
       <section className="py-12 bg-silver-100 border-t border-silver-200">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <h2 className="font-display text-xl font-bold text-navy-900 mb-6">Our treatments</h2>
           <ul className="flex flex-wrap gap-3">
-            {TREATMENT_LINKS.slice(0, 10).map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className="inline-block px-4 py-2 rounded-full bg-white border border-silver-200 text-navy-700 text-sm font-medium hover:border-clinical-400 hover:text-clinical-600 transition-colors"
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
+            {TREATMENT_LINKS.map((link) => {
+              const isExternal = link.href.startsWith("http") || link.href.startsWith("mailto:");
+              const linkClass = "inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-silver-200 text-navy-700 text-sm font-medium hover:border-clinical-400 hover:text-clinical-600 transition-colors";
+              return (
+                <li key={link.href}>
+                  {isExternal ? (
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={linkClass}
+                    >
+                      {link.label}
+                      <ArrowRight className="w-4 h-4 opacity-80" strokeWidth={2} />
+                    </a>
+                  ) : (
+                    <Link href={link.href} className={linkClass}>
+                      {link.label}
+                      <ArrowRight className="w-4 h-4 opacity-80" strokeWidth={2} />
+                    </Link>
+                  )}
+                </li>
+              );
+            })}
           </ul>
         </div>
       </section>
