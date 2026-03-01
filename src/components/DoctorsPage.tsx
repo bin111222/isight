@@ -102,6 +102,7 @@ export default function DoctorsPage() {
         <div className="absolute inset-0">
           <ImageWithFallback
             src={ABOUT_IMAGES.hero.src}
+            fallbackSrc={getImageUrl("/hero.webp")}
             alt={ABOUT_IMAGES.hero.alt}
             fill
             className="object-cover object-[center_30%]"
@@ -149,6 +150,7 @@ export default function DoctorsPage() {
             <div className="relative max-w-lg rounded-2xl overflow-hidden shadow-soft-lg ring-1 ring-black/5">
               <ImageWithFallback
                 src={ABOUT_IMAGES.publications.src}
+                fallbackSrc={getImageUrl("/hero.webp")}
                 alt={ABOUT_IMAGES.publications.alt}
                 width={ABOUT_IMAGES.publications.width}
                 height={ABOUT_IMAGES.publications.height}
@@ -244,6 +246,7 @@ export default function DoctorsPage() {
             <div className="order-1 lg:order-2 relative max-w-sm mx-auto rounded-2xl overflow-hidden shadow-soft-lg ring-1 ring-black/5 bg-navy-50 p-6">
               <ImageWithFallback
                 src={ABOUT_IMAGES.coffee.src}
+                fallbackSrc={getImageUrl("/hero.webp")}
                 alt={ABOUT_IMAGES.coffee.alt}
                 width={ABOUT_IMAGES.coffee.width}
                 height={ABOUT_IMAGES.coffee.height}
@@ -262,6 +265,7 @@ export default function DoctorsPage() {
             <div className="relative max-w-lg rounded-2xl overflow-hidden shadow-soft-lg ring-1 ring-black/5">
               <ImageWithFallback
                 src={ABOUT_IMAGES.pet.src}
+                fallbackSrc={getImageUrl("/hero.webp")}
                 alt={ABOUT_IMAGES.pet.alt}
                 width={ABOUT_IMAGES.pet.width}
                 height={ABOUT_IMAGES.pet.height}
@@ -301,6 +305,7 @@ export default function DoctorsPage() {
               >
                 <ImageWithFallback
                   src={img.src}
+                  fallbackSrc={getImageUrl("/hero.webp")}
                   alt={img.alt}
                   fill
                   className="object-cover"
