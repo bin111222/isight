@@ -88,9 +88,15 @@ const physicianJsonLd = {
   award: "Ophthall Hall of Vision Recognition Award",
 };
 
+/** Non-treatment pages that appear in service-style cards and need an image (e.g. International Patients) */
+const EXTRA_SERVICE_SLUGS = ["international-patients"] as const;
+
 export default function HomePage() {
   const serviceImages: Record<string, string> = {};
   for (const slug of TREATMENT_SLUGS) {
+    serviceImages[slug] = getFirstImage(slug);
+  }
+  for (const slug of EXTRA_SERVICE_SLUGS) {
     serviceImages[slug] = getFirstImage(slug);
   }
 

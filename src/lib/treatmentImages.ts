@@ -30,6 +30,11 @@ const IMAGE_EXT = new Set([".jpg", ".jpeg", ".png", ".webp", ".avif", ".gif"]);
  */
 const DEFAULT_FIRST_IMAGE = "1.webp";
 
+/** Slugs that are not treatments but need a single image (e.g. international-patients page card) */
+const NON_TREATMENT_IMAGE_PATHS: Record<string, string[]> = {
+  "international-patients": ["/hero.webp"],
+};
+
 /**
  * Returns paths for images in this treatment's folder.
  * Reads filesystem when public/ exists (local/build with assets). When public/ is
@@ -37,6 +42,9 @@ const DEFAULT_FIRST_IMAGE = "1.webp";
  * so ImageKit URLs are still built correctly instead of falling back to hero.
  */
 export function getTreatmentImagePaths(slug: string): string[] {
+  const nonTreatment = NON_TREATMENT_IMAGE_PATHS[slug];
+  if (nonTreatment) return nonTreatment;
+
   const folderName = SLUG_TO_FOLDER[slug];
   if (!folderName) return [];
 
