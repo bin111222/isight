@@ -3,7 +3,7 @@ import { GraduationCap, Award, Stethoscope, ArrowRight } from "lucide-react";
 import { TREATMENT_LINKS, SITE_URL } from "@/lib/sitemap";
 import BookAppointmentCTA from "@/components/BookAppointmentCTA";
 import ClinicBrickGallery from "@/components/ClinicBrickGallery";
-import { ImageWithFallback } from "@/components/ImageWithFallback";
+import DoctorPageImage from "@/components/DoctorPageImage";
 import { CLINIC_IMAGES, GALLERY_IMAGES } from "@/lib/galleryAssets";
 import { getImageUrl } from "@/lib/imageUrl";
 
@@ -145,7 +145,7 @@ export default function DoctorsPage() {
               </p>
             </div>
             <div className="relative max-w-lg rounded-2xl overflow-hidden shadow-soft-lg ring-1 ring-black/5">
-              <ImageWithFallback
+              <DoctorPageImage
                 src={ABOUT_IMAGES.publications.src}
                 fallbackSrc="/hero.webp"
                 alt={ABOUT_IMAGES.publications.alt}
@@ -241,7 +241,7 @@ export default function DoctorsPage() {
               </p>
             </div>
             <div className="order-1 lg:order-2 relative max-w-sm mx-auto rounded-2xl overflow-hidden shadow-soft-lg ring-1 ring-black/5 bg-navy-50 p-6">
-              <ImageWithFallback
+              <DoctorPageImage
                 src={ABOUT_IMAGES.coffee.src}
                 fallbackSrc="/hero.webp"
                 alt={ABOUT_IMAGES.coffee.alt}
@@ -260,7 +260,7 @@ export default function DoctorsPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
             <div className="relative max-w-lg rounded-2xl overflow-hidden shadow-soft-lg ring-1 ring-black/5">
-              <ImageWithFallback
+              <DoctorPageImage
                 src={ABOUT_IMAGES.pet.src}
                 fallbackSrc="/hero.webp"
                 alt={ABOUT_IMAGES.pet.alt}
@@ -295,12 +295,12 @@ export default function DoctorsPage() {
             From the operating theatre to the stage—meet Dr. Nikhil Nasta in practice, in portrait, and at TEDx.
           </p>
           <div className="mt-10 grid sm:grid-cols-3 gap-6 lg:gap-8">
-            {GALLERY_IMAGES.map((img, i) => (
+            {GALLERY_IMAGES.map((img) => (
               <div
                 key={img.src}
                 className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-[0_4px_24px_-4px_rgba(10,15,26,0.15)] ring-1 ring-black/5 hover:shadow-[0_12px_40px_-8px_rgba(10,15,26,0.2)] transition-shadow duration-300"
               >
-                <ImageWithFallback
+                <DoctorPageImage
                   src={img.src}
                   fallbackSrc="/hero.webp"
                   alt={img.alt}
