@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import ImageWithFallback from "@/components/ImageWithFallback";
+import { ImageWithFallback } from "@/components/ImageWithFallback";
 import TreatmentCardImage from "@/components/TreatmentCardImage";
 import { Phone, Stethoscope, ClipboardList, ArrowRight } from "lucide-react";
 import CountUpStat from "@/components/CountUpStat";
