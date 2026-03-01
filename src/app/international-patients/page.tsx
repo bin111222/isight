@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { SITE_URL } from "@/lib/sitemap";
 import { getTreatmentImagePaths } from "@/lib/treatmentImages";
-import { getImageUrl } from "@/lib/imageUrl";
 import InternationalPatientsPage from "@/components/InternationalPatientsPage";
 
 /** Slugs used for treatment badges on the international patients page */
@@ -20,15 +19,12 @@ const BADGE_SLUGS = [
   "dry-eye-treatment-mumbai",
 ] as const;
 
-function getFirstImage(slug: string): string {
-  const paths = getTreatmentImagePaths(slug);
-  return getImageUrl(paths[0] ?? "/hero.webp");
-}
-
+/** Same-origin image paths so all images load from the app (no CDN dependency). */
 function getInternationalPatientsTreatmentImages(): Record<string, string> {
-  const map: Record<string, string> = { placeholder: getImageUrl("/hero.webp") };
+  const map: Record<string, string> = { placeholder: "/hero.webp" };
   for (const slug of BADGE_SLUGS) {
-    map[slug] = getFirstImage(slug);
+    const paths = getTreatmentImagePaths(slug);
+    map[slug] = paths[0] ?? "/hero.webp";
   }
   return map;
 }

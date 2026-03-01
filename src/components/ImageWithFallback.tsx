@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { getImageUrl } from "@/lib/imageUrl";
 
@@ -26,6 +26,10 @@ export function ImageWithFallback(props: ImageWithFallbackProps) {
   const { src, fallbackSrc = DEFAULT_FALLBACK, alt = "", className, sizes, priority, unoptimized } = props;
   const [currentSrc, setCurrentSrc] = useState(src);
   const useFallback = currentSrc === fallbackSrc;
+
+  useEffect(() => {
+    setCurrentSrc(src);
+  }, [src]);
 
   const handleError = () => {
     if (!useFallback) setCurrentSrc(fallbackSrc);

@@ -15,7 +15,6 @@ import {
   HeadphonesIcon,
   Video,
 } from "lucide-react";
-import { getImageUrl } from "@/lib/imageUrl";
 import { FAQAccordion } from "@/components/ui/faq-accordion";
 import { ImageWithFallback } from "@/components/ImageWithFallback";
 
@@ -316,7 +315,8 @@ export default function InternationalPatientsPage({ treatmentImages }: Props) {
       {/* ——— HERO ——— */}
       <header className="relative min-h-[70vh] flex flex-col justify-center py-24 lg:py-32 overflow-hidden">
         <ImageWithFallback
-          src={getImageUrl("/hero.webp")}
+          src="/hero.webp"
+          fallbackSrc="/hero.webp"
           alt=""
           fill
           className="object-cover object-[center_28%]"
@@ -387,7 +387,7 @@ export default function InternationalPatientsPage({ treatmentImages }: Props) {
             </div>
             <div className="lg:col-span-2 relative aspect-[4/3] lg:aspect-square rounded-2xl overflow-hidden shadow-[0_12px_40px_-12px_rgba(10,15,26,0.2)] border border-silver-200/80">
               <ImageWithFallback
-                src={getImageUrl("/clinic/DSC04995.webp")}
+                src="/clinic/DSC04995.webp"
                 alt=""
                 fill
                 className="object-cover"
@@ -404,7 +404,7 @@ export default function InternationalPatientsPage({ treatmentImages }: Props) {
           <div className="grid lg:grid-cols-5 gap-10 lg:gap-14 items-start">
             <div className="lg:col-span-2 order-2 lg:order-1 relative aspect-[4/3] lg:aspect-[3/4] rounded-2xl overflow-hidden shadow-[0_12px_40px_-12px_rgba(10,15,26,0.15)] border border-silver-200/80">
               <ImageWithFallback
-                src={getImageUrl("/gallery/ot.webp")}
+                src="/gallery/ot.webp"
                 alt=""
                 fill
                 className="object-cover"
@@ -490,7 +490,7 @@ export default function InternationalPatientsPage({ treatmentImages }: Props) {
             <div className="lg:col-span-5 flex flex-col gap-4">
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-[0_8px_32px_-8px_rgba(10,15,26,0.15)] border border-silver-200/80 flex-1 min-h-[200px]">
                 <ImageWithFallback
-                  src={getImageUrl("/clinic/DSC04997.webp")}
+                  src="/clinic/DSC04997.webp"
                   alt=""
                   fill
                   className="object-cover"
@@ -499,7 +499,7 @@ export default function InternationalPatientsPage({ treatmentImages }: Props) {
               </div>
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-[0_8px_32px_-8px_rgba(10,15,26,0.15)] border border-silver-200/80 hidden sm:block">
                 <ImageWithFallback
-                  src={getImageUrl("/clinic/DSC05447.webp")}
+                  src="/clinic/DSC05447.webp"
                   alt=""
                   fill
                   className="object-cover"
@@ -523,7 +523,7 @@ export default function InternationalPatientsPage({ treatmentImages }: Props) {
           <div className="grid lg:grid-cols-5 gap-10 lg:gap-14 items-center">
             <div className="lg:col-span-2 relative aspect-[4/3] rounded-2xl overflow-hidden shadow-[0_12px_40px_-12px_rgba(10,15,26,0.15)] border border-silver-200/80">
               <ImageWithFallback
-                src={getImageUrl("/clinic/DSC05345.webp")}
+                src="/clinic/DSC05345.webp"
                 alt=""
                 fill
                 className="object-cover"
@@ -577,7 +577,7 @@ export default function InternationalPatientsPage({ treatmentImages }: Props) {
               </ul>
               <div className="mt-8 relative aspect-video rounded-2xl overflow-hidden shadow-[0_8px_32px_-8px_rgba(10,15,26,0.12)] border border-silver-200/80">
                 <ImageWithFallback
-                  src={getImageUrl("/clinic/DSC05464.webp")}
+                  src="/clinic/DSC05464.webp"
                   alt=""
                   fill
                   className="object-cover"
@@ -601,7 +601,7 @@ export default function InternationalPatientsPage({ treatmentImages }: Props) {
               </p>
               <div className="mt-8 relative aspect-video rounded-2xl overflow-hidden shadow-[0_8px_32px_-8px_rgba(10,15,26,0.12)] border border-silver-200/80">
                 <ImageWithFallback
-                  src={getImageUrl("/clinic/DSC05102.webp")}
+                  src="/clinic/DSC05102.webp"
                   alt=""
                   fill
                   className="object-cover"
@@ -619,7 +619,7 @@ export default function InternationalPatientsPage({ treatmentImages }: Props) {
           <div className="grid lg:grid-cols-5 gap-10 lg:gap-14 items-center">
             <div className="lg:col-span-2 relative aspect-[4/3] rounded-2xl overflow-hidden shadow-[0_12px_40px_-12px_rgba(10,15,26,0.15)] border border-silver-200/80 order-2 lg:order-1">
               <ImageWithFallback
-                src={getImageUrl("/hero.webp")}
+                src="/hero.webp"
                 alt=""
                 fill
                 className="object-cover"
