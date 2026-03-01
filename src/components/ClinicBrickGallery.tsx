@@ -4,13 +4,13 @@ import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { X, Phone, MessageCircle, ArrowRight } from "lucide-react";
-import { getImageUrl } from "@/lib/imageUrl";
 import { ImageWithFallback } from "@/components/ImageWithFallback";
 
 const PHONE = "918692986033";
 const PHONE_DISPLAY = "8692986033";
 const WHATSAPP_URL = `https://wa.me/${PHONE}`;
-const FALLBACK_IMAGE = getImageUrl("/hero.webp");
+/** Same-origin so fallback loads when CDN fails */
+const FALLBACK_IMAGE = "/hero.webp";
 
 type ClinicBrickGalleryProps = {
   images: readonly string[];

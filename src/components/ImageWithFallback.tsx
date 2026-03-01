@@ -2,9 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { getImageUrl } from "@/lib/imageUrl";
-
-const DEFAULT_FALLBACK = getImageUrl("/hero.webp");
+/** Same-origin so fallback loads when CDN fails */
+const DEFAULT_FALLBACK = "/hero.webp";
 
 type BaseProps = {
   src: string;
