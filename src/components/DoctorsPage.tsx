@@ -97,17 +97,14 @@ export default function DoctorsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(physicianJsonLd) }}
       />
     <div className="min-h-screen bg-silver-100">
-      {/* Hero — full-bleed image */}
+      {/* Hero — full-bleed image (native img so it always loads from public/) */}
       <section className="relative min-h-[70vh] flex flex-col justify-end overflow-hidden">
         <div className="absolute inset-0">
-          <ImageWithFallback
+          <img
             src="/hero.webp"
-            fallbackSrc="/hero.webp"
             alt={ABOUT_IMAGES.hero.alt}
-            fill
-            className="object-cover object-[center_30%]"
-            sizes="100vw"
-            priority
+            className="absolute inset-0 w-full h-full object-cover object-[center_30%]"
+            fetchPriority="high"
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-navy-900/40 to-navy-900/95" aria-hidden />

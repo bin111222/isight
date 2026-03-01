@@ -20,11 +20,17 @@ type SizeProps = BaseProps & { width: number; height: number; fill?: false };
 
 export type ImageWithFallbackProps = FillProps | SizeProps;
 
+/** Same-origin path: starts with / but not // (protocol-relative). Bypass optimizer so static file loads directly. */
+function isSameOrigin(src: string): boolean {
+  return typeof src === "string" && src.startsWith("/") && !src.startsWith("//");
+}
+
 /** Renders Next Image with fallback when primary src fails (e.g. CDN 404). */
 export function ImageWithFallback(props: ImageWithFallbackProps) {
   const { src, fallbackSrc = DEFAULT_FALLBACK, alt = "", className, sizes, priority, unoptimized } = props;
   const [currentSrc, setCurrentSrc] = useState(src);
   const useFallback = currentSrc === fallbackSrc;
+  const bypassOptimizer = unoptimized ?? isSameOrigin(currentSrc);
 
   useEffect(() => {
     setCurrentSrc(src);
@@ -43,7 +49,7 @@ export function ImageWithFallback(props: ImageWithFallbackProps) {
         className={className}
         sizes={sizes}
         priority={priority}
-        unoptimized={unoptimized}
+        unoptimized={bypassOptimizer}
         onError={handleError}
       />
     );
@@ -58,7 +64,7 @@ export function ImageWithFallback(props: ImageWithFallbackProps) {
       className={className}
       sizes={sizes}
       priority={priority}
-      unoptimized={unoptimized}
+      unoptimized={bypassOptimizer}
       onError={handleError}
     />
   );
