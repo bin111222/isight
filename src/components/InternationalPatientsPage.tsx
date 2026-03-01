@@ -383,7 +383,7 @@ export default function InternationalPatientsPage({ treatmentImages }: Props) {
               </p>
             </div>
             <div className="lg:col-span-2 relative aspect-[4/3] lg:aspect-square rounded-2xl overflow-hidden shadow-[0_12px_40px_-12px_rgba(10,15,26,0.2)] border border-silver-200/80">
-              <TreatmentCardImage src="/clinic/DSC04995.webp" fallbackSrc="/hero.webp" alt="" />
+              <TreatmentCardImage src="/hero.webp" fallbackSrc="/hero.webp" alt="" />
             </div>
           </div>
         </div>
@@ -394,7 +394,7 @@ export default function InternationalPatientsPage({ treatmentImages }: Props) {
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-5 gap-10 lg:gap-14 items-start">
             <div className="lg:col-span-2 order-2 lg:order-1 relative aspect-[4/3] lg:aspect-[3/4] rounded-2xl overflow-hidden shadow-[0_12px_40px_-12px_rgba(10,15,26,0.15)] border border-silver-200/80">
-              <TreatmentCardImage src="/gallery/ot.webp" fallbackSrc="/hero.webp" alt="" />
+              <TreatmentCardImage src="/hero.webp" fallbackSrc="/hero.webp" alt="" />
             </div>
             <div className="lg:col-span-3 order-1 lg:order-2">
               <SectionHeading
@@ -474,10 +474,10 @@ export default function InternationalPatientsPage({ treatmentImages }: Props) {
             </div>
             <div className="lg:col-span-5 flex flex-col gap-4">
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-[0_8px_32px_-8px_rgba(10,15,26,0.15)] border border-silver-200/80 flex-1 min-h-[200px]">
-                <TreatmentCardImage src="/clinic/DSC04997.webp" fallbackSrc="/hero.webp" alt="" />
+                <TreatmentCardImage src="/hero.webp" fallbackSrc="/hero.webp" alt="" />
               </div>
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-[0_8px_32px_-8px_rgba(10,15,26,0.15)] border border-silver-200/80 hidden sm:block">
-                <TreatmentCardImage src="/clinic/DSC05447.webp" fallbackSrc="/hero.webp" alt="" />
+                <TreatmentCardImage src="/hero.webp" fallbackSrc="/hero.webp" alt="" />
               </div>
             </div>
           </div>
@@ -495,7 +495,7 @@ export default function InternationalPatientsPage({ treatmentImages }: Props) {
           />
           <div className="grid lg:grid-cols-5 gap-10 lg:gap-14 items-center">
             <div className="lg:col-span-2 relative aspect-[4/3] rounded-2xl overflow-hidden shadow-[0_12px_40px_-12px_rgba(10,15,26,0.15)] border border-silver-200/80">
-              <TreatmentCardImage src="/clinic/DSC05345.webp" fallbackSrc="/hero.webp" alt="" />
+              <TreatmentCardImage src="/hero.webp" fallbackSrc="/hero.webp" alt="" />
             </div>
             <div className="lg:col-span-3">
               <div className="rounded-2xl bg-silver-100 border border-silver-200/80 p-6 sm:p-8">
@@ -543,7 +543,7 @@ export default function InternationalPatientsPage({ treatmentImages }: Props) {
                 ))}
               </ul>
               <div className="mt-8 relative aspect-video rounded-2xl overflow-hidden shadow-[0_8px_32px_-8px_rgba(10,15,26,0.12)] border border-silver-200/80">
-                <TreatmentCardImage src="/clinic/DSC05464.webp" fallbackSrc="/hero.webp" alt="" />
+                <TreatmentCardImage src="/hero.webp" fallbackSrc="/hero.webp" alt="" />
               </div>
             </div>
             <div>
@@ -561,7 +561,7 @@ export default function InternationalPatientsPage({ treatmentImages }: Props) {
                 Most surgeries do not require long hospitalisation.
               </p>
               <div className="mt-8 relative aspect-video rounded-2xl overflow-hidden shadow-[0_8px_32px_-8px_rgba(10,15,26,0.12)] border border-silver-200/80">
-                <TreatmentCardImage src="/clinic/DSC05102.webp" fallbackSrc="/hero.webp" alt="" />
+                <TreatmentCardImage src="/hero.webp" fallbackSrc="/hero.webp" alt="" />
               </div>
             </div>
           </div>
