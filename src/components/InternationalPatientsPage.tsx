@@ -16,7 +16,7 @@ import {
   Video,
 } from "lucide-react";
 import { FAQAccordion } from "@/components/ui/faq-accordion";
-import { ImageWithFallback } from "@/components/ImageWithFallback";
+import TreatmentCardImage from "@/components/TreatmentCardImage";
 
 const PHONE = "918692986033";
 const WHATSAPP_URL = `https://wa.me/${PHONE}`;
@@ -248,19 +248,14 @@ function TreatmentBadgeCard({
   imageSrc: string;
   fallbackSrc?: string;
 }) {
-  const imageProps = {
-    fill: true as const,
-    className: "object-cover transition-transform duration-500 group-hover:scale-105",
-    sizes: "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw",
-  };
   return (
     <div className="group relative flex flex-col rounded-2xl overflow-hidden bg-white shadow-[0_4px_24px_-4px_rgba(10,15,26,0.12)] border border-silver-200/60 hover:shadow-[0_12px_40px_-12px_rgba(10,15,26,0.2)] hover:border-clinical-500/20 transition-all duration-300 hover:-translate-y-1">
       {badge.pageHref ? (
         <Link href={badge.pageHref} className="relative block w-full aspect-[4/3] overflow-hidden rounded-t-2xl">
-          <ImageWithFallback
+          <TreatmentCardImage
             src={imageSrc}
-            fallbackSrc={fallbackSrc}
-            {...imageProps}
+            fallbackSrc={fallbackSrc ?? "/hero.webp"}
+            alt=""
           />
           <div className="absolute inset-0 bg-gradient-to-t from-navy-900/90 via-navy-900/30 to-transparent" />
           <span className="absolute bottom-0 left-0 right-0 p-4 pt-8">
@@ -269,10 +264,10 @@ function TreatmentBadgeCard({
         </Link>
       ) : (
         <div className="relative w-full aspect-[4/3] overflow-hidden rounded-t-2xl">
-          <ImageWithFallback
+          <TreatmentCardImage
             src={imageSrc}
-            fallbackSrc={fallbackSrc}
-            {...imageProps}
+            fallbackSrc={fallbackSrc ?? "/hero.webp"}
+            alt=""
           />
           <div className="absolute inset-0 bg-gradient-to-t from-navy-900/90 via-navy-900/30 to-transparent" />
           <span className="absolute bottom-0 left-0 right-0 p-4 pt-8">
@@ -314,15 +309,17 @@ export default function InternationalPatientsPage({ treatmentImages }: Props) {
     <div className="min-h-screen bg-silver-100">
       {/* ——— HERO ——— */}
       <header className="relative min-h-[70vh] flex flex-col justify-center py-24 lg:py-32 overflow-hidden">
-        <ImageWithFallback
-          src="/hero.webp"
-          fallbackSrc="/hero.webp"
-          alt=""
-          fill
-          className="object-cover object-[center_28%]"
-          sizes="100vw"
-          priority
-        />
+        <div className="absolute inset-0">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/hero.webp"
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover object-[center_28%]"
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
+          />
+        </div>
         <div className="absolute inset-0 bg-navy-900/80" aria-hidden />
         <div className="absolute inset-0 bg-gradient-to-b from-navy-900/50 via-transparent to-navy-900/90 pointer-events-none" aria-hidden />
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-clinical-400/50 to-transparent" aria-hidden />
@@ -386,13 +383,7 @@ export default function InternationalPatientsPage({ treatmentImages }: Props) {
               </p>
             </div>
             <div className="lg:col-span-2 relative aspect-[4/3] lg:aspect-square rounded-2xl overflow-hidden shadow-[0_12px_40px_-12px_rgba(10,15,26,0.2)] border border-silver-200/80">
-              <ImageWithFallback
-                src="/clinic/DSC04995.webp"
-                alt=""
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 40vw"
-              />
+              <TreatmentCardImage src="/clinic/DSC04995.webp" fallbackSrc="/hero.webp" alt="" />
             </div>
           </div>
         </div>
@@ -403,13 +394,7 @@ export default function InternationalPatientsPage({ treatmentImages }: Props) {
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-5 gap-10 lg:gap-14 items-start">
             <div className="lg:col-span-2 order-2 lg:order-1 relative aspect-[4/3] lg:aspect-[3/4] rounded-2xl overflow-hidden shadow-[0_12px_40px_-12px_rgba(10,15,26,0.15)] border border-silver-200/80">
-              <ImageWithFallback
-                src="/gallery/ot.webp"
-                alt=""
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 35vw"
-              />
+              <TreatmentCardImage src="/gallery/ot.webp" fallbackSrc="/hero.webp" alt="" />
             </div>
             <div className="lg:col-span-3 order-1 lg:order-2">
               <SectionHeading
@@ -489,22 +474,10 @@ export default function InternationalPatientsPage({ treatmentImages }: Props) {
             </div>
             <div className="lg:col-span-5 flex flex-col gap-4">
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-[0_8px_32px_-8px_rgba(10,15,26,0.15)] border border-silver-200/80 flex-1 min-h-[200px]">
-                <ImageWithFallback
-                  src="/clinic/DSC04997.webp"
-                  alt=""
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 40vw"
-                />
+                <TreatmentCardImage src="/clinic/DSC04997.webp" fallbackSrc="/hero.webp" alt="" />
               </div>
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-[0_8px_32px_-8px_rgba(10,15,26,0.15)] border border-silver-200/80 hidden sm:block">
-                <ImageWithFallback
-                  src="/clinic/DSC05447.webp"
-                  alt=""
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 40vw"
-                />
+                <TreatmentCardImage src="/clinic/DSC05447.webp" fallbackSrc="/hero.webp" alt="" />
               </div>
             </div>
           </div>
@@ -522,13 +495,7 @@ export default function InternationalPatientsPage({ treatmentImages }: Props) {
           />
           <div className="grid lg:grid-cols-5 gap-10 lg:gap-14 items-center">
             <div className="lg:col-span-2 relative aspect-[4/3] rounded-2xl overflow-hidden shadow-[0_12px_40px_-12px_rgba(10,15,26,0.15)] border border-silver-200/80">
-              <ImageWithFallback
-                src="/clinic/DSC05345.webp"
-                alt=""
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 35vw"
-              />
+              <TreatmentCardImage src="/clinic/DSC05345.webp" fallbackSrc="/hero.webp" alt="" />
             </div>
             <div className="lg:col-span-3">
               <div className="rounded-2xl bg-silver-100 border border-silver-200/80 p-6 sm:p-8">
@@ -576,13 +543,7 @@ export default function InternationalPatientsPage({ treatmentImages }: Props) {
                 ))}
               </ul>
               <div className="mt-8 relative aspect-video rounded-2xl overflow-hidden shadow-[0_8px_32px_-8px_rgba(10,15,26,0.12)] border border-silver-200/80">
-                <ImageWithFallback
-                  src="/clinic/DSC05464.webp"
-                  alt=""
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
+                <TreatmentCardImage src="/clinic/DSC05464.webp" fallbackSrc="/hero.webp" alt="" />
               </div>
             </div>
             <div>
@@ -600,13 +561,7 @@ export default function InternationalPatientsPage({ treatmentImages }: Props) {
                 Most surgeries do not require long hospitalisation.
               </p>
               <div className="mt-8 relative aspect-video rounded-2xl overflow-hidden shadow-[0_8px_32px_-8px_rgba(10,15,26,0.12)] border border-silver-200/80">
-                <ImageWithFallback
-                  src="/clinic/DSC05102.webp"
-                  alt=""
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
+                <TreatmentCardImage src="/clinic/DSC05102.webp" fallbackSrc="/hero.webp" alt="" />
               </div>
             </div>
           </div>
@@ -618,13 +573,7 @@ export default function InternationalPatientsPage({ treatmentImages }: Props) {
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-5 gap-10 lg:gap-14 items-center">
             <div className="lg:col-span-2 relative aspect-[4/3] rounded-2xl overflow-hidden shadow-[0_12px_40px_-12px_rgba(10,15,26,0.15)] border border-silver-200/80 order-2 lg:order-1">
-              <ImageWithFallback
-                src="/hero.webp"
-                alt=""
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 35vw"
-              />
+              <TreatmentCardImage src="/hero.webp" fallbackSrc="/hero.webp" alt="" />
             </div>
             <div className="lg:col-span-3 text-center lg:text-left order-1 lg:order-2">
               <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-clinical-100 text-clinical-600 mb-6">
