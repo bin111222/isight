@@ -10,6 +10,7 @@ import AwardsPage from "@/components/AwardsPage";
 import ConsultPage from "@/components/ConsultPage";
 import BookAppointmentCTA from "@/components/BookAppointmentCTA";
 import BlogPage from "@/components/BlogPage";
+import { clampTitleTag } from "@/lib/seoTitle";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -20,14 +21,15 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const content = getPageContent(slug);
-  if (!content) return { title: "iSight Eye Care | Mumbai" };
+  if (!content) return { title: clampTitleTag("iSight Eye Care Mumbai") };
   const canonical = `${SITE_URL}/${slug}`;
+  const title = clampTitleTag(content.title);
   return {
-    title: content.title,
+    title,
     description: content.description,
     alternates: { canonical },
     openGraph: {
-      title: content.title,
+      title,
       description: content.description,
       url: canonical,
       siteName: "iSight Eye Care",
@@ -38,13 +40,13 @@ export async function generateMetadata({ params }: Props) {
           url: "/og-image.webp",
           width: 1200,
           height: 630,
-          alt: content.title,
+          alt: title,
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: content.title,
+      title,
       description: content.description,
       images: ["/og-image.webp"],
     },

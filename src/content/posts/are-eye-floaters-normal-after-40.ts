@@ -14,7 +14,7 @@ const post: BlogPost = {
     },
     {
       heading: "Warning Signs That Need Immediate Eye Check",
-      body: "Seek urgent evaluation if you notice: Sudden shower of floaters Bright flashes of light Curtain or shadow in vision Sudden vision loss One eye affected suddenly These can indicate: Retinal tear Retinal detachment Vitreous hemorrhage 👉 Retina services: https://www.eyesurgeonmumbai.com/retinalsurgerymumbai Dr. Nikhil Nasta stresses that early treatment can save vision .",
+      body: "Seek urgent evaluation if you notice: Sudden shower of floaters Bright flashes of light Curtain or shadow in vision Sudden vision loss One eye affected suddenly These can indicate: Retinal tear Retinal detachment Vitreous hemorrhage 👉 Retina services: https://www.eyesurgeonmumbai.com/retinal-surgery-mumbai Dr. Nikhil Nasta stresses that early treatment can save vision .",
     },
     {
       heading: "How Eye Floaters Are Evaluated at I-Sight Eye Care",

@@ -3,7 +3,7 @@ import type { BlogPost } from "@/types/content";
 /** Scraped from old Wix – same URL /post/dry-eye-treatment-mumbai-guide for SEO */
 const post: BlogPost = {
   slug: "dry-eye-treatment-mumbai-guide",
-  title: "Dry Eye Treatment in Mumbai",
+  title: "Dry Eye Treatment Mumbai: Symptoms, IPL & Relief",
   description: "IntroductionDry eye disease is one of the most common yet misunderstood eye conditions today. It affects people of all ages and is especially common among:• Off",
   date: "2025-12-14",
   image: "dry-eye-treatment-mumbai-guide",

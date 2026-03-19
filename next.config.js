@@ -7,6 +7,20 @@ const nextConfig = {
       { protocol: 'https', hostname: 'ik.imagekit.io', pathname: '/**' },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/retinalsurgerymumbai',
+        destination: '/retinal-surgery-mumbai',
+        permanent: true,
+      },
+      {
+        source: '/retinalsurgerymumbai/',
+        destination: '/retinal-surgery-mumbai',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { SITE_URL } from "@/lib/sitemap";
 import { getTreatmentImagePaths } from "@/lib/treatmentImages";
 import InternationalPatientsPage from "@/components/InternationalPatientsPage";
+import { clampTitleTag } from "@/lib/seoTitle";
 
 /** Slugs used for treatment badges on the international patients page */
 const BADGE_SLUGS = [
@@ -30,9 +31,10 @@ function getInternationalPatientsTreatmentImages(): Record<string, string> {
 }
 
 const canonical = `${SITE_URL}/international-patients`;
+const title = clampTitleTag("International Patients | Eye Surgery Mumbai | iSight Eye Care");
 
 export const metadata: Metadata = {
-  title: "International Patients | Eye Surgery in Mumbai, India | iSight Eye Care",
+  title,
   description:
     "World-class eye surgery in Mumbai for international patients. Cataract, LASIK, retina, cornea, glaucoma & more. Transparent costs, English-speaking staff, NABH-accredited. Get a treatment plan and cost estimate.",
   keywords: [
@@ -47,7 +49,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical },
   openGraph: {
-    title: "International Patients | Eye Surgery in Mumbai, India | iSight Eye Care",
+    title,
     description:
       "World-class eye surgery in Mumbai for international patients. Transparent costs, dedicated coordination, NABH-accredited care.",
     url: canonical,
@@ -57,7 +59,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "International Patients | Eye Surgery in Mumbai | iSight Eye Care",
+    title,
     description: "World-class eye surgery in Mumbai for international patients. Get a treatment plan and cost estimate.",
   },
   robots: "index, follow",

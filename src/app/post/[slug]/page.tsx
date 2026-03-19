@@ -10,6 +10,7 @@ import BookAppointmentCTA from "@/components/BookAppointmentCTA";
 import { BlogFAQAccordion } from "@/components/ui/blog-faq-accordion";
 import { SITE_URL } from "@/lib/sitemap";
 import { getBlogImageUrl } from "@/lib/blogImageUrl";
+import { clampTitleTag } from "@/lib/seoTitle";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -20,25 +21,26 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const post = getPostBySlug(slug);
-  if (!post) return { title: "Blog | iSight Eye Care Mumbai" };
+  if (!post) return { title: clampTitleTag("Blog | iSight Eye Care Mumbai") };
   const canonical = `${SITE_URL}/post/${slug}`;
   const ogImage = post.image ? getBlogImageUrl(post.image) : `${SITE_URL}/og-image.webp`;
+  const title = clampTitleTag(post.title);
   return {
-    title: post.title,
+    title,
     description: post.description ?? undefined,
     alternates: { canonical },
     openGraph: {
-      title: post.title,
+      title,
       description: post.description ?? undefined,
       url: canonical,
       siteName: "iSight Eye Care",
       locale: "en_IN",
       type: "article",
-      images: [{ url: ogImage, width: 1200, height: 630, alt: post.title }],
+      images: [{ url: ogImage, width: 1200, height: 630, alt: title }],
     },
     twitter: {
       card: "summary_large_image",
-      title: post.title,
+      title,
       description: post.description ?? undefined,
       images: [ogImage],
     },

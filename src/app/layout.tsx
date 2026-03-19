@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CustomCursor from "@/components/CustomCursor";
 import { SITE_URL } from "@/lib/sitemap";
+import { clampTitleTag } from "@/lib/seoTitle";
 
 const FAVICON_ICO_URL =
   "https://ik.imagekit.io/jaishreeskinfinitii/isighteyecare/public/favicon.ico?updatedAt=1772183807221";
@@ -22,8 +23,8 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Best Eye Doctor in Mumbai | iSight Eye Care – Dr. Nikhil Nasta",
-    template: "%s | iSight Eye Care Mumbai",
+    default: "Eye Doctor in Mumbai | iSight Eye Care",
+    template: "%s",
   },
   description:
     "Expert eye care in Mumbai. LASIK, cataract surgery, dry eye treatment, retinal care & more. Award-winning ophthalmologist Dr. Nikhil Nasta. Book consultation.",
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Best Eye Doctor in Mumbai | iSight Eye Care – Dr. Nikhil Nasta",
+    title: clampTitleTag("Eye Doctor in Mumbai | iSight Eye Care"),
     description:
       "Expert eye care in Mumbai. LASIK, cataract surgery, dry eye treatment, retinal care & more. Award-winning ophthalmologist Dr. Nikhil Nasta.",
     url: SITE_URL,
@@ -49,7 +50,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Best Eye Doctor in Mumbai | iSight Eye Care – Dr. Nikhil Nasta",
+    title: clampTitleTag("Eye Doctor in Mumbai | iSight Eye Care"),
     description:
       "Expert eye care in Mumbai. LASIK, cataract, dry eye, retina & more. Award-winning ophthalmologist Dr. Nikhil Nasta.",
     images: ["/og-image.webp"],

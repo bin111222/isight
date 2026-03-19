@@ -26,7 +26,7 @@ const post: BlogPost = {
     },
     {
       heading: "4. Healthy Retina and Optic Nerve",
-      body: "Phaco surgery improves clarity, but final vision depends on retinal health. Ideal candidates have: Healthy macula No advanced retinal disease Stable optic nerve Advanced retina evaluation is performed when needed. 👉 Retina services: https://www.eyesurgeonmumbai.com/retinalsurgerymumbai",
+      body: "Phaco surgery improves clarity, but final vision depends on retinal health. Ideal candidates have: Healthy macula No advanced retinal disease Stable optic nerve Advanced retina evaluation is performed when needed. 👉 Retina services: https://www.eyesurgeonmumbai.com/retinal-surgery-mumbai",
     },
     {
       heading: "5. Controlled Medical Conditions",

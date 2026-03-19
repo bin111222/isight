@@ -3,7 +3,7 @@ import type { BlogPost } from "@/types/content";
 /** Scraped from old Wix – same URL /post/dry-eye-disease-treatment-mumbai for SEO */
 const post: BlogPost = {
   slug: "dry-eye-disease-treatment-mumbai",
-  title: "Dry Eye Treatment in Mumbai",
+  title: "Dry Eye Disease Treatment in Mumbai (2025 Guide)",
   description: "Dry eye disease is a chronic condition that affects the tear film and the ocular surface, leading to symptoms such as dryness, burning, irritation, and fluctuat",
   date: "2025-11-13",
   image: "dry-eye-disease-treatment-mumbai",
