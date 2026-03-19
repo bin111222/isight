@@ -3,75 +3,158 @@ import type { BlogPost } from "@/types/content";
 /** Scraped from old Wix – same URL /post/dry-eye-home-treatment for SEO */
 const post: BlogPost = {
   slug: "dry-eye-home-treatment",
-  title: "Dry Eye Home Treatment",
-  description: "Dry eye is one of the most common eye concerns, especially among office workers, students, and individuals spending long hours on digital screens. While moderat",
+  title: "Dry Eye Home Treatment: Doctor-Approved Remedies",
+  description:
+    "Mild cases of dry eye improve significantly with simple home remedies. Learn about doctor-approved treatments that actually work.",
   date: "2025-12-11",
   image: "dry-eye-home-treatment",
   sections: [
     {
-      
-      body: "Dry Eye Home Treatment : Doctor-Approved Remedies That Actually Work Dr. Nikhil Nasta Nov 13, 2025 3 min read Updated: Dec 11, 2025 Dry eye is one of the most common eye concerns, especially among office workers, students, and individuals spending long hours on digital screens. While moderate to severe dry eye requires medical treatment, many mild cases improve significantly with simple home remedies . At I-Sight Eye Care, Mumbai , we recommend clinically safe at-home treatments as part of a structured management plan. 👉 Dry Eye Care Services: https://www.eyesurgeonmumbai.com/dry-eye-treatment-mumbai 🧂 1. Warm Compress Therapy (Most Effective Home Treatment) Warm compresses help: Melt thickened Meibomian gland oils Improve tear quality Reduce evaporation Relieve irritation",
+      body: "Dry eye is one of the most common eye concerns, especially among office workers, students, and individuals spending long hours on digital screens. While moderate to severe dry eye requires medical treatment, many mild cases improve significantly with simple home remedies.\n\nAt I-Sight Eye Care, Mumbai, we recommend clinically safe at-home treatments as part of a structured management plan.\n\n👉 Dry Eye Care Services: https://www.eyesurgeonmumbai.com/dry-eye-treatment-mumbai",
     },
     {
-      heading: "How to do it:",
-      body: "Use a clean warm cloth or microwavable eye mask Apply for 10 minutes Repeat 1–2 times daily",
+      heading: "1. Warm Compress Therapy (Most Effective Home Treatment)",
+      body: "Warm compresses help:",
+      list: [
+        "Melt thickened Meibomian gland oils",
+        "Improve tear quality",
+        "Reduce evaporation",
+        "Relieve irritation",
+      ],
     },
     {
-      heading: "Why it works:",
-      body: "80% of dry eye is due to Meibomian Gland Dysfunction (MGD) , and warm compresses directly improve gland function. 💧 2. Preservative-Free Lubricating Eye Drops Daily lubrication reduces dryness, irritation, and fluctuating vision.",
+      body: "How to do it: Use a clean warm cloth or microwavable eye mask. Apply for 10 minutes. Repeat 1–2 times daily.\n\nWhy it works: 80% of dry eye is due to Meibomian Gland Dysfunction (MGD), and warm compresses directly improve gland function.",
     },
     {
-      heading: "Best choices:",
-      body: "Sodium hyaluronate 0.1–0.3% CMC (Carboxymethylcellulose) Lipid-based drops (evaporative dryness)",
+      heading: "2. Preservative-Free Lubricating Eye Drops",
+      body: "Daily lubrication reduces dryness, irritation, and fluctuating vision.",
+      list: [
+        "Best choices: Sodium hyaluronate 0.1–0.3%, CMC (Carboxymethylcellulose), Lipid-based drops (evaporative dryness)",
+        "Frequency: 4–6 times/day (or as needed)",
+        "Why preservative-free only? Preservatives cause irritation with long-term use.",
+      ],
     },
     {
-      heading: "Frequency:",
-      body: "4–6 times/day (or as needed)",
+      heading: "3. Increase Hydration (Simple, Proven)",
+      body: "Dehydration reduces tear volume.",
+      list: [
+        "Drink 2–3 litres/day",
+        "Include electrolytes if exposed to heat",
+        "Reduce caffeine (it increases tear evaporation)",
+      ],
     },
     {
-      heading: "Why preservative-free only?",
-      body: "Preservatives cause irritation with long-term use. 👉 See doctor-recommended eye drops here: https://www.eyesurgeonmumbai.com/dry-eye-treatment-mumbai 💦 3. Increase Hydration (Simple, Proven) Dehydration reduces tear volume.",
+      heading: "4. Adjust Your Environment",
+      body: "Dry indoor air and AC environments worsen symptoms.",
+      list: [
+        "Use a humidifier",
+        "Avoid direct AC vents to the face",
+        "Keep fans at a low angle",
+        "Increase room moisture (open bowl of water)",
+      ],
     },
     {
-      heading: "Recommendation:",
-      body: "Drink 2–3 litres/day Include electrolytes if exposed to heat Reduce caffeine (it increases tear evaporation) 🌫 4. Adjust Your Environment Dry indoor air and AC environments worsen symptoms.",
+      body: "Humidity helps maintain tear stability.",
     },
     {
-      heading: "What to do:",
-      body: "Use a humidifier Avoid direct AC vents to the face Keep fans at a low angle Increase room moisture (open bowl of water) Humidity helps maintain tear stability. 🧼 5. Lid Hygiene (Essential for Long-Term Relief) Lid hygiene reduces inflammation and bacterial debris.",
+      heading: "5. Lid Hygiene (Essential for Long-Term Relief)",
+      body: "Lid hygiene reduces inflammation and bacterial debris.",
+      list: [
+        "Use warm water and baby shampoo OR use lid wipes recommended by your doctor.",
+        "Clean lash line gently.",
+        "Helps with: Blepharitis, MGD, Crusting.",
+      ],
     },
     {
-      heading: "How to perform:",
-      body: "Use warm water and baby shampoo OR Use lid wipes recommended by your doctor Clean lash line gently",
+      heading: "6. Blink Exercises (For Screen Users)",
+      body: "Screen time reduces blink rate by 50–60%. Blink exercise (every 20 minutes):",
+      list: [
+        "Close both eyes gently",
+        "Squeeze for 2 seconds",
+        "Open fully",
+        "Repeat 5 times",
+      ],
     },
     {
-      heading: "Helps with:",
-      body: "Blepharitis MGD Crusting 👁️ 6. Blink Exercises (For Screen Users) Screen time reduces blink rate by 50–60% .",
+      body: "Trains the eyes to blink fully and moisturize naturally.",
     },
     {
-      heading: "Blink exercise:",
-      body: "Every 20 minutes: Close both eyes gently Squeeze for 2 seconds Open fully Repeat 5 times Trains the eyes to blink fully and moisturize naturally. 💻 7. Follow the 20–20–20 Rule (Digital Eye Strain) Every 20 minutes : Look 20 feet away For 20 seconds Prevents tear evaporation and visual fatigue. 🥗 8. Omega-3 Fatty Acids (Natural Tear Support) Omega-3 improves tear oil layer quality.",
+      heading: "7. Follow the 20–20–20 Rule (Digital Eye Strain)",
+      body: "Every 20 minutes: Look 20 feet away for 20 seconds. Prevents tear evaporation and visual fatigue.",
     },
     {
-      heading: "Sources:",
-      body: "Flaxseed Fish oil capsules Walnuts Chia seeds",
+      heading: "8. Omega-3 Fatty Acids (Natural Tear Support)",
+      body: "Omega-3 improves tear oil layer quality.",
+      list: [
+        "Sources: Flaxseed, Fish oil capsules, Walnuts, Chia seeds",
+        "Benefits: Reduces inflammation, Stabilises tear film, Supports gland function",
+      ],
     },
     {
-      heading: "Benefits:",
-      body: "Reduces inflammation Stabilises tear film Supports gland function 🌿 9. Cold Compress (For Allergy-Related Dryness) If itching or redness is present: Cold compress helps: Reduce swelling Decrease irritation Soothe allergic symptoms Do NOT rub your eyes — this worsens dryness and risks keratoconus. 🧴 10. Avoid Harmful Habits These worsen dryness: ❌ Eye rubbing❌ Sleeping with fans/AC directly on your face❌ Using redness-relief OTC drops❌ Wearing contact lenses for long hours❌ Smoking 🩺 When Home Treatment Is NOT Enough Seek medical evaluation if you experience: Persistent dryness for 2+ weeks Redness or burning Eye pain Blurred vision Light sensitivity Severe irritation or foreign-body sensation Post-LASIK symptoms not improving 👉 Book consultation: https://www.eyesurgeonmumbai.com/consult 🧪 Advanced Treatments We Offer (Beyond Home Care) Anti-inflammatory drops Meibomian gland expression Thermal pulsation therapy Intense Pulsed Light (IPL) Punctal plugs Prescription lubricants Mild dry eye improves with home care, but moderate to severe cases require medical management. 🏁 Conclusion Dry eye home treatments are safe, effective, and essential especially for screen-heavy lifestyles. When combined with medical diagnosis and guided therapy, most patients experience long-term relief and improved comfort. 📞 CTA If your symptoms persist or worsen, book a dry eye evaluation at I-Sight Eye Care:👉 https://www.eyesurgeonmumbai.com/consult ❓ FAQs",
+      heading: "9. Cold Compress (For Allergy-Related Dryness)",
+      body: "If itching or redness is present, a cold compress helps:",
+      list: [
+        "Reduce swelling",
+        "Decrease irritation",
+        "Soothe allergic symptoms",
+      ],
     },
     {
-      heading: "1. Can dry eye be treated at home?",
-      body: "Yes—mild dry eye often improves with warm compresses, lubricants, hydration, and lifestyle changes.",
+      body: "Do NOT rub your eyes — this worsens dryness and risks keratoconus.",
     },
     {
-      heading: "2. How many times should I use eye drops?",
-      body: "Preservative-free drops can be used 4–6 times/day.",
+      heading: "10. Avoid Harmful Habits",
+      body: "These worsen dryness:",
+      list: [
+        "Eye rubbing",
+        "Sleeping with fans/AC directly on your face",
+        "Using redness-relief OTC drops",
+        "Wearing contact lenses for long hours",
+        "Smoking",
+      ],
     },
     {
-      heading: "3. Does screen time cause dry eye?",
-      body: "Yes, because it reduces blink rate and increases tear evaporation.",
-    }
+      heading: "When Home Treatment Is NOT Enough",
+      body: "Seek medical evaluation if you experience:",
+      list: [
+        "Persistent dryness for 2+ weeks",
+        "Redness or burning",
+        "Eye pain",
+        "Blurred vision",
+        "Light sensitivity",
+        "Severe irritation or foreign-body sensation",
+        "Post-LASIK symptoms not improving",
+      ],
+    },
+    {
+      heading: "Advanced Treatments We Offer",
+      list: [
+        "Anti-inflammatory drops",
+        "Meibomian gland expression",
+        "Thermal pulsation therapy",
+        "Intense Pulsed Light (IPL)",
+        "Punctal plugs",
+        "Prescription lubricants",
+      ],
+    },
+    {
+      heading: "Conclusion",
+      body: "Dry eye home treatments are safe, effective, and essential especially for screen-heavy lifestyles. When combined with medical diagnosis and guided therapy, most patients experience long-term relief and improved comfort.",
+    },
+  ],
+  faqs: [
+    {
+      q: "Can dry eye be treated at home?",
+      a: "Yes—mild dry eye often improves with warm compresses, lubricants, hydration, and lifestyle changes.",
+    },
+    {
+      q: "How many times should I use eye drops?",
+      a: "Preservative-free drops can be used 4–6 times/day.",
+    },
+    {
+      q: "Does screen time cause dry eye?",
+      a: "Yes, because it reduces blink rate and increases tear evaporation.",
+    },
   ],
 };
 

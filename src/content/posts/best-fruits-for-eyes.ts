@@ -4,21 +4,17 @@ import type { BlogPost } from "@/types/content";
 const post: BlogPost = {
   slug: "best-fruits-for-eyes",
   title: "10 Best Fruits for Healthy Eyes – Expert Tips",
-  description: "Want healthy eyes naturally? Discover the top 10 fruits for better vision, packed with vitamins and antioxidants. Expert guide from Mumbai’s leading eye special",
+  description:
+    "Want healthy eyes naturally? Discover the top 10 fruits for better vision, packed with vitamins and antioxidants. Expert guide from Mumbai’s leading eye specialists.",
   date: "2025-09-01",
   image: "best-fruits-for-eyes",
   sections: [
     {
-      
-      body: "10 Best Fruits Good for Your Eyes (Backed by Eye Specialist Dr. Nikhil Nasta) Dr. Nikhil Nasta Sep 1, 2025 2 min read Fruits Good for Your Eyes: Best Fruits to Improve Eyesight Naturally",
-    },
-    {
       heading: "Why Fruits Are Good for Your Eyes",
-      body: "Your eyes need constant nutrition to stay sharp and healthy. Vitamins like A, C, and E , along with lutein, zeaxanthin, and antioxidants , play a vital role in protecting your retina, preventing cataracts, and reducing age-related vision problems. Eating the right fruits daily not only boosts your general health but also helps you maintain strong, clear vision for years.",
+      body: "Your eyes need constant nutrition to stay sharp and healthy. Vitamins like A, C, and E, along with lutein, zeaxanthin, and antioxidants, play a vital role in protecting your retina, preventing cataracts, and reducing age-related vision problems. Eating the right fruits daily not only boosts your general health but also helps you maintain strong, clear vision for years.",
     },
     {
       heading: "Top 10 Best Fruits for Eyesight Improvement",
-      body: "",
     },
     {
       heading: "1. Oranges 🍊 – Vitamin C for Lens Health",
@@ -38,7 +34,7 @@ const post: BlogPost = {
     },
     {
       heading: "5. Grapes 🍇 – Protection Against Degeneration",
-      body: "Studies suggest grapes may protect against macular degeneration .",
+      body: "Studies suggest grapes may protect against macular degeneration.",
     },
     {
       heading: "6. Kiwi 🥝 – Lutein & Zeaxanthin",
@@ -62,7 +58,12 @@ const post: BlogPost = {
     },
     {
       heading: "Which Fruits Are Best for Different Eye Conditions?",
-      body: "Cataracts: Oranges, Kiwi, Guava (Vitamin C) Night Blindness: Papaya, Mango (Vitamin A) Dry Eyes: Watermelon, Grapes Macular Degeneration: Blueberries, Grapes",
+      list: [
+        "Cataracts: Oranges, Kiwi, Guava (Vitamin C)",
+        "Night Blindness: Papaya, Mango (Vitamin A)",
+        "Dry Eyes: Watermelon, Grapes",
+        "Macular Degeneration: Blueberries, Grapes",
+      ],
     },
     {
       heading: "How Many Fruits Should You Eat for Eye Health?",
@@ -70,15 +71,30 @@ const post: BlogPost = {
     },
     {
       heading: "Can Fruits Replace Eye Treatment?",
-      body: "Fruits are excellent for prevention and support , but they cannot correct refractive errors like myopia (nearsightedness) or presbyopia (age-related farsightedness).👉 That’s where professional eye checkups and advanced treatments like LASIK, cataract surgery, and squint correction come in.",
+      body: "Fruits are excellent for prevention and support, but they cannot correct refractive errors like myopia (nearsightedness) or presbyopia (age-related farsightedness).\n\nThat’s where professional eye checkups and advanced treatments like LASIK, cataract surgery, and squint correction come in.",
     },
     {
-      heading: "Why Choose I Sight Eye Care, Mumbai?",
-      body: "At I Sight Eye Care , we believe in combining prevention with precision treatments. While nutrition lays the foundation, our advanced surgical and non-surgical options help restore and protect vision for life.",
-    }
+      heading: "Why Choose I-Sight Eye Care, Mumbai?",
+      body: "At I-Sight Eye Care, we believe in combining prevention with precision treatments. While nutrition lays the foundation, our advanced surgical and non-surgical options help restore and protect vision for life.\n\nhttps://www.eyesurgeonmumbai.com/consult",
+    },
   ],
   faqs: [
-    { q: "❓ FAQs on Fruits for Eyesight", a: "Q. Which fruit is best for eyesight? Papaya, oranges, kiwi, and blueberries are considered the best. Q. Can fruits improve weak eyesight? They support eye health but cannot replace corrective treatments. Q. Do fruits prevent cataracts or glaucoma? Vitamin-rich fruits may reduce risks, but regular checkups are essential. Q. How much Vitamin A do I need daily? Around 700–900 mcg per day, which you can get from fruits like papaya and mangoes. Consult Now" },
+    {
+      q: "Which fruit is best for eyesight?",
+      a: "Papaya, oranges, kiwi, and blueberries are considered the best.",
+    },
+    {
+      q: "Can fruits improve weak eyesight?",
+      a: "They support eye health but cannot replace corrective treatments.",
+    },
+    {
+      q: "Do fruits prevent cataracts or glaucoma?",
+      a: "Vitamin-rich fruits may reduce risks, but regular checkups are essential.",
+    },
+    {
+      q: "How much Vitamin A do I need daily?",
+      a: "Around 700–900 mcg per day, which you can get from fruits like papaya and mangoes.",
+    },
   ],
 };
 

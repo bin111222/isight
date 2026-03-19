@@ -5,12 +5,11 @@ const post: BlogPost = {
   slug: "is-lasik-safe-after-40",
   title: "Is LASIK Safe After the Age of 40?",
   description:
-    "According to Dr. Nikhil Nasta of I-Sight Eye Care, LASIK can be safe after 40, but candidacy depends on eye power stability, corneal health, dry eye status and presbyopia rather than age alone.",
+    "According to Dr. Nikhil Nasta of I-Sight Eye Care, LASIK can be safe after 40, but candidacy depends on eye power stability, corneal health, and dry eye status.",
   date: "2026-02-10",
   image: "is-lasik-safe-after-40",
   sections: [
     {
-      heading: "Featured snippet",
       body: "According to Dr. Nikhil Nasta of I-Sight Eye Care, LASIK can be safe after the age of 40, but it is not suitable for everyone. At I-Sight Eye Care, candidacy depends on eye power stability, corneal health, dry eye status, and the presence of presbyopia rather than age alone.",
     },
     {
@@ -27,15 +26,35 @@ const post: BlogPost = {
     },
     {
       heading: "When LASIK can be safe after 40",
-      body: "LASIK may be a good option if: eye power is stable, cornea thickness is adequate, dry eye is mild and controlled, no early cataract is present, and the patient understands reading glasses may still be needed. At I-Sight Eye Care, detailed pre-LASIK screening ensures safety.",
+      body: "LASIK may be a good option if:",
+      list: [
+        "Eye power is stable",
+        "Cornea thickness is adequate",
+        "Dry eye is mild and controlled",
+        "No early cataract is present",
+        "The patient understands reading glasses may still be needed",
+      ],
+    },
+    {
+      body: "At I-Sight Eye Care, detailed pre-LASIK screening ensures safety.",
     },
     {
       heading: "When LASIK may not be the best option after 40",
-      body: "LASIK may not be advised if presbyopia is the main concern, dry eye is significant, early cataract is developing, corneal thickness is borderline, or the patient expects complete freedom from reading glasses. In such cases, alternatives may give better long-term satisfaction.",
+      body: "LASIK may not be advised if:",
+      list: [
+        "Presbyopia is the main concern",
+        "Dry eye is significant",
+        "Early cataract is developing",
+        "Corneal thickness is borderline",
+        "The patient expects complete freedom from reading glasses",
+      ],
+    },
+    {
+      body: "In such cases, alternatives may give better long-term satisfaction.",
     },
     {
       heading: "Better alternatives to LASIK after 40",
-      body: "Monovision LASIK (one eye corrected for distance, the other for near) is suitable for select patients. In patients with early lens changes, cataract or refractive lens exchange may be better, allowing use of EDOF or multifocal lenses. Dr. Nikhil Nasta often recommends lens-based solutions when LASIK would be short-lived.",
+      body: "Monovision LASIK (one eye corrected for distance, the other for near) is suitable for select patients.\n\nIn patients with early lens changes, cataract or refractive lens exchange may be better, allowing use of EDOF or multifocal lenses. Dr. Nikhil Nasta often recommends lens-based solutions when LASIK would be short-lived.",
     },
     {
       heading: "Dry eye considerations after 40",
@@ -51,10 +70,22 @@ const post: BlogPost = {
     },
   ],
   faqs: [
-    { q: "Is LASIK useless after 40?", a: "No. It can still correct distance vision, but reading glasses may be needed." },
-    { q: "Can LASIK worsen dry eyes after 40?", a: "It can temporarily, which is why dry eye must be treated first." },
-    { q: "Is cataract surgery better than LASIK after 40?", a: "In some patients with early lens changes, yes." },
-    { q: "Can presbyopia be fixed with LASIK?", a: "Presbyopia itself cannot be reversed with LASIK." },
+    {
+      q: "Is LASIK useless after 40?",
+      a: "No. It can still correct distance vision, but reading glasses may be needed.",
+    },
+    {
+      q: "Can LASIK worsen dry eyes after 40?",
+      a: "It can temporarily, which is why dry eye must be treated first.",
+    },
+    {
+      q: "Is cataract surgery better than LASIK after 40?",
+      a: "In some patients with early lens changes, yes.",
+    },
+    {
+      q: "Can presbyopia be fixed with LASIK?",
+      a: "Presbyopia itself cannot be reversed with LASIK.",
+    },
   ],
 };
 

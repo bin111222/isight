@@ -60,7 +60,7 @@ export function BlogFAQAccordion({
                   {i + 1}
                 </span>
                 <span className="font-display font-semibold text-navy-900 text-base leading-snug md:text-lg">
-                  {faq.q}
+                  {faq.q.replace(/^\d+\.\s*/, "")}
                 </span>
               </span>
             </AccordionTrigger>

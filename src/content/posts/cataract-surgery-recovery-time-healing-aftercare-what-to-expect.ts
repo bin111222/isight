@@ -4,25 +4,27 @@ import type { BlogPost } from "@/types/content";
 const post: BlogPost = {
   slug: "cataract-surgery-recovery-time-healing-aftercare-what-to-expect",
   title: "Cataract Surgery Recovery – Timeline & Aftercare Tips",
-  description: "Key Takeaways • Most people resume daily activities within 1–3 days after cataract surgery, but full healing takes 4–6 weeks. • Blurred vision, light sensitivit",
+  description:
+    "Most people resume daily activities within 1–3 days after cataract surgery, but full healing takes 4–6 weeks. Learn about the recovery timeline and aftercare tips.",
   date: "2025-09-10",
   image: "cataract-surgery-recovery-time-healing-aftercare-what-to-expect",
   sections: [
     {
-      
-      body: "Cataract Surgery Recovery Time: Healing, Aftercare & What to Expect Dr. Nikhil Nasta Sep 10, 2025 2 min read",
-    },
-    {
       heading: "Key Takeaways",
-      body: "Most people resume daily activities within 1–3 days after cataract surgery, but full healing takes 4–6 weeks . Blurred vision, light sensitivity, and mild redness are normal in the first few days. Strict aftercare (no eye rubbing, no heavy lifting, no swimming) reduces complications. Follow-up visits help monitor healing and detect rare issues early. Modern cataract surgery has a very high success rate , with most patients seeing clearer than before.",
+      list: [
+        "Most people resume daily activities within 1–3 days after cataract surgery, but full healing takes 4–6 weeks.",
+        "Blurred vision, light sensitivity, and mild redness are normal in the first few days.",
+        "Strict aftercare (no eye rubbing, no heavy lifting, no swimming) reduces complications.",
+        "Follow-up visits help monitor healing and detect rare issues early.",
+        "Modern cataract surgery has a very high success rate, with most patients seeing clearer than before.",
+      ],
     },
     {
       heading: "Introduction",
-      body: "If you’ve been Googling “recovery period for cataract surgery” or “how long does cataract surgery healing take” , you’re not alone. These are some of the most common questions patients ask right after surgery. The good news? Cataract surgery is one of the safest and fastest-healing eye procedures . At I-Sight Eye Care, Mumbai , we guide you through every step of recovery so you know exactly what’s normal and what to watch out for.",
+      body: "If you’ve been Googling “recovery period for cataract surgery” or “how long does cataract surgery healing take”, you’re not alone. These are some of the most common questions patients ask right after surgery.\n\nThe good news? Cataract surgery is one of the safest and fastest-healing eye procedures. At I-Sight Eye Care, Mumbai, we guide you through every step of recovery so you know exactly what’s normal and what to watch out for.",
     },
     {
       heading: "Recovery Timeline After Cataract Surgery",
-      body: "",
     },
     {
       heading: "Day 1–3: Early Recovery",
@@ -42,20 +44,58 @@ const post: BlogPost = {
     },
     {
       heading: "Aftercare Tips for Cataract Surgery",
-      body: "Use prescribed drops exactly as instructed. Wear the protective shield/glasses especially while sleeping for the first week. Avoid dusty environments and dirty water (swimming pools). Don’t bend too low or lift heavy objects to prevent pressure on the eye. Follow up as scheduled with your surgeon. 👉 Read more about our Cataract Services in Mumbai .",
+      list: [
+        "Use prescribed drops exactly as instructed.",
+        "Wear the protective shield or glasses especially while sleeping for the first week.",
+        "Avoid dusty environments and dirty water (swimming pools).",
+        "Don’t bend too low or lift heavy objects to prevent pressure on the eye.",
+        "Follow up as scheduled with your surgeon.",
+      ],
+    },
+    {
+      body: "Read more about our Cataract Services in Mumbai: https://www.eyesurgeonmumbai.com/cataract-surgery-mumbai",
     },
     {
       heading: "Factors Affecting Recovery",
-      body: "Age and general health Presence of other eye diseases (glaucoma, diabetes-related changes) Type of lens implant (monofocal, multifocal, toric) Compliance with aftercare instructions",
+      list: [
+        "Age and general health",
+        "Presence of other eye diseases (glaucoma, diabetes-related changes)",
+        "Type of lens implant (monofocal, multifocal, toric)",
+        "Compliance with aftercare instructions",
+      ],
     },
     {
       heading: "When to Call Your Doctor",
-      body: "Seek immediate care if you notice: Severe pain unrelieved by medication Sudden drop in vision Increasing redness/swelling Flashes of light or floaters",
+      body: "Seek immediate care if you notice:",
+      list: [
+        "Severe pain unrelieved by medication",
+        "Sudden drop in vision",
+        "Increasing redness/swelling",
+        "Flashes of light or floaters",
+      ],
+    },
+    {
+      heading: "Conclusion",
+      body: "The healing period after cataract surgery is short and smooth for most patients. With the right aftercare and regular follow-ups, you’ll enjoy clearer vision and a safer recovery. Learn more about Cataract Surgery in Mumbai or explore other Eye Treatments at I-Sight Eye Care.",
     }
   ],
   faqs: [
-    { q: "FAQ (from Google PAA + patient forums)", a: "How long is the recovery period for cataract surgery? Most people are functional in 1–3 days, but complete healing takes 4–6 weeks. Can I watch TV after cataract surgery? Yes, usually from the first day, in moderation. Take breaks to avoid eye strain. When can I drive after cataract surgery? Usually after 2–3 days, once your vision is clear and your doctor approves. Is cataract surgery painful during recovery? No. Mild scratchiness is common but improves with drops and time. Do I need glasses af" },
-    { q: "Conclusion", a: "The healing period after cataract surgery is short and smooth for most patients. With the right aftercare and regular follow-ups, you’ll enjoy clearer vision and a safer recovery. 👉 Learn more about Cataract Surgery in Mumbai or explore other Eye Treatments at I-Sight Eye Care." },
+    {
+      q: "How long is the recovery period for cataract surgery?",
+      a: "Most people are functional in 1–3 days, but complete healing takes 4–6 weeks.",
+    },
+    {
+      q: "Can I watch TV after cataract surgery?",
+      a: "Yes, usually from the first day, in moderation. Take breaks to avoid eye strain.",
+    },
+    {
+      q: "When can I drive after cataract surgery?",
+      a: "Usually after 2–3 days, once your vision is clear and your doctor approves.",
+    },
+    {
+      q: "Is cataract surgery painful during recovery?",
+      a: "No. Mild scratchiness is common but improves with drops and time.",
+    },
   ],
 };
 
