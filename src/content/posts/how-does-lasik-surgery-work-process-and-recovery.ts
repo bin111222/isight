@@ -9,25 +9,39 @@ const post: BlogPost = {
   sections: [
     {
       heading: "How Does LASIK Surgery Work for Vision Correction?",
-      body: "Many patients ask, 'How does LASIK surgery work for vision correction?' The procedure involves reshaping the cornea—the clear front part of the eye—so that light traveling through it is properly focused onto the retina. This reshaping corrects refractive errors like myopia (nearsightedness), hyperopia (farsightedness), and astigmatism."
+      body: "Many patients ask, 'How does LASIK surgery work for vision correction?' The concept is beautifully simple but highly advanced in execution. The procedure involves reshaping your cornea—the clear front window of the eye—so that light traveling through it is perfectly focused onto the retina."
+    },
+    {
+      body: "This precise reshaping is what instantly corrects refractive errors like myopia (nearsightedness), hyperopia (farsightedness), and astigmatism, allowing you to see clearly without glasses or contacts."
     },
     {
       heading: "Describe the Process of Laser Vision Correction",
-      body: "The process of laser vision correction is quick and typically painless. Here is a step-by-step breakdown:",
+      body: "The actual process of laser vision correction is incredibly quick—often taking less than 15 minutes for both eyes—and is completely painless. Here is what happens on the day of surgery:"
+    },
+    {
       list: [
-        "Preparation: Numbing drops are applied to your eyes to ensure comfort.",
-        "Flap Creation: A specialized laser (femtosecond laser in bladeless LASIK) is used to create a thin flap in the cornea.",
-        "Corneal Reshaping: The surgeon folds back the flap and uses an excimer laser to precisely reshape the underlying corneal tissue based on your unique eye mapping.",
-        "Flap Replacement: The flap is gently laid back in place, where it acts as a natural bandage and heals without the need for stitches."
+        "Numbing the Eye: Anesthetic eye drops are applied so you feel absolutely no pain.",
+        "Creating the Flap: A highly precise femtosecond laser creates a microscopic, thin flap on the surface of your cornea.",
+        "Reshaping the Cornea: The surgeon gently lifts the flap and uses an excimer laser to reshape the underlying tissue in seconds, guided by a 3D map of your eye.",
+        "Healing: The flap is gently laid back down. It acts as a natural bandage and begins healing immediately without any stitches."
       ]
     },
     {
-      heading: "Compare LASIK vs PRK for Myopia Correction",
-      body: "When exploring vision correction, you might need to compare LASIK vs PRK. Both procedures use the same excimer laser to reshape the cornea. The main difference lies in the first step:\n\n- LASIK involves creating a corneal flap, which allows for a very rapid and comfortable recovery.\n- PRK (Photorefractive Keratectomy) does not involve a flap. Instead, the outer layer of the cornea (epithelium) is gently removed before the laser treatment. PRK is often recommended for patients with thinner corneas or those involved in high-contact sports, though the recovery time is longer compared to LASIK."
+      heading: "Compare LASIK vs PRK for Vision Correction",
+      body: "During your consultation, you might need to compare LASIK vs PRK to see which fits you best. Both procedures use the same laser to reshape the cornea, but the preparation differs:"
     },
     {
-      heading: "Taking the Next Step",
-      body: "Understanding the procedure is the first step toward visual freedom. To see if you are a candidate and to explore advanced options, visit our [LASIK Surgery in Mumbai](/lasik-surgery-mumbai) page."
+      list: [
+        "LASIK: Involves creating a protective corneal flap. The major benefit is a remarkably fast, virtually painless recovery. You can often see perfectly the very next day.",
+        "PRK (Photorefractive Keratectomy): Does not create a flap. Instead, the thin outer layer of the eye is gently removed before using the laser. This is the safer, preferred option for patients with thinner corneas or athletes in high-contact sports, though recovery takes a few days longer."
+      ]
+    },
+    {
+      heading: "Start Your Journey to Clear Vision",
+      body: "Understanding the procedure is the first step, but a thorough clinical evaluation is the only way to know which treatment is right for your unique eyes. At I-Sight Eye Care, Dr. Nikhil Nasta personally evaluates every patient to determine the safest, most effective approach."
+    },
+    {
+      body: "Ready to ditch your glasses? Discover our advanced, bladeless LASIK options and book your consultation today. 👉 https://www.eyesurgeonmumbai.com/lasik-surgery-mumbai"
     }
   ],
   faqs: [

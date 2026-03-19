@@ -74,6 +74,10 @@ import p_which_fruits_good_for_eyesight from "./which-fruits-good-for-eyesight";
 import p_who_should_perform_eye_aesthetic_treatments from "./who-should-perform-eye-aesthetic-treatments";
 import p_why_dry_eye_occurs from "./why-dry-eye-occurs";
 import p_why_icl_instead_of_lasik from "./why-icl-instead-of-lasik";
+import p_lasik_laser_eye_surgery_cost_in_india from "./lasik-laser-eye-surgery-cost-in-india";
+import p_does_lasik_permanently_fix_eyes from "./does-lasik-permanently-fix-eyes";
+import p_how_does_lasik_surgery_work_process_and_recovery from "./how-does-lasik-surgery-work-process-and-recovery";
+import p_best_clinics_for_lasik_eye_surgery_in_india from "./best-clinics-for-lasik-eye-surgery-in-india";
 
 const POSTS: Record<string, BlogPost> = {
   "advantages-edof-iol-mumbai": p_advantages_edof_iol_mumbai,
@@ -147,6 +151,10 @@ const POSTS: Record<string, BlogPost> = {
   "who-should-perform-eye-aesthetic-treatments": p_who_should_perform_eye_aesthetic_treatments,
   "why-dry-eye-occurs": p_why_dry_eye_occurs,
   "why-icl-instead-of-lasik": p_why_icl_instead_of_lasik,
+  "lasik-laser-eye-surgery-cost-in-india": p_lasik_laser_eye_surgery_cost_in_india,
+  "does-lasik-permanently-fix-eyes": p_does_lasik_permanently_fix_eyes,
+  "how-does-lasik-surgery-work-process-and-recovery": p_how_does_lasik_surgery_work_process_and_recovery,
+  "best-clinics-for-lasik-eye-surgery-in-india": p_best_clinics_for_lasik_eye_surgery_in_india,
 };
 
 export default POSTS;

@@ -9,19 +9,35 @@ const post: BlogPost = {
   sections: [
     {
       heading: "Does LASIK Permanently Fix Eyes?",
-      body: "A common question among those considering vision correction is, 'Does LASIK permanently fix eyes?' The short answer is yes, the reshaping of the cornea performed during LASIK is permanent. However, it's important to understand that while the surgical correction itself doesn't wear off, your eyes can still undergo natural age-related changes over time."
+      body: "A common question among those considering vision correction is, 'Does LASIK permanently fix eyes?' The short answer is yes—the reshaping of the cornea performed during LASIK is permanent."
+    },
+    {
+      body: "Because the laser literally removes microscopic amounts of tissue to correct your prescription, that specific physical change does not wear off. However, it is vital to understand that LASIK does not stop the natural aging process of your eyes, which can bring other changes decades later."
     },
     {
       heading: "Is LASIK 100% Safe?",
-      body: "No surgical procedure is entirely without risk, so it is inaccurate to claim any surgery is '100% safe.' However, LASIK is one of the safest and most commonly performed elective surgeries in the world. When performed by an experienced surgeon using advanced technology—such as bladeless femtosecond lasers and Contoura Vision—the complication rate is extremely low. Thorough pre-operative screening is critical to ensuring you are a suitable candidate, which significantly maximizes safety."
+      body: "While no surgical procedure in the world is entirely without risk, LASIK is recognized as one of the safest and most commonly performed elective surgeries globally. When performed by an expert surgeon using advanced, bladeless technology, the complication rate is exceptionally low."
+    },
+    {
+      body: "The true secret to LASIK safety lies in the screening process. A top-tier clinic will rigorously test your eyes—checking corneal thickness, tear film, and topography—to guarantee you are a perfect candidate before ever touching a laser."
     },
     {
       heading: "Understanding the LASIK Laser Eye Surgery Age Limit",
-      body: "The lasik laser eye surgery age limit is an important factor in determining candidacy. The minimum age is typically 18 years, as the eyes must have a stable prescription for at least a year. While there is no strict upper age limit, patients over 40 may begin to experience presbyopia (the natural loss of near vision). In such cases, alternative treatments or reading glasses might be necessary even after successful LASIK."
+      body: "Age plays a critical role in LASIK candidacy:"
     },
     {
-      heading: "Long-Term Care and Alternatives",
-      body: "Maintaining regular eye check-ups is essential for long-term ocular health, even after LASIK. If you are considering vision correction and want to learn more about our Contoura LASIK packages in Mumbai, visit our comprehensive [LASIK Surgery in Mumbai](/lasik-surgery-mumbai) page to explore your options."
+      list: [
+        "The Minimum Age: Typically 18 to 21 years old, because your eye prescription must remain stable for at least a full year before surgery.",
+        "The Sweet Spot: Ages 20 to 40 are generally considered ideal for traditional LASIK.",
+        "After 40: While there is no strict upper limit, natural age-related changes like presbyopia (the need for reading glasses) begin. In these cases, your surgeon might recommend specialized treatments like Monovision LASIK or Refractive Lens Exchange."
+      ]
+    },
+    {
+      heading: "Take the Next Step Towards Permanent Visual Freedom",
+      body: "Maintaining regular eye check-ups is essential for long-term ocular health, but ditching your glasses can transform your daily life today. At I-Sight Eye Care, Dr. Nikhil Nasta ensures that every patient receives a comprehensive safety evaluation before recommending any procedure."
+    },
+    {
+      body: "Are you a safe candidate for permanent vision correction? Find out more about our strict safety protocols and advanced treatments here. 👉 https://www.eyesurgeonmumbai.com/lasik-surgery-mumbai"
     }
   ],
   faqs: [
