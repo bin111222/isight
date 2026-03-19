@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ImageWithFallback } from "@/components/ImageWithFallback";
@@ -9,13 +10,14 @@ import CountUpStat from "@/components/CountUpStat";
 import UnderstandYourEye from "@/components/UnderstandYourEye";
 import GoogleReviewsSection from "@/components/GoogleReviewsSection";
 import EyeFollowCursor from "@/components/EyeFollowCursor";
-import HeroParticles from "@/components/HeroParticles";
 import { TREATMENT_LINKS } from "@/lib/sitemap";
 import { getImageUrl } from "@/lib/imageUrl";
 
 const PHONE = "918692986033";
 const PHONE_DISPLAY = "8692986033";
 const FALLBACK_IMAGE = getImageUrl("/hero.webp");
+const HOME_SEQUENCE_TOTAL_FRAMES = 151;
+const HOME_SEQUENCE_SCROLL_FRAMES = 120;
 
 const FEATURED_TREATMENTS = [
   { title: "LASIK Surgery", excerpt: "Freedom from glasses with Contoura LASIK. Quick, precise, life-changing.", href: "/lasik-surgery-mumbai", tag: "Refractive" },
@@ -44,6 +46,75 @@ type Props = {
 };
 
 export default function HomePageClient({ images }: Props) {
+  const heroRef = useRef<HTMLElement | null>(null);
+  const [activeFrame, setActiveFrame] = useState(1);
+  const sequenceFrameUrls = useMemo(
+    () =>
+      Array.from({ length: HOME_SEQUENCE_TOTAL_FRAMES }, (_, index) => {
+        const frame = String(index + 1).padStart(3, "0");
+        return `/homesequence/ezgif-frame-${frame}.jpg`;
+      }),
+    [],
+  );
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const section = heroRef.current;
+    if (!section) return;
+
+    let rafId = 0;
+
+    const updateFrameFromScroll = () => {
+      const scrollDistance = section.offsetHeight - window.innerHeight;
+      if (scrollDistance <= 0) {
+        setActiveFrame(1);
+        return;
+      }
+
+      const rect = section.getBoundingClientRect();
+      const progress = Math.min(Math.max(-rect.top / scrollDistance, 0), 1);
+      const nextFrame = 1 + Math.round(progress * (HOME_SEQUENCE_SCROLL_FRAMES - 1));
+      setActiveFrame((current) => (current === nextFrame ? current : nextFrame));
+    };
+
+    const onScrollOrResize = () => {
+      if (rafId) return;
+      rafId = window.requestAnimationFrame(() => {
+        updateFrameFromScroll();
+        rafId = 0;
+      });
+    };
+
+    updateFrameFromScroll();
+    window.addEventListener("scroll", onScrollOrResize, { passive: true });
+    window.addEventListener("resize", onScrollOrResize);
+
+    return () => {
+      window.removeEventListener("scroll", onScrollOrResize);
+      window.removeEventListener("resize", onScrollOrResize);
+      if (rafId) {
+        window.cancelAnimationFrame(rafId);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const preloadCount = HOME_SEQUENCE_SCROLL_FRAMES;
+    const preloadedImages: HTMLImageElement[] = [];
+
+    for (let index = 0; index < preloadCount; index += 1) {
+      const img = new window.Image();
+      img.src = sequenceFrameUrls[index];
+      preloadedImages.push(img);
+    }
+
+    return () => {
+      preloadedImages.length = 0;
+    };
+  }, [sequenceFrameUrls]);
+
   const getServiceImage = (href: string) => {
     const slug = href.replace(/^\//, "");
     return images.serviceImages[slug] ?? FALLBACK_IMAGE;
@@ -51,45 +122,56 @@ export default function HomePageClient({ images }: Props) {
 
   return (
     <>
-      {/* Hero — extends to top of viewport; dark bg so no white shows on overscroll */}
-      <section className="relative -mt-16 min-h-[100vh] flex flex-col justify-center mesh-bg overflow-hidden overscroll-none pt-16 bg-[var(--navy-950)]">
-        <div className="absolute inset-0 bg-hero-glow opacity-50 pointer-events-none" />
-        <div className="absolute inset-0 hero-grain" aria-hidden />
-        <HeroParticles />
-        <div className="absolute top-1/4 left-1/4 w-[420px] h-[420px] rounded-full bg-clinical-400/12 blur-[100px] animate-float pointer-events-none" />
-        <div className="absolute bottom-1/4 right-1/5 w-[380px] h-[380px] rounded-full bg-clinical-500/10 blur-[90px] animate-float pointer-events-none" style={{ animationDelay: "2s" }} />
-        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 py-28 text-center">
-          <p className="font-display text-sm font-semibold uppercase tracking-[0.35em] text-clinical-400/90 animate-fade-in opacity-0 [animation-fill-mode:forwards]">
-            iSight Eye Care · Mumbai
-          </p>
-          <h1 className="mt-4 font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold text-white tracking-tight leading-[0.95] animate-fade-in opacity-0 [animation-fill-mode:forwards] [animation-delay:0.08s]">
-            Vision
-            <br />
-            <span className="bg-gradient-to-r from-clinical-200 via-clinical-400 to-clinical-300 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-shift">
-              Restored
-            </span>
-          </h1>
-          <div className="mt-8 flex justify-center animate-fade-in opacity-0 [animation-fill-mode:forwards] [animation-delay:0.12s]">
-            <EyeFollowCursor />
-          </div>
-          <p className="mt-6 text-lg sm:text-xl text-white/80 max-w-lg mx-auto leading-relaxed text-balance animate-fade-in opacity-0 stagger-1 [animation-fill-mode:forwards]">
-            Expert eye care for a clearer tomorrow. Led by Dr. Nikhil Nasta.
-          </p>
-          <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in opacity-0 stagger-2 [animation-fill-mode:forwards]">
-            <a
-              href={`tel:+${PHONE}`}
-              className="btn btn-lg btn-secondary group border-0"
-            >
-              <Phone className="w-5 h-5 shrink-0" strokeWidth={2.25} aria-hidden />
-              Book Consultation
-            </a>
-            <Link
-              href="/treatments"
-              className="btn btn-lg btn-outline group"
-            >
-              <Stethoscope className="w-5 h-5 shrink-0 opacity-90" strokeWidth={2.25} aria-hidden />
-              Explore Treatments
-            </Link>
+      {/* Scroll-sequence hero: first 120 frames scrub on scroll before next section */}
+      <section
+        ref={heroRef}
+        className="relative -mt-16 h-[220vh] bg-[var(--navy-950)]"
+      >
+        <div className="sticky top-0 h-screen overflow-hidden pt-16">
+          <img
+            src={sequenceFrameUrls[activeFrame - 1] ?? sequenceFrameUrls[0]}
+            alt=""
+            className="absolute inset-0 h-full w-full object-cover"
+            aria-hidden
+          />
+          <div className="absolute inset-0 bg-navy-950/45" aria-hidden />
+          <div className="absolute inset-0 hero-grain" aria-hidden />
+          <div className="absolute top-1/4 left-1/4 w-[420px] h-[420px] rounded-full bg-clinical-400/12 blur-[100px] animate-float pointer-events-none" />
+          <div className="absolute bottom-1/4 right-1/5 w-[380px] h-[380px] rounded-full bg-clinical-500/10 blur-[90px] animate-float pointer-events-none" style={{ animationDelay: "2s" }} />
+
+          <div className="relative max-w-5xl mx-auto px-4 sm:px-6 py-28 text-center">
+            <p className="font-display text-sm font-semibold uppercase tracking-[0.35em] text-clinical-400/90 animate-fade-in opacity-0 [animation-fill-mode:forwards]">
+              iSight Eye Care · Mumbai
+            </p>
+            <h1 className="mt-4 font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold text-white tracking-tight leading-[0.95] animate-fade-in opacity-0 [animation-fill-mode:forwards] [animation-delay:0.08s]">
+              Vision
+              <br />
+              <span className="bg-gradient-to-r from-clinical-200 via-clinical-400 to-clinical-300 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-shift">
+                Restored
+              </span>
+            </h1>
+            <div className="mt-8 flex justify-center animate-fade-in opacity-0 [animation-fill-mode:forwards] [animation-delay:0.12s]">
+              <EyeFollowCursor />
+            </div>
+            <p className="mt-6 text-lg sm:text-xl text-white/80 max-w-lg mx-auto leading-relaxed text-balance animate-fade-in opacity-0 stagger-1 [animation-fill-mode:forwards]">
+              Expert eye care for a clearer tomorrow. Led by Dr. Nikhil Nasta.
+            </p>
+            <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in opacity-0 stagger-2 [animation-fill-mode:forwards]">
+              <a
+                href={`tel:+${PHONE}`}
+                className="btn btn-lg btn-secondary group border-0"
+              >
+                <Phone className="w-5 h-5 shrink-0" strokeWidth={2.25} aria-hidden />
+                Book Consultation
+              </a>
+              <Link
+                href="/treatments"
+                className="btn btn-lg btn-outline group"
+              >
+                <Stethoscope className="w-5 h-5 shrink-0 opacity-90" strokeWidth={2.25} aria-hidden />
+                Explore Treatments
+              </Link>
+            </div>
           </div>
         </div>
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-clinical-400/40 to-transparent" />
