@@ -207,8 +207,8 @@ function CtaButton({
       rel={isExternal ? "noopener noreferrer" : undefined}
       className={
         primary
-          ? "group inline-flex items-center justify-center gap-3 px-6 py-4 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold transition-all duration-300 shadow-lg hover:scale-[1.02] active:scale-[0.98]"
-          : "group inline-flex items-center justify-center gap-3 px-6 py-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/25 hover:bg-white/20 text-white font-semibold transition-all duration-300"
+          ? "btn btn-lg btn-whatsapp group"
+          : "btn btn-lg btn-glass group"
       }
     >
       <Icon className="w-5 h-5 flex-shrink-0" strokeWidth={2.25} />
@@ -589,7 +589,7 @@ export default function InternationalPatientsPage({ treatmentImages }: Props) {
               </p>
               <a
                 href={mailtoVirtual}
-                className="mt-6 inline-flex items-center gap-2 px-6 py-4 rounded-xl bg-clinical-500 hover:bg-clinical-400 text-white font-semibold transition-colors"
+                className="btn btn-lg btn-primary mt-6"
               >
                 <Mail className="w-5 h-5" /> Email to Request Virtual Consultation
               </a>

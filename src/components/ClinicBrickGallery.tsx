@@ -134,17 +134,17 @@ export default function ClinicBrickGallery({ images }: ClinicBrickGalleryProps) 
                 </span>
                 <a
                   href={`tel:+${PHONE}`}
-                  className="group flex items-center justify-center gap-2 w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-clinical-500 to-clinical-400 text-white font-semibold shadow-lg shadow-clinical-500/25 hover:shadow-clinical-400/30 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
+                  className="btn btn-md w-full bg-gradient-to-r from-clinical-500 to-clinical-400 text-white shadow-lg shadow-clinical-500/25 group hover:-translate-y-0.5"
                 >
                   <Phone className="w-4 h-4" strokeWidth={2.25} />
                   Call {PHONE_DISPLAY}
-                  <ArrowRight className="w-3.5 h-3.5 opacity-80 group-hover:translate-x-0.5" strokeWidth={2.5} />
+                  <ArrowRight className="w-3.5 h-3.5 opacity-80 group-hover:translate-x-0.5 transition-transform" strokeWidth={2.5} />
                 </a>
                 <a
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 w-full py-3.5 px-4 rounded-xl bg-white/10 hover:bg-white/15 text-white font-semibold border border-white/20 transition-all duration-300"
+                  className="btn btn-md btn-glass w-full"
                 >
                   <MessageCircle className="w-4 h-4" strokeWidth={2.25} />
                   WhatsApp

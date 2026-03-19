@@ -2,22 +2,92 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --navy-950: #0a0f1a;
-  --navy-900: #0f1729;
-  --clinical-400: #5c8bc9;
-  --clinical-100: #e8eef7;
-  --silver-100: #f5f7fa;
-}
+@layer base {
+  :root {
+    --navy-950: #0a0f1a;
+    --navy-900: #0f1729;
+    --clinical-400: #5c8bc9;
+    --clinical-100: #e8eef7;
+    --silver-100: #f5f7fa;
+  }
 
-html {
-  scroll-behavior: smooth;
-  background-color: var(--navy-950);
-}
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--navy-950);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-body {
-  @apply text-navy-900 antialiased font-sans;
-  background-color: var(--navy-950);
+  body {
+    @apply text-navy-900 font-sans;
+    background-color: var(--navy-950);
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Elegant text selection */
+  ::selection {
+    @apply bg-clinical-400/30 text-clinical-100;
+  }
+
+  /* Universal accessible focus states */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-clinical-400/80 ring-offset-2 ring-offset-navy-950 transition-shadow;
+  }
+
+  /* Modern custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 14px;
+    height: 14px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-navy-950;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-navy-800 rounded-full border-[4px] border-solid border-navy-950 bg-clip-padding;
+  }
+
+  /* Brand Buttons */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2.5 font-semibold transition-all duration-300 active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none whitespace-nowrap;
+  }
+
+  .btn-sm {
+    @apply px-5 py-2.5 text-sm rounded-xl;
+  }
+
+  .btn-md {
+    @apply px-6 py-3.5 text-base rounded-xl;
+  }
+
+  .btn-lg {
+    @apply px-8 py-4 text-base rounded-2xl;
+  }
+
+  .btn-primary {
+    @apply bg-clinical-500 text-white hover:bg-clinical-400 shadow-[0_4px_20px_-4px_rgba(45,90,158,0.5)] hover:shadow-[0_6px_28px_-4px_rgba(92,139,201,0.45)] hover:-translate-y-0.5;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-navy-900 hover:bg-white/95 shadow-xl hover:shadow-2xl hover:-translate-y-0.5;
+  }
+
+  .btn-outline {
+    @apply bg-transparent border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 hover:-translate-y-0.5;
+  }
+
+  .btn-dark {
+    @apply bg-navy-900 text-white hover:bg-navy-800 shadow-lg hover:shadow-xl hover:-translate-y-0.5;
+  }
+
+  .btn-whatsapp {
+    @apply bg-[#25D366] text-white hover:bg-[#20bd5a] shadow-lg hover:shadow-xl hover:-translate-y-0.5;
+  }
+
+  .btn-glass {
+    @apply bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 hover:border-white/30 hover:shadow-glow hover:-translate-y-0.5;
+  }
 }
 
 /* Custom cursor: hide default on desktop (keep for touch) */
@@ -72,7 +142,7 @@ body {
 
 /* Nav link underline */
 .nav-link {
-  @apply relative text-silver-200/90 hover:text-white transition-colors;
+  @apply relative text-silver-200/90 hover:text-white focus-visible:text-white transition-colors;
 }
 .nav-link::after {
   content: "";
@@ -82,9 +152,10 @@ body {
   width: 0;
   height: 2px;
   background: linear-gradient(90deg, var(--clinical-400), transparent);
-  transition: width 0.25s ease;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.nav-link:hover::after {
+.nav-link:hover::after,
+.nav-link:focus-visible::after {
   width: 100%;
 }
 
@@ -103,14 +174,6 @@ body {
 .hover-lift:hover {
   transform: translateY(-4px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.06), 0 16px 40px -12px rgba(10, 15, 26, 0.15);
-}
-
-/* Glass button */
-.btn-glass {
-  @apply bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-xl transition-all duration-300;
-}
-.btn-glass:hover {
-  @apply bg-white/20 border-white/30 shadow-glow;
 }
 
 /* Treatment page: section accent */

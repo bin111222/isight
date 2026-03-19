@@ -141,7 +141,7 @@ export default function AssessmentReport({
       <div className="flex flex-col sm:flex-row gap-4">
         <Link
           href={resultBand.ctaHref}
-          className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-2xl bg-clinical-500 text-white font-semibold shadow-[0_0_24px_rgba(92,139,201,0.3)] hover:bg-clinical-400 transition-all duration-300"
+          className="btn btn-lg btn-primary"
         >
           {resultBand.ctaLabel}
           <ChevronRight className="w-5 h-5" strokeWidth={2.5} />
@@ -149,7 +149,7 @@ export default function AssessmentReport({
         <button
           type="button"
           onClick={onRetake}
-          className="inline-flex items-center justify-center px-6 py-4 rounded-2xl border-2 border-white/30 text-white font-semibold hover:bg-white/10 transition-all duration-300"
+          className="btn btn-lg btn-outline"
         >
           Retake assessment
         </button>

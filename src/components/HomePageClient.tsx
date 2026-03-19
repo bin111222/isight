@@ -78,14 +78,14 @@ export default function HomePageClient({ images }: Props) {
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in opacity-0 stagger-2 [animation-fill-mode:forwards]">
             <a
               href={`tel:+${PHONE}`}
-              className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-white text-navy-900 font-semibold text-base shadow-xl hover:shadow-2xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 border-0"
+              className="btn btn-lg btn-secondary group border-0"
             >
               <Phone className="w-5 h-5 shrink-0" strokeWidth={2.25} aria-hidden />
               Book Consultation
             </a>
             <Link
               href="/treatments"
-              className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl border-2 border-white/40 text-white font-semibold text-base bg-transparent hover:bg-white/10 hover:border-white/60 transition-all duration-300"
+              className="btn btn-lg btn-outline group"
             >
               <Stethoscope className="w-5 h-5 shrink-0 opacity-90" strokeWidth={2.25} aria-hidden />
               Explore Treatments
@@ -234,13 +234,13 @@ export default function HomePageClient({ images }: Props) {
           <div className="mt-14 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/treatments"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-navy-900 text-white font-semibold hover:bg-navy-800 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"
+              className="btn btn-lg btn-dark w-full sm:w-auto"
             >
               View all treatments
             </Link>
             <a
               href={`tel:+${PHONE}`}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-clinical-500 text-white font-semibold hover:bg-clinical-400 transition-all duration-300 shadow-[0_4px_20px_-4px_rgba(45,90,158,0.4)] hover:shadow-glow hover:scale-[1.02] active:scale-[0.98]"
+              className="btn btn-lg btn-primary w-full sm:w-auto"
             >
               Book Consultation
             </a>
@@ -286,7 +286,7 @@ export default function HomePageClient({ images }: Props) {
                 </p>
                 <a
                   href={`tel:+${PHONE}`}
-                  className="mt-8 inline-flex items-center gap-2 px-6 py-3.5 bg-clinical-500 hover:bg-clinical-400 rounded-full font-semibold transition-all hover:shadow-glow"
+                  className="btn btn-md btn-primary rounded-full mt-8"
                 >
                   Consult
                 </a>
@@ -308,7 +308,7 @@ export default function HomePageClient({ images }: Props) {
                 </p>
                 <a
                   href={`tel:+${PHONE}`}
-                  className="mt-8 inline-flex items-center gap-2 px-6 py-3.5 bg-clinical-500 hover:bg-clinical-400 rounded-full font-semibold transition-all hover:shadow-glow"
+                  className="btn btn-md btn-primary rounded-full mt-8"
                 >
                   Book now
                 </a>
@@ -370,7 +370,7 @@ export default function HomePageClient({ images }: Props) {
           <div className="mt-12 text-center">
             <Link
               href="/treatments"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-navy-900 text-white font-semibold hover:bg-navy-800 transition-colors"
+              className="btn btn-md btn-dark"
             >
               See full treatments page →
             </Link>
@@ -401,11 +401,11 @@ export default function HomePageClient({ images }: Props) {
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href={`tel:+${PHONE}`}
-              className="inline-flex justify-center items-center gap-2 px-8 py-4 bg-white text-navy-900 font-semibold rounded-2xl hover:bg-white/95 transition-all shadow-xl hover:scale-[1.02]"
+              className="btn btn-lg btn-secondary w-full sm:w-auto"
             >
               Book now
             </a>
-            <a href={`tel:+${PHONE}`} className="btn-glass inline-flex justify-center px-8 py-4 rounded-2xl border-2 border-white/30">
+            <a href={`tel:+${PHONE}`} className="btn btn-lg btn-glass w-full sm:w-auto">
               Call {PHONE_DISPLAY}
             </a>
           </div>

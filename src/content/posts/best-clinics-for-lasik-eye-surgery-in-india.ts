@@ -13,9 +13,7 @@ const post: BlogPost = {
     },
     {
       heading: "What Makes a Top LASIK Clinic Stand Out?",
-      body: "Premier eye care centers share several non-negotiable characteristics that prioritize patient safety over high surgical volume:"
-    },
-    {
+      body: "Premier eye care centers share several non-negotiable characteristics that prioritize patient safety over high surgical volume:",
       list: [
         "Advanced Technology: The best clinics invest in the latest, FDA-approved platforms, such as bladeless femtosecond lasers and Contoura Vision topography-guided systems.",
         "Rigorous Screening Protocols: A top clinic will never rush you into surgery. They perform detailed corneal mapping, tear film analysis, and retinal checks. If you aren't a safe candidate, they will tell you.",
@@ -24,17 +22,11 @@ const post: BlogPost = {
     },
     {
       heading: "Finding Top LASIK Surgeons with the Highest Success Rates",
-      body: "World-class technology is only as effective as the hands operating it. The top LASIK surgeons with highest success rates have years of specialized, dedicated experience in refractive surgery."
-    },
-    {
-      body: "They are skilled not just in LASIK, but in managing complex cases and offering safe alternatives—like ICLs (Implantable Collamer Lenses) or PRK—when LASIK isn't the best fit. In Mumbai, Dr. Nikhil Nasta at I-Sight Eye Care is renowned for this meticulous, safety-first approach and commitment to delivering exceptional, long-lasting visual outcomes."
+      body: "World-class technology is only as effective as the hands operating it. The top LASIK surgeons with highest success rates have years of specialized, dedicated experience in refractive surgery.\n\nThey are skilled not just in LASIK, but in managing complex cases and offering safe alternatives—like ICLs (Implantable Collamer Lenses) or PRK—when LASIK isn't the best fit. In Mumbai, Dr. Nikhil Nasta at I-Sight Eye Care is renowned for this meticulous, safety-first approach and commitment to delivering exceptional, long-lasting visual outcomes."
     },
     {
       heading: "Why Patients Choose I-Sight Eye Care",
-      body: "For patients in Mumbai and across India, I-Sight Eye Care represents the gold standard in refractive surgery. Led by Dr. Nikhil Nasta, the clinic combines state-of-the-art bladeless technology with highly personalized, honest, patient-first care."
-    },
-    {
-      body: "Don't compromise on your vision. Explore our advanced vision correction treatments and book an evaluation with Dr. Nikhil Nasta today. 👉 https://www.eyesurgeonmumbai.com/lasik-surgery-mumbai"
+      body: "For patients in Mumbai and across India, I-Sight Eye Care represents the gold standard in refractive surgery. Led by Dr. Nikhil Nasta, the clinic combines state-of-the-art bladeless technology with highly personalized, honest, patient-first care.\n\nDon't compromise on your vision. Explore our advanced vision correction treatments and book an evaluation with Dr. Nikhil Nasta today. 👉 https://www.eyesurgeonmumbai.com/lasik-surgery-mumbai"
     }
   ],
   faqs: [

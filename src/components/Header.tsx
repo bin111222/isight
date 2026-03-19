@@ -158,7 +158,7 @@ export default function Header() {
             ))}
             <a
               href={`tel:+${PHONE}`}
-              className="whitespace-nowrap ml-1 xl:ml-2 px-5 py-2.5 bg-clinical-500 hover:bg-clinical-400 text-white text-sm font-semibold rounded-full transition-all duration-300 hover:shadow-glow"
+              className="btn btn-sm btn-primary ml-1 xl:ml-2 rounded-full"
             >
               Book Consultation
             </a>
@@ -225,7 +225,7 @@ export default function Header() {
             })}
             <a
               href={`tel:+${PHONE}`}
-              className="mt-2 py-3 bg-clinical-500 text-white text-center font-medium rounded-lg"
+              className="btn btn-md btn-primary w-full mt-2"
             >
               Call {PHONE_DISPLAY}
             </a>

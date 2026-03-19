@@ -87,7 +87,7 @@ export default function BookAppointmentCTA({
             <div className="mt-6 sm:mt-8 flex flex-wrap items-center gap-3">
               <a
                 href={`tel:+${PHONE}`}
-                className="group inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-clinical-500 hover:bg-clinical-400 text-white font-semibold rounded-xl transition-all duration-300 shadow-[0_4px_20px_-4px_rgba(45,90,158,0.5)] hover:shadow-[0_6px_28px_-4px_rgba(92,139,201,0.45)] hover:scale-[1.02] active:scale-[0.98]"
+                className="btn btn-md btn-primary group"
               >
                 <Phone className="w-4 h-4" strokeWidth={2.25} />
                 Call {PHONE_DISPLAY}
@@ -98,7 +98,7 @@ export default function BookAppointmentCTA({
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-white/8 hover:bg-white/14 text-white font-semibold rounded-xl transition-all duration-300 border border-white/20 hover:border-white/35 backdrop-blur-sm"
+                  className="btn btn-md btn-glass group"
                 >
                   <MessageCircle className="w-4 h-4 opacity-90" strokeWidth={2.25} />
                   WhatsApp

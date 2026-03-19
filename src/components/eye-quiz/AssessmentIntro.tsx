@@ -30,14 +30,14 @@ export default function AssessmentIntro({ title, body, disclaimer, onBegin, onBa
         <button
           type="button"
           onClick={onBegin}
-          className="inline-flex items-center justify-center px-6 py-4 rounded-2xl bg-clinical-500 text-white font-semibold shadow-[0_0_24px_rgba(92,139,201,0.3)] hover:bg-clinical-400 transition-all duration-300"
+          className="btn btn-lg btn-primary w-full sm:w-auto"
         >
           I understand — begin assessment
         </button>
         <button
           type="button"
           onClick={onBack}
-          className="inline-flex items-center justify-center px-6 py-4 rounded-2xl border border-white/20 text-white/80 font-medium hover:bg-white/5 transition-all duration-300"
+          className="btn btn-lg btn-outline w-full sm:w-auto"
         >
           ← Back to assessments
         </button>

@@ -179,7 +179,7 @@ export default function QuizRunner({ quiz, onBack }: Props) {
             <button
               type="button"
               onClick={handleNext}
-              className="inline-flex items-center justify-center px-6 py-3 rounded-2xl bg-clinical-500 text-white font-semibold hover:bg-clinical-400 transition-all"
+              className="btn btn-md btn-primary"
             >
               Next →
             </button>

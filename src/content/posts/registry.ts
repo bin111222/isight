@@ -53,8 +53,8 @@ import p_morpheus_eye_rejuvenation_brighten_and_tighten_the_eyes_naturally from 
 import p_myopia_treatment_mumbai_guide from "./myopia-treatment-mumbai-guide";
 import p_myths_about_phaco_cataract_surgery from "./myths-about-phaco-cataract-surgery";
 import p_ophthalmic_aesthetics_mumbai_guide from "./ophthalmic-aesthetics-mumbai-guide";
-import p_pediatric_eye_care_in_mumbai_conditions_treatments_why_early_checks_matter from "./pediatric-eye-care-in-mumbai-conditions-treatments-why-early-checks-matter";
-import p_pediatric_eye_care_in_mumbai_early_eye_checks_big_vision_for_little_eyes from "./pediatric-eye-care-in-mumbai-early-eye-checks-big-vision-for-little-eyes";
+import p_pediatric_eye_care_mumbai_in_mumbai_conditions_treatments_why_early_checks_matter from "./pediatric-eye-care-mumbai-in-mumbai-conditions-treatments-why-early-checks-matter";
+import p_pediatric_eye_care_mumbai_in_mumbai_early_eye_checks_big_vision_for_little_eyes from "./pediatric-eye-care-mumbai-in-mumbai-early-eye-checks-big-vision-for-little-eyes";
 import p_pediatric_eye_doctor from "./pediatric-eye-doctor";
 import p_pediatric_eye_doctor_india from "./pediatric-eye-doctor-india";
 import p_pediatric_eye_doctor_near_me from "./pediatric-eye-doctor-near-me";
@@ -130,8 +130,8 @@ const POSTS: Record<string, BlogPost> = {
   "myopia-treatment-mumbai-guide": p_myopia_treatment_mumbai_guide,
   "myths-about-phaco-cataract-surgery": p_myths_about_phaco_cataract_surgery,
   "ophthalmic-aesthetics-mumbai-guide": p_ophthalmic_aesthetics_mumbai_guide,
-  "pediatric-eye-care-in-mumbai-conditions-treatments-why-early-checks-matter": p_pediatric_eye_care_in_mumbai_conditions_treatments_why_early_checks_matter,
-  "pediatric-eye-care-in-mumbai-early-eye-checks-big-vision-for-little-eyes": p_pediatric_eye_care_in_mumbai_early_eye_checks_big_vision_for_little_eyes,
+  "pediatric-eye-care-mumbai-in-mumbai-conditions-treatments-why-early-checks-matter": p_pediatric_eye_care_mumbai_in_mumbai_conditions_treatments_why_early_checks_matter,
+  "pediatric-eye-care-mumbai-in-mumbai-early-eye-checks-big-vision-for-little-eyes": p_pediatric_eye_care_mumbai_in_mumbai_early_eye_checks_big_vision_for_little_eyes,
   "pediatric-eye-doctor": p_pediatric_eye_doctor,
   "pediatric-eye-doctor-india": p_pediatric_eye_doctor_india,
   "pediatric-eye-doctor-near-me": p_pediatric_eye_doctor_near_me,

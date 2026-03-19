@@ -1,13 +1,13 @@
 import type { BlogPost } from "@/types/content";
 
-/** Scraped from old Wix – same URL /post/pediatric-eye-care-mumbai-in-mumbai-conditions-treatments-why-early-checks-matter for SEO */
+/** Scraped from old Wix – same URL /post/pediatric-eye-care-in-mumbai-conditions-treatments-why-early-checks-matter for SEO */
 const post: BlogPost = {
   slug: "pediatric-eye-care-mumbai-in-mumbai-conditions-treatments-why-early-checks-matter",
   title: "Pediatric Eye Care in Mumbai",
   description:
     "Routine eye exams for children can detect vision issues before they impact school performance or development. Learn about common conditions and treatments.",
   date: "2025-09-10",
-  image: "pediatric-eye-care-mumbai-in-mumbai-conditions-treatments-why-early-checks-matter",
+  image: "pediatric-eye-care-in-mumbai-conditions-treatments-why-early-checks-matter",
   sections: [
     {
       heading: "Key Takeaways",

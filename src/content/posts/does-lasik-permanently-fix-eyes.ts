@@ -9,23 +9,15 @@ const post: BlogPost = {
   sections: [
     {
       heading: "Does LASIK Permanently Fix Eyes?",
-      body: "A common question among those considering vision correction is, 'Does LASIK permanently fix eyes?' The short answer is yes—the reshaping of the cornea performed during LASIK is permanent."
-    },
-    {
-      body: "Because the laser literally removes microscopic amounts of tissue to correct your prescription, that specific physical change does not wear off. However, it is vital to understand that LASIK does not stop the natural aging process of your eyes, which can bring other changes decades later."
+      body: "A common question among those considering vision correction is, 'Does LASIK permanently fix eyes?' The short answer is yes—the reshaping of the cornea performed during LASIK is permanent.\n\nBecause the laser literally removes microscopic amounts of tissue to correct your prescription, that specific physical change does not wear off. However, it is vital to understand that LASIK does not stop the natural aging process of your eyes, which can bring other changes decades later."
     },
     {
       heading: "Is LASIK 100% Safe?",
-      body: "While no surgical procedure in the world is entirely without risk, LASIK is recognized as one of the safest and most commonly performed elective surgeries globally. When performed by an expert surgeon using advanced, bladeless technology, the complication rate is exceptionally low."
-    },
-    {
-      body: "The true secret to LASIK safety lies in the screening process. A top-tier clinic will rigorously test your eyes—checking corneal thickness, tear film, and topography—to guarantee you are a perfect candidate before ever touching a laser."
+      body: "While no surgical procedure in the world is entirely without risk, LASIK is recognized as one of the safest and most commonly performed elective surgeries globally. When performed by an expert surgeon using advanced, bladeless technology, the complication rate is exceptionally low.\n\nThe true secret to LASIK safety lies in the screening process. A top-tier clinic will rigorously test your eyes—checking corneal thickness, tear film, and topography—to guarantee you are a perfect candidate before ever touching a laser."
     },
     {
       heading: "Understanding the LASIK Laser Eye Surgery Age Limit",
-      body: "Age plays a critical role in LASIK candidacy:"
-    },
-    {
+      body: "Age plays a critical role in LASIK candidacy:",
       list: [
         "The Minimum Age: Typically 18 to 21 years old, because your eye prescription must remain stable for at least a full year before surgery.",
         "The Sweet Spot: Ages 20 to 40 are generally considered ideal for traditional LASIK.",
@@ -34,10 +26,7 @@ const post: BlogPost = {
     },
     {
       heading: "Take the Next Step Towards Permanent Visual Freedom",
-      body: "Maintaining regular eye check-ups is essential for long-term ocular health, but ditching your glasses can transform your daily life today. At I-Sight Eye Care, Dr. Nikhil Nasta ensures that every patient receives a comprehensive safety evaluation before recommending any procedure."
-    },
-    {
-      body: "Are you a safe candidate for permanent vision correction? Find out more about our strict safety protocols and advanced treatments here. 👉 https://www.eyesurgeonmumbai.com/lasik-surgery-mumbai"
+      body: "Maintaining regular eye check-ups is essential for long-term ocular health, but ditching your glasses can transform your daily life today. At I-Sight Eye Care, Dr. Nikhil Nasta ensures that every patient receives a comprehensive safety evaluation before recommending any procedure.\n\nAre you a safe candidate for permanent vision correction? Find out more about our strict safety protocols and advanced treatments here. 👉 https://www.eyesurgeonmumbai.com/lasik-surgery-mumbai"
     }
   ],
   faqs: [

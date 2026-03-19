@@ -105,7 +105,7 @@ export default function ConsultPage() {
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
                 <a
                   href={`tel:+${PHONE}`}
-                  className="group inline-flex items-center justify-center gap-3 px-6 py-4 rounded-xl bg-clinical-500 hover:bg-clinical-400 text-white font-semibold transition-all duration-300 shadow-[0_4px_20px_-4px_rgba(45,90,158,0.5)] hover:shadow-[0_6px_28px_-4px_rgba(92,139,201,0.45)] hover:scale-[1.02] active:scale-[0.98]"
+                  className="btn btn-lg btn-primary group"
                 >
                   <Phone className="w-5 h-5" strokeWidth={2.25} />
                   Call {PHONE_DISPLAY}
@@ -115,7 +115,7 @@ export default function ConsultPage() {
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex items-center justify-center gap-3 px-6 py-4 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold transition-all duration-300 shadow-lg hover:scale-[1.02] active:scale-[0.98]"
+                  className="btn btn-lg btn-whatsapp group"
                 >
                   <MessageCircle className="w-5 h-5" strokeWidth={2.25} />
                   WhatsApp to book
@@ -279,7 +279,7 @@ export default function ConsultPage() {
                 </div>
                 <button
                   type="submit"
-                  className="group inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold rounded-xl transition-all duration-300 shadow-lg hover:scale-[1.02] active:scale-[0.98]"
+                  className="btn btn-lg btn-whatsapp group w-full sm:w-auto"
                 >
                   <MessageCircle className="w-5 h-5" strokeWidth={2.25} />
                   Send to WhatsApp

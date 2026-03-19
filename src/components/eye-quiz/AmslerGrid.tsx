@@ -99,14 +99,14 @@ export default function AmslerGrid({ instruction, question, onResult }: Props) {
             <button
               type="button"
               onClick={() => onResult(false)}
-              className="px-6 py-3 rounded-xl border-2 border-white/20 bg-white/5 text-white font-medium hover:bg-white/10 hover:border-clinical-400/40 transition-all"
+              className="btn btn-md btn-outline bg-white/5"
             >
               All lines look normal
             </button>
             <button
               type="button"
               onClick={() => onResult(true)}
-              className="px-6 py-3 rounded-xl border-2 border-clinical-400/50 bg-clinical-500/20 text-white font-medium hover:bg-clinical-500/30 transition-all"
+              className="btn btn-md btn-primary"
             >
               I see a problem (wavy, blur, or missing area)
             </button>

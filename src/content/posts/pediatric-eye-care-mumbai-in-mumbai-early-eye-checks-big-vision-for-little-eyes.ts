@@ -1,13 +1,13 @@
 import type { BlogPost } from "@/types/content";
 
-/** Scraped from old Wix – same URL /post/pediatric-eye-care-mumbai-in-mumbai-early-eye-checks-big-vision-for-little-eyes for SEO */
+/** Scraped from old Wix – same URL /post/pediatric-eye-care-in-mumbai-early-eye-checks-big-vision-for-little-eyes for SEO */
 const post: BlogPost = {
   slug: "pediatric-eye-care-mumbai-in-mumbai-early-eye-checks-big-vision-for-little-eyes",
   title: "Pediatric Eye Care in Mumbai: Early Eye Checks",
   description:
     "Early eye exams detect problems like myopia, lazy eye, and squint before they affect learning. Learn why early checks are essential.",
   date: "2025-10-14",
-  image: "pediatric-eye-care-mumbai-in-mumbai-early-eye-checks-big-vision-for-little-eyes",
+  image: "pediatric-eye-care-in-mumbai-early-eye-checks-big-vision-for-little-eyes",
   sections: [
     {
       heading: "Key Takeaways",
