@@ -52,7 +52,7 @@ export default function HomePageClient({ images }: Props) {
     () =>
       Array.from({ length: HOME_SEQUENCE_TOTAL_FRAMES }, (_, index) => {
         const frame = String(index + 1).padStart(3, "0");
-        return `/homesequence/ezgif-frame-${frame}.jpg`;
+        return getImageUrl(`/homesequence/ezgif-frame-${frame}.jpg`);
       }),
     [],
   );
