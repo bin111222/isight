@@ -6,6 +6,9 @@ import Footer from "@/components/Footer";
 import CustomCursor from "@/components/CustomCursor";
 import { SITE_URL } from "@/lib/sitemap";
 
+const FAVICON_ICO_URL =
+  "https://ik.imagekit.io/jaishreeskinfinitii/isighteyecare/public/favicon.ico?updatedAt=1772183807221";
+
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -52,18 +55,10 @@ export const metadata: Metadata = {
     images: ["/og-image.webp"],
   },
   icons: {
-    icon: [
-      { url: "/favicon.ico", sizes: "32x32", type: "image/x-icon" },
-      { url: "/favicon/favicon-16x16.webp", sizes: "16x16", type: "image/webp" },
-      { url: "/favicon/favicon-32x32.webp", sizes: "32x32", type: "image/webp" },
-    ],
-    apple: { url: "/favicon/apple-touch-icon.webp", type: "image/webp" },
-    other: [
-      { rel: "android-chrome-192x192", url: "/favicon/android-chrome-192x192.webp" },
-      { rel: "android-chrome-512x512", url: "/favicon/android-chrome-512x512.webp" },
-    ],
+    icon: [{ url: FAVICON_ICO_URL, type: "image/x-icon" }],
+    shortcut: [{ url: FAVICON_ICO_URL, type: "image/x-icon" }],
+    apple: [{ url: FAVICON_ICO_URL, type: "image/x-icon" }],
   },
-  manifest: "/favicon/site.webmanifest",
 };
 
 export default function RootLayout({
