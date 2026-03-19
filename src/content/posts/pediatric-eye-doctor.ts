@@ -5,13 +5,13 @@ const post: BlogPost = {
   slug: "pediatric-eye-doctor",
   title: "Pediatric Eye Doctor: When Your Child Needs an Eye Specialist",
   description:
-    "A pediatric eye doctor specialises in diagnosing and treating eye conditions in children, including lazy eye, refractive errors, squint, allergies, infections, and more.",
+    "A pediatric eye doctor specialises in diagnosing and treating eye conditions in children, including lazy eye, refractive errors, squint, allergies, and infections.",
   date: "2025-11-13",
   image: "pediatric-eye-doctor",
   sections: [
     {
       heading: "When Your Child Needs an Eye Specialist",
-      body: "A pediatric eye doctor (paediatric ophthalmologist) specialises in diagnosing and treating eye conditions in children, including lazy eye, refractive errors, squint, allergies, infections, and developmental eye problems. Children need an eye exam if they show signs such as squinting, blinking, poor school performance, headaches, or holding objects too close.\n\nHealthy vision is essential for your child’s learning, development, and overall growth. Many parents believe children will “outgrow” eye problems, but in reality, most conditions need early diagnosis and treatment to prevent long-term vision issues.\n\nAt I-Sight Eye Care, Mumbai, we provide specialised pediatric eye care with child-friendly diagnostic methods and evidence-based treatment protocols.\n\n👉 [Pediatric Eye Care Page](https://www.eyesurgeonmumbai.com/pediatric-eye-care)",
+      body: "A pediatric eye doctor (paediatric ophthalmologist) specialises in diagnosing and treating eye conditions in children, including lazy eye, refractive errors, squint, allergies, infections, and developmental eye problems. Children need an eye exam if they show signs such as squinting, blinking, poor school performance, headaches, or holding objects too close.\n\nHealthy vision is essential for your child’s learning, development, and overall growth. Many parents believe children will “outgrow” eye problems, but in reality, most conditions need early diagnosis and treatment to prevent long-term vision issues.\n\nAt I-Sight Eye Care, Mumbai, we provide specialised pediatric eye care with child-friendly diagnostic methods and evidence-based treatment protocols.\n\n👉 https://www.eyesurgeonmumbai.com/pediatric-eye-care",
     },
     {
       heading: "Why Children Need a Pediatric Eye Doctor",
@@ -75,7 +75,7 @@ const post: BlogPost = {
       list: ["Glasses", "Eye exercises", "Squint surgery (if required)"],
     },
     {
-      body: "👉 [Squint correction](https://www.eyesurgeonmumbai.com/squint-correction-surgery-mumbai)",
+      body: "👉 https://www.eyesurgeonmumbai.com/squint-correction-surgery-mumbai",
     },
     {
       heading: "4. Allergic Eye Disease",

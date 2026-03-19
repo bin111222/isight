@@ -10,6 +10,10 @@ const post: BlogPost = {
   image: "can-glaucoma-exist-without-symptoms",
   sections: [
     {
+      heading: "Featured Snippet Answer",
+      body: "According to Dr. Nikhil Nasta of I-Sight Eye Care, yes, glaucoma can exist for years without any noticeable symptoms. This is why it is often called the “silent thief of sight.” Routine eye check-ups are the only way to detect it before irreversible vision loss occurs.",
+    },
+    {
       heading: "When Symptoms Finally Appear",
       body: "Late-stage glaucoma may cause:",
       list: [
@@ -35,7 +39,7 @@ const post: BlogPost = {
       ],
     },
     {
-      body: "👉 [Glaucoma Services](https://www.eyesurgeonmumbai.com/glaucoma-treatment-mumbai)\n\nDr. Nikhil Nasta recommends proactive screening in these groups.",
+      body: "👉 https://www.eyesurgeonmumbai.com/glaucoma-treatment-mumbai\n\nDr. Nikhil Nasta recommends proactive screening in these groups.",
     },
     {
       heading: "Primary Open-Angle Glaucoma",

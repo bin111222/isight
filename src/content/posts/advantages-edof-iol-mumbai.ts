@@ -5,12 +5,12 @@ const post: BlogPost = {
   slug: "advantages-edof-iol-mumbai",
   title: "Advantages of EDOF IOL Lenses",
   description:
-    "Extended depth of focus lenses known as EDOF IOLs are one of the most significant advances in modern cataract surgery. These lenses help patients enjoy clearer distance and intermediate vision with fewer visual disturbances compared to older multifocal designs.",
+    "Extended depth of focus lenses known as EDOF IOLs are one of the most significant advances in modern cataract surgery. Learn about their advantages.",
   date: "2025-12-11",
   image: "advantages-edof-iol-mumbai",
   sections: [
     {
-      body: "Extended depth of focus lenses known as EDOF IOLs are one of the most significant advances in modern cataract surgery. These lenses help patients enjoy clearer distance and intermediate vision with fewer visual disturbances compared to older multifocal designs. If you are planning cataract surgery in Mumbai or wish to reduce dependence on glasses, understanding the advantages of EDOF lenses will help you choose confidently.",
+      body: "Extended depth of focus lenses known as EDOF IOLs are one of the most significant advances in modern cataract surgery. These lenses help patients enjoy clearer distance and intermediate vision with fewer visual disturbances compared to older multifocal designs. If you are planning cataract surgery in Mumbai or wish to reduce dependence on glasses, understanding the advantages of EDOF lenses will help you choose confidently.\n\nhttps://www.eyesurgeonmumbai.com/cataract-surgery-mumbai\nhttps://www.eyesurgeonmumbai.com/edof-iol-surgery-mumbai",
     },
     {
       heading: "1. Smooth Visual Range Without Abrupt Jumps",
@@ -74,7 +74,7 @@ const post: BlogPost = {
       ],
     },
     {
-      body: "Your surgeon may manage surface dryness through Dry eye treatment in Mumbai to ensure optimal clarity.",
+      body: "Your surgeon may manage surface dryness through dry eye treatment in Mumbai to ensure optimal clarity.\n\nhttps://www.eyesurgeonmumbai.com/dry-eye-treatment-mumbai",
     },
     {
       heading: "6. Better Night Driving Performance",
@@ -95,7 +95,7 @@ const post: BlogPost = {
       ],
     },
     {
-      body: "You may still need a mild reading pair for fine print or very low light, but your overall dependence on glasses reduces dramatically. If you want maximum near vision independence, you can explore Trifocal IOL options as a combined strategy.",
+      body: "You may still need a mild reading pair for fine print or very low light, but your overall dependence on glasses reduces dramatically. If you want maximum near vision independence, you can explore Trifocal IOL options as a combined strategy.\n\nhttps://www.eyesurgeonmumbai.com/trifocal-iol-surgery-mumbai",
     },
     {
       heading: "8. Works Seamlessly with Modern Phaco Surgery",
@@ -112,7 +112,7 @@ const post: BlogPost = {
     },
     {
       heading: "Conclusion",
-      body: "EDOF lenses offer one of the best combinations of clarity, contrast, comfort, and functional range. They are ideal for patients who want to reduce dependence on glasses without the night glare associated with older multifocal lenses. To explore if you are a candidate for EDOF, consult the specialists at I-Sight Eye Care.",
+      body: "EDOF lenses offer one of the best combinations of clarity, contrast, comfort, and functional range. They are ideal for patients who want to reduce dependence on glasses without the night glare associated with older multifocal lenses. To explore if you are a candidate for EDOF, consult the specialists at I-Sight Eye Care.\n\nhttps://www.eyesurgeonmumbai.com/consult",
     },
   ],
 };

@@ -5,13 +5,13 @@ const post: BlogPost = {
   slug: "pediatric-eye-doctor-india",
   title: "Pediatric Eye Doctor India: 12 Signs Your Child Needs an Eye Exam",
   description:
-    "A child should visit a pediatric eye doctor if they show signs such as squinting, excessive blinking, headaches, difficulty seeing the board, or holding books too close.",
+    "A child should visit a pediatric eye doctor if they show signs such as squinting, excessive blinking, headaches, or difficulty seeing the board.",
   date: "2025-11-13",
   image: "pediatric-eye-doctor-india",
   sections: [
     {
       heading: "Why Early Eye Exams Matter",
-      body: "Early eye exams are essential to detect conditions like refractive errors, lazy eye, and squint before they cause long-term vision problems. Children rely heavily on their vision for learning, reading, sports, and overall cognitive development. Yet many eye problems remain undetected because children rarely complain; they simply adapt.\n\nAs one of Mumbai’s leading eye centres for children, I-Sight Eye Care regularly treats conditions that could have been prevented with earlier evaluation.\n\n👉 [Pediatric Eye Care](https://www.eyesurgeonmumbai.com/pediatric-eye-care)",
+      body: "Early eye exams are essential to detect conditions like refractive errors, lazy eye, and squint before they cause long-term vision problems. Children rely heavily on their vision for learning, reading, sports, and overall cognitive development. Yet many eye problems remain undetected because children rarely complain; they simply adapt.\n\nAs one of Mumbai’s leading eye centres for children, I-Sight Eye Care regularly treats conditions that could have been prevented with earlier evaluation.\n\n👉 https://www.eyesurgeonmumbai.com/pediatric-eye-care",
     },
     {
       heading: "12 Signs Your Child Needs a Pediatric Eye Exam",
@@ -124,7 +124,7 @@ const post: BlogPost = {
       ],
     },
     {
-      body: "👉 [Squint Treatment](https://www.eyesurgeonmumbai.com/squint-correction-surgery-mumbai)",
+      body: "👉 https://www.eyesurgeonmumbai.com/squint-correction-surgery-mumbai",
     },
     {
       heading: "11. Delayed Visual Milestones in Infants",

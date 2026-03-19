@@ -5,13 +5,13 @@ const post: BlogPost = {
   slug: "dry-eye-therapy-mumbai",
   title: "Dry Eye Therapy: Latest Treatments That Actually Work",
   description:
-    "The most effective dry eye therapy in 2025 includes diagnostic testing, anti-inflammatory drops, Meibomian gland therapy, and lifestyle changes.",
+    "The most effective dry eye therapy includes diagnostic testing, anti-inflammatory drops, Meibomian gland therapy, and lifestyle changes.",
   date: "2025-11-13",
   image: "dry-eye-therapy-mumbai",
   sections: [
     {
       heading: "Advanced Treatments for Long-Lasting Relief",
-      body: "The most effective dry eye therapy in 2025 includes a combination of diagnostic testing, anti-inflammatory drops, lubricants, Meibomian gland therapy, warm compress treatments, lifestyle changes, and in severe cases, punctal plugs or advanced procedures.\n\nTreatment depends on whether the dryness is due to low tear production or rapid evaporation. Dry eye is one of the most common and most frustrating ocular conditions. While mild cases respond to simple lubricants, chronic dry eye requires a structured, medical-grade treatment plan based on the root cause.\n\nAt I-Sight Eye Care, Mumbai, we offer the latest diagnostic tools and advanced therapies tailored to each patient.\n\n👉 [Dry Eye Treatment](https://www.eyesurgeonmumbai.com/dry-eye-treatment-mumbai)",
+      body: "The most effective dry eye therapy includes a combination of diagnostic testing, anti-inflammatory drops, lubricants, Meibomian gland therapy, warm compress treatments, lifestyle changes, and in severe cases, punctal plugs or advanced procedures.\n\nTreatment depends on whether the dryness is due to low tear production or rapid evaporation. Dry eye is one of the most common and most frustrating ocular conditions. While mild cases respond to simple lubricants, chronic dry eye requires a structured, medical-grade treatment plan based on the root cause.\n\nAt I-Sight Eye Care, Mumbai, we offer the latest diagnostic tools and advanced therapies tailored to each patient.\n\n👉 https://www.eyesurgeonmumbai.com/dry-eye-treatment-mumbai",
     },
     {
       heading: "Understanding Dry Eye Before Treatment",
@@ -31,11 +31,11 @@ const post: BlogPost = {
       heading: "1. Diagnostic Tests for Dry Eye (Critical Step)",
       body: "Accurate diagnosis ensures correct therapy. At I-Sight Eye Care, we use:",
       list: [
-        "Tear Film Break-Up Time (TBUT): Checks tear stability.",
-        "Meibography: Identifies Meibomian gland blockages or gland loss.",
-        "Ocular Surface Staining: Highlights damaged corneal cells.",
-        "Schirmer’s Test: Measures tear production.",
-        "Tear Osmolarity: Indicates severity.",
+        "Tear Film Break-Up Time (TBUT): Checks tear stability",
+        "Meibography: Identifies Meibomian gland blockages or gland loss",
+        "Ocular Surface Staining: Highlights damaged corneal cells",
+        "Schirmer’s Test: Measures tear production",
+        "Tear Osmolarity: Indicates severity",
       ],
     },
     {
@@ -43,11 +43,11 @@ const post: BlogPost = {
     },
     {
       heading: "2. Lubricant Eye Drops (First-Line Therapy)",
-      body: "Preservative-free lubricants are the safest and most effective. We recommend drops based on the tear deficiency type:\n\n**Aqueous Deficient Dry Eye:**",
+      body: "Preservative-free lubricants are the safest and most effective. We recommend drops based on the tear deficiency type.\n\nAqueous Deficient Dry Eye:",
       list: ["Sodium hyaluronate (0.1–0.3%)", "Carboxymethylcellulose (CMC)"],
     },
     {
-      body: "**Evaporative Dry Eye:**",
+      body: "Evaporative Dry Eye:",
       list: ["Lipid-based drops", "Glycerin-based artificial tears"],
     },
     {
@@ -57,9 +57,9 @@ const post: BlogPost = {
       heading: "3. Anti-Inflammatory Therapy (For Chronic Dry Eye)",
       body: "Chronic dryness is largely inflammatory. These therapies reduce surface inflammation:",
       list: [
-        "Cyclosporine A (0.05%–0.1%): Improves tear production long-term.",
-        "Lifitegrast (Newer Molecule): Targets T-cell inflammation.",
-        "Mild steroid eye drops (short-term): For flare-ups and severe discomfort.",
+        "Cyclosporine A (0.05%–0.1%): Improves tear production long-term",
+        "Lifitegrast (Newer Molecule): Targets T-cell inflammation",
+        "Mild steroid eye drops (short-term): For flare-ups and severe discomfort",
       ],
     },
     {

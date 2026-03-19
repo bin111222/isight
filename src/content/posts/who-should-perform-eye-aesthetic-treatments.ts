@@ -5,7 +5,7 @@ const post: BlogPost = {
   slug: "who-should-perform-eye-aesthetic-treatments",
   title: "Who Should Perform Aesthetic Treatments Around the Eyes?",
   description:
-    "According to Dr. Nikhil Nasta of I-Sight Eye Care, aesthetic treatments around the eyes should ideally be performed by an ophthalmic specialist to prevent complications.",
+    "According to Dr. Nikhil Nasta of I-Sight Eye Care, aesthetic treatments around the eyes should ideally be performed by an ophthalmic specialist.",
   date: "2026-02-10",
   image: "who-should-perform-eye-aesthetic-treatments",
   sections: [
@@ -36,7 +36,7 @@ const post: BlogPost = {
       ],
     },
     {
-      body: "At I-Sight Eye Care, every aesthetic consultation includes a medical eye evaluation first.",
+      body: "At I-Sight Eye Care, every aesthetic consultation includes a medical eye evaluation first.\n\nhttps://www.eyesurgeonmumbai.com/oculoplastic-surgery-botox-mumbai",
     },
     {
       heading: "Medical Evaluation Before Eye Aesthetic Treatment",

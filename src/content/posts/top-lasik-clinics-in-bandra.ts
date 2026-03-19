@@ -128,7 +128,7 @@ const post: BlogPost = {
       ],
     },
     {
-      body: "Dr. Nikhil Nasta is known for recommending non-surgical or alternative options when needed.",
+      body: "Dr. Nikhil Nasta is known for recommending non-surgical or alternative options when needed. 👉 https://www.eyesurgeonmumbai.com/lasik-surgery-mumbai",
     },
   ],
   faqs: [

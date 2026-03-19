@@ -4,55 +4,147 @@ import type { BlogPost } from "@/types/content";
 const post: BlogPost = {
   slug: "phaco-vs-traditional-cataract-surgery",
   title: "Phaco vs Traditional Cataract Surgery: What Has Changed",
-  description: "⭐ Featured Snippet AnswerAccording to Dr. Nikhil Nasta of I-Sight Eye Care, Mumbai, phacoemulsification cataract surgery has replaced traditional cataract surge",
+  description:
+    "According to Dr. Nikhil Nasta of I-Sight Eye Care, Mumbai, phacoemulsification cataract surgery has replaced traditional cataract surgery, offering faster recovery.",
   date: "2026-01-15",
   image: "phaco-vs-traditional-cataract-surgery",
   sections: [
     {
-      
-      body: "Phaco vs Traditional Cataract Surgery: What Has Changed Dr. Nikhil Nasta Jan 15 3 min read",
-    },
-    {
       heading: "Phaco vs Traditional Cataract Surgery: Key Differences",
-      body: "",
     },
     {
       heading: "1. Incision Size",
-      body: "Traditional Surgery: Large incision Sutures required Higher astigmatism risk Phaco Surgery: Micro-incision No stitches Better corneal stability Dr. Nikhil Nasta highlights that smaller incisions significantly reduce healing time and complications.",
+      body: "Traditional Surgery:",
+      list: [
+        "Large incision",
+        "Sutures required",
+        "Higher astigmatism risk",
+      ],
+    },
+    {
+      body: "Phaco Surgery:",
+      list: [
+        "Micro-incision",
+        "No stitches",
+        "Better corneal stability",
+      ],
+    },
+    {
+      body: "Dr. Nikhil Nasta highlights that smaller incisions significantly reduce healing time and complications.",
     },
     {
       heading: "2. Recovery Time",
-      body: "Traditional Surgery: Visual recovery over weeks Restricted activities for longer periods Phaco Surgery: Vision improves within days Faster return to daily routine Most patients at I-Sight Eye Care resume normal activities within a few days after phaco surgery.",
+      body: "Traditional Surgery:",
+      list: [
+        "Visual recovery over weeks",
+        "Restricted activities for longer periods",
+      ],
+    },
+    {
+      body: "Phaco Surgery:",
+      list: [
+        "Vision improves within days",
+        "Faster return to daily routine",
+      ],
+    },
+    {
+      body: "Most patients at I-Sight Eye Care resume normal activities within a few days after phaco surgery.",
     },
     {
       heading: "3. Post-Operative Comfort",
-      body: "Traditional Surgery: More irritation and discomfort Longer medication duration Phaco Surgery: Minimal pain Shorter medication course",
+      body: "Traditional Surgery:",
+      list: [
+        "More irritation and discomfort",
+        "Longer medication duration",
+      ],
+    },
+    {
+      body: "Phaco Surgery:",
+      list: [
+        "Minimal pain",
+        "Shorter medication course",
+      ],
     },
     {
       heading: "4. Hospital Stay",
-      body: "Traditional Surgery: Often required hospital admission Phaco Surgery: Day-care procedure Patient goes home the same day This is especially beneficial for elderly patients.",
+      body: "Traditional Surgery:",
+      list: [
+        "Often required hospital admission",
+      ],
     },
     {
-      heading: "6. Risk of Complications",
-      body: "Traditional Surgery: Higher infection risk due to larger wound Delayed wound healing Phaco Surgery: Lower infection rates Faster wound sealing At I-Sight Eye Care, strict safety protocols further minimise surgical risks.",
+      body: "Phaco Surgery:",
+      list: [
+        "Day-care procedure",
+        "Patient goes home the same day",
+      ],
     },
     {
-      heading: "7. Suitability",
-      body: "Traditional Surgery: Reserved mainly for very hard or advanced cataracts Phaco Surgery: Suitable for most age-related cataracts Ideal for patients seeking faster recovery Dr. Nikhil Nasta evaluates each patient carefully to choose the safest and most effective approach.",
+      body: "This is especially beneficial for elderly patients.",
+    },
+    {
+      heading: "5. Risk of Complications",
+      body: "Traditional Surgery:",
+      list: [
+        "Higher infection risk due to larger wound",
+        "Delayed wound healing",
+      ],
+    },
+    {
+      body: "Phaco Surgery:",
+      list: [
+        "Lower infection rates",
+        "Faster wound sealing",
+      ],
+    },
+    {
+      body: "At I-Sight Eye Care, strict safety protocols further minimise surgical risks.",
+    },
+    {
+      heading: "6. Suitability",
+      body: "Traditional Surgery:",
+      list: [
+        "Reserved mainly for very hard or advanced cataracts",
+      ],
+    },
+    {
+      body: "Phaco Surgery:",
+      list: [
+        "Suitable for most age-related cataracts",
+        "Ideal for patients seeking faster recovery",
+      ],
+    },
+    {
+      body: "Dr. Nikhil Nasta evaluates each patient carefully to choose the safest and most effective approach.",
     },
     {
       heading: "Why Dr. Nikhil Nasta Prefers Phaco Surgery",
-      body: "According to Dr. Nikhil Nasta, phacoemulsification offers: Superior safety Faster visual rehabilitation Greater patient comfort Compatibility with advanced IOL technology Consistent long-term outcomes This is why phaco surgery has become the standard cataract procedure at I-Sight Eye Care. 👉 Meet the doctor https://www.eyesurgeonmumbai.com/isighteyecare-doctors",
+      body: "According to Dr. Nikhil Nasta, phacoemulsification offers:",
+      list: [
+        "Superior safety",
+        "Faster visual rehabilitation",
+        "Greater patient comfort",
+        "Compatibility with advanced IOL technology",
+        "Consistent long-term outcomes",
+      ],
     },
     {
-      heading: "FAQs",
-      body: "",
-    }
+      body: "This is why phaco surgery has become the standard cataract procedure at I-Sight Eye Care. 👉 Meet the doctor: https://www.eyesurgeonmumbai.com/consult",
+    },
   ],
   faqs: [
-    { q: "Is traditional cataract surgery still done today?", a: "Yes, but it is usually reserved for specific cases. Phaco surgery is preferred in most patients." },
-    { q: "Which cataract surgery has faster recovery?", a: "Phacoemulsification has significantly faster recovery than traditional surgery." },
-    { q: "Is phaco surgery more expensive?", a: "Phaco surgery may cost slightly more, but the faster recovery and better outcomes make it cost-effective." },
+    {
+      q: "Is traditional cataract surgery still done today?",
+      a: "Yes, but it is usually reserved for specific cases. Phaco surgery is preferred in most patients.",
+    },
+    {
+      q: "Which cataract surgery has faster recovery?",
+      a: "Phacoemulsification has significantly faster recovery than traditional surgery.",
+    },
+    {
+      q: "Is phaco surgery more expensive?",
+      a: "Phaco surgery may cost slightly more, but the faster recovery and better outcomes make it cost-effective.",
+    },
   ],
 };
 

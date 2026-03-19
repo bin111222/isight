@@ -10,11 +10,21 @@ const post: BlogPost = {
   image: "how-often-should-child-eye-checkup",
   sections: [
     {
-      body: "Many parents assume children will mention vision problems on their own. In reality, kids often adapt quietly and may not realize their vision is blurry. Regular eye check-ups help detect refractive errors, lazy eye, squint, allergies, and other concerns early, when treatment is most effective.",
+      body: "Many parents assume children will mention vision problems on their own. In reality, kids often adapt quietly and may not realize their vision is blurry. Regular eye check-ups help detect refractive errors, lazy eye, squint, allergies, and other concerns early, when treatment is most effective.\n\nhttps://www.eyesurgeonmumbai.com/pediatric-eye-care-mumbai",
     },
     {
       heading: "Quick Answer: How Often Should Kids Get Eye Check-Ups?",
-      body: "A practical schedule is:\n- At birth (basic newborn screening)\n- At 6-12 months\n- At 3 years\n- Before school starts (around 4-5 years)\n- Every year during school age\nIf your child has glasses, squint, a strong family history, or symptoms, follow-up may be needed every 6 months as advised by your eye specialist.",
+      body: "A practical schedule is:",
+      list: [
+        "At birth (basic newborn screening)",
+        "At 6-12 months",
+        "At 3 years",
+        "Before school starts (around 4-5 years)",
+        "Every year during school age",
+      ],
+    },
+    {
+      body: "If your child has glasses, squint, a strong family history, or symptoms, follow-up may be needed every 6 months as advised by your eye specialist.",
     },
     {
       heading: "Why Regular Pediatric Eye Exams Matter",
