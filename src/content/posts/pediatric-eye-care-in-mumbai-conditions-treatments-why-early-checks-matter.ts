@@ -1,13 +1,13 @@
 import type { BlogPost } from "@/types/content";
 
-/** Scraped from old Wix – same URL /post/pediatric-eye-care-in-mumbai-conditions-treatments-why-early-checks-matter for SEO */
+/** Scraped from old Wix – same URL /post/pediatric-eye-care-mumbai-in-mumbai-conditions-treatments-why-early-checks-matter for SEO */
 const post: BlogPost = {
-  slug: "pediatric-eye-care-in-mumbai-conditions-treatments-why-early-checks-matter",
+  slug: "pediatric-eye-care-mumbai-in-mumbai-conditions-treatments-why-early-checks-matter",
   title: "Pediatric Eye Care in Mumbai",
   description:
     "Routine eye exams for children can detect vision issues before they impact school performance or development. Learn about common conditions and treatments.",
   date: "2025-09-10",
-  image: "pediatric-eye-care-in-mumbai-conditions-treatments-why-early-checks-matter",
+  image: "pediatric-eye-care-mumbai-in-mumbai-conditions-treatments-why-early-checks-matter",
   sections: [
     {
       heading: "Key Takeaways",
@@ -21,7 +21,7 @@ const post: BlogPost = {
     },
     {
       heading: "Introduction",
-      body: "Children don’t always say when they can’t see well. Sometimes, the first signs of a vision problem show up as poor handwriting, sitting too close to the TV, or struggling in school. That’s why pediatric eye care is crucial.\n\nAt I-Sight Eye Care, Mumbai, we specialize in child-friendly eye testing, treatments, and surgical care. In this guide, I’ll walk you through common conditions, when to see a pediatric eye specialist, and what parents should watch out for.\n\n👉 Learn more about our Children’s Eye Care services: https://www.eyesurgeonmumbai.com/pediatric-eye-care",
+      body: "Children don’t always say when they can’t see well. Sometimes, the first signs of a vision problem show up as poor handwriting, sitting too close to the TV, or struggling in school. That’s why pediatric eye care is crucial.\n\nAt I-Sight Eye Care, Mumbai, we specialize in child-friendly eye testing, treatments, and surgical care. In this guide, I’ll walk you through common conditions, when to see a pediatric eye specialist, and what parents should watch out for.\n\n👉 Learn more about our Children’s Eye Care services: https://www.eyesurgeonmumbai.com/pediatric-eye-care-mumbai",
     },
     {
       heading: "Common Pediatric Eye Conditions",

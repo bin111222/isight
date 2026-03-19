@@ -21,7 +21,7 @@ const post: BlogPost = {
     },
     {
       heading: "Introduction",
-      body: "Your child’s world depends on what they see. From reading the board to recognizing faces, clear vision shapes how they learn, move, and grow. But here’s the catch, children rarely tell you they can’t see well. They just adapt.\n\nThat’s why routine eye check-ups for kids are critical for catching issues early and ensuring healthy visual development. At I-Sight Eye Care, Mumbai, Dr. Nikhil Nasta, a trusted pediatric ophthalmologist, makes eye exams comfortable, fun, and effective because clear vision in childhood builds confident vision for life.\n\n👉 Book your child’s Eye Check-Up: https://www.eyesurgeonmumbai.com/pediatric-eye-care",
+      body: "Your child’s world depends on what they see. From reading the board to recognizing faces, clear vision shapes how they learn, move, and grow. But here’s the catch, children rarely tell you they can’t see well. They just adapt.\n\nThat’s why routine eye check-ups for kids are critical for catching issues early and ensuring healthy visual development. At I-Sight Eye Care, Mumbai, Dr. Nikhil Nasta, a trusted pediatric ophthalmologist, makes eye exams comfortable, fun, and effective because clear vision in childhood builds confident vision for life.\n\n👉 Book your child’s Eye Check-Up: https://www.eyesurgeonmumbai.com/pediatric-eye-care-mumbai",
     },
     {
       heading: "Why Kids Need Regular Eye Exams",

@@ -10,6 +10,26 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/pediatric-eye-care',
+        destination: '/pediatric-eye-care-mumbai',
+        permanent: true,
+      },
+      {
+        source: '/pediatric-eye-care/',
+        destination: '/pediatric-eye-care-mumbai',
+        permanent: true,
+      },
+      {
+        source: '/isighteyecare-doctors',
+        destination: '/isight-eye-care-doctors',
+        permanent: true,
+      },
+      {
+        source: '/isighteyecare-doctors/',
+        destination: '/isight-eye-care-doctors',
+        permanent: true,
+      },
+      {
         source: '/retinalsurgerymumbai',
         destination: '/retinal-surgery-mumbai',
         permanent: true,

@@ -144,7 +144,7 @@ const post: BlogPost = {
       ],
     },
     {
-      body: "This personalised approach ensures optimal outcomes. 👉 Meet the doctor: https://www.eyesurgeonmumbai.com/isighteyecare-doctors",
+      body: "This personalised approach ensures optimal outcomes. 👉 Meet the doctor: https://www.eyesurgeonmumbai.com/isight-eye-care-doctors",
     },
   ],
   faqs: [

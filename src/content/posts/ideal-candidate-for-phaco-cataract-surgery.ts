@@ -126,7 +126,7 @@ const post: BlogPost = {
       ],
     },
     {
-      body: "This comprehensive approach ensures safety and precision. 👉 Meet the doctors: https://www.eyesurgeonmumbai.com/isighteyecare-doctors",
+      body: "This comprehensive approach ensures safety and precision. 👉 Meet the doctors: https://www.eyesurgeonmumbai.com/isight-eye-care-doctors",
     },
   ],
   faqs: [

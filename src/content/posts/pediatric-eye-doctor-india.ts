@@ -11,7 +11,7 @@ const post: BlogPost = {
   sections: [
     {
       heading: "Why Early Eye Exams Matter",
-      body: "Early eye exams are essential to detect conditions like refractive errors, lazy eye, and squint before they cause long-term vision problems. Children rely heavily on their vision for learning, reading, sports, and overall cognitive development. Yet many eye problems remain undetected because children rarely complain; they simply adapt.\n\nAs one of Mumbai’s leading eye centres for children, I-Sight Eye Care regularly treats conditions that could have been prevented with earlier evaluation.\n\n👉 https://www.eyesurgeonmumbai.com/pediatric-eye-care",
+      body: "Early eye exams are essential to detect conditions like refractive errors, lazy eye, and squint before they cause long-term vision problems. Children rely heavily on their vision for learning, reading, sports, and overall cognitive development. Yet many eye problems remain undetected because children rarely complain; they simply adapt.\n\nAs one of Mumbai’s leading eye centres for children, I-Sight Eye Care regularly treats conditions that could have been prevented with earlier evaluation.\n\n👉 https://www.eyesurgeonmumbai.com/pediatric-eye-care-mumbai",
     },
     {
       heading: "12 Signs Your Child Needs a Pediatric Eye Exam",

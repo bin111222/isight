@@ -65,7 +65,7 @@ const post: BlogPost = {
       ],
     },
     {
-      body: "Surgeons who also perform ICL surgery and cataract surgery usually have a broader understanding of eye anatomy and refractive outcomes. You can view the specialists here: https://www.eyesurgeonmumbai.com/isighteyecare-doctors",
+      body: "Surgeons who also perform ICL surgery and cataract surgery usually have a broader understanding of eye anatomy and refractive outcomes. You can view the specialists here: https://www.eyesurgeonmumbai.com/isight-eye-care-doctors",
     },
     {
       heading: "How Much Does LASIK Cost in Bandra Area?",

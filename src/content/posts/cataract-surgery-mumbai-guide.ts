@@ -3,7 +3,7 @@ import type { BlogPost } from "@/types/content";
 /** Scraped from old Wix – same URL /post/cataract-surgery-mumbai-guide for SEO */
 const post: BlogPost = {
   slug: "cataract-surgery-mumbai-guide",
-  title: "Cataract Surgery in Mumbai",
+  title: "Cataract Surgery in Mumbai: A Comprehensive Guide",
   description:
     "Cataracts are one of the most common causes of blurred, cloudy or dim vision as we grow older. Fortunately, modern cataract surgery is one of the safest procedures.",
   date: "2025-12-11",

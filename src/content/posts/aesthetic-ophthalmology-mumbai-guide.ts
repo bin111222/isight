@@ -253,7 +253,7 @@ const post: BlogPost = {
       ],
     },
     {
-      body: "Meet your specialists here: https://www.eyesurgeonmumbai.com/isighteyecare-doctors\nBook a consultation here: https://www.eyesurgeonmumbai.com/consult",
+      body: "Meet your specialists here: https://www.eyesurgeonmumbai.com/isight-eye-care-doctors\nBook a consultation here: https://www.eyesurgeonmumbai.com/consult",
     },
     {
       heading: "Conclusion",

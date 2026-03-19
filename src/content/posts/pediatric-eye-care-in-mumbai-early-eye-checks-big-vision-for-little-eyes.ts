@@ -1,13 +1,13 @@
 import type { BlogPost } from "@/types/content";
 
-/** Scraped from old Wix – same URL /post/pediatric-eye-care-in-mumbai-early-eye-checks-big-vision-for-little-eyes for SEO */
+/** Scraped from old Wix – same URL /post/pediatric-eye-care-mumbai-in-mumbai-early-eye-checks-big-vision-for-little-eyes for SEO */
 const post: BlogPost = {
-  slug: "pediatric-eye-care-in-mumbai-early-eye-checks-big-vision-for-little-eyes",
+  slug: "pediatric-eye-care-mumbai-in-mumbai-early-eye-checks-big-vision-for-little-eyes",
   title: "Pediatric Eye Care in Mumbai: Early Eye Checks",
   description:
     "Early eye exams detect problems like myopia, lazy eye, and squint before they affect learning. Learn why early checks are essential.",
   date: "2025-10-14",
-  image: "pediatric-eye-care-in-mumbai-early-eye-checks-big-vision-for-little-eyes",
+  image: "pediatric-eye-care-mumbai-in-mumbai-early-eye-checks-big-vision-for-little-eyes",
   sections: [
     {
       heading: "Key Takeaways",
@@ -21,7 +21,7 @@ const post: BlogPost = {
     },
     {
       heading: "Introduction",
-      body: "Children rarely complain when they can’t see well because they assume everyone sees the same way. That’s why routine eye check-ups for kids are as essential as dental visits or vaccines. From struggling to read the board to tilting their head while watching TV, subtle signs can reveal hidden vision problems.\n\nAt I-Sight Eye Care, Mumbai, Dr. Nikhil Nasta specializes in gentle, accurate assessment of children’s eyes—ensuring clear vision, proper alignment, and healthy visual development.\n\n👉 Explore our Children’s Vision Clinic: https://www.eyesurgeonmumbai.com/pediatric-eye-care",
+      body: "Children rarely complain when they can’t see well because they assume everyone sees the same way. That’s why routine eye check-ups for kids are as essential as dental visits or vaccines. From struggling to read the board to tilting their head while watching TV, subtle signs can reveal hidden vision problems.\n\nAt I-Sight Eye Care, Mumbai, Dr. Nikhil Nasta specializes in gentle, accurate assessment of children’s eyes—ensuring clear vision, proper alignment, and healthy visual development.\n\n👉 Explore our Children’s Vision Clinic: https://www.eyesurgeonmumbai.com/pediatric-eye-care-mumbai",
     },
     {
       heading: "Why Choose a Pediatric Eye Doctor in Mumbai?",

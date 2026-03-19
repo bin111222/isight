@@ -41,7 +41,7 @@ const post: BlogPost = {
       ],
     },
     {
-      body: "At I-Sight Eye Care, Dr. Nikhil Nasta personally performs LASIK suitability checks, ensuring unsafe candidates are filtered out early. 👉 About the doctors: https://www.eyesurgeonmumbai.com/isighteyecare-doctors",
+      body: "At I-Sight Eye Care, Dr. Nikhil Nasta personally performs LASIK suitability checks, ensuring unsafe candidates are filtered out early. 👉 About the doctors: https://www.eyesurgeonmumbai.com/isight-eye-care-doctors",
     },
     {
       heading: "2. Willingness to Say No to LASIK",

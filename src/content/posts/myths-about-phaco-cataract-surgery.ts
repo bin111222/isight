@@ -38,7 +38,7 @@ const post: BlogPost = {
       ],
     },
     {
-      body: "👉 About the doctors: https://www.eyesurgeonmumbai.com/isighteyecare-doctors",
+      body: "👉 About the doctors: https://www.eyesurgeonmumbai.com/isight-eye-care-doctors",
     },
   ],
   faqs: [

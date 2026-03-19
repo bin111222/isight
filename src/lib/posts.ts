@@ -74,6 +74,10 @@ export const POST_SLUGS = [
   "dry-eye-treatment-mumbai-guide",
   "when-floaters-mean-trouble-understanding-retina-health",
   "cataract-surgery-mumbai-guide",
+  "lasik-laser-eye-surgery-cost-in-india",
+  "does-lasik-permanently-fix-eyes",
+  "how-does-lasik-surgery-work-process-and-recovery",
+  "best-clinics-for-lasik-eye-surgery-in-india",
 ] as const;
 
 export type PostSlug = (typeof POST_SLUGS)[number];

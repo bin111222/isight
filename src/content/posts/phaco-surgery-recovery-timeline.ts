@@ -116,7 +116,7 @@ const post: BlogPost = {
       ],
     },
     {
-      body: "This results in consistently faster and safer healing.\n\n👉 Meet the doctor: https://www.eyesurgeonmumbai.com/isighteyecare-doctors",
+      body: "This results in consistently faster and safer healing.\n\n👉 Meet the doctor: https://www.eyesurgeonmumbai.com/isight-eye-care-doctors",
     },
   ],
   faqs: [
