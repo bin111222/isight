@@ -48,7 +48,7 @@ export default function AmslerGrid({ instruction, question, onResult }: Props) {
             height={GRID_SIZE * CELL_PX}
             className="cursor-crosshair select-none"
             onClick={handleSvgClick}
-            aria-label="Amsler grid — tap any area that looks wavy, blurry, or missing"
+            aria-label="Amsler grid - tap any area that looks wavy, blurry, or missing"
           >
             <defs>
               <pattern id="amsler-cells" width="1" height="1" patternUnits="userSpaceOnUse">

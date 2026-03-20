@@ -155,7 +155,7 @@ export default function NewsBrickGallery({
             className="relative w-full max-w-5xl max-h-[90vh] rounded-2xl overflow-y-auto overflow-x-hidden shadow-2xl ring-1 ring-white/10 bg-navy-900 flex flex-col"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Zoom controls — above image */}
+            {/* Zoom controls - above image */}
             <div className="sticky top-0 left-0 right-0 z-10 flex justify-center p-2 sm:p-3 bg-navy-900/95 backdrop-blur-sm border-b border-white/5 shrink-0">
               <div className="flex items-center gap-1 p-1.5 rounded-xl bg-navy-950/80 border border-white/10 shadow-lg">
               <button
@@ -191,7 +191,7 @@ export default function NewsBrickGallery({
             </div>
             </div>
 
-            {/* Image area — pannable when zoomed; capped on mobile */}
+            {/* Image area - pannable when zoomed; capped on mobile */}
             <div
               className="flex-1 flex items-center justify-center min-h-[200px] sm:min-h-[280px] overflow-hidden touch-none select-none cursor-grab active:cursor-grabbing"
               onMouseDown={handleMouseDown}

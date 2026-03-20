@@ -57,7 +57,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // Treatment / procedure pages — high priority
+  // Treatment / procedure pages - high priority
   const treatmentPages: MetadataRoute.Sitemap = TREATMENT_SLUGS.map((slug) => ({
     url: `${SITE_URL}/${slug}`,
     lastModified: now,

@@ -14,7 +14,7 @@ export function clampTitleTag(title: string, maxLength = DEFAULT_MAX_TITLE_LENGT
 
   return softCut
     .slice(0, cutIndex)
-    .replace(/[|,;:!?.\-–—\s]+$/g, "")
+    .replace(/[|,;:!?.\-–-\s]+$/g, "")
     .trim();
 }
 

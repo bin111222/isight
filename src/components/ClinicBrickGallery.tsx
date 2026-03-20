@@ -49,7 +49,7 @@ export default function ClinicBrickGallery({ images }: ClinicBrickGalleryProps) 
             onClick={() => setSelected(src)}
             className="group block w-full break-inside-avoid mb-3 sm:mb-4 rounded-xl overflow-hidden bg-silver-200 shadow-[0_1px_3px_rgba(0,0,0,0.06)] hover:shadow-lg hover:ring-2 hover:ring-clinical-400/50 hover:ring-offset-2 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-clinical-500 focus-visible:ring-offset-2 text-left"
           >
-            {/* Native img so height is natural — no fixed grid rows, no distortion */}
+            {/* Native img so height is natural - no fixed grid rows, no distortion */}
             <span className="block relative w-full overflow-hidden rounded-xl">
               <img
                 src={src}
@@ -68,7 +68,7 @@ export default function ClinicBrickGallery({ images }: ClinicBrickGalleryProps) 
         ))}
       </div>
 
-      {/* Modal — scrollable on mobile to prevent overlap */}
+      {/* Modal - scrollable on mobile to prevent overlap */}
       {selected && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6"
@@ -83,19 +83,19 @@ export default function ClinicBrickGallery({ images }: ClinicBrickGalleryProps) 
             aria-hidden
           />
 
-          {/* Content card — scrollable on mobile */}
+          {/* Content card - scrollable on mobile */}
           <div
             className="relative w-full max-w-5xl max-h-[90vh] flex flex-col sm:flex-row rounded-2xl overflow-y-auto overflow-x-hidden shadow-2xl ring-1 ring-white/10"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Rich gradient base — behind content */}
+            {/* Rich gradient base - behind content */}
             <div className="absolute inset-0 bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 pointer-events-none z-0" />
             <div className="absolute inset-0 bg-gradient-to-tr from-clinical-500/25 via-transparent to-transparent pointer-events-none z-0" />
             <div className="absolute inset-0 bg-gradient-to-bl from-clinical-400/15 via-transparent to-transparent pointer-events-none z-0" />
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[90%] h-[50%] bg-clinical-500/20 rounded-full blur-3xl pointer-events-none z-0" />
             <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-navy-700/30 rounded-full blur-2xl pointer-events-none z-0" />
 
-            {/* Image area — capped height on mobile to avoid overlap */}
+            {/* Image area - capped height on mobile to avoid overlap */}
             <div className="relative flex-shrink-0 flex-1 flex items-center justify-center min-h-[200px] min-w-0 sm:min-w-[280px] p-3 sm:p-6 z-10">
               <div className="relative w-full max-w-2xl aspect-[4/3] max-h-[50vh] sm:max-h-none rounded-xl overflow-hidden bg-navy-950/50 shadow-inner">
                 {modalSrc && (
@@ -110,7 +110,7 @@ export default function ClinicBrickGallery({ images }: ClinicBrickGalleryProps) 
               </div>
             </div>
 
-            {/* Side panel — iSight branding + CTA */}
+            {/* Side panel - iSight branding + CTA */}
             <div className="relative flex flex-col justify-between w-full sm:w-80 lg:w-96 flex-shrink-0 p-4 sm:p-8 bg-gradient-to-b from-navy-900/98 via-navy-950/95 to-navy-950 border-t sm:border-t-0 sm:border-l border-white/10 z-10">
               <div className="absolute inset-0 bg-gradient-to-b from-clinical-500/5 to-transparent pointer-events-none rounded-b-2xl sm:rounded-r-2xl sm:rounded-b-none z-0" />
               <div className="relative">
@@ -159,7 +159,7 @@ export default function ClinicBrickGallery({ images }: ClinicBrickGalleryProps) 
             </div>
           </div>
 
-          {/* Close button — above card on mobile */}
+          {/* Close button - above card on mobile */}
           <button
             type="button"
             onClick={close}

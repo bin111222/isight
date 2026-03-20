@@ -140,7 +140,7 @@ export default function HeroParticles() {
         const centerX = cw / 2;
         const centerY = ch / 2;
 
-        // Cursor repulsion — push away from mouse so they flow around it and don't cover eyes
+        // Cursor repulsion - push away from mouse so they flow around it and don't cover eyes
         const dx = p.x - mx;
         const dy = p.y - my;
         const d = Math.hypot(dx, dy);
@@ -173,7 +173,7 @@ export default function HeroParticles() {
         if (p.y > ch + margin) p.y = -margin;
       }
 
-      // Draw particles on top of lines (big soft glows) — theme blue range only
+      // Draw particles on top of lines (big soft glows) - theme blue range only
       for (const p of particles) {
         const r = p.r;
         const t = p.hue;

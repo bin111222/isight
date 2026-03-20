@@ -77,7 +77,7 @@ export default function GoogleReviewsSection() {
                 {t.quote}
               </p>
               <footer className="mt-6 font-semibold text-navy-900">
-                — {t.author}
+                - {t.author}
               </footer>
             </blockquote>
           ))}

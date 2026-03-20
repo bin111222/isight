@@ -34,7 +34,7 @@ const EYE_PARTS_DATA: EyePart[] = [
     cy: 50,
     r: 10,
     what: "The lens sits behind the iris and works with the cornea to focus light onto the retina. It can change shape to help you focus on near and far objects.",
-    conditions: "Cataract—clouding of the lens with age—is the most common condition. It can cause blurry vision, glare, and difficulty with night driving.",
+    conditions: "Cataract-clouding of the lens with age-is the most common condition. It can cause blurry vision, glare, and difficulty with night driving.",
     care: "Cataract surgery removes the cloudy lens and replaces it with a clear artificial lens (IOL). We offer no-patch, no-stitch, no-injection surgery with premium lens options including multifocal and toric IOLs.",
   },
   {
@@ -54,7 +54,7 @@ const EYE_PARTS_DATA: EyePart[] = [
     cy: 88,
     r: 8,
     what: "The optic nerve carries visual signals from the retina to the brain. It is often described as the cable that connects the eye to the brain.",
-    conditions: "Glaucoma—damage to the optic nerve, often linked to high eye pressure—is a leading cause of irreversible vision loss. It can progress with few symptoms until later stages.",
+    conditions: "Glaucoma-damage to the optic nerve, often linked to high eye pressure-is a leading cause of irreversible vision loss. It can progress with few symptoms until later stages.",
     care: "We manage glaucoma with regular monitoring, prescription eye drops, laser procedures (e.g. SLT), and surgery when needed. Early detection and treatment help protect your vision.",
   },
 ];

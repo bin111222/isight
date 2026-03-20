@@ -97,7 +97,7 @@ export default function DoctorsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(physicianJsonLd) }}
       />
     <div className="min-h-screen bg-silver-100">
-      {/* Hero — full-bleed image (native img so it always loads from public/) */}
+      {/* Hero - full-bleed image (native img so it always loads from public/) */}
       <section className="relative min-h-[70vh] flex flex-col justify-end overflow-hidden">
         <div className="absolute inset-0">
           <img
@@ -135,7 +135,7 @@ export default function DoctorsPage() {
               </h2>
               <p className="mt-5 text-navy-700 leading-relaxed text-base sm:text-lg">
                 iSight Eyecare and Surgery is a chain of multi-speciality eye care centres developed by Dr. Nikhil
-                Nasta. Our centres are in two prime Mumbai locations—Khar and Dadar—equipped with the latest
+                Nasta. Our centres are in two prime Mumbai locations-Khar and Dadar-equipped with the latest
                 ophthalmic instruments and operating facilities.
               </p>
               <p className="mt-4 text-navy-700 leading-relaxed text-base sm:text-lg">
@@ -236,7 +236,7 @@ export default function DoctorsPage() {
               </h2>
               <p className="mt-5 text-navy-700 leading-relaxed text-base sm:text-lg">
                 Sit with Dr. Nikhil Nasta and enjoy a coffee whilst talking about eyes and life. We believe in
-                personalised attention and care—you’re not just a case number. Many of our patients have our team’s
+                personalised attention and care-you’re not just a case number. Many of our patients have our team’s
                 contact and are just a WhatsApp away when they need advice.
               </p>
             </div>
@@ -284,7 +284,7 @@ export default function DoctorsPage() {
         </div>
       </section>
 
-      {/* Gallery — Dr. Nikhil: OT, portrait, TEDx */}
+      {/* Gallery - Dr. Nikhil: OT, portrait, TEDx */}
       <section className="py-14 lg:py-18 bg-silver-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-clinical-500">05</span>
@@ -292,7 +292,7 @@ export default function DoctorsPage() {
             Behind the scenes
           </h2>
           <p className="mt-4 text-navy-700 leading-relaxed text-base sm:text-lg max-w-2xl">
-            From the operating theatre to the stage—meet Dr. Nikhil Nasta in practice, in portrait, and at TEDx.
+            From the operating theatre to the stage-meet Dr. Nikhil Nasta in practice, in portrait, and at TEDx.
           </p>
           <div className="mt-10 grid sm:grid-cols-3 gap-6 lg:gap-8">
             {GALLERY_IMAGES.map((img) => (
@@ -314,7 +314,7 @@ export default function DoctorsPage() {
         </div>
       </section>
 
-      {/* Clinic photos — brick wall gallery */}
+      {/* Clinic photos - brick wall gallery */}
       <section className="relative py-14 lg:py-18 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-white via-silver-100/50 to-white pointer-events-none" aria-hidden />
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
@@ -323,7 +323,7 @@ export default function DoctorsPage() {
             Our clinic & facilities
           </h2>
           <p className="mt-4 text-navy-700 leading-relaxed text-base sm:text-lg max-w-2xl">
-            iSight Eye Care centres in Khar and Dadar—modern equipment, comfortable spaces, and a team dedicated to your vision.
+            iSight Eye Care centres in Khar and Dadar-modern equipment, comfortable spaces, and a team dedicated to your vision.
           </p>
           <div className="mt-10">
             <ClinicBrickGallery images={CLINIC_IMAGES} />
@@ -350,7 +350,7 @@ export default function DoctorsPage() {
         <BookAppointmentCTA variant="card" />
       </section>
 
-      {/* Treatments quick links — same pattern as InternationalPatientsPage: Link for internal, a for external */}
+      {/* Treatments quick links - same pattern as InternationalPatientsPage: Link for internal, a for external */}
       <section className="py-12 bg-silver-100 border-t border-silver-200">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <h2 className="font-display text-xl font-bold text-navy-900 mb-6">Our treatments</h2>

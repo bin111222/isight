@@ -10,7 +10,7 @@ export default function AwardsPage() {
 
   return (
     <div className="min-h-screen bg-silver-100">
-      {/* Hero — compact */}
+      {/* Hero - compact */}
       <section className="relative py-8 sm:py-10 lg:py-12 overflow-hidden bg-gradient-to-b from-navy-900 to-navy-900/95">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_0%,rgba(92,139,201,0.2),transparent_50%)] pointer-events-none" aria-hidden />
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 text-center">
@@ -22,7 +22,7 @@ export default function AwardsPage() {
             Awards &amp; recognition
           </h1>
           <p className="mt-2 sm:mt-3 text-silver-200 text-base sm:text-lg max-w-2xl mx-auto">
-            iSight Eye Care and Dr. Nikhil Nasta—honoured for excellence in eye care and the growth of our brand.
+            iSight Eye Care and Dr. Nikhil Nasta-honoured for excellence in eye care and the growth of our brand.
           </p>
         </div>
       </section>
@@ -42,7 +42,7 @@ export default function AwardsPage() {
         </div>
       </section>
 
-      {/* Media coverage — news brick gallery */}
+      {/* Media coverage - news brick gallery */}
       <section className="py-14 lg:py-18 bg-white border-t border-silver-200">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <span className="inline-flex items-center gap-2 text-clinical-500 text-sm font-semibold uppercase tracking-[0.2em]">

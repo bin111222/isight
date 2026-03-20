@@ -308,7 +308,7 @@ type Props = { treatmentImages: Record<string, string> };
 export default function InternationalPatientsPage({ treatmentImages }: Props) {
   return (
     <div className="min-h-screen bg-silver-100">
-      {/* ——— HERO ——— */}
+      {/* --- HERO --- */}
       <header className="relative min-h-[70vh] flex flex-col justify-center py-24 lg:py-32 overflow-hidden">
         <div className="absolute inset-0">
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -335,7 +335,7 @@ export default function InternationalPatientsPage({ treatmentImages }: Props) {
             Experience precision-driven eye surgery, advanced technology, and personalised care in Mumbai, India.
           </p>
           <p className="mt-4 text-white/90 text-base sm:text-lg max-w-2xl mx-auto">
-            From cataract and LASIK to retina, cornea, glaucoma, paediatric and cosmetic eye surgery — we provide
+            From cataract and LASIK to retina, cornea, glaucoma, paediatric and cosmetic eye surgery - we provide
             complete ophthalmology solutions under one roof.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -349,7 +349,7 @@ export default function InternationalPatientsPage({ treatmentImages }: Props) {
         </div>
       </header>
 
-      {/* ——— WHY PATIENTS CHOOSE INDIA ——— */}
+      {/* --- WHY PATIENTS CHOOSE INDIA --- */}
       <section className="py-16 lg:py-24 bg-white" aria-labelledby="why-india-heading">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-5 gap-10 lg:gap-14 items-center">
@@ -390,7 +390,7 @@ export default function InternationalPatientsPage({ treatmentImages }: Props) {
         </div>
       </section>
 
-      {/* ——— WHY I SIGHT ——— */}
+      {/* --- WHY I SIGHT --- */}
       <section className="py-16 lg:py-24 bg-silver-100" aria-labelledby="why-isight-heading">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-5 gap-10 lg:gap-14 items-start">
@@ -402,7 +402,7 @@ export default function InternationalPatientsPage({ treatmentImages }: Props) {
                 id="why-isight-heading"
                 eyebrow="Why choose iSight Eye Care"
                 title="What International Patients Receive at iSight"
-                description="Our goal is to provide world-class eye care with precision, safety and clarity — both medically and financially."
+                description="Our goal is to provide world-class eye care with precision, safety and clarity - both medically and financially."
               />
               <ul className="grid sm:grid-cols-2 gap-4">
                 {WHY_ISIGHT.map((item) => (
@@ -417,14 +417,14 @@ export default function InternationalPatientsPage({ treatmentImages }: Props) {
         </div>
       </section>
 
-      {/* ——— COMPLETE LIST OF EYE SURGERIES (BADGES) ——— */}
+      {/* --- COMPLETE LIST OF EYE SURGERIES (BADGES) --- */}
       <section className="py-16 lg:py-24 bg-white" aria-labelledby="surgeries-heading">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <SectionHeading
             id="surgeries-heading"
             eyebrow="Complete list of eye surgeries available"
             title="Every Procedure You Need, Under One Roof"
-            description="From cataract and laser vision correction to retina, glaucoma, cornea and paediatric care — we deliver the full range of international eye surgery needs."
+            description="From cataract and laser vision correction to retina, glaucoma, cornea and paediatric care - we deliver the full range of international eye surgery needs."
           />
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {TREATMENT_BADGES.map((badge) => (
@@ -439,7 +439,7 @@ export default function InternationalPatientsPage({ treatmentImages }: Props) {
         </div>
       </section>
 
-      {/* ——— TREATMENT JOURNEY ——— */}
+      {/* --- TREATMENT JOURNEY --- */}
       <section className="py-16 lg:py-24 bg-silver-100" aria-labelledby="journey-heading">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <SectionHeading
@@ -485,7 +485,7 @@ export default function InternationalPatientsPage({ treatmentImages }: Props) {
         </div>
       </section>
 
-      {/* ——— COST ADVANTAGE ——— */}
+      {/* --- COST ADVANTAGE --- */}
       <section className="py-16 lg:py-24 bg-white" aria-labelledby="cost-heading">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <SectionHeading
@@ -523,7 +523,7 @@ export default function InternationalPatientsPage({ treatmentImages }: Props) {
         </div>
       </section>
 
-      {/* ——— TECHNOLOGY & SUPPORT ——— */}
+      {/* --- TECHNOLOGY & SUPPORT --- */}
       <section className="py-16 lg:py-24 bg-silver-100" aria-labelledby="tech-heading">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
@@ -569,7 +569,7 @@ export default function InternationalPatientsPage({ treatmentImages }: Props) {
         </div>
       </section>
 
-      {/* ——— ONLINE CONSULTATION ——— */}
+      {/* --- ONLINE CONSULTATION --- */}
       <section className="py-16 lg:py-24 bg-white" aria-labelledby="online-heading">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-5 gap-10 lg:gap-14 items-center">
@@ -598,7 +598,7 @@ export default function InternationalPatientsPage({ treatmentImages }: Props) {
         </div>
       </section>
 
-      {/* ——— FAQ ——— */}
+      {/* --- FAQ --- */}
       <section className="py-16 lg:py-24 bg-silver-100" aria-labelledby="faq-heading">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <h2 id="faq-heading" className="font-display text-2xl sm:text-3xl font-bold text-navy-900 mb-10">
@@ -608,7 +608,7 @@ export default function InternationalPatientsPage({ treatmentImages }: Props) {
         </div>
       </section>
 
-      {/* ——— FINAL CTA ——— */}
+      {/* --- FINAL CTA --- */}
       <section className="relative py-20 lg:py-28 overflow-hidden bg-navy-900" aria-labelledby="final-cta-heading">
         <div className="absolute inset-0 bg-mesh-gradient opacity-50 pointer-events-none" aria-hidden />
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-clinical-400/50 to-transparent" aria-hidden />

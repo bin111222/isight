@@ -70,7 +70,7 @@ export default function ConsultPage() {
 
   return (
     <div className="min-h-screen bg-silver-100">
-      {/* Hero — image-backed, gradient overlay, accent */}
+      {/* Hero - image-backed, gradient overlay, accent */}
       <section className="relative min-h-[50vh] flex flex-col justify-center py-24 lg:py-32 overflow-hidden">
         <Image
           src={getImageUrl("/hero.webp")}
@@ -95,7 +95,7 @@ export default function ConsultPage() {
         </div>
       </section>
 
-      {/* Quick contact — premium card with accent bar */}
+      {/* Quick contact - premium card with accent bar */}
       <section className="relative -mt-8 z-10 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
           <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl bg-white shadow-[0_4px_24px_-4px_rgba(10,15,26,0.15)] border border-silver-200/80">
@@ -127,7 +127,7 @@ export default function ConsultPage() {
         </div>
       </section>
 
-      {/* Two locations — map on top, card with accent */}
+      {/* Two locations - map on top, card with accent */}
       <section className="py-16 lg:py-24 bg-silver-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-clinical-500">Our locations</p>
@@ -184,7 +184,7 @@ export default function ConsultPage() {
         </div>
       </section>
 
-      {/* Request appointment form — card with accent bar */}
+      {/* Request appointment form - card with accent bar */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="max-w-2xl mx-auto">
@@ -195,7 +195,7 @@ export default function ConsultPage() {
                 Send us your details
               </h2>
               <p className="mt-3 text-navy-700 text-base leading-relaxed">
-                Fill in the form below and click Send to WhatsApp. The message will open in WhatsApp—you just need to hit send.
+                Fill in the form below and click Send to WhatsApp. The message will open in WhatsApp-you just need to hit send.
               </p>
 
               <form onSubmit={handleSubmit} className="mt-8 space-y-5">
@@ -291,7 +291,7 @@ export default function ConsultPage() {
         </div>
       </section>
 
-      {/* Why book with us — icon cards */}
+      {/* Why book with us - icon cards */}
       <section className="py-16 lg:py-24 bg-silver-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-clinical-500">Why iSight</p>

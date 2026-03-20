@@ -54,7 +54,7 @@ export default function TreatmentsPage({ content }: Props) {
 
   return (
     <>
-      {/* Hero — aligned with homepage */}
+      {/* Hero - aligned with homepage */}
       <section className="relative min-h-[50vh] flex flex-col justify-center mesh-bg overflow-hidden">
         <div className="absolute inset-0 bg-hero-glow opacity-50 pointer-events-none" />
         <div className="absolute inset-0 hero-grain" aria-hidden />
@@ -70,13 +70,13 @@ export default function TreatmentsPage({ content }: Props) {
             </span>
           </h1>
           <p className="mt-6 text-lg text-white/80 max-w-xl mx-auto leading-relaxed">
-            Full spectrum of eye care—from vision correction to surgery and medical management.
+            Full spectrum of eye care-from vision correction to surgery and medical management.
           </p>
         </div>
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-clinical-400/40 to-transparent" />
       </section>
 
-      {/* Trust strip — same as homepage */}
+      {/* Trust strip - same as homepage */}
       <section className="relative bg-navy-800/90 backdrop-blur-md border-b border-white/5 py-16 lg:py-20 -mt-px">
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" aria-hidden />
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6">
@@ -102,7 +102,7 @@ export default function TreatmentsPage({ content }: Props) {
         </section>
       )}
 
-      {/* Treatment cards grid — same UI as homepage Our Services */}
+      {/* Treatment cards grid - same UI as homepage Our Services */}
       <section className="relative py-24 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-silver-100 via-white to-silver-100" aria-hidden />
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6">

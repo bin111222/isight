@@ -66,17 +66,17 @@ export default function AwardsBrickGallery({
             onClick={close}
             aria-hidden
           />
-          {/* Content card — scrollable on mobile so image + panel don't overlap */}
+          {/* Content card - scrollable on mobile so image + panel don't overlap */}
           <div
             className="relative w-full max-w-5xl max-h-[90vh] flex flex-col sm:flex-row rounded-2xl overflow-y-auto overflow-x-hidden shadow-2xl ring-1 ring-white/10"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Gradient base — behind content */}
+            {/* Gradient base - behind content */}
             <div className="absolute inset-0 bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 pointer-events-none z-0" />
             <div className="absolute inset-0 bg-gradient-to-tr from-clinical-500/25 via-transparent to-transparent pointer-events-none z-0" />
             <div className="absolute inset-0 bg-gradient-to-bl from-clinical-400/15 via-transparent to-transparent pointer-events-none z-0" />
 
-            {/* Image area — capped height on mobile to avoid overlap */}
+            {/* Image area - capped height on mobile to avoid overlap */}
             <div className="relative flex-shrink-0 flex-1 flex items-center justify-center min-h-[200px] min-w-0 sm:min-w-[280px] p-3 sm:p-6 z-10">
               <div className="relative w-full max-w-2xl flex items-center justify-center max-h-[50vh] sm:max-h-none">
                 <img
@@ -89,7 +89,7 @@ export default function AwardsBrickGallery({
               </div>
             </div>
 
-            {/* Side panel — Dr. Nikhil */}
+            {/* Side panel - Dr. Nikhil */}
             <div className="relative flex flex-col justify-between w-full sm:w-80 lg:w-96 flex-shrink-0 p-4 sm:p-8 bg-gradient-to-b from-navy-900/98 via-navy-950/95 to-navy-950 border-t sm:border-t-0 sm:border-l border-white/10 z-10">
               <div className="absolute inset-0 bg-gradient-to-b from-clinical-500/5 to-transparent pointer-events-none rounded-b-2xl sm:rounded-r-2xl sm:rounded-b-none z-0" />
               <div className="relative">
@@ -104,7 +104,7 @@ export default function AwardsBrickGallery({
                   Founder, iSight Eye Care · Over 15 years of experience
                 </p>
                 <p className="text-white/70 text-sm mt-3 leading-relaxed">
-                  Award-winning ophthalmologist with expertise in cataract, glaucoma, refractive surgery, and paediatric eye care. Dr. Nasta founded iSight to bring quality, affordable eye care to Mumbai—with centres in Khar and Dadar and a team dedicated to your vision.
+                  Award-winning ophthalmologist with expertise in cataract, glaucoma, refractive surgery, and paediatric eye care. Dr. Nasta founded iSight to bring quality, affordable eye care to Mumbai-with centres in Khar and Dadar and a team dedicated to your vision.
                 </p>
                 <p className="text-white/60 text-xs mt-3 leading-relaxed">
                   M.S. Ophthalmology · D.N.B. · ICO certified · Pfizer Gold Medallion · Mumbai University honours

@@ -32,7 +32,7 @@ export default function AssessmentIntro({ title, body, disclaimer, onBegin, onBa
           onClick={onBegin}
           className="btn btn-lg btn-primary w-full sm:w-auto"
         >
-          I understand — begin assessment
+          I understand - begin assessment
         </button>
         <button
           type="button"

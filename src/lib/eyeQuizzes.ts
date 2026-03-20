@@ -94,8 +94,8 @@ export const DRY_EYE_QUIZ: QuizDef = {
     "This tool is for awareness only and does not replace an in-person eye examination.",
   baselineQuestion: "Right now, how would you rate your eye comfort? (1 = very comfortable, 10 = very uncomfortable)",
   sections: [
-    { id: "symptoms", title: "Part A — Symptom severity", description: "Over the past week, how would you rate the following?" },
-    { id: "habits", title: "Part B — Habits & environment", description: "A few questions about your daily routine." },
+    { id: "symptoms", title: "Part A - Symptom severity", description: "Over the past week, how would you rate the following?" },
+    { id: "habits", title: "Part B - Habits & environment", description: "A few questions about your daily routine." },
   ],
   questions: [
     {
@@ -179,7 +179,7 @@ export const DRY_EYE_QUIZ: QuizDef = {
       max: 18,
       riskLevel: "moderate",
       title: "Mild to moderate symptoms",
-      summary: "Your symptom scores suggest dry eye may be affecting you. A specialist can confirm with tear film tests and recommend a tailored plan—from drops to advanced therapies (e.g. IPL, Forma).",
+      summary: "Your symptom scores suggest dry eye may be affecting you. A specialist can confirm with tear film tests and recommend a tailored plan-from drops to advanced therapies (e.g. IPL, Forma).",
       ctaLabel: "Book a dry eye evaluation",
       ctaHref: "/consult",
       reportRecommendation: ["Consider a comprehensive dry eye evaluation.", "In-clinic tests: Schirmer, TBUT, meibography.", "Discuss lubricants, lid hygiene, and advanced options if needed."],
@@ -210,8 +210,8 @@ export const DIGITAL_STRAIN_QUIZ: QuizDef = {
     "This tool is for awareness only and does not replace an in-person eye examination.",
   baselineQuestion: "Right now, how would you rate your eye comfort? (1 = very comfortable, 10 = very uncomfortable)",
   sections: [
-    { id: "exposure", title: "Part A — Screen exposure & habits", description: "Your typical daily screen use." },
-    { id: "symptoms", title: "Part B — Symptom severity", description: "Over the past week, rate the following." },
+    { id: "exposure", title: "Part A - Screen exposure & habits", description: "Your typical daily screen use." },
+    { id: "symptoms", title: "Part B - Symptom severity", description: "Over the past week, rate the following." },
   ],
   questions: [
     {
@@ -328,9 +328,9 @@ export const VISION_WELLNESS_QUIZ: QuizDef = {
     "This tool is for awareness only and does not replace a comprehensive eye examination.",
   baselineQuestion: "Right now, how would you rate the clarity of your central vision? (1 = very clear, 10 = very blurry or distorted)",
   sections: [
-    { id: "symptoms", title: "Part A — Vision & symptoms", description: "Over the past few weeks." },
-    { id: "history", title: "Part B — History & risk factors", description: "Brief medical and family history." },
-    { id: "amsler", title: "Part C — Amsler grid check", description: "Optional screening for central vision. Cover one eye and look at the centre dot." },
+    { id: "symptoms", title: "Part A - Vision & symptoms", description: "Over the past few weeks." },
+    { id: "history", title: "Part B - History & risk factors", description: "Brief medical and family history." },
+    { id: "amsler", title: "Part C - Amsler grid check", description: "Optional screening for central vision. Cover one eye and look at the centre dot." },
   ],
   questions: [
     {
@@ -402,7 +402,7 @@ export const VISION_WELLNESS_QUIZ: QuizDef = {
       id: "q_amsler",
       type: "visual",
       visualType: "amsler",
-      question: "Amsler grid — Do you see any wavy lines, blur, or missing areas?",
+      question: "Amsler grid - Do you see any wavy lines, blur, or missing areas?",
       sectionId: "amsler",
       instruction: "Cover one eye. Look at the centre dot. Keep your gaze on the dot. Do all lines look straight and all squares present? Tap anywhere that looks wavy, blurry, or missing.",
     },

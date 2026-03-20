@@ -36,7 +36,7 @@ export const skinTypeOcularAestheticsMumbai: PageContent = {
     {
       heading: "Our Philosophy",
       body:
-        "Eye aesthetics is about more than appearance. It's about confidence, first impressions, and overall well-being. At iSight Eye Care, we blend science and artistry to bring out your natural beauty. Because your eyes deserve to shine — both in vision and in appearance.",
+        "Eye aesthetics is about more than appearance. It's about confidence, first impressions, and overall well-being. At iSight Eye Care, we blend science and artistry to bring out your natural beauty. Because your eyes deserve to shine - both in vision and in appearance.",
     },
     { heading: "Why Choose I-Sight Eye Care?", list: WHY_CHOOSE },
   ],

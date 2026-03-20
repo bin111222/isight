@@ -100,7 +100,7 @@ export default function AssessmentReport({
                     key={s.sectionId}
                     className="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-sm"
                   >
-                    <span className="text-white/70">{s.title.replace(/^Part [A-Z] —\s*/, "")}</span>
+                    <span className="text-white/70">{s.title.replace(/^Part [A-Z] -\s*/, "")}</span>
                     <span className="ml-2 font-semibold text-white tabular-nums">
                       {s.score} / {s.max}
                     </span>
