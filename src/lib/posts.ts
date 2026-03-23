@@ -78,6 +78,21 @@ export const POST_SLUGS = [
   "does-lasik-permanently-fix-eyes",
   "how-does-lasik-surgery-work-process-and-recovery",
   "best-clinics-for-lasik-eye-surgery-in-india",
+  "advanced-eye-surgery-latest-technology-near-me",
+  "best-eye-hospitals-laser-vision-correction-india",
+  "affordable-advanced-eye-surgery-packages-india",
+  "customized-cataract-surgery-options-india",
+  "eye-surgery-centers-financing-emi-plans-india",
+  "consultation-premium-lens-implant-surgeries-india",
+  "hospitals-using-bladeless-laser-eye-surgery-india",
+  "advanced-eye-surgery-insurance-coverage-india",
+  "patient-reviews-advanced-eye-surgery-centers",
+  "experienced-retinal-surgery-clinics-india",
+  "top-rated-corneal-transplant-centers-india",
+  "advanced-glaucoma-surgery-minimal-downtime-india",
+  "hospitals-for-pediatric-advanced-eye-surgeries-india",
+  "same-day-advanced-eye-surgery-procedures-india",
+  "advanced-refractive-surgery-quick-recovery-centers-india",
 ] as const;
 
 export type PostSlug = (typeof POST_SLUGS)[number];

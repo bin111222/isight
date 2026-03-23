@@ -78,6 +78,21 @@ import p_lasik_laser_eye_surgery_cost_in_india from "./lasik-laser-eye-surgery-c
 import p_does_lasik_permanently_fix_eyes from "./does-lasik-permanently-fix-eyes";
 import p_how_does_lasik_surgery_work_process_and_recovery from "./how-does-lasik-surgery-work-process-and-recovery";
 import p_best_clinics_for_lasik_eye_surgery_in_india from "./best-clinics-for-lasik-eye-surgery-in-india";
+import p_advanced_eye_surgery_latest_technology_near_me from "./advanced-eye-surgery-latest-technology-near-me";
+import p_best_eye_hospitals_laser_vision_correction_india from "./best-eye-hospitals-laser-vision-correction-india";
+import p_affordable_advanced_eye_surgery_packages_india from "./affordable-advanced-eye-surgery-packages-india";
+import p_customized_cataract_surgery_options_india from "./customized-cataract-surgery-options-india";
+import p_eye_surgery_centers_financing_emi_plans_india from "./eye-surgery-centers-financing-emi-plans-india";
+import p_consultation_premium_lens_implant_surgeries_india from "./consultation-premium-lens-implant-surgeries-india";
+import p_hospitals_using_bladeless_laser_eye_surgery_india from "./hospitals-using-bladeless-laser-eye-surgery-india";
+import p_advanced_eye_surgery_insurance_coverage_india from "./advanced-eye-surgery-insurance-coverage-india";
+import p_patient_reviews_advanced_eye_surgery_centers from "./patient-reviews-advanced-eye-surgery-centers";
+import p_experienced_retinal_surgery_clinics_india from "./experienced-retinal-surgery-clinics-india";
+import p_top_rated_corneal_transplant_centers_india from "./top-rated-corneal-transplant-centers-india";
+import p_advanced_glaucoma_surgery_minimal_downtime_india from "./advanced-glaucoma-surgery-minimal-downtime-india";
+import p_hospitals_for_pediatric_advanced_eye_surgeries_india from "./hospitals-for-pediatric-advanced-eye-surgeries-india";
+import p_same_day_advanced_eye_surgery_procedures_india from "./same-day-advanced-eye-surgery-procedures-india";
+import p_advanced_refractive_surgery_quick_recovery_centers_india from "./advanced-refractive-surgery-quick-recovery-centers-india";
 
 const POSTS: Record<string, BlogPost> = {
   "advantages-edof-iol-mumbai": p_advantages_edof_iol_mumbai,
@@ -155,6 +170,22 @@ const POSTS: Record<string, BlogPost> = {
   "does-lasik-permanently-fix-eyes": p_does_lasik_permanently_fix_eyes,
   "how-does-lasik-surgery-work-process-and-recovery": p_how_does_lasik_surgery_work_process_and_recovery,
   "best-clinics-for-lasik-eye-surgery-in-india": p_best_clinics_for_lasik_eye_surgery_in_india,
+  "advanced-eye-surgery-latest-technology-near-me": p_advanced_eye_surgery_latest_technology_near_me,
+  "best-eye-hospitals-laser-vision-correction-india": p_best_eye_hospitals_laser_vision_correction_india,
+  "affordable-advanced-eye-surgery-packages-india": p_affordable_advanced_eye_surgery_packages_india,
+  "customized-cataract-surgery-options-india": p_customized_cataract_surgery_options_india,
+  "eye-surgery-centers-financing-emi-plans-india": p_eye_surgery_centers_financing_emi_plans_india,
+  "consultation-premium-lens-implant-surgeries-india": p_consultation_premium_lens_implant_surgeries_india,
+  "hospitals-using-bladeless-laser-eye-surgery-india": p_hospitals_using_bladeless_laser_eye_surgery_india,
+  "advanced-eye-surgery-insurance-coverage-india": p_advanced_eye_surgery_insurance_coverage_india,
+  "patient-reviews-advanced-eye-surgery-centers": p_patient_reviews_advanced_eye_surgery_centers,
+  "experienced-retinal-surgery-clinics-india": p_experienced_retinal_surgery_clinics_india,
+  "top-rated-corneal-transplant-centers-india": p_top_rated_corneal_transplant_centers_india,
+  "advanced-glaucoma-surgery-minimal-downtime-india": p_advanced_glaucoma_surgery_minimal_downtime_india,
+  "hospitals-for-pediatric-advanced-eye-surgeries-india": p_hospitals_for_pediatric_advanced_eye_surgeries_india,
+  "same-day-advanced-eye-surgery-procedures-india": p_same_day_advanced_eye_surgery_procedures_india,
+  "advanced-refractive-surgery-quick-recovery-centers-india": p_advanced_refractive_surgery_quick_recovery_centers_india,
+
 };
 
 export default POSTS;
