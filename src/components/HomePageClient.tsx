@@ -138,36 +138,38 @@ export default function HomePageClient({ images }: Props) {
           <div className="absolute top-1/4 left-1/4 w-[420px] h-[420px] rounded-full bg-clinical-400/12 blur-[100px] animate-float pointer-events-none" />
           <div className="absolute bottom-1/4 right-1/5 w-[380px] h-[380px] rounded-full bg-clinical-500/10 blur-[90px] animate-float pointer-events-none" style={{ animationDelay: "2s" }} />
 
-          <div className="relative max-w-5xl mx-auto px-4 sm:px-6 py-20 sm:py-24 md:py-28 text-center">
-            <p className="inline-flex items-center rounded-full border border-white/20 bg-navy-950/45 px-4 py-1.5 font-display text-sm font-semibold uppercase tracking-[0.35em] text-clinical-200/95 shadow-[0_8px_24px_-14px_rgba(0,0,0,0.8)] backdrop-blur-sm animate-fade-in opacity-0 [animation-fill-mode:forwards]">
-              iSight Eye Care · Mumbai
-            </p>
-            <h1 className="mt-4 font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold text-white tracking-tight leading-[0.95] drop-shadow-[0_10px_28px_rgba(0,0,0,0.58)] animate-fade-in opacity-0 [animation-fill-mode:forwards] [animation-delay:0.08s]">
-              Vision
-              <br />
-              <span className="bg-gradient-to-r from-clinical-100 via-clinical-300 to-clinical-200 bg-clip-text text-transparent bg-[length:200%_auto] drop-shadow-[0_8px_18px_rgba(0,0,0,0.42)] animate-gradient-shift">
-                Restored
-              </span>
-            </h1>
-            <div className="mt-6 sm:mt-8 max-w-2xl mx-auto rounded-3xl border border-white/15 bg-navy-950/35 px-5 py-5 sm:px-8 sm:py-7 shadow-[0_24px_60px_-34px_rgba(0,0,0,0.95)] backdrop-blur-sm animate-fade-in opacity-0 stagger-1 [animation-fill-mode:forwards]">
-              <p className="text-base sm:text-lg text-white max-w-xl mx-auto leading-relaxed text-balance drop-shadow-[0_8px_22px_rgba(0,0,0,0.75)]">
-                Expert eye care for a clearer tomorrow. Led by Dr. Nikhil Nasta.
+          <div className="relative h-full max-w-5xl mx-auto px-4 sm:px-6 pt-16 sm:pt-20 pb-10 sm:pb-14 text-center flex items-center justify-center">
+            <div className="w-full max-w-3xl">
+              <p className="inline-flex items-center rounded-full border border-white/20 bg-navy-950/40 px-4 py-1.5 font-display text-xs sm:text-sm font-semibold uppercase tracking-[0.32em] text-clinical-200/95 shadow-[0_8px_24px_-14px_rgba(0,0,0,0.8)] backdrop-blur-sm animate-fade-in opacity-0 [animation-fill-mode:forwards]">
+                iSight Eye Care · Mumbai
               </p>
-              <div className="mt-6 flex flex-col sm:flex-row gap-3.5 justify-center items-center">
-                <a
-                  href={`tel:+${PHONE}`}
-                  className="btn btn-lg btn-secondary group border-0 shadow-2xl w-full sm:w-auto"
-                >
-                  <Phone className="w-5 h-5 shrink-0" strokeWidth={2.25} aria-hidden />
-                  Book Consultation
-                </a>
-                <Link
-                  href="/treatments"
-                  className="btn btn-lg group w-full sm:w-auto border-2 border-white/70 bg-navy-950/55 text-white shadow-[0_10px_28px_-16px_rgba(0,0,0,0.85)] backdrop-blur-sm hover:bg-navy-900/70 hover:border-white/90 hover:-translate-y-0.5"
-                >
-                  <Stethoscope className="w-5 h-5 shrink-0 opacity-90" strokeWidth={2.25} aria-hidden />
-                  Explore Treatments
-                </Link>
+              <h1 className="mt-4 font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold text-white tracking-tight leading-[0.95] drop-shadow-[0_10px_28px_rgba(0,0,0,0.58)] animate-fade-in opacity-0 [animation-fill-mode:forwards] [animation-delay:0.08s]">
+                Vision
+                <br />
+                <span className="bg-gradient-to-r from-clinical-100 via-clinical-300 to-clinical-200 bg-clip-text text-transparent bg-[length:200%_auto] drop-shadow-[0_8px_18px_rgba(0,0,0,0.42)] animate-gradient-shift">
+                  Restored
+                </span>
+              </h1>
+              <div className="mt-5 sm:mt-7 max-w-2xl mx-auto rounded-[26px] border border-white/20 bg-gradient-to-b from-white/14 via-white/9 to-white/6 px-5 py-5 sm:px-7 sm:py-6 shadow-[0_20px_52px_-34px_rgba(0,0,0,0.95)] backdrop-blur-lg ring-1 ring-white/10 animate-fade-in opacity-0 stagger-1 [animation-fill-mode:forwards]">
+                <p className="text-base sm:text-lg text-white/95 max-w-xl mx-auto leading-relaxed text-balance drop-shadow-[0_8px_22px_rgba(0,0,0,0.75)]">
+                  Advanced eye care for sharper, safer vision. Led by Dr. Nikhil Nasta.
+                </p>
+                <div className="mt-5 flex flex-col sm:flex-row gap-3 justify-center items-center">
+                  <a
+                    href={`tel:+${PHONE}`}
+                    className="btn btn-lg btn-secondary group border-0 shadow-[0_10px_28px_-16px_rgba(0,0,0,0.9)] w-full sm:w-auto"
+                  >
+                    <Phone className="w-5 h-5 shrink-0" strokeWidth={2.25} aria-hidden />
+                    Book Consultation
+                  </a>
+                  <Link
+                    href="/treatments"
+                    className="btn btn-lg group w-full sm:w-auto border border-white/55 bg-navy-950/45 text-white shadow-[0_10px_28px_-16px_rgba(0,0,0,0.85)] backdrop-blur-sm hover:bg-navy-900/60 hover:border-white/80 hover:-translate-y-0.5"
+                  >
+                    <Stethoscope className="w-5 h-5 shrink-0 opacity-90" strokeWidth={2.25} aria-hidden />
+                    Explore Treatments
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
