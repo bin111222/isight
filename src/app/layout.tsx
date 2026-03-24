@@ -23,18 +23,18 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Eye Doctor in Mumbai | iSight Eye Care",
+    default: "Eye Doctor in Mumbai for LASIK & Cataract | iSight Eye Care",
     template: "%s",
   },
   description:
-    "Expert eye care in Mumbai. LASIK, cataract surgery, dry eye treatment, retinal care & more. Award-winning ophthalmologist Dr. Nikhil Nasta. Book consultation.",
+    "Leading eye care in Mumbai for LASIK, cataract, retina and dry eye treatment. Trusted ophthalmologist Dr. Nikhil Nasta. Book your consultation today.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: clampTitleTag("Eye Doctor in Mumbai | iSight Eye Care"),
+    title: clampTitleTag("Eye Doctor in Mumbai for LASIK & Cataract | iSight Eye Care"),
     description:
-      "Expert eye care in Mumbai. LASIK, cataract surgery, dry eye treatment, retinal care & more. Award-winning ophthalmologist Dr. Nikhil Nasta.",
+      "Leading eye care in Mumbai for LASIK, cataract, retina and dry eye treatment. Trusted ophthalmologist Dr. Nikhil Nasta.",
     url: SITE_URL,
     siteName: "iSight Eye Care",
     locale: "en_IN",
@@ -50,9 +50,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: clampTitleTag("Eye Doctor in Mumbai | iSight Eye Care"),
+    title: clampTitleTag("Eye Doctor in Mumbai for LASIK & Cataract | iSight Eye Care"),
     description:
-      "Expert eye care in Mumbai. LASIK, cataract, dry eye, retina & more. Award-winning ophthalmologist Dr. Nikhil Nasta.",
+      "Leading eye care in Mumbai for LASIK, cataract, retina and dry eye treatment. Trusted ophthalmologist Dr. Nikhil Nasta.",
     images: ["/og-image.webp"],
   },
   icons: {
