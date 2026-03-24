@@ -4,6 +4,7 @@ const SITE_ORIGIN = "https://www.eyesurgeonmumbai.com";
 
 /** Matches http(s) URLs. Stops at space, closing paren/quote, or end. */
 const URL_REGEX = /https?:\/\/[^\s)\]>"']+/g;
+const TRAILING_PUNCTUATION_REGEX = /[.,;:!?]+$/;
 
 function getPathname(url: string): string | null {
   try {
@@ -35,10 +36,14 @@ export function LinkifiedText({ text, className, linkClassName }: LinkifiedProps
     if (m.index > lastIndex) {
       parts.push(text.slice(lastIndex, m.index));
     }
-    const url = m[0];
+    const rawUrl = m[0];
+    const trailing = rawUrl.match(TRAILING_PUNCTUATION_REGEX)?.[0] ?? "";
+    const url = trailing ? rawUrl.slice(0, -trailing.length) : rawUrl;
     const pathname = getPathname(url);
     parts.push({ url, pathname });
+    if (trailing) parts.push(trailing);
     lastIndex = m.index + url.length;
+    if (trailing) lastIndex += trailing.length;
   }
   if (lastIndex < text.length) parts.push(text.slice(lastIndex));
 
