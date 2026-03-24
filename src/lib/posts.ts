@@ -2,7 +2,7 @@ import type { BlogPost } from "@/types/content";
 import POSTS_REGISTRY from "@/content/posts/registry";
 
 /** All post slugs from old Wix blog – same paths for SEO. Generated from old-blog-sitemap.md. */
-export const POST_SLUGS = [
+export const LEGACY_POST_SLUGS = [
   "phaco-surgery-mumbai",
   "ideal-candidate-for-phaco-cataract-surgery",
   "digital-eye-strain-how-to-protect-your-vision-in-the-screen-age",
@@ -95,14 +95,24 @@ export const POST_SLUGS = [
   "advanced-refractive-surgery-quick-recovery-centers-india",
 ] as const;
 
-export type PostSlug = (typeof POST_SLUGS)[number];
+export type PostSlug = string;
+
+/**
+ * Preserve legacy ordering first, then include any newly added registry posts.
+ * This ensures newly created posts appear without needing manual slug list updates.
+ */
+export const POST_SLUGS: PostSlug[] = [
+  ...LEGACY_POST_SLUGS,
+  ...Object.keys(POSTS_REGISTRY).filter(
+    (slug) => !(LEGACY_POST_SLUGS as readonly string[]).includes(slug)
+  ),
+];
 
 export function getAllPostSlugs(): PostSlug[] {
   return [...POST_SLUGS];
 }
 
 export function getPostBySlug(slug: string): BlogPost | null {
-  if (!POST_SLUGS.includes(slug as PostSlug)) return null;
   return POSTS_REGISTRY[slug] ?? null;
 }
 

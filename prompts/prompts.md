@@ -115,3 +115,167 @@ These prompts are designed to generate high-quality, professional, and trustwort
 > Happy young adult enjoying clear vision outdoors one day after refractive surgery, subtle eye clinic in background, bright optimistic natural light, visual clarity theme, photorealistic, no text, 8k.
 
 
+## LASIK Content Cluster Plan (20 New Posts + Landing Angles)
+
+Use this section to create 20 new LASIK-focused blogs and matching landing pages that cover all business-relevant keywords from the LASIK question map (how/what/why/when/where/who/can/will/are/which + comparison and local intent).
+
+### 1. What Is LASIK Eye Surgery and How Does It Work?
+**Blog Slug:** `what-is-lasik-eye-surgery-and-how-it-works`
+**Landing Page Slug:** `lasik-eye-surgery-mumbai-explained`
+**Primary Keyword:** `what is lasik eye surgery`
+**Secondary Keywords Covered:** `what is lasik`, `what is lasik surgery`, `how lasik works`, `what happens in lasik`, `lasik procedure steps`
+**Nano Banana Prompt:**
+> Photorealistic ophthalmology procedure scene showing a surgeon performing modern LASIK with femtosecond laser guidance, detailed corneal topography display on monitor, premium sterile operation theater, clean white and soft blue palette, trustworthy and advanced medical feel, no text, ultra-detailed, 8k.
+
+### 2. Is LASIK Safe? Risks, Side Effects, and Realistic Expectations
+**Blog Slug:** `is-lasik-safe-risks-side-effects-and-expectations`
+**Landing Page Slug:** `safe-lasik-surgery-mumbai`
+**Primary Keyword:** `is lasik safe`
+**Secondary Keywords Covered:** `are lasik surgeries safe`, `lasik side effects`, `lasik complications`, `is lasik dangerous`, `lasik safety standards`
+**Nano Banana Prompt:**
+> Reassuring consultation between experienced eye surgeon and patient discussing LASIK safety report on tablet, modern eye clinic setting, calm facial expressions, subtle medical equipment in background, soft natural lighting, photorealistic, no text, 8k.
+
+### 3. LASIK Cost in Mumbai: Packages, EMI, and What Impacts Price
+**Blog Slug:** `lasik-cost-in-mumbai-packages-emi-and-pricing-factors`
+**Landing Page Slug:** `lasik-cost-mumbai-emi-options`
+**Primary Keyword:** `lasik cost in mumbai`
+**Secondary Keywords Covered:** `how much does lasik cost`, `lasik package`, `affordable lasik`, `lasik emi options`, `lasik pricing factors`
+**Nano Banana Prompt:**
+> Premium eye clinic billing consultation with transparent LASIK treatment estimate, EMI calculator on tablet, doctor and patient reviewing plan together, modern reception desk, balanced professional lighting, photorealistic, no text, 8k.
+
+### 4. LASIK Recovery Timeline: When You Can Work, Drive, Gym, and Travel
+**Blog Slug:** `lasik-recovery-timeline-work-drive-gym-travel`
+**Landing Page Slug:** `lasik-recovery-care-mumbai`
+**Primary Keyword:** `lasik recovery time`
+**Secondary Keywords Covered:** `when can i drive after lasik`, `when can i work after lasik`, `when can i exercise after lasik`, `lasik downtime`, `lasik healing timeline`
+**Nano Banana Prompt:**
+> Lifestyle-focused medical image of a young professional post-LASIK checking clear vision while driving at sunrise, subtle eye drops and follow-up card in foreground, natural optimistic mood, photorealistic, no text, 8k.
+
+### 5. Who Is a Good Candidate for LASIK? Tests That Decide Eligibility
+**Blog Slug:** `who-is-a-good-candidate-for-lasik-eligibility-tests`
+**Landing Page Slug:** `lasik-eligibility-test-mumbai`
+**Primary Keyword:** `who is a candidate for lasik`
+**Secondary Keywords Covered:** `can i get lasik`, `lasik eligibility`, `who can do lasik`, `lasik eye test`, `lasik suitability screening`
+**Nano Banana Prompt:**
+> Detailed LASIK screening scene with corneal scan, pachymetry and dry eye diagnostics in a premium eye clinic, doctor explaining results to patient, clean clinical environment, photorealistic, no text, 8k.
+
+### 6. LASIK for High Power: Can You Do LASIK with Thin Cornea or High Myopia?
+**Blog Slug:** `lasik-for-high-power-thin-cornea-high-myopia`
+**Landing Page Slug:** `high-power-lasik-options-mumbai`
+**Primary Keyword:** `can i do lasik with high power`
+**Secondary Keywords Covered:** `lasik for thin cornea`, `lasik for high myopia`, `can lasik correct high number`, `limits of lasik power`, `alternative to lasik high power`
+**Nano Banana Prompt:**
+> Ophthalmologist reviewing high myopia prescription and corneal thickness map on a large digital screen, patient listening attentively, modern refractive center aesthetic, photorealistic, no text, 8k.
+
+### 7. LASIK After 40: Is It Worth It or Is Lens-Based Surgery Better?
+**Blog Slug:** `lasik-after-40-vs-lens-based-vision-correction`
+**Landing Page Slug:** `vision-correction-after-40-mumbai`
+**Primary Keyword:** `is lasik safe after 40`
+**Secondary Keywords Covered:** `can you get lasik after 40`, `lasik vs lens surgery after 40`, `presbyopia correction`, `who should avoid lasik after 40`
+**Nano Banana Prompt:**
+> Sophisticated eye consultation with middle-aged patient comparing LASIK and lens options using 3D eye model, premium ophthalmology office, warm trustworthy lighting, photorealistic, no text, 8k.
+
+### 8. LASIK vs SMILE vs PRK: Which Vision Correction Is Best for You?
+**Blog Slug:** `lasik-vs-smile-vs-prk-which-is-best`
+**Landing Page Slug:** `compare-lasik-smile-prk-mumbai`
+**Primary Keyword:** `lasik vs smile vs prk`
+**Secondary Keywords Covered:** `which lasik surgery is best`, `lasik vs prk`, `smile vs lasik recovery`, `best refractive surgery for me`
+**Nano Banana Prompt:**
+> Futuristic yet realistic comparison visual of three refractive surgery paths represented by clean medical icons and a central cornea hologram in an advanced clinic environment, elegant blue-white palette, photorealistic 3D style, no text, 8k.
+
+### 9. Bladeless LASIK Explained: Is It Better Than Traditional LASIK?
+**Blog Slug:** `bladeless-lasik-explained-benefits-and-limitations`
+**Landing Page Slug:** `bladeless-lasik-mumbai`
+**Primary Keyword:** `bladeless lasik`
+**Secondary Keywords Covered:** `femtosecond lasik`, `traditional vs bladeless lasik`, `is bladeless lasik safer`, `latest lasik technology`
+**Nano Banana Prompt:**
+> High-detail close-up of femtosecond laser interface preparing corneal flap in sterile operation theater, surgeon hands in frame, precision medical technology emphasis, photorealistic, no text, 8k.
+
+### 10. LASIK Success Rate: How Long Results Last and When Touch-Ups Are Needed
+**Blog Slug:** `lasik-success-rate-long-term-results-and-enhancements`
+**Landing Page Slug:** `lasik-results-success-rate-mumbai`
+**Primary Keyword:** `lasik success rate`
+**Secondary Keywords Covered:** `will lasik last forever`, `are lasik results permanent`, `lasik enhancement`, `long term results of lasik`
+**Nano Banana Prompt:**
+> Confident post-LASIK patient reading eye chart clearly with surgeon smiling in background, modern clinic exam room, hopeful and evidence-driven atmosphere, photorealistic, no text, 8k.
+
+### 11. LASIK for Astigmatism: Can LASIK Correct Cylindrical Power?
+**Blog Slug:** `lasik-for-astigmatism-can-cylindrical-power-be-corrected`
+**Landing Page Slug:** `astigmatism-lasik-treatment-mumbai`
+**Primary Keyword:** `can lasik correct astigmatism`
+**Secondary Keywords Covered:** `lasik for cylinder power`, `will lasik fix astigmatism`, `mixed astigmatism lasik`, `custom lasik astigmatism`
+**Nano Banana Prompt:**
+> Clinical diagnostic setup with astigmatism topography rings and wavefront map displayed on monitor, surgeon explaining correction plan to patient, high-end refractive center, photorealistic, no text, 8k.
+
+### 12. Can LASIK Treat Nearsightedness and Farsightedness?
+**Blog Slug:** `can-lasik-treat-myopia-and-hyperopia`
+**Landing Page Slug:** `myopia-hyperopia-lasik-mumbai`
+**Primary Keyword:** `can lasik fix myopia and hyperopia`
+**Secondary Keywords Covered:** `will lasik cure nearsightedness`, `lasik for farsightedness`, `who benefits most from lasik`, `range of refractive error for lasik`
+**Nano Banana Prompt:**
+> Split-vision concept: blurred city scene transitioning into crystal-clear focus through a stylized eye frame, subtle clinic background and refractive diagnostics, premium photorealistic style, no text, 8k.
+
+### 13. LASIK and Dry Eye: Can You Get LASIK If Your Eyes Are Dry?
+**Blog Slug:** `lasik-and-dry-eye-can-you-still-undergo-surgery`
+**Landing Page Slug:** `dry-eye-lasik-screening-mumbai`
+**Primary Keyword:** `can i do lasik with dry eyes`
+**Secondary Keywords Covered:** `lasik dry eye risk`, `pre-lasik dry eye treatment`, `post-lasik dryness`, `who should delay lasik`
+**Nano Banana Prompt:**
+> Ophthalmologist performing tear film and meibomian gland assessment before LASIK eligibility decision, patient seated comfortably, modern dry eye diagnostic equipment, photorealistic, no text, 8k.
+
+### 14. LASIK Pain, Anesthesia, and Comfort: Does LASIK Hurt?
+**Blog Slug:** `does-lasik-hurt-pain-anesthesia-and-comfort-guide`
+**Landing Page Slug:** `pain-free-lasik-experience-mumbai`
+**Primary Keyword:** `does lasik hurt`
+**Secondary Keywords Covered:** `will lasik be painful`, `lasik anesthesia drops`, `lasik fear and anxiety`, `comfortable lasik procedure`
+**Nano Banana Prompt:**
+> Calm LASIK pre-op scene with patient relaxed on procedure bed while surgeon reassures and prepares numbing eye drops, gentle ambient lighting, compassionate medical storytelling, photorealistic, no text, 8k.
+
+### 15. LASIK Consultation Checklist: Questions You Must Ask Your Surgeon
+**Blog Slug:** `lasik-consultation-checklist-questions-to-ask-surgeon`
+**Landing Page Slug:** `book-lasik-consultation-mumbai`
+**Primary Keyword:** `lasik consultation questions`
+**Secondary Keywords Covered:** `what to ask before lasik`, `who does lasik surgery`, `how to choose lasik surgeon`, `best lasik consultation near me`
+**Nano Banana Prompt:**
+> Professional doctor-patient consultation with printed LASIK checklist and corneal scan report on desk, premium eye clinic office, clean and trustworthy visual language, photorealistic, no text, 8k.
+
+### 16. Best LASIK Surgeon in Mumbai: How to Evaluate Experience and Outcomes
+**Blog Slug:** `best-lasik-surgeon-in-mumbai-how-to-choose`
+**Landing Page Slug:** `top-lasik-surgeon-mumbai`
+**Primary Keyword:** `best lasik surgeon in mumbai`
+**Secondary Keywords Covered:** `top rated lasik surgeon`, `who performs lasik`, `lasik surgeon reviews`, `experienced refractive surgeon mumbai`
+**Nano Banana Prompt:**
+> Portrait-style image of experienced refractive surgeon in a premium ophthalmology center with advanced laser platform in background, confident yet approachable expression, cinematic medical photography, no text, 8k.
+
+### 17. Best LASIK Clinic in Bandra and Mumbai: What Actually Matters
+**Blog Slug:** `best-lasik-clinic-in-bandra-and-mumbai-selection-guide`
+**Landing Page Slug:** `best-lasik-clinic-bandra-mumbai`
+**Primary Keyword:** `best lasik clinic in bandra`
+**Secondary Keywords Covered:** `where to get lasik in mumbai`, `best clinics for lasik`, `bladeless lasik clinic near me`, `lasik center with latest technology`
+**Nano Banana Prompt:**
+> Wide-angle interior of upscale LASIK center in Mumbai with modern diagnostics, warm reception, and treatment counseling zone, premium healthcare architecture photography, no logos or text, 8k.
+
+### 18. LASIK vs ICL: When LASIK Is Not the Right Choice
+**Blog Slug:** `lasik-vs-icl-when-lens-based-correction-is-better`
+**Landing Page Slug:** `icl-vs-lasik-mumbai`
+**Primary Keyword:** `lasik vs icl`
+**Secondary Keywords Covered:** `why icl instead of lasik`, `not suitable for lasik`, `high power alternative to lasik`, `which is better icl or lasik`
+**Nano Banana Prompt:**
+> Advanced refractive consultation comparing corneal laser and implantable collamer lens options using 3D eye model, surgeon and young adult patient in discussion, premium clinic setting, photorealistic, no text, 8k.
+
+### 19. Free LASIK Eye Test and Second Opinion: What to Expect
+**Blog Slug:** `free-lasik-eye-test-and-second-opinion-guide`
+**Landing Page Slug:** `free-lasik-screening-second-opinion-mumbai`
+**Primary Keyword:** `free lasik eye test`
+**Secondary Keywords Covered:** `can i get free lasik consultation`, `lasik second opinion`, `where to get lasik checkup`, `lasik eligibility camp`
+**Nano Banana Prompt:**
+> Friendly eye screening camp setup in a professional clinic, optometrist performing preliminary LASIK tests while patient reviews next steps, clean and approachable healthcare environment, photorealistic, no text, 8k.
+
+### 20. LASIK FAQ Hub: 50 Most Asked Questions Answered by Specialists
+**Blog Slug:** `lasik-faq-most-asked-questions-answered`
+**Landing Page Slug:** `lasik-faq-and-booking-mumbai`
+**Primary Keyword:** `lasik faqs`
+**Secondary Keywords Covered:** `what/why/how/who/when/where lasik questions`, `can i do lasik`, `will lasik improve vision`, `are lasik results permanent`, `which lasik is best`
+**Nano Banana Prompt:**
+> Editorial-style healthcare composition with an ophthalmologist answering patient questions on a tablet, subtle speech bubble icons and eye anatomy model in clinic background, polished professional look, photorealistic, no text, 8k.
+

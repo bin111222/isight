@@ -94,6 +94,30 @@ import p_hospitals_for_pediatric_advanced_eye_surgeries_india from "./hospitals-
 import p_same_day_advanced_eye_surgery_procedures_india from "./same-day-advanced-eye-surgery-procedures-india";
 import p_advanced_refractive_surgery_quick_recovery_centers_india from "./advanced-refractive-surgery-quick-recovery-centers-india";
 
+import p_what_is_lasik_eye_surgery_and_how_it_works from "./what-is-lasik-eye-surgery-and-how-it-works";
+import p_is_lasik_safe_risks_side_effects_and_expectations from "./is-lasik-safe-risks-side-effects-and-expectations";
+import p_lasik_cost_in_mumbai_packages_emi_and_pricing_factors from "./lasik-cost-in-mumbai-packages-emi-and-pricing-factors";
+import p_lasik_recovery_timeline_work_drive_gym_travel from "./lasik-recovery-timeline-work-drive-gym-travel";
+import p_who_is_a_good_candidate_for_lasik_eligibility_tests from "./who-is-a-good-candidate-for-lasik-eligibility-tests";
+import p_lasik_for_high_power_thin_cornea_high_myopia from "./lasik-for-high-power-thin-cornea-high-myopia";
+import p_lasik_after_40_vs_lens_based_vision_correction from "./lasik-after-40-vs-lens-based-vision-correction";
+import p_lasik_vs_smile_vs_prk_which_is_best from "./lasik-vs-smile-vs-prk-which-is-best";
+import p_bladeless_lasik_explained_benefits_and_limitations from "./bladeless-lasik-explained-benefits-and-limitations";
+import p_lasik_success_rate_long_term_results_and_enhancements from "./lasik-success-rate-long-term-results-and-enhancements";
+import p_lasik_for_astigmatism_can_cylindrical_power_be_corrected from "./lasik-for-astigmatism-can-cylindrical-power-be-corrected";
+import p_can_lasik_treat_myopia_and_hyperopia from "./can-lasik-treat-myopia-and-hyperopia";
+import p_lasik_and_dry_eye_can_you_still_undergo_surgery from "./lasik-and-dry-eye-can-you-still-undergo-surgery";
+import p_does_lasik_hurt_pain_anesthesia_and_comfort_guide from "./does-lasik-hurt-pain-anesthesia-and-comfort-guide";
+import p_lasik_consultation_checklist_questions_to_ask_surgeon from "./lasik-consultation-checklist-questions-to-ask-surgeon";
+import p_best_lasik_surgeon_in_mumbai_how_to_choose from "./best-lasik-surgeon-in-mumbai-how-to-choose";
+import p_best_lasik_clinic_in_bandra_and_mumbai_selection_guide from "./best-lasik-clinic-in-bandra-and-mumbai-selection-guide";
+import p_lasik_vs_icl_when_lens_based_correction_is_better from "./lasik-vs-icl-when-lens-based-correction-is-better";
+import p_free_lasik_eye_test_and_second_opinion_guide from "./free-lasik-eye-test-and-second-opinion-guide";
+import p_lasik_faq_most_asked_questions_answered from "./lasik-faq-most-asked-questions-answered";
+import p_astigmatism_lasik_treatment_mumbai_complete_guide from "./astigmatism-lasik-treatment-mumbai-complete-guide";
+import p_lasik_second_opinion_before_surgery_why_it_matters from "./lasik-second-opinion-before-surgery-why-it-matters";
+import p_lasik_night_vision_glare_halos_what_to_expect from "./lasik-night-vision-glare-halos-what-to-expect";
+
 const POSTS: Record<string, BlogPost> = {
   "advantages-edof-iol-mumbai": p_advantages_edof_iol_mumbai,
   "advantages-of-edof-iol-over-multifocal": p_advantages_of_edof_iol_over_multifocal,
@@ -185,6 +209,29 @@ const POSTS: Record<string, BlogPost> = {
   "hospitals-for-pediatric-advanced-eye-surgeries-india": p_hospitals_for_pediatric_advanced_eye_surgeries_india,
   "same-day-advanced-eye-surgery-procedures-india": p_same_day_advanced_eye_surgery_procedures_india,
   "advanced-refractive-surgery-quick-recovery-centers-india": p_advanced_refractive_surgery_quick_recovery_centers_india,
+  "what-is-lasik-eye-surgery-and-how-it-works": p_what_is_lasik_eye_surgery_and_how_it_works,
+  "is-lasik-safe-risks-side-effects-and-expectations": p_is_lasik_safe_risks_side_effects_and_expectations,
+  "lasik-cost-in-mumbai-packages-emi-and-pricing-factors": p_lasik_cost_in_mumbai_packages_emi_and_pricing_factors,
+  "lasik-recovery-timeline-work-drive-gym-travel": p_lasik_recovery_timeline_work_drive_gym_travel,
+  "who-is-a-good-candidate-for-lasik-eligibility-tests": p_who_is_a_good_candidate_for_lasik_eligibility_tests,
+  "lasik-for-high-power-thin-cornea-high-myopia": p_lasik_for_high_power_thin_cornea_high_myopia,
+  "lasik-after-40-vs-lens-based-vision-correction": p_lasik_after_40_vs_lens_based_vision_correction,
+  "lasik-vs-smile-vs-prk-which-is-best": p_lasik_vs_smile_vs_prk_which_is_best,
+  "bladeless-lasik-explained-benefits-and-limitations": p_bladeless_lasik_explained_benefits_and_limitations,
+  "lasik-success-rate-long-term-results-and-enhancements": p_lasik_success_rate_long_term_results_and_enhancements,
+  "lasik-for-astigmatism-can-cylindrical-power-be-corrected": p_lasik_for_astigmatism_can_cylindrical_power_be_corrected,
+  "can-lasik-treat-myopia-and-hyperopia": p_can_lasik_treat_myopia_and_hyperopia,
+  "lasik-and-dry-eye-can-you-still-undergo-surgery": p_lasik_and_dry_eye_can_you_still_undergo_surgery,
+  "does-lasik-hurt-pain-anesthesia-and-comfort-guide": p_does_lasik_hurt_pain_anesthesia_and_comfort_guide,
+  "lasik-consultation-checklist-questions-to-ask-surgeon": p_lasik_consultation_checklist_questions_to_ask_surgeon,
+  "best-lasik-surgeon-in-mumbai-how-to-choose": p_best_lasik_surgeon_in_mumbai_how_to_choose,
+  "best-lasik-clinic-in-bandra-and-mumbai-selection-guide": p_best_lasik_clinic_in_bandra_and_mumbai_selection_guide,
+  "lasik-vs-icl-when-lens-based-correction-is-better": p_lasik_vs_icl_when_lens_based_correction_is_better,
+  "free-lasik-eye-test-and-second-opinion-guide": p_free_lasik_eye_test_and_second_opinion_guide,
+  "lasik-faq-most-asked-questions-answered": p_lasik_faq_most_asked_questions_answered,
+  "astigmatism-lasik-treatment-mumbai-complete-guide": p_astigmatism_lasik_treatment_mumbai_complete_guide,
+  "lasik-second-opinion-before-surgery-why-it-matters": p_lasik_second_opinion_before_surgery_why_it_matters,
+  "lasik-night-vision-glare-halos-what-to-expect": p_lasik_night_vision_glare_halos_what_to_expect,
 
 };
 
