@@ -140,36 +140,57 @@ export default function HomePageClient({ images }: Props) {
 
           <div className="relative h-full max-w-5xl mx-auto px-4 sm:px-6 pt-16 sm:pt-20 pb-10 sm:pb-14 text-center flex items-center justify-center">
             <div className="w-full max-w-3xl">
-              <p className="inline-flex items-center rounded-full border border-white/20 bg-navy-950/40 px-4 py-1.5 font-display text-xs sm:text-sm font-semibold uppercase tracking-[0.32em] text-clinical-200/95 shadow-[0_8px_24px_-14px_rgba(0,0,0,0.8)] backdrop-blur-sm animate-fade-in opacity-0 [animation-fill-mode:forwards]">
+              {/* Location badge */}
+              <p className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/8 px-4 py-1.5 font-display text-xs sm:text-sm font-semibold uppercase tracking-[0.32em] text-clinical-200/95 backdrop-blur-sm animate-fade-in opacity-0 [animation-fill-mode:forwards]">
+                <span className="w-1.5 h-1.5 rounded-full bg-clinical-400 animate-pulse" aria-hidden />
                 iSight Eye Care · Mumbai
               </p>
-              <h1 className="mt-4 font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold text-white tracking-tight leading-[0.95] drop-shadow-[0_10px_28px_rgba(0,0,0,0.58)] animate-fade-in opacity-0 [animation-fill-mode:forwards] [animation-delay:0.08s]">
+
+              {/* Main heading */}
+              <h1 className="mt-5 font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold text-white tracking-tight leading-[0.92] drop-shadow-[0_10px_28px_rgba(0,0,0,0.58)] animate-fade-in opacity-0 [animation-fill-mode:forwards] [animation-delay:0.08s]">
                 Vision
                 <br />
-                <span className="bg-gradient-to-r from-clinical-100 via-clinical-300 to-clinical-200 bg-clip-text text-transparent bg-[length:200%_auto] drop-shadow-[0_8px_18px_rgba(0,0,0,0.42)] animate-gradient-shift">
+                <span className="bg-gradient-to-r from-clinical-100 via-clinical-300 to-clinical-200 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-shift">
                   Restored
                 </span>
               </h1>
-              <div className="mt-5 sm:mt-7 max-w-2xl mx-auto rounded-[26px] border border-white/20 bg-gradient-to-b from-white/14 via-white/9 to-white/6 px-5 py-5 sm:px-7 sm:py-6 shadow-[0_20px_52px_-34px_rgba(0,0,0,0.95)] backdrop-blur-lg ring-1 ring-white/10 animate-fade-in opacity-0 stagger-1 [animation-fill-mode:forwards]">
-                <p className="text-base sm:text-lg text-white/95 max-w-xl mx-auto leading-relaxed text-balance drop-shadow-[0_8px_22px_rgba(0,0,0,0.75)]">
-                  Advanced eye care for sharper, safer vision. Led by Dr. Nikhil Nasta.
-                </p>
-                <div className="mt-5 flex flex-col sm:flex-row gap-3 justify-center items-center">
-                  <a
-                    href={`tel:+${PHONE}`}
-                    className="btn btn-lg btn-secondary group border-0 shadow-[0_10px_28px_-16px_rgba(0,0,0,0.9)] w-full sm:w-auto"
-                  >
-                    <Phone className="w-5 h-5 shrink-0" strokeWidth={2.25} aria-hidden />
-                    Book Consultation
-                  </a>
-                  <Link
-                    href="/treatments"
-                    className="btn btn-lg group w-full sm:w-auto border border-white/55 bg-navy-950/45 text-white shadow-[0_10px_28px_-16px_rgba(0,0,0,0.85)] backdrop-blur-sm hover:bg-navy-900/60 hover:border-white/80 hover:-translate-y-0.5"
-                  >
-                    <Stethoscope className="w-5 h-5 shrink-0 opacity-90" strokeWidth={2.25} aria-hidden />
-                    Explore Treatments
-                  </Link>
-                </div>
+
+              {/* Tagline — no box, just clean text */}
+              <p className="mt-6 sm:mt-8 text-base sm:text-lg text-white/80 max-w-xl mx-auto leading-relaxed text-balance animate-fade-in opacity-0 stagger-1 [animation-fill-mode:forwards]">
+                Advanced eye care for sharper, safer vision — led by award-winning ophthalmologist Dr. Nikhil Nasta.
+              </p>
+
+              {/* CTA buttons */}
+              <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-3 justify-center items-center animate-fade-in opacity-0 stagger-2 [animation-fill-mode:forwards]">
+                <a
+                  href={`tel:+${PHONE}`}
+                  className="btn btn-lg btn-secondary group shadow-[0_8px_32px_-8px_rgba(45,90,158,0.6)] w-full sm:w-auto"
+                >
+                  <Phone className="w-5 h-5 shrink-0" strokeWidth={2.25} aria-hidden />
+                  Book Consultation
+                </a>
+                <Link
+                  href="/treatments"
+                  className="btn btn-lg group w-full sm:w-auto border border-white/25 bg-white/10 text-white backdrop-blur-sm hover:bg-white/18 hover:border-white/45 hover:-translate-y-0.5 transition-all duration-200"
+                >
+                  <Stethoscope className="w-5 h-5 shrink-0 opacity-80" strokeWidth={2.25} aria-hidden />
+                  Explore Treatments
+                </Link>
+              </div>
+
+              {/* Trust indicators */}
+              <div className="mt-8 flex items-center justify-center gap-5 sm:gap-8 animate-fade-in opacity-0 stagger-3 [animation-fill-mode:forwards]">
+                <span className="flex items-center gap-1.5 text-white/50 text-xs font-medium tracking-wide">
+                  <span className="text-clinical-400">✓</span> NABH Accredited
+                </span>
+                <span className="w-px h-3 bg-white/20" aria-hidden />
+                <span className="flex items-center gap-1.5 text-white/50 text-xs font-medium tracking-wide">
+                  <span className="text-clinical-400">✓</span> 15,000+ Surgeries
+                </span>
+                <span className="w-px h-3 bg-white/20" aria-hidden />
+                <span className="flex items-center gap-1.5 text-white/50 text-xs font-medium tracking-wide">
+                  <span className="text-clinical-400">✓</span> Award-Winning Care
+                </span>
               </div>
             </div>
           </div>
