@@ -114,9 +114,6 @@ import p_best_lasik_clinic_in_bandra_and_mumbai_selection_guide from "./best-las
 import p_lasik_vs_icl_when_lens_based_correction_is_better from "./lasik-vs-icl-when-lens-based-correction-is-better";
 import p_free_lasik_eye_test_and_second_opinion_guide from "./free-lasik-eye-test-and-second-opinion-guide";
 import p_lasik_faq_most_asked_questions_answered from "./lasik-faq-most-asked-questions-answered";
-import p_astigmatism_lasik_treatment_mumbai_complete_guide from "./astigmatism-lasik-treatment-mumbai-complete-guide";
-import p_lasik_second_opinion_before_surgery_why_it_matters from "./lasik-second-opinion-before-surgery-why-it-matters";
-import p_lasik_night_vision_glare_halos_what_to_expect from "./lasik-night-vision-glare-halos-what-to-expect";
 
 const POSTS: Record<string, BlogPost> = {
   "advantages-edof-iol-mumbai": p_advantages_edof_iol_mumbai,
@@ -229,9 +226,6 @@ const POSTS: Record<string, BlogPost> = {
   "lasik-vs-icl-when-lens-based-correction-is-better": p_lasik_vs_icl_when_lens_based_correction_is_better,
   "free-lasik-eye-test-and-second-opinion-guide": p_free_lasik_eye_test_and_second_opinion_guide,
   "lasik-faq-most-asked-questions-answered": p_lasik_faq_most_asked_questions_answered,
-  "astigmatism-lasik-treatment-mumbai-complete-guide": p_astigmatism_lasik_treatment_mumbai_complete_guide,
-  "lasik-second-opinion-before-surgery-why-it-matters": p_lasik_second_opinion_before_surgery_why_it_matters,
-  "lasik-night-vision-glare-halos-what-to-expect": p_lasik_night_vision_glare_halos_what_to_expect,
 
 };
 
