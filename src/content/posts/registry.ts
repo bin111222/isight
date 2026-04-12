@@ -120,6 +120,16 @@ import p_lasik_eye_surgery_experience_mumbai from "./lasik-eye-surgery-experienc
 import p_lasik_eye_surgery_navi_mumbai from "./lasik-eye-surgery-navi-mumbai";
 import p_lasik_surgery_cost_mumbai from "./lasik-surgery-cost-mumbai";
 import p_lasik_vs_smile_vs_silk_vs_contoura_mumbai from "./lasik-vs-smile-vs-silk-vs-contoura-mumbai";
+import p_best_cataract_surgeon_mumbai from "./best-cataract-surgeon-mumbai";
+import p_cataract_surgery_navi_mumbai from "./cataract-surgery-navi-mumbai";
+import p_dry_eye_specialist_mumbai from "./dry-eye-specialist-mumbai";
+import p_eye_clinics_mumbai from "./eye-clinics-mumbai";
+import p_eye_doctor_in_mumbai from "./eye-doctor-in-mumbai";
+import p_eye_specialist_navi_mumbai from "./eye-specialist-navi-mumbai";
+import p_icl_surgery_cost_mumbai from "./icl-surgery-cost-mumbai";
+import p_laser_eye_surgery_mumbai_cost from "./laser-eye-surgery-mumbai-cost";
+import p_premium_iol_lens_cost_mumbai_2026 from "./premium-iol-lens-cost-mumbai-2026";
+import p_squint_eye_surgery_mumbai_cost from "./squint-eye-surgery-mumbai-cost";
 
 const POSTS: Record<string, BlogPost> = {
   "advantages-edof-iol-mumbai": p_advantages_edof_iol_mumbai,
@@ -140,6 +150,7 @@ const POSTS: Record<string, BlogPost> = {
   "cataract-surgery-cost-mumbai": p_cataract_surgery_cost_mumbai,
   "cataract-surgery-mumbai": p_cataract_surgery_mumbai,
   "cataract-surgery-mumbai-guide": p_cataract_surgery_mumbai_guide,
+  "cataract-surgery-navi-mumbai": p_cataract_surgery_navi_mumbai,
   "cataract-surgery-recovery-time-healing-aftercare-what-to-expect": p_cataract_surgery_recovery_time_healing_aftercare_what_to_expect,
   "common-eye-area-aesthetic-concerns-solutions": p_common_eye_area_aesthetic_concerns_solutions,
   "contoura-vision-mumbai-bandra-guide": p_contoura_vision_mumbai_bandra_guide,
@@ -150,14 +161,19 @@ const POSTS: Record<string, BlogPost> = {
   "dry-eye-therapy-mumbai": p_dry_eye_therapy_mumbai,
   "dry-eye-treatment-in-mumbai-causes-modern-treatments-long-term-relief": p_dry_eye_treatment_in_mumbai_causes_modern_treatments_long_term_relief,
   "dry-eye-treatment-mumbai-guide": p_dry_eye_treatment_mumbai_guide,
+  "dry-eye-specialist-mumbai": p_dry_eye_specialist_mumbai,
   "edof-iol-surgery-mumbai-guide": p_edof_iol_surgery_mumbai_guide,
   "edof-iol-vs-trifocal-iol": p_edof_iol_vs_trifocal_iol,
   "edof-lens-night-driving-mumbai": p_edof_lens_night_driving_mumbai,
   "everything-you-need-to-know-about-robotic-cataract-surgery-in-mumbai": p_everything_you_need_to_know_about_robotic_cataract_surgery_in_mumbai,
   "eye-treatment-mumbai-international-patients": p_eye_treatment_mumbai_international_patients,
+  "eye-clinics-mumbai": p_eye_clinics_mumbai,
+  "eye-doctor-in-mumbai": p_eye_doctor_in_mumbai,
+  "eye-specialist-navi-mumbai": p_eye_specialist_navi_mumbai,
   "glaucoma-the-silent-thief-of-sight-and-how-to-catch-it-early": p_glaucoma_the_silent_thief_of_sight_and_how_to_catch_it_early,
   "how-often-should-child-eye-checkup": p_how_often_should_child_eye_checkup,
   "icl-surgery-mumbai-india-guide": p_icl_surgery_mumbai_india_guide,
+  "icl-surgery-cost-mumbai": p_icl_surgery_cost_mumbai,
   "ideal-candidate-for-phaco-cataract-surgery": p_ideal_candidate_for_phaco_cataract_surgery,
   "ipl-and-morpheus-for-dry-eye-treatment-restoring-comfort-and-clarity-at-i-sight-eye-care-mumbai": p_ipl_and_morpheus_for_dry_eye_treatment_restoring_comfort_and_clarity_at_i_sight_eye_care_mumbai,
   "ipl-treatment-dry-eye-mumbai-guide": p_ipl_treatment_dry_eye_mumbai_guide,
@@ -183,6 +199,7 @@ const POSTS: Record<string, BlogPost> = {
   "phaco-surgery-recovery-timeline": p_phaco_surgery_recovery_timeline,
   "phaco-vs-traditional-cataract-surgery": p_phaco_vs_traditional_cataract_surgery,
   "phaco-vs-traditional-cataract-surgery-which-technique-gives-better-results-in-mumbai": p_phaco_vs_traditional_cataract_surgery_which_technique_gives_better_results_in_mumbai,
+  "premium-iol-lens-cost-mumbai-2026": p_premium_iol_lens_cost_mumbai_2026,
   "the-complete-guide-to-kids-eye-check-ups-when-why-and-how-to-protect-young-vision": p_the_complete_guide_to_kids_eye_check_ups_when_why_and_how_to_protect_young_vision,
   "top-lasik-clinics-in-bandra": p_top_lasik_clinics_in_bandra,
   "top-rated-lasik-surgeons-in-bandra": p_top_rated_lasik_surgeons_in_bandra,
@@ -212,11 +229,13 @@ const POSTS: Record<string, BlogPost> = {
   "advanced-glaucoma-surgery-minimal-downtime-india": p_advanced_glaucoma_surgery_minimal_downtime_india,
   "hospitals-for-pediatric-advanced-eye-surgeries-india": p_hospitals_for_pediatric_advanced_eye_surgeries_india,
   "same-day-advanced-eye-surgery-procedures-india": p_same_day_advanced_eye_surgery_procedures_india,
+  "squint-eye-surgery-mumbai-cost": p_squint_eye_surgery_mumbai_cost,
   "advanced-refractive-surgery-quick-recovery-centers-india": p_advanced_refractive_surgery_quick_recovery_centers_india,
   "what-is-lasik-eye-surgery-and-how-it-works": p_what_is_lasik_eye_surgery_and_how_it_works,
   "is-lasik-safe-risks-side-effects-and-expectations": p_is_lasik_safe_risks_side_effects_and_expectations,
   "is-lasik-safe-india-faq": p_is_lasik_safe_india_faq,
   "lasik-cost-in-mumbai-packages-emi-and-pricing-factors": p_lasik_cost_in_mumbai_packages_emi_and_pricing_factors,
+  "laser-eye-surgery-mumbai-cost": p_laser_eye_surgery_mumbai_cost,
   "lasik-eye-surgery-experience-mumbai": p_lasik_eye_surgery_experience_mumbai,
   "lasik-eye-surgery-navi-mumbai": p_lasik_eye_surgery_navi_mumbai,
   "lasik-recovery-timeline-work-drive-gym-travel": p_lasik_recovery_timeline_work_drive_gym_travel,
@@ -234,6 +253,7 @@ const POSTS: Record<string, BlogPost> = {
   "lasik-consultation-checklist-questions-to-ask-surgeon": p_lasik_consultation_checklist_questions_to_ask_surgeon,
   "best-lasik-surgeon-in-mumbai-how-to-choose": p_best_lasik_surgeon_in_mumbai_how_to_choose,
   "best-lasik-surgeon-mumbai": p_best_lasik_surgeon_mumbai,
+  "best-cataract-surgeon-mumbai": p_best_cataract_surgeon_mumbai,
   "best-lasik-clinic-in-bandra-and-mumbai-selection-guide": p_best_lasik_clinic_in_bandra_and_mumbai_selection_guide,
   "lasik-vs-icl-when-lens-based-correction-is-better": p_lasik_vs_icl_when_lens_based_correction_is_better,
   "free-lasik-eye-test-and-second-opinion-guide": p_free_lasik_eye_test_and_second_opinion_guide,
