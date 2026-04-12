@@ -1,6 +1,12 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL, ALL_PAGE_SLUGS, TREATMENT_SLUGS } from "@/lib/sitemap";
-import { POST_SLUGS } from "@/lib/posts";
+import { getPublishedPostSlugs } from "@/lib/posts";
+
+/**
+ * Regenerate sitemap periodically so posts with a future `date` appear after their
+ * publish day without redeploying. Same cadence as `/post/[slug]` (3600s).
+ */
+export const revalidate = 3600;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -66,7 +72,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   // Blog post pages
-  const blogPages: MetadataRoute.Sitemap = POST_SLUGS.map((slug) => ({
+  const blogPages: MetadataRoute.Sitemap = getPublishedPostSlugs().map((slug) => ({
     url: `${SITE_URL}/post/${slug}`,
     lastModified: now,
     changeFrequency: "yearly" as const,

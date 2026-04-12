@@ -1,9 +1,15 @@
 /** Shared content types – used by lib/content and content/treatments to avoid circular deps */
 
+export type ContentTable = {
+  headers: string[];
+  rows: string[][];
+};
+
 export type ContentSection = {
   heading?: string;
   body?: string;
   list?: string[];
+  table?: ContentTable;
 };
 
 export type FAQ = { q: string; a: string };
@@ -19,6 +25,7 @@ export type PageContent = {
 /** Blog post – same URL as old Wix (/post/[slug]) for SEO */
 export type BlogPost = PageContent & {
   slug: string;
-  date: string; // YYYY-MM-DD
+  /** YYYY-MM-DD. If this calendar day (India time) is in the future, the post stays hidden until then. */
+  date: string;
   image?: string; // hero image slug (resolved via getBlogImageUrl)
 };

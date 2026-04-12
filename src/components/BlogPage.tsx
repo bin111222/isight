@@ -2,7 +2,7 @@ import Link from "next/link";
 import { getBlogImageUrl } from "@/lib/blogImageUrl";
 import type { PageContent } from "@/types/content";
 import type { BlogPost } from "@/types/content";
-import { getAllPosts, getReadingTimeMinutes } from "@/lib/posts";
+import { getPublishedPosts, getReadingTimeMinutes } from "@/lib/posts";
 
 type BlogPageProps = { content: PageContent };
 
@@ -61,7 +61,7 @@ function PostThumbnail({ post }: { post: BlogPost }) {
 }
 
 export default function BlogPage({ content }: BlogPageProps) {
-  const posts = getAllPosts().sort(
+  const posts = getPublishedPosts().sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   );
 

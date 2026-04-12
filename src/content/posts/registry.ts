@@ -114,6 +114,12 @@ import p_best_lasik_clinic_in_bandra_and_mumbai_selection_guide from "./best-las
 import p_lasik_vs_icl_when_lens_based_correction_is_better from "./lasik-vs-icl-when-lens-based-correction-is-better";
 import p_free_lasik_eye_test_and_second_opinion_guide from "./free-lasik-eye-test-and-second-opinion-guide";
 import p_lasik_faq_most_asked_questions_answered from "./lasik-faq-most-asked-questions-answered";
+import p_best_lasik_surgeon_mumbai from "./best-lasik-surgeon-mumbai";
+import p_is_lasik_safe_india_faq from "./is-lasik-safe-india-faq";
+import p_lasik_eye_surgery_experience_mumbai from "./lasik-eye-surgery-experience-mumbai";
+import p_lasik_eye_surgery_navi_mumbai from "./lasik-eye-surgery-navi-mumbai";
+import p_lasik_surgery_cost_mumbai from "./lasik-surgery-cost-mumbai";
+import p_lasik_vs_smile_vs_silk_vs_contoura_mumbai from "./lasik-vs-smile-vs-silk-vs-contoura-mumbai";
 
 const POSTS: Record<string, BlogPost> = {
   "advantages-edof-iol-mumbai": p_advantages_edof_iol_mumbai,
@@ -162,6 +168,7 @@ const POSTS: Record<string, BlogPost> = {
   "laser-treatment-for-eyes-in-mumbai-who-it-s-for-how-it-works-and-what-to-expect": p_laser_treatment_for_eyes_in_mumbai_who_it_s_for_how_it_works_and_what_to_expect,
   "lasik-in-khar-mumbai": p_lasik_in_khar_mumbai,
   "lasik-surgery-bandra-mumbai-guide": p_lasik_surgery_bandra_mumbai_guide,
+  "lasik-surgery-cost-mumbai": p_lasik_surgery_cost_mumbai,
   "morpheus-eye-rejuvenation-brighten-and-tighten-the-eyes-naturally": p_morpheus_eye_rejuvenation_brighten_and_tighten_the_eyes_naturally,
   "myopia-treatment-mumbai-guide": p_myopia_treatment_mumbai_guide,
   "myths-about-phaco-cataract-surgery": p_myths_about_phaco_cataract_surgery,
@@ -208,12 +215,16 @@ const POSTS: Record<string, BlogPost> = {
   "advanced-refractive-surgery-quick-recovery-centers-india": p_advanced_refractive_surgery_quick_recovery_centers_india,
   "what-is-lasik-eye-surgery-and-how-it-works": p_what_is_lasik_eye_surgery_and_how_it_works,
   "is-lasik-safe-risks-side-effects-and-expectations": p_is_lasik_safe_risks_side_effects_and_expectations,
+  "is-lasik-safe-india-faq": p_is_lasik_safe_india_faq,
   "lasik-cost-in-mumbai-packages-emi-and-pricing-factors": p_lasik_cost_in_mumbai_packages_emi_and_pricing_factors,
+  "lasik-eye-surgery-experience-mumbai": p_lasik_eye_surgery_experience_mumbai,
+  "lasik-eye-surgery-navi-mumbai": p_lasik_eye_surgery_navi_mumbai,
   "lasik-recovery-timeline-work-drive-gym-travel": p_lasik_recovery_timeline_work_drive_gym_travel,
   "who-is-a-good-candidate-for-lasik-eligibility-tests": p_who_is_a_good_candidate_for_lasik_eligibility_tests,
   "lasik-for-high-power-thin-cornea-high-myopia": p_lasik_for_high_power_thin_cornea_high_myopia,
   "lasik-after-40-vs-lens-based-vision-correction": p_lasik_after_40_vs_lens_based_vision_correction,
   "lasik-vs-smile-vs-prk-which-is-best": p_lasik_vs_smile_vs_prk_which_is_best,
+  "lasik-vs-smile-vs-silk-vs-contoura-mumbai": p_lasik_vs_smile_vs_silk_vs_contoura_mumbai,
   "bladeless-lasik-explained-benefits-and-limitations": p_bladeless_lasik_explained_benefits_and_limitations,
   "lasik-success-rate-long-term-results-and-enhancements": p_lasik_success_rate_long_term_results_and_enhancements,
   "lasik-for-astigmatism-can-cylindrical-power-be-corrected": p_lasik_for_astigmatism_can_cylindrical_power_be_corrected,
@@ -222,6 +233,7 @@ const POSTS: Record<string, BlogPost> = {
   "does-lasik-hurt-pain-anesthesia-and-comfort-guide": p_does_lasik_hurt_pain_anesthesia_and_comfort_guide,
   "lasik-consultation-checklist-questions-to-ask-surgeon": p_lasik_consultation_checklist_questions_to_ask_surgeon,
   "best-lasik-surgeon-in-mumbai-how-to-choose": p_best_lasik_surgeon_in_mumbai_how_to_choose,
+  "best-lasik-surgeon-mumbai": p_best_lasik_surgeon_mumbai,
   "best-lasik-clinic-in-bandra-and-mumbai-selection-guide": p_best_lasik_clinic_in_bandra_and_mumbai_selection_guide,
   "lasik-vs-icl-when-lens-based-correction-is-better": p_lasik_vs_icl_when_lens_based_correction_is_better,
   "free-lasik-eye-test-and-second-opinion-guide": p_free_lasik_eye_test_and_second_opinion_guide,

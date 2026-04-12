@@ -2,8 +2,9 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import {
   getPostBySlug,
-  getAllPostSlugs,
+  getPublishedPostSlugs,
   getReadingTimeMinutes,
+  isPostPublished,
 } from "@/lib/posts";
 import { LinkifiedText } from "@/lib/linkify";
 import BookAppointmentCTA from "@/components/BookAppointmentCTA";
@@ -15,14 +16,18 @@ import { Twitter, Linkedin, Facebook, MessageCircle } from "lucide-react";
 
 type Props = { params: Promise<{ slug: string }> };
 
+/** Revalidate so future-dated posts become reachable after their publish day without redeploying. */
+export const revalidate = 3600;
+
 export async function generateStaticParams() {
-  return getAllPostSlugs().map((slug) => ({ slug }));
+  return getPublishedPostSlugs().map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const post = getPostBySlug(slug);
   if (!post) return { title: formatTitleTag("Blog") };
+  if (!isPostPublished(post)) notFound();
   const canonical = `${SITE_URL}/post/${slug}`;
   const ogImage = post.image ? getBlogImageUrl(post.image) : `${SITE_URL}/og-image.webp`;
   const title = formatTitleTag(post.title);
@@ -52,6 +57,7 @@ export default async function PostPage({ params }: Props) {
   const { slug } = await params;
   const post = getPostBySlug(slug);
   if (!post) notFound();
+  if (!isPostPublished(post)) notFound();
 
   const readingMin = getReadingTimeMinutes(post);
   const canonical = `${SITE_URL}/post/${post.slug}`;
@@ -141,7 +147,10 @@ export default async function PostPage({ params }: Props) {
             const hasContent =
               headingText ||
               bodyText ||
-              (section.list && section.list.length > 0);
+              (section.list && section.list.length > 0) ||
+              (section.table &&
+                section.table.headers.length > 0 &&
+                section.table.rows.length > 0);
             
             if (!hasContent) return null;
 
@@ -169,13 +178,58 @@ export default async function PostPage({ params }: Props) {
                     ))}
                   </ul>
                 )}
+                {section.table &&
+                  section.table.headers.length > 0 &&
+                  section.table.rows.length > 0 && (
+                    <div className="mb-8 overflow-x-auto rounded-xl border border-silver-200 bg-white shadow-sm">
+                      <table className="w-full min-w-[32rem] text-left text-[15px] md:text-[17px] text-navy-800">
+                        <thead>
+                          <tr className="border-b border-silver-200 bg-silver-50">
+                            {section.table.headers.map((h, j) => (
+                              <th
+                                key={j}
+                                scope="col"
+                                className="px-4 py-3 font-semibold text-navy-950"
+                              >
+                                {h}
+                              </th>
+                            ))}
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {section.table.rows.map((row, ri) => (
+                            <tr
+                              key={ri}
+                              className="border-b border-silver-100 last:border-0"
+                            >
+                              {row.map((cell, ci) => (
+                                <td key={ci} className="px-4 py-3 align-top">
+                                  {cell}
+                                </td>
+                              ))}
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  )}
               </section>
             );
           })}
         </div>
 
+        {/* Mini CTA */}
+        <div className="mt-16 flex justify-center">
+          <a
+            href="/consult"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-clinical-500 text-white font-semibold text-base hover:bg-clinical-600 transition-colors shadow-sm"
+          >
+            Contact the Eye Clinic
+          </a>
+        </div>
+
         {/* 4. Enhanced Navigation & Social Proof (Social Share) */}
-        <div className="mt-16 pt-8 border-t border-silver-200">
+        <div className="mt-10 pt-8 border-t border-silver-200">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
             <span className="font-semibold text-navy-900 font-display">Share this article:</span>
             <div className="flex items-center gap-4">

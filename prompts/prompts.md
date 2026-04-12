@@ -279,3 +279,62 @@ Use this section to create 20 new LASIK-focused blogs and matching landing pages
 **Nano Banana Prompt:**
 > Editorial-style healthcare composition with an ophthalmologist answering patient questions on a tablet, subtle speech bubble icons and eye anatomy model in clinic background, polished professional look, photorealistic, no text, 8k.
 
+
+---
+
+## LASIK Mumbai 6-Cluster Blog Series (From Content Brief — April 2026)
+
+These 6 image prompts correspond to the new Mumbai-specific LASIK content cluster, written to capture zero-ranked LASIK keywords for eyesurgeonmumbai.com. Publish in the order listed below.
+
+### Cluster 1. LASIK Eye Surgery Cost in Mumbai — Complete Price Guide
+**Blog Slug:** `lasik-surgery-cost-mumbai`
+**File Name:** `public/images/blog/lasik-surgery-cost-mumbai.webp`
+**Alt Text:** `LASIK surgery cost in Mumbai — transparent pricing consultation`
+**Prompt:**
+> A premium Mumbai eye clinic billing consultation scene: a friendly doctor and patient reviewing a detailed, itemised LASIK treatment estimate together on a tablet, an EMI/instalment breakdown visible on a second screen, a modern reception desk with subtle blue and white clinical tones in the background, natural warm light from large windows, trustworthy and transparent atmosphere, photorealistic, no text or logos, 8k.
+
+---
+
+### Cluster 2. Best LASIK Surgeon in Mumbai — How to Choose
+**Blog Slug:** `best-lasik-surgeon-mumbai`
+**File Name:** `public/images/blog/best-lasik-surgeon-mumbai.webp`
+**Alt Text:** `Best LASIK surgeon in Mumbai — ophthalmology consultation`
+**Prompt:**
+> Confident, experienced refractive eye surgeon in a premium Mumbai ophthalmology centre, sitting across from a patient and reviewing a corneal topography map on a large display monitor, advanced femtosecond laser platform softly visible in the background, white coat, approachable and authoritative expression, cinematic medical portrait photography style, no text, 8k.
+
+---
+
+### Cluster 3. LASIK vs SMILE vs SILK vs Contoura Mumbai
+**Blog Slug:** `lasik-vs-smile-vs-silk-vs-contoura-mumbai`
+**File Name:** `public/images/blog/lasik-vs-smile-vs-silk-vs-contoura-mumbai.webp`
+**Alt Text:** `LASIK vs SMILE vs SILK vs Contoura — laser eye surgery comparison Mumbai`
+**Prompt:**
+> Futuristic yet realistic split-panel medical visual showing four distinct corneal laser treatment paths side by side — each represented by a glowing, translucent cornea cross-section with a different coloured precision laser beam (blue, green, violet, gold), a clean dark high-tech clinical environment, advanced holographic display aesthetic, no text, no logos, photorealistic 3D render, 8k.
+
+---
+
+### Cluster 4. Is LASIK Safe? — Honest FAQ for Indian Patients
+**Blog Slug:** `is-lasik-safe-india-faq`
+**File Name:** `public/images/blog/is-lasik-safe-india-faq.webp`
+**Alt Text:** `Is LASIK safe in India — reassuring doctor consultation`
+**Prompt:**
+> Calm, reassuring LASIK safety consultation: an experienced ophthalmologist in a modern Indian eye clinic discussing a LASIK safety data sheet with a thoughtful patient, both in comfortable seating, soft natural light, subtle diagnostic equipment in background, genuine trust and transparency in the scene, photorealistic, no text, 8k.
+
+---
+
+### Cluster 5. My LASIK Experience in Mumbai — What to Really Expect
+**Blog Slug:** `lasik-eye-surgery-experience-mumbai`
+**File Name:** `public/images/blog/lasik-eye-surgery-experience-mumbai.webp`
+**Alt Text:** `LASIK eye surgery experience Mumbai — patient recovery journey`
+**Prompt:**
+> A warm, authentic lifestyle image of a happy young Mumbai professional — early 30s, Indian features — stepping outside into bright morning sunlight without glasses, eyes clear and open, subtle city skyline in the soft background, natural optimistic mood conveying freedom from glasses, photorealistic, no text, 8k.
+
+---
+
+### Cluster 6. LASIK Eye Surgery in Navi Mumbai — Cost & Guide
+**Blog Slug:** `lasik-eye-surgery-navi-mumbai`
+**File Name:** `public/images/blog/lasik-eye-surgery-navi-mumbai.webp`
+**Alt Text:** `LASIK eye surgery in Navi Mumbai — local clinic consultation`
+**Prompt:**
+> A welcoming, modern eye clinic interior in a suburban Mumbai setting — clean white and light blue tones, a friendly optometrist consulting with a patient at a slit lamp, Navi Mumbai city buildings softly visible through large windows in the background, approachable and professional atmosphere, photorealistic, no text or logos, 8k.
+

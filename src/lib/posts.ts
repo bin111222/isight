@@ -108,6 +108,58 @@ export const POST_SLUGS: PostSlug[] = [
   ),
 ];
 
+const SCHEDULE_TIMEZONE = "Asia/Kolkata";
+
+/** YYYYMMDD integer for calendar comparison (timezone-agnostic date string). */
+function calendarKeyFromDateString(dateStr: string): number | null {
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(dateStr.trim());
+  if (!m) return null;
+  const y = Number(m[1]);
+  const mo = Number(m[2]);
+  const d = Number(m[3]);
+  if (!y || mo < 1 || mo > 12 || d < 1 || d > 31) return null;
+  return y * 10_000 + mo * 100 + d;
+}
+
+/** Today's calendar date as YYYYMMDD in India (publish schedule). */
+function todayCalendarKeyIST(asOf: Date): number {
+  const parts = new Intl.DateTimeFormat("en-CA", {
+    timeZone: SCHEDULE_TIMEZONE,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).formatToParts(asOf);
+  const y = Number(parts.find((p) => p.type === "year")?.value);
+  const m = Number(parts.find((p) => p.type === "month")?.value);
+  const d = Number(parts.find((p) => p.type === "day")?.value);
+  return y * 10_000 + m * 100 + d;
+}
+
+/**
+ * True when `post.date` (YYYY-MM-DD) is on or before today's calendar date in Asia/Kolkata.
+ * Invalid `date` strings are treated as published so content is not accidentally hidden.
+ */
+export function isPostPublished(
+  post: BlogPost,
+  asOf: Date = new Date()
+): boolean {
+  const postKey = calendarKeyFromDateString(post.date);
+  if (postKey == null) return true;
+  return postKey <= todayCalendarKeyIST(asOf);
+}
+
+/** Slugs visible on /blog, sitemap, and /post/[slug] (excludes future-dated posts). */
+export function getPublishedPostSlugs(asOf: Date = new Date()): PostSlug[] {
+  return getAllPostSlugs().filter((slug) => {
+    const p = getPostBySlug(slug);
+    return p != null && isPostPublished(p, asOf);
+  });
+}
+
+export function getPublishedPosts(asOf: Date = new Date()): BlogPost[] {
+  return getAllPosts().filter((p) => isPostPublished(p, asOf));
+}
+
 export function getAllPostSlugs(): PostSlug[] {
   return [...POST_SLUGS];
 }
@@ -127,7 +179,12 @@ export function getReadingTimeMinutes(post: BlogPost): number {
   const text = [
     post.title,
     post.description,
-    ...post.sections.flatMap((s) => [s.heading, s.body, ...(s.list ?? [])].filter(Boolean)),
+    ...post.sections.flatMap((s) => {
+      const fromTable = s.table
+        ? [s.table.headers, ...s.table.rows].flat().join(" ")
+        : "";
+      return [s.heading, s.body, ...(s.list ?? []), fromTable].filter(Boolean);
+    }),
     ...(post.faqs ?? []).flatMap((f) => [f.q, f.a]),
   ]
     .filter(Boolean)
