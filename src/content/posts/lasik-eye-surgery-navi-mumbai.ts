@@ -6,7 +6,7 @@ const post: BlogPost = {
  "LASIK Eye Surgery in Navi Mumbai: Cost, Best Surgeons & What to Know (2026)",
  description:
  "Considering LASIK in Navi Mumbai? A practical guide to local options, cost comparison with Mumbai city, what to look for in a Navi Mumbai LASIK clinic, and when to travel.",
- date: "2026-04-12",
+  date: "2026-04-17",
  image: "lasik-eye-surgery-navi-mumbai",
  sections: [
  {

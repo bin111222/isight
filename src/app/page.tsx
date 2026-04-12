@@ -1,6 +1,8 @@
 import { getTreatmentImagePaths } from "@/lib/treatmentImages";
 import { getImageUrl } from "@/lib/imageUrl";
 import { TREATMENT_SLUGS, SITE_URL } from "@/lib/sitemap";
+import { PHYSICIAN_JSON_LD } from "@/lib/physicianJsonLd";
+import { HOMEPAGE_FAQS, getHomepageFaqPageJsonLd } from "@/lib/homepageFaqs";
 import HomePageClient, { type HomePageImages } from "@/components/HomePageClient";
 
 const SERVICE_SLUGS = [
@@ -66,28 +68,6 @@ const localBusinessJsonLd = {
   ],
 };
 
-const physicianJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Physician",
-  name: "Dr. Nikhil Nasta",
-  description:
-    "Award-winning ophthalmologist with over 15 years of experience. Expertise in cataract surgery, LASIK, retinal surgery, dry eye management, and ocular aesthetics.",
-  url: `${SITE_URL}/isight-eye-care-doctors`,
-  image: `${SITE_URL}/hero.webp`,
-  medicalSpecialty: "Ophthalmology",
-  worksFor: {
-    "@type": "MedicalClinic",
-    name: "iSight Eye Care & Surgery",
-    url: SITE_URL,
-  },
-  hasCredential: [
-    { "@type": "EducationalOccupationalCredential", credentialCategory: "MBBS" },
-    { "@type": "EducationalOccupationalCredential", credentialCategory: "MS Ophthalmology" },
-    { "@type": "EducationalOccupationalCredential", credentialCategory: "DNB Ophthalmology" },
-  ],
-  award: "Ophthall Hall of Vision Recognition Award",
-};
-
 /** Non-treatment pages that need an image. Use same-origin path so it always loads (avoids CDN 404). */
 const EXTRA_SERVICE_IMAGES: Record<string, string> = {
   "international-patients": "/hero.webp",
@@ -116,9 +96,13 @@ export default function HomePage() {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(physicianJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(PHYSICIAN_JSON_LD) }}
       />
-      <HomePageClient images={images} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(getHomepageFaqPageJsonLd()) }}
+      />
+      <HomePageClient images={images} faqs={[...HOMEPAGE_FAQS]} />
     </>
   );
 }

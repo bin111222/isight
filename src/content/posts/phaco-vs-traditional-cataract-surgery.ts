@@ -3,9 +3,10 @@ import type { BlogPost } from "@/types/content";
 /** Scraped from old Wix – same URL /post/phaco-vs-traditional-cataract-surgery for SEO */
 const post: BlogPost = {
   slug: "phaco-vs-traditional-cataract-surgery",
-  title: "Phaco vs Traditional Cataract Surgery: What Has Changed",
+  title:
+    "Phaco vs Traditional Cataract Surgery: Which is Better & Safer? (Mumbai Surgeon Explains)",
   description:
-    "According to Dr. Nikhil Nasta of I-Sight Eye Care, Mumbai, phacoemulsification cataract surgery has replaced traditional cataract surgery, offering faster recovery.",
+    "Mumbai eye surgeon compares phaco vs traditional cataract surgery—safety, incision size, recovery, and outcomes—so you can choose with confidence at iSight Eye Care.",
   date: "2026-01-15",
   image: "phaco-vs-traditional-cataract-surgery",
   sections: [
@@ -134,16 +135,16 @@ const post: BlogPost = {
   ],
   faqs: [
     {
-      q: "Is traditional cataract surgery still done today?",
-      a: "Yes, but it is usually reserved for specific cases. Phaco surgery is preferred in most patients.",
+      q: "Is phaco cataract surgery painful?",
+      a: "No. Phacoemulsification is performed under topical or local anaesthesia — you are awake but feel no pain. A mild sensation of pressure is normal; most patients describe the procedure as comfortable.",
     },
     {
-      q: "Which cataract surgery has faster recovery?",
-      a: "Phacoemulsification has significantly faster recovery than traditional surgery.",
+      q: "How long is recovery after phaco surgery?",
+      a: "Most patients see clearly within 24–48 hours and resume light daily activities in 2–3 days. Full stabilisation of vision, especially if a premium lens is used, typically occurs within 4–6 weeks.",
     },
     {
-      q: "Is phaco surgery more expensive?",
-      a: "Phaco surgery may cost slightly more, but the faster recovery and better outcomes make it cost-effective.",
+      q: "Which is better: phaco or traditional cataract surgery?",
+      a: "For the vast majority of patients, phacoemulsification (phaco) is the better choice — it uses a micro-incision, requires no stitches, offers faster recovery, and is compatible with advanced premium lenses. Traditional (SICS) surgery is reserved for select cases such as very dense cataracts or resource-limited settings.",
     },
   ],
 };

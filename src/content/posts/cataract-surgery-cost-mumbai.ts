@@ -3,9 +3,9 @@ import type { BlogPost } from "@/types/content";
 /** Scraped from old Wix – same URL /post/cataract-surgery-cost-mumbai for SEO */
 const post: BlogPost = {
   slug: "cataract-surgery-cost-mumbai",
-  title: "Cataract Operation Cost in Mumbai (2026 Guide)",
+  title: "Cataract Surgery Cost in Mumbai 2026: Real Prices",
   description:
-    "The cost of cataract surgery in Mumbai in 2026 ranges from ₹25,000 to ₹1,60,000 per eye, depending on the type of surgery, the lens chosen, and the hospital facility.",
+    "Cataract surgery cost in Mumbai 2026: phaco vs FLACS (laser-assisted), lens types from monofocal to premium multifocal/EDOF, and real per-eye ranges (about ₹25,000–₹1,60,000+) with what's included.",
   date: "2025-11-13",
   image: "cataract-surgery-cost-mumbai",
   sections: [
@@ -171,16 +171,20 @@ const post: BlogPost = {
   ],
   faqs: [
     {
-      q: "Is cataract surgery painful?",
-      a: "No. It is performed under local or topical anesthesia.",
+      q: "How much does cataract surgery cost in Mumbai?",
+      a: "Cataract surgery in Mumbai typically ranges from about ₹25,000 to ₹1,60,000 per eye, depending on the type of surgery (phaco vs FLACS) and the intraocular lens chosen (monofocal, multifocal, trifocal, or EDOF). Consult iSight Eye Care for an accurate estimate after evaluation.",
     },
     {
-      q: "How long does the surgery take?",
-      a: "Typically 12–15 minutes from start to finish.",
+      q: "Does insurance cover cataract surgery in India?",
+      a: "Most health insurance plans and Mediclaim policies in India do cover standard cataract surgery (phacoemulsification with a basic monofocal lens). Premium lenses such as trifocal, multifocal, or EDOF IOLs are usually not covered and are paid out-of-pocket.",
     },
     {
-      q: "When can I resume work?",
-      a: "Most patients resume normal routine within 2–3 days.",
+      q: "What is the difference between phaco and FLACS cataract surgery?",
+      a: "Phacoemulsification (phaco) uses ultrasound energy through a micro-incision to break up and remove the lens. FLACS (Femtosecond Laser-Assisted Cataract Surgery) uses a laser to pre-cut and soften the lens before phaco, offering greater precision. FLACS is more expensive but may benefit patients with complex cataracts or those choosing premium lenses.",
+    },
+    {
+      q: "How long does cataract surgery take?",
+      a: "The procedure itself typically takes 12–15 minutes per eye. Total time at the centre, including preparation and recovery observation, is usually 2–3 hours.",
     },
   ],
 };

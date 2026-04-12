@@ -5,7 +5,7 @@ const post: BlogPost = {
  title: "Best LASIK Surgeon in Mumbai: What to Look For & How to Choose (2026)",
  description:
  "How to find the best LASIK surgeon in Mumbai: credentials to verify, technology to ask about, red flags to avoid, and a consultation checklist you can take with you.",
- date: "2026-04-12",
+  date: "2026-04-13",
  image: "best-lasik-surgeon-mumbai",
  sections: [
  {

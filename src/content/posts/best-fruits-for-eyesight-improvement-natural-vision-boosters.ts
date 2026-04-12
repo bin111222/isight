@@ -39,6 +39,20 @@ const post: BlogPost = {
       body: "If you notice symptoms like persistent blurry vision, double vision, halos around lights, or frequent headaches, diet alone isn’t enough. These may be signs of cataracts, glaucoma, or refractive errors that need medical attention.",
     },
   ],
+  faqs: [
+    {
+      q: "Which fruit is best for eyesight?",
+      a: "Papaya, oranges, kiwi, and blueberries are among the best for eye health. They provide Vitamin A, Vitamin C, lutein, and zeaxanthin — nutrients that protect the retina, support night vision, and reduce the risk of cataracts and macular degeneration.",
+    },
+    {
+      q: "Do carrots actually improve vision?",
+      a: "Carrots are rich in beta-carotene, which the body converts to Vitamin A — essential for rod cells in the retina that enable night vision. They help prevent night blindness and maintain a healthy cornea, but they cannot correct refractive errors like myopia or hyperopia.",
+    },
+    {
+      q: "What foods increase eye power naturally?",
+      a: "No food can increase refractive power or eliminate the need for glasses, but a diet rich in leafy greens, orange and yellow fruits, oily fish (omega-3), eggs, and nuts can slow age-related decline and reduce the risk of macular degeneration, dry eye, and cataracts.",
+    },
+  ],
 };
 
 export default post;

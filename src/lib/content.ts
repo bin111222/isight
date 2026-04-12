@@ -51,12 +51,13 @@ export function getPageContent(slug: string): PageContent | null {
       ],
     },
     "isight-eye-care-doctors": {
-      title: "Our Doctors | Dr. Nikhil Nasta | iSight Eye Care Mumbai",
-      description: "Meet Dr. Nikhil Nasta, award-winning ophthalmologist and founder of iSight Eye Care. Over 15 years of experience.",
+      title: "Dr. Nikhil Nasta | Eye Surgeon Mumbai | iSight Eye Care & Surgery",
+      description:
+        "Dr. Nikhil Nasta—MBBS, MS (Ophthalmology), DNB—is an award-winning eye surgeon and founder of iSight Eye Care & Surgery, Mumbai (Khar & Dadar). LASIK, cataract, retina, glaucoma, dry eye, pediatric eye care.",
       sections: [
         {
           heading: "About Dr. Nikhil Nasta",
-          body: "Award-winning ophthalmologist Dr. Nikhil Nasta has a vision to help fix the No.1 sense that humans need on a daily basis. Why struggle with poor eyesight in this day and age? With over 15 years of experience, he leads iSight Eye Care with expertise in cataract surgery, LASIK, retinal surgery, dry eye management, and ocular aesthetics. NABH accredited centres, multiple locations in Mumbai.",
+          body: "Dr. Nikhil Nasta, MBBS, MS (Ophthalmology), and DNB, is a consultant eye surgeon in Mumbai and the founder of iSight Eye Care & Surgery. He leads NABH-accredited centres in Khar West and Dadar West, offering cataract surgery with premium intraocular lenses, Contoura LASIK and refractive vision correction, retinal surgery and injections, medical and surgical glaucoma care, advanced dry eye treatment, pediatric ophthalmology, squint surgery, and oculoplastic procedures. With over 15 years of experience and recognition including the Ophthall Hall of Vision award, Dr. Nasta focuses on evidence-based, patient-first ophthalmology using modern phacoemulsification, laser, and diagnostic platforms.",
         },
       ],
     },

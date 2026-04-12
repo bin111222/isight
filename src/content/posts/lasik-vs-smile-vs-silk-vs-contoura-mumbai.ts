@@ -6,7 +6,7 @@ const post: BlogPost = {
  "LASIK vs SMILE vs SILK vs Contoura: Which Eye Surgery is Right for You in Mumbai?",
  description:
  "A clear comparison of LASIK, SMILE, SILK, and Contoura laser eye surgery in Mumbai: how each works, who it suits, recovery differences, and cost ranges.",
- date: "2026-04-12",
+  date: "2026-04-14",
  image: "lasik-vs-smile-vs-silk-vs-contoura-mumbai",
  sections: [
  {

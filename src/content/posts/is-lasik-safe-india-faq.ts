@@ -5,7 +5,7 @@ const post: BlogPost = {
  title: "Is LASIK Safe? 20 Honest Questions Answered for Indian Patients (2026)",
  description:
  "Honest, evidence-based answers to the most common LASIK safety questions for Indian patients: success rates, failure rates, side effects, permanence, dry eyes, and more.",
- date: "2026-04-12",
+  date: "2026-04-15",
  image: "is-lasik-safe-india-faq",
  sections: [
  {

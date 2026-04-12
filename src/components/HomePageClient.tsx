@@ -9,6 +9,7 @@ import { Phone, Stethoscope, ClipboardList, ArrowRight } from "lucide-react";
 import CountUpStat from "@/components/CountUpStat";
 import UnderstandYourEye from "@/components/UnderstandYourEye";
 import GoogleReviewsSection from "@/components/GoogleReviewsSection";
+import { BlogFAQAccordion, type FAQItem } from "@/components/ui/blog-faq-accordion";
 import { TREATMENT_LINKS } from "@/lib/sitemap";
 import { getImageUrl } from "@/lib/imageUrl";
 
@@ -42,9 +43,10 @@ export type HomePageImages = {
 
 type Props = {
   images: HomePageImages;
+  faqs: FAQItem[];
 };
 
-export default function HomePageClient({ images }: Props) {
+export default function HomePageClient({ images, faqs }: Props) {
   const heroRef = useRef<HTMLElement | null>(null);
   const [activeFrame, setActiveFrame] = useState(1);
   const sequenceFrameUrls = useMemo(
@@ -143,16 +145,22 @@ export default function HomePageClient({ images }: Props) {
               <p className="inline-flex items-center rounded-full border border-white/20 bg-navy-950/40 px-4 py-1.5 font-display text-xs sm:text-sm font-semibold uppercase tracking-[0.32em] text-clinical-200/95 shadow-[0_8px_24px_-14px_rgba(0,0,0,0.8)] backdrop-blur-sm animate-fade-in opacity-0 [animation-fill-mode:forwards]">
                 iSight Eye Care · Mumbai
               </p>
-              <h1 className="mt-4 font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold text-white tracking-tight leading-[0.95] drop-shadow-[0_10px_28px_rgba(0,0,0,0.58)] animate-fade-in opacity-0 [animation-fill-mode:forwards] [animation-delay:0.08s]">
-                Vision
-                <br />
-                <span className="bg-gradient-to-r from-clinical-100 via-clinical-300 to-clinical-200 bg-clip-text text-transparent bg-[length:200%_auto] drop-shadow-[0_8px_18px_rgba(0,0,0,0.42)] animate-gradient-shift">
-                  Restored
+              <h1 className="mt-4 font-display font-extrabold text-white tracking-tight drop-shadow-[0_10px_28px_rgba(0,0,0,0.58)] animate-fade-in opacity-0 [animation-fill-mode:forwards] [animation-delay:0.08s]">
+                <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-white/95 leading-tight mb-2 sm:mb-3">
+                  Dr. Nikhil Nasta
+                </span>
+                <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.95]">
+                  Vision
+                  <br />
+                  <span className="bg-gradient-to-r from-clinical-100 via-clinical-300 to-clinical-200 bg-clip-text text-transparent bg-[length:200%_auto] drop-shadow-[0_8px_18px_rgba(0,0,0,0.42)] animate-gradient-shift">
+                    Restored
+                  </span>
                 </span>
               </h1>
               <div className="mt-5 sm:mt-7 max-w-2xl mx-auto rounded-[26px] border border-white/20 bg-gradient-to-b from-white/14 via-white/9 to-white/6 px-5 py-5 sm:px-7 sm:py-6 shadow-[0_20px_52px_-34px_rgba(0,0,0,0.95)] backdrop-blur-lg ring-1 ring-white/10 animate-fade-in opacity-0 stagger-1 [animation-fill-mode:forwards]">
                 <p className="text-base sm:text-lg text-white/95 max-w-xl mx-auto leading-relaxed text-balance drop-shadow-[0_8px_22px_rgba(0,0,0,0.75)]">
-                  Advanced eye care for sharper, safer vision. Led by Dr. Nikhil Nasta.
+                  Leading eye surgeon in Mumbai at iSight Eye Care & Surgery - LASIK, cataract, retina, glaucoma, and
+                  dry eye. NABH-accredited centres in Khar and Dadar.
                 </p>
                 <div className="mt-5 flex flex-col sm:flex-row gap-3 justify-center items-center">
                   <a
@@ -459,6 +467,29 @@ export default function HomePageClient({ images }: Props) {
           </div>
         </div>
       </section>
+
+      {/* FAQ — visible copy matches FAQPage JSON-LD in page.tsx */}
+      {faqs.length > 0 && (
+        <section className="bg-white py-20 lg:py-28 border-t border-silver-200" aria-labelledby="home-faq-heading">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6">
+            <p className="font-display text-sm font-semibold uppercase tracking-[0.25em] text-clinical-500 text-center">
+              Common questions
+            </p>
+            <h2
+              id="home-faq-heading"
+              className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-900 mt-3 text-center text-balance"
+            >
+              Frequently asked questions
+            </h2>
+            <p className="mt-4 text-navy-600 text-center text-balance max-w-xl mx-auto">
+              Quick answers about Dr. Nikhil Nasta, our Mumbai locations, and LASIK at iSight Eye Care.
+            </p>
+            <div className="mt-10">
+              <BlogFAQAccordion faqs={faqs} defaultValue="0" />
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Google reviews (real) with fallback to static testimonials */}
       <GoogleReviewsSection />

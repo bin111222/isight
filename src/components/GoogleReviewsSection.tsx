@@ -1,28 +1,49 @@
 "use client";
 
-import { ExternalLink } from "lucide-react";
+import { ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
+import { useCallback, useEffect, useRef, useState } from "react";
+
+import { HOMEPAGE_TESTIMONIALS } from "@/data/homepageTestimonials";
 
 const GOOGLE_MAPS_URL = "https://maps.app.goo.gl/WBCWnwJDfNRdPGuy7";
 
-const TESTIMONIALS = [
-  {
-    quote:
-      "Getting LASIK done by Dr. Nikhil Nasta was the best decision of my life! I had been wearing glasses for over 12 years and now I wake up with perfect vision. The procedure was quick, painless, and Dr. Nasta made me feel completely comfortable.",
-    author: "Rohan S.",
-  },
-  {
-    quote:
-      "I was struggling with severe dry eyes for months. Dr. Nikhil diagnosed the root cause in my first visit. Within weeks, my eyes feel normal again. Highly recommend him if you suffer from dry eyes in Mumbai.",
-    author: "Neha M.",
-  },
-  {
-    quote:
-      "My father had cataracts in both eyes and was very nervous about surgery. Dr. Nikhil Nasta explained everything with such patience. The cataract surgery was smooth, recovery was fast. Truly the best cataract surgeon in Mumbai!",
-    author: "Anil K.",
-  },
-];
-
 export default function GoogleReviewsSection() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
+
+  const updateScrollEdges = useCallback(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const { scrollLeft, scrollWidth, clientWidth } = el;
+    const maxScroll = scrollWidth - clientWidth;
+    setCanScrollLeft(scrollLeft > 4);
+    setCanScrollRight(scrollLeft < maxScroll - 4);
+  }, []);
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    updateScrollEdges();
+    el.addEventListener("scroll", updateScrollEdges, { passive: true });
+    const ro = new ResizeObserver(updateScrollEdges);
+    ro.observe(el);
+    return () => {
+      el.removeEventListener("scroll", updateScrollEdges);
+      ro.disconnect();
+    };
+  }, [updateScrollEdges]);
+
+  const scrollByDirection = (direction: "left" | "right") => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const distance = Math.max(el.clientWidth * 0.75, 280);
+    el.scrollBy({
+      left: direction === "left" ? -distance : distance,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <section className="bg-silver-100 py-24 lg:py-32">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
@@ -64,23 +85,56 @@ export default function GoogleReviewsSection() {
           </a>
         </div>
 
-        <div className="mt-14 grid md:grid-cols-3 gap-8">
-          {TESTIMONIALS.map((t, i) => (
-            <blockquote
-              key={i}
-              className="relative rounded-2xl bg-white p-6 sm:p-8 border border-silver-200/80 shadow-soft hover-lift"
-            >
-              <span className="absolute top-5 left-6 text-4xl text-clinical-200/50 font-serif leading-none">
-                "
-              </span>
-              <p className="relative text-navy-700 leading-relaxed pt-4">
-                {t.quote}
-              </p>
-              <footer className="mt-6 font-semibold text-navy-900">
-                - {t.author}
-              </footer>
-            </blockquote>
-          ))}
+        <p className="mt-6 text-sm text-navy-500">
+          Use the arrows to move left and right, or scroll the row on a trackpad or touchscreen.
+        </p>
+
+        <div className="mt-4 flex flex-row items-stretch gap-2 sm:gap-3">
+          <button
+            type="button"
+            aria-label="Scroll reviews left"
+            disabled={!canScrollLeft}
+            onClick={() => scrollByDirection("left")}
+            className="shrink-0 self-center flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-xl border border-silver-200 bg-white text-navy-800 shadow-sm transition-all hover:border-clinical-500/30 hover:shadow-md disabled:pointer-events-none disabled:opacity-35"
+          >
+            <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6" aria-hidden />
+          </button>
+
+          <div
+            ref={scrollRef}
+            dir="ltr"
+            className="min-w-0 flex-1 flex flex-row gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4 [scrollbar-gutter:stable]"
+            role="list"
+            aria-label="Patient testimonials"
+          >
+            {HOMEPAGE_TESTIMONIALS.map((t, i) => (
+              <blockquote
+                key={i}
+                role="listitem"
+                className="relative shrink-0 w-72 sm:w-80 snap-start rounded-2xl bg-white p-6 sm:p-7 border border-silver-200/80 shadow-soft hover-lift"
+              >
+                <span className="absolute top-5 left-6 text-4xl text-clinical-200/50 font-serif leading-none">
+                  "
+                </span>
+                <p className="relative text-navy-700 leading-relaxed pt-4">
+                  {t.quote}
+                </p>
+                <footer className="mt-6 font-semibold text-navy-900">
+                  - {t.author}
+                </footer>
+              </blockquote>
+            ))}
+          </div>
+
+          <button
+            type="button"
+            aria-label="Scroll reviews right"
+            disabled={!canScrollRight}
+            onClick={() => scrollByDirection("right")}
+            className="shrink-0 self-center flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-xl border border-silver-200 bg-white text-navy-800 shadow-sm transition-all hover:border-clinical-500/30 hover:shadow-md disabled:pointer-events-none disabled:opacity-35"
+          >
+            <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6" aria-hidden />
+          </button>
         </div>
 
         <p className="mt-8 text-center">

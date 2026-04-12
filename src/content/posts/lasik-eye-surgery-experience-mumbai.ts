@@ -6,7 +6,7 @@ const post: BlogPost = {
  "My LASIK Eye Surgery Experience in Mumbai: What to Really Expect (Before, During & After)",
  description:
  "A realistic, honest account of what getting LASIK in Mumbai actually looks like: consultation, surgery day, week-by-week recovery, real costs, and whether it was worth it.",
- date: "2026-04-12",
+  date: "2026-04-16",
  image: "lasik-eye-surgery-experience-mumbai",
  sections: [
  {

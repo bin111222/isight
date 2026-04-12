@@ -1,60 +1,12 @@
 import Link from "next/link";
 import { GraduationCap, Award, Stethoscope, ArrowRight } from "lucide-react";
-import { TREATMENT_LINKS, SITE_URL } from "@/lib/sitemap";
+import { TREATMENT_LINKS } from "@/lib/sitemap";
+import { PHYSICIAN_JSON_LD } from "@/lib/physicianJsonLd";
 import BookAppointmentCTA from "@/components/BookAppointmentCTA";
 import ClinicBrickGallery from "@/components/ClinicBrickGallery";
 import DoctorPageImage from "@/components/DoctorPageImage";
 import { CLINIC_IMAGES, GALLERY_IMAGES } from "@/lib/galleryAssets";
 import { getImageUrl } from "@/lib/imageUrl";
-
-const physicianJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Physician",
-  name: "Dr. Nikhil Nasta",
-  description:
-    "Award-winning ophthalmologist with over 15 years of experience in cataract surgery, LASIK, retinal surgery, dry eye management, and ocular aesthetics. Founder of iSight Eye Care, Mumbai.",
-  url: `${SITE_URL}/isight-eye-care-doctors`,
-  image: `${SITE_URL}/hero.webp`,
-  telephone: "+918692986033",
-  medicalSpecialty: "Ophthalmology",
-  hasCredential: [
-    {
-      "@type": "EducationalOccupationalCredential",
-      credentialCategory: "degree",
-      name: "MBBS",
-      educationalLevel: "undergraduate",
-    },
-    {
-      "@type": "EducationalOccupationalCredential",
-      credentialCategory: "degree",
-      name: "MS Ophthalmology",
-      recognizedBy: { "@type": "Organization", name: "J.N. Medical College, Belgaum" },
-    },
-    {
-      "@type": "EducationalOccupationalCredential",
-      credentialCategory: "degree",
-      name: "DNB Ophthalmology",
-      recognizedBy: { "@type": "Organization", name: "National Board of Examinations, India" },
-    },
-  ],
-  award: [
-    "Ophthall Hall of Vision Recognition Award",
-    "Pfizer Gold Medallion and Plaque",
-  ],
-  worksFor: {
-    "@type": "MedicalClinic",
-    name: "iSight Eye Care & Surgery",
-    url: SITE_URL,
-  },
-  alumniOf: [
-    { "@type": "EducationalOrganization", name: "Padmashree Dr. D.Y. Patil Medical College" },
-    { "@type": "EducationalOrganization", name: "J.N. Medical College, Belgaum" },
-  ],
-  knowsAbout: [
-    "Cataract Surgery", "LASIK", "Contoura Vision", "Retinal Surgery",
-    "Glaucoma Treatment", "Dry Eye", "Pediatric Ophthalmology", "Ocular Aesthetics",
-  ],
-};
 
 /** About page images with intrinsic dimensions – display at original aspect ratio */
 const ABOUT_IMAGES = {
@@ -94,7 +46,7 @@ export default function DoctorsPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(physicianJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(PHYSICIAN_JSON_LD) }}
       />
     <div className="min-h-screen bg-silver-100">
       {/* Hero - full-bleed image (native img so it always loads from public/) */}
@@ -119,6 +71,26 @@ export default function DoctorsPage() {
               <p className="mt-3 text-silver-200 text-lg sm:text-xl max-w-xl [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_6px_rgba(0,0,0,0.7)]">
                 Award-winning ophthalmologist · Founder of iSight Eye Care · Over 15 years of experience
               </p>
+              <div className="mt-5 space-y-3 text-silver-100 text-base sm:text-lg leading-relaxed max-w-xl [text-shadow:0_1px_3px_rgba(0,0,0,0.85),0_2px_8px_rgba(0,0,0,0.65)]">
+                <p>
+                  <strong className="font-semibold text-white">Dr. Nikhil Nasta</strong>, MBBS, MS (Ophthalmology),
+                  and DNB, is a consultant eye surgeon in Mumbai and the founder of{" "}
+                  <strong className="font-semibold text-white">iSight Eye Care & Surgery</strong>. He leads
+                  NABH-accredited centres in <strong className="font-semibold text-white">Khar West</strong> and{" "}
+                  <strong className="font-semibold text-white">Dadar West</strong>, combining advanced technology with
+                  a patient-first approach.
+                </p>
+                <p>
+                  His practice spans <strong className="font-semibold text-white">cataract surgery</strong> with
+                  premium intraocular lenses, <strong className="font-semibold text-white">Contoura LASIK</strong>{" "}
+                  and refractive vision correction, <strong className="font-semibold text-white">retinal surgery</strong>{" "}
+                  and injections, medical and surgical <strong className="font-semibold text-white">glaucoma</strong>{" "}
+                  care, <strong className="font-semibold text-white">dry eye</strong> management,{" "}
+                  <strong className="font-semibold text-white">pediatric ophthalmology</strong> and squint surgery, and{" "}
+                  <strong className="font-semibold text-white">oculoplastic</strong> procedures—supported by training at
+                  respected institutions and recognition including the Ophthall Hall of Vision award.
+                </p>
+              </div>
             </div>
           </div>
         </div>

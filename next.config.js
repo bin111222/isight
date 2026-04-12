@@ -1,5 +1,22 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async headers() {
+    // HSTS only on Vercel so local `next dev` / `next start` is not pinned to HTTPS incorrectly.
+    if (process.env.VERCEL !== "1") {
+      return [];
+    }
+    return [
+      {
+        source: "/:path*",
+        headers: [
+          {
+            key: "Strict-Transport-Security",
+            value: "max-age=31536000; includeSubDomains; preload",
+          },
+        ],
+      },
+    ];
+  },
   images: {
     remotePatterns: [
       { protocol: 'https', hostname: 'static.wixstatic.com', pathname: '/**' },

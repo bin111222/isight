@@ -3,9 +3,9 @@ import type { BlogPost } from "@/types/content";
 /** Scraped from old Wix – same URL /post/best-eye-drops-for-dry-eyes for SEO */
 const post: BlogPost = {
   slug: "best-eye-drops-for-dry-eyes",
-  title: "Best Eye Drops for Dry Eyes in India (Doctor Recommended 2025)",
+  title: "Best Eye Drops for Dry Eyes in India 2026 – Doctor's Top Picks",
   description:
-    "Dry eye is one of the most common complaints. Choosing the right eye drops is the first step toward long-term comfort. This guide explains which drops work best.",
+    "Ophthalmologist-recommended dry eye drops in India: preservative-free picks, typical OTC price bands (~₹200–₹800+), and brands like Refresh, Systane & Hylo—how to choose by symptom.",
   date: "2025-11-13",
   image: "best-eye-drops-for-dry-eyes",
   sections: [
