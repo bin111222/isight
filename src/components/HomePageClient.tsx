@@ -482,7 +482,7 @@ export default function HomePageClient({ images, faqs }: Props) {
               Frequently asked questions
             </h2>
             <p className="mt-4 text-navy-600 text-center text-balance max-w-xl mx-auto">
-              Quick answers about Dr. Nikhil Nasta, our Mumbai locations, and LASIK at iSight Eye Care.
+              Quick answers about appointments, our Mumbai centres, treatments including LASIK, and what to expect at iSight Eye Care.
             </p>
             <div className="mt-10">
               <BlogFAQAccordion faqs={faqs} defaultValue="0" />
