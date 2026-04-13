@@ -10,9 +10,15 @@ declare global {
   }
 }
 
+function normalizeMeasurementId(value?: string): string | null {
+  if (!value) return null;
+  const trimmed = value.trim().replace(/^['"]+|['"]+$/g, "");
+  return /^G-[A-Z0-9]+$/i.test(trimmed) ? trimmed : null;
+}
+
 const measurementId =
-  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ||
-  process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID ||
+  normalizeMeasurementId(process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID) ||
+  normalizeMeasurementId(process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID) ||
   "G-VS8X68FBJL";
 
 function trackPageView(url: string) {
