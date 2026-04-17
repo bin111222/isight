@@ -338,3 +338,109 @@ These 6 image prompts correspond to the new Mumbai-specific LASIK content cluste
 **Prompt:**
 > A welcoming, modern eye clinic interior in a suburban Mumbai setting — clean white and light blue tones, a friendly optometrist consulting with a patient at a slit lamp, Navi Mumbai city buildings softly visible through large windows in the background, approachable and professional atmosphere, photorealistic, no text or logos, 8k.
 
+---
+
+## Additional LASIK Blog Image Prompts (New Blog Conversions)
+
+### 1. LASIK Eye Surgery Cost in Mumbai (2026 Price Guide)
+**Blog Slug:** `lasik-eye-surgery-cost-mumbai`
+**File Name:** `public/images/blog/lasik-eye-surgery-cost-mumbai.webp`
+**Alt Text:** `LASIK eye surgery cost in Mumbai consultation with transparent pricing`
+**Prompt:**
+> Premium ophthalmology billing consultation scene in Mumbai, doctor and patient reviewing an itemized LASIK estimate on tablet, EMI options visible on a secondary screen, clean modern clinic reception with soft blue and white tones, trustworthy medical atmosphere, photorealistic, no text, ultra-detailed, 8k.
+
+### 2. LASIK Eye Surgery in Mumbai: Procedure, Recovery and Results
+**Blog Slug:** `lasik-eye-surgery-in-mumbai`
+**File Name:** `public/images/blog/lasik-eye-surgery-in-mumbai.webp`
+**Alt Text:** `LASIK eye surgery in Mumbai procedure and recovery concept`
+**Prompt:**
+> High-end refractive surgery center scene in Mumbai showing a surgeon preparing a patient for LASIK under a modern laser platform, corneal topography map on monitor, calm and reassuring mood, cinematic natural lighting, photorealistic, no text or logos, 8k.
+
+### 3. Top LASIK Hospitals and Clinics in Mumbai
+**Blog Slug:** `lasik-hospital-mumbai`
+**File Name:** `public/images/blog/lasik-hospital-mumbai.webp`
+**Alt Text:** `Top LASIK hospitals and clinics in Mumbai comparison visual`
+**Prompt:**
+> Wide architectural healthcare shot of a premium Mumbai eye hospital interior with advanced LASIK diagnostic zone, surgeon and patient consultation in mid-ground, polished white-blue palette, organized and trustworthy medical environment, photorealistic, no text, 8k.
+
+### 4. LASIK in Navi Mumbai: Costs, Surgeons and Centre Comparison
+**Blog Slug:** `lasik-navi-mumbai`
+**File Name:** `public/images/blog/lasik-navi-mumbai.webp`
+**Alt Text:** `LASIK in Navi Mumbai clinic consultation scene`
+**Prompt:**
+> Modern Navi Mumbai eye clinic consultation with ophthalmologist explaining LASIK options to a patient, slit lamp and refractive diagnostics in background, subtle cityscape visible through windows, approachable and professional tone, photorealistic, no text, 8k.
+
+### 5. LASIK Operation in Mumbai: What to Expect on Surgery Day
+**Blog Slug:** `lasik-operation-mumbai`
+**File Name:** `public/images/blog/lasik-operation-mumbai.webp`
+**Alt Text:** `LASIK operation in Mumbai surgery day process`
+**Prompt:**
+> Realistic LASIK operation theater moment with patient on treatment bed, surgeon team preparing laser-guided procedure, sterile environment with soft focused instrumentation, calm and safe clinical storytelling style, photorealistic, no text, 8k.
+
+### 6. LASIK Surgery Cost in Mumbai: What Reddit Patients Actually Paid
+**Blog Slug:** `lasik-surgery-cost-mumbai-reddit`
+**File Name:** `public/images/blog/lasik-surgery-cost-mumbai-reddit.webp`
+**Alt Text:** `LASIK surgery cost in Mumbai patient-reported pricing concept`
+**Prompt:**
+> Contemporary healthcare decision-making scene showing patient reviewing multiple LASIK quotes on smartphone and tablet in a bright clinic lounge, doctor available for discussion in background, transparent and practical mood, photorealistic, no text, 8k.
+
+---
+
+## Additional LASIK Blog Image Prompts (Prompt Folder Completion)
+
+### 1. Best LASIK Surgery in Mumbai: How to Choose a Top Clinic
+**Blog Slug:** `best-lasik-surgery-mumbai`
+**File Name:** `public/images/blog/best-lasik-surgery-mumbai.webp`
+**Alt Text:** `Best LASIK surgery in Mumbai clinic evaluation consultation`
+**Prompt:**
+> Premium LASIK consultation in Mumbai with experienced surgeon reviewing clinic selection criteria and corneal scans with patient, advanced diagnostic suite in background, trustworthy and professional atmosphere, photorealistic, no text, 8k.
+
+### 2. How Much Does LASIK Eye Surgery Cost in India? (Mumbai Compared)
+**Blog Slug:** `how-much-does-lasik-eye-surgery-cost-india`
+**File Name:** `public/images/blog/how-much-does-lasik-eye-surgery-cost-india.webp`
+**Alt Text:** `LASIK eye surgery cost in India and Mumbai comparison concept`
+**Prompt:**
+> Healthcare pricing comparison visual with ophthalmologist discussing India-wide LASIK cost options with patient over tablet and printed estimate sheets, modern eye clinic setting, clean blue-white color palette, photorealistic, no text, 8k.
+
+### 3. What Is the Cost of LASIK Eye Surgery in India? (Mumbai Patient's Guide)
+**Blog Slug:** `what-is-lasik-eye-surgery-cost-india`
+**File Name:** `public/images/blog/what-is-lasik-eye-surgery-cost-india.webp`
+**Alt Text:** `Mumbai patient guide to LASIK eye surgery cost in India`
+**Prompt:**
+> Thoughtful Mumbai patient consulting a refractive surgeon about LASIK package inclusions, itemized treatment estimate visible on desk, warm clinical lighting, premium ophthalmology office, photorealistic, no text, 8k.
+
+### 4. How Much Does LASIK Cost in Mumbai? Full Price Breakdown
+**Blog Slug:** `how-much-does-lasik-cost-mumbai`
+**File Name:** `public/images/blog/how-much-does-lasik-cost-mumbai.webp`
+**Alt Text:** `How much does LASIK cost in Mumbai full pricing breakdown`
+**Prompt:**
+> Transparent LASIK billing desk scene in a modern Mumbai eye clinic showing per-eye and both-eye package discussion with EMI calculator on tablet, doctor and patient seated together, trustworthy and polished visual style, photorealistic, no text, 8k.
+
+### 5. Contoura Vision LASIK in Mumbai: Cost, Benefits and Is It Worth It?
+**Blog Slug:** `contoura-vision-lasik-mumbai`
+**File Name:** `public/images/blog/contoura-vision-lasik-mumbai.webp`
+**Alt Text:** `Contoura Vision LASIK in Mumbai topography-guided surgery concept`
+**Prompt:**
+> High-tech Contoura Vision planning scene with detailed corneal topography map on large monitor, surgeon explaining personalized laser correction to patient in advanced refractive clinic, crisp clinical lighting, photorealistic, no text, 8k.
+
+### 6. SMILE LASIK Surgery in Mumbai: Is It Better Than Standard LASIK?
+**Blog Slug:** `smile-lasik-surgery-mumbai`
+**File Name:** `public/images/blog/smile-lasik-surgery-mumbai.webp`
+**Alt Text:** `SMILE LASIK surgery in Mumbai flapless laser procedure scene`
+**Prompt:**
+> Flapless SMILE laser surgery setup in a premium Mumbai refractive center, patient under modern femtosecond laser with surgeon team in focus, calm sterile environment, detailed medical realism, photorealistic, no text, 8k.
+
+### 7. SILK LASIK in Mumbai: The Newest Bladeless Procedure Explained
+**Blog Slug:** `silk-lasik-mumbai`
+**File Name:** `public/images/blog/silk-lasik-mumbai.webp`
+**Alt Text:** `SILK LASIK in Mumbai newest flapless technology visual`
+**Prompt:**
+> Futuristic yet realistic ophthalmic procedure room showing next-generation flapless SILK laser interface, surgeon preparing treatment for patient, sleek premium clinic design, soft cinematic lighting, photorealistic, no text, 8k.
+
+### 8. Femto LASIK in Mumbai: How It Differs from Bladeless LASIK
+**Blog Slug:** `femto-lasik-mumbai`
+**File Name:** `public/images/blog/femto-lasik-mumbai.webp`
+**Alt Text:** `Femto LASIK in Mumbai bladeless procedure explanation image`
+**Prompt:**
+> Detailed femtosecond LASIK preparation scene with corneal flap planning visualization on monitor, surgeon discussing bladeless approach with patient in modern Mumbai clinic, clean and authoritative medical tone, photorealistic, no text, 8k.
+

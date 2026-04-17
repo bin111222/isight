@@ -118,6 +118,20 @@ import p_best_lasik_surgeon_mumbai from "./best-lasik-surgeon-mumbai";
 import p_is_lasik_safe_india_faq from "./is-lasik-safe-india-faq";
 import p_lasik_eye_surgery_experience_mumbai from "./lasik-eye-surgery-experience-mumbai";
 import p_lasik_eye_surgery_navi_mumbai from "./lasik-eye-surgery-navi-mumbai";
+import p_lasik_eye_surgery_cost_mumbai from "./lasik-eye-surgery-cost-mumbai";
+import p_lasik_eye_surgery_in_mumbai from "./lasik-eye-surgery-in-mumbai";
+import p_lasik_hospital_mumbai from "./lasik-hospital-mumbai";
+import p_lasik_navi_mumbai from "./lasik-navi-mumbai";
+import p_lasik_operation_mumbai from "./lasik-operation-mumbai";
+import p_lasik_surgery_cost_mumbai_reddit from "./lasik-surgery-cost-mumbai-reddit";
+import p_best_lasik_surgery_mumbai from "./best-lasik-surgery-mumbai";
+import p_how_much_does_lasik_eye_surgery_cost_india from "./how-much-does-lasik-eye-surgery-cost-india";
+import p_what_is_lasik_eye_surgery_cost_india from "./what-is-lasik-eye-surgery-cost-india";
+import p_how_much_does_lasik_cost_mumbai from "./how-much-does-lasik-cost-mumbai";
+import p_contoura_vision_lasik_mumbai from "./contoura-vision-lasik-mumbai";
+import p_smile_lasik_surgery_mumbai from "./smile-lasik-surgery-mumbai";
+import p_silk_lasik_mumbai from "./silk-lasik-mumbai";
+import p_femto_lasik_mumbai from "./femto-lasik-mumbai";
 import p_lasik_surgery_cost_mumbai from "./lasik-surgery-cost-mumbai";
 import p_lasik_vs_smile_vs_silk_vs_contoura_mumbai from "./lasik-vs-smile-vs-silk-vs-contoura-mumbai";
 import p_best_cataract_surgeon_mumbai from "./best-cataract-surgeon-mumbai";
@@ -238,7 +252,21 @@ const POSTS: Record<string, BlogPost> = {
   "laser-eye-surgery-mumbai-cost": p_laser_eye_surgery_mumbai_cost,
   "lasik-eye-surgery-experience-mumbai": p_lasik_eye_surgery_experience_mumbai,
   "lasik-eye-surgery-navi-mumbai": p_lasik_eye_surgery_navi_mumbai,
+  "lasik-eye-surgery-cost-mumbai": p_lasik_eye_surgery_cost_mumbai,
+  "lasik-eye-surgery-in-mumbai": p_lasik_eye_surgery_in_mumbai,
+  "lasik-hospital-mumbai": p_lasik_hospital_mumbai,
+  "lasik-navi-mumbai": p_lasik_navi_mumbai,
+  "lasik-operation-mumbai": p_lasik_operation_mumbai,
   "lasik-recovery-timeline-work-drive-gym-travel": p_lasik_recovery_timeline_work_drive_gym_travel,
+  "lasik-surgery-cost-mumbai-reddit": p_lasik_surgery_cost_mumbai_reddit,
+  "best-lasik-surgery-mumbai": p_best_lasik_surgery_mumbai,
+  "how-much-does-lasik-eye-surgery-cost-india": p_how_much_does_lasik_eye_surgery_cost_india,
+  "what-is-lasik-eye-surgery-cost-india": p_what_is_lasik_eye_surgery_cost_india,
+  "how-much-does-lasik-cost-mumbai": p_how_much_does_lasik_cost_mumbai,
+  "contoura-vision-lasik-mumbai": p_contoura_vision_lasik_mumbai,
+  "smile-lasik-surgery-mumbai": p_smile_lasik_surgery_mumbai,
+  "silk-lasik-mumbai": p_silk_lasik_mumbai,
+  "femto-lasik-mumbai": p_femto_lasik_mumbai,
   "who-is-a-good-candidate-for-lasik-eligibility-tests": p_who_is_a_good_candidate_for_lasik_eligibility_tests,
   "lasik-for-high-power-thin-cornea-high-myopia": p_lasik_for_high_power_thin_cornea_high_myopia,
   "lasik-after-40-vs-lens-based-vision-correction": p_lasik_after_40_vs_lens_based_vision_correction,
