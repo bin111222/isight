@@ -193,11 +193,13 @@ function CtaButton({
   children,
   primary = false,
   icon: Icon,
+  className = "",
 }: {
   href: string;
   children: React.ReactNode;
   primary?: boolean;
   icon: React.ElementType;
+  className?: string;
 }) {
   const isExternal = href.startsWith("http") || href.startsWith("mailto:");
   return (
@@ -207,8 +209,8 @@ function CtaButton({
       rel={isExternal ? "noopener noreferrer" : undefined}
       className={
         primary
-          ? "btn btn-lg btn-whatsapp group"
-          : "btn btn-lg btn-glass group"
+          ? `btn btn-lg btn-whatsapp group w-full sm:w-auto whitespace-normal text-center leading-snug ${className}`
+          : `btn btn-lg btn-glass group w-full sm:w-auto whitespace-normal text-center leading-snug ${className}`
       }
     >
       <Icon className="w-5 h-5 flex-shrink-0" strokeWidth={2.25} />
@@ -309,7 +311,7 @@ export default function InternationalPatientsPage({ treatmentImages }: Props) {
   return (
     <div className="min-h-screen bg-silver-100">
       {/* --- HERO --- */}
-      <header className="relative min-h-[70vh] flex flex-col justify-center py-24 lg:py-32 overflow-hidden">
+      <header className="relative min-h-[70vh] flex flex-col justify-center py-16 sm:py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -338,7 +340,7 @@ export default function InternationalPatientsPage({ treatmentImages }: Props) {
             From cataract and LASIK to retina, cornea, glaucoma, paediatric and cosmetic eye surgery - we provide
             complete ophthalmology solutions under one roof.
           </p>
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4">
             <CtaButton href={`${WHATSAPP_URL}?text=${WHATSAPP_INTERNATIONAL_MSG}`} primary icon={MessageCircle}>
               WhatsApp Our International Care Team
             </CtaButton>
@@ -360,11 +362,11 @@ export default function InternationalPatientsPage({ treatmentImages }: Props) {
                 title="A Trusted Destination for Advanced Eye Care"
                 description="India has become one of the world's most trusted destinations for advanced medical care. In ophthalmology, patients travel from across the globe for high-quality, affordable treatment."
               />
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 mb-8">
                 {REGIONS.map((region) => (
                   <div
                     key={region}
-                    className="flex items-center justify-center py-4 px-4 rounded-xl bg-silver-100 border border-silver-200/80 text-navy-800 font-medium text-sm sm:text-base"
+                    className="flex items-center justify-center text-center py-3 sm:py-4 px-3 sm:px-4 rounded-xl bg-silver-100 border border-silver-200/80 text-navy-800 font-medium text-sm sm:text-base leading-tight"
                   >
                     {region}
                   </div>
@@ -452,7 +454,7 @@ export default function InternationalPatientsPage({ treatmentImages }: Props) {
               {JOURNEY_STEPS.map(({ step, title, body, cta, href, Icon }) => (
                 <div
                   key={step}
-                  className="relative flex gap-6 p-6 sm:p-8 rounded-2xl bg-white border border-silver-200/80 shadow-[0_2px_12px_-4px_rgba(10,15,26,0.08)]"
+                  className="relative flex flex-col sm:flex-row gap-4 sm:gap-6 p-5 sm:p-8 rounded-2xl bg-white border border-silver-200/80 shadow-[0_2px_12px_-4px_rgba(10,15,26,0.08)]"
                 >
                   <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-clinical-100 text-clinical-600 flex items-center justify-center">
                     <Icon className="w-6 h-6" strokeWidth={2} />
@@ -620,7 +622,7 @@ export default function InternationalPatientsPage({ treatmentImages }: Props) {
             If you are considering eye surgery in India, our international patient coordination team is ready to
             guide you.
           </p>
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="mt-10 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4">
             <CtaButton href={`${WHATSAPP_URL}?text=${WHATSAPP_INTERNATIONAL_MSG}`} primary icon={MessageCircle}>
               WhatsApp Us
             </CtaButton>

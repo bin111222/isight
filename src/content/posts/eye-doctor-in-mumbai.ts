@@ -59,7 +59,7 @@ const post: BlogPost = {
     },
     {
       heading: "Why Patients Choose I-Sight Eye Care",
-      body: "Mumbai has many clinics; quality comes down to who examines you, which machines measure your eyes, and how complications are handled. Dr. Nikhil Nasta combines refractive and cataract expertise with a conservative, safety-first approach. Whether you need a second opinion before LASIK or a detailed cataract lens discussion, the goal is the same: long-term eye health, not a one-day sale.\n\n👉 Book a consultation: https://www.eyesurgeonmumbai.com/consult\n👉 Cataract information: https://www.eyesurgeonmumbai.com/cataract-surgery-mumbai\n👉 LASIK and laser vision: https://www.eyesurgeonmumbai.com/lasik-eye-surgery-mumbai",
+      body: "Mumbai has many clinics; quality comes down to who examines you, which machines measure your eyes, and how complications are handled. Dr. Nikhil Nasta combines refractive and cataract expertise with a conservative, safety-first approach. Whether you need a second opinion before LASIK or a detailed cataract lens discussion, the goal is the same: long-term eye health, not a one-day sale.\n\n👉 Book a consultation: https://www.eyesurgeonmumbai.com/consult\n👉 Cataract information: https://www.eyesurgeonmumbai.com/cataract-surgery-mumbai\n👉 LASIK and laser vision: https://www.eyesurgeonmumbai.com/lasik-surgery-mumbai",
     },
     {
       heading: "Local Areas We Commonly Serve",
