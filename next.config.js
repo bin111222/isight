@@ -56,6 +56,26 @@ const nextConfig = {
         destination: '/retinal-surgery-mumbai',
         permanent: true,
       },
+      {
+        source: '/eye-treatment-mumbai-international-patients',
+        destination: '/post/eye-treatment-mumbai-international-patients',
+        permanent: true,
+      },
+      {
+        source: '/eye-treatment-mumbai-international-patients/',
+        destination: '/post/eye-treatment-mumbai-international-patients',
+        permanent: true,
+      },
+      {
+        source: '/lasik-eye-surgery-mumbai',
+        destination: '/lasik-surgery-mumbai',
+        permanent: true,
+      },
+      {
+        source: '/lasik-eye-surgery-mumbai/',
+        destination: '/lasik-surgery-mumbai',
+        permanent: true,
+      },
     ];
   },
 };
