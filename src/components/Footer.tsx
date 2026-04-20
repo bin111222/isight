@@ -79,9 +79,17 @@ export default function Footer() {
         </div>
 
         <div className="mt-14 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-silver-200/60">
-            © {currentYear} iSight Eye Care &amp; Surgery. All rights reserved.
-          </p>
+          <div className="text-sm text-silver-200/60 text-center sm:text-left">
+            <p>© {currentYear} iSight Eye Care &amp; Surgery. All rights reserved.</p>
+            <a
+              href="https://www.1942studio.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex mt-1 text-silver-200/70 hover:text-clinical-300 transition-colors"
+            >
+              Built by 1942 Studio
+            </a>
+          </div>
           <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-8 text-sm">
             <Link href="/consult" className="text-silver-200/80 hover:text-clinical-300 transition-colors font-medium">
               Book Consultation
