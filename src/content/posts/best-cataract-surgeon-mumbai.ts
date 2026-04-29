@@ -6,7 +6,7 @@ const post: BlogPost = {
   description:
     "How to find the best cataract surgeon in Mumbai for your eye: phaco vs FLACS experience, premium IOL expertise, complication rates, and the questions to ask before you sign a package.",
   date: "2026-04-28",
-  image: "best-cataract-surgeon-mumbai",
+  image: "cataract-surgery-mumbai",
   sections: [
     {
       body: "Choosing the best cataract surgeon in Mumbai is less about a trophy title and more about measurable factors: surgical volume with modern phacoemulsification, honest lens counselling, access to femtosecond laser when it truly helps your case, and a team that handles diagnostics and aftercare meticulously. Cataract surgery is common, but your eyes are not interchangeable—small differences in biometry accuracy and lens choice drive decades of vision quality.\n\nDr. Nikhil Nasta at I-Sight Eye Care performs advanced cataract surgery including laser-assisted techniques and premium intraocular lenses, with emphasis on matching lens design to lifestyle (night driving, computer work, reading) and ocular anatomy.",

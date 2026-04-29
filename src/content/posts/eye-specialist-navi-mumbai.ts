@@ -6,7 +6,7 @@ const post: BlogPost = {
   description:
     "Searching for an eye specialist Navi Mumbai or eye doctor Navi Mumbai? Here is how local care compares with Mumbai centres for cataract, LASIK, ICL, retina, and pediatric eye problems—and what to prioritise.",
   date: "2026-04-23",
-  image: "eye-specialist-navi-mumbai",
+  image: "lasik-eye-surgery-navi-mumbai",
   sections: [
     {
       body: "Navi Mumbai has grown a strong base of optometry outlets and general ophthalmology clinics. Patients who type “eye specialist Navi Mumbai” or “eye doctor Navi Mumbai” often want one of three things: a reliable glasses update, treatment for infection or allergy, or a surgeon for cataract / LASIK / ICL. The right choice depends on complexity.\n\nMany high-acuity procedures still cluster in South Mumbai, Bandra, and western corridor hospitals where femtosecond lasers, premium IOL inventory, and high-volume refractive surgeons are concentrated. That does not mean Navi Mumbai residents must compromise—it means knowing when a short travel investment buys better diagnostics and outcomes.\n\nI-Sight Eye Care regularly sees patients from Vashi, Nerul, Belapur, Kharghar, and Panvel for second opinions and surgery planning.",

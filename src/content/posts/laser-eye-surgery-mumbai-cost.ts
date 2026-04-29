@@ -6,7 +6,7 @@ const post: BlogPost = {
   description:
     "Complete guide to laser eye surgery Mumbai cost in 2026: price ranges per eye for LASIK, bladeless LASIK, SMILE, and PRK, what packages include, and how to compare quotes fairly.",
   date: "2026-04-19",
-  image: "laser-eye-surgery-mumbai-cost",
+  image: "lasik-eye-surgery-cost-mumbai",
   sections: [
     {
       body: "Laser eye surgery Mumbai cost is one of the most searched phrases by patients who already know they want vision correction and are comparing budgets. In 2026, transparent clinics in Mumbai typically quote per-eye pricing that depends on the laser platform, whether a femtosecond flap is used, topography guidance, and how much of the workup and follow-up is bundled.\n\nThis article uses “laser eye surgery” in the broad sense patients use online—it covers LASIK, femto-LASIK, topography-guided LASIK (such as Contoura-style treatments), SMILE, and surface ablation (PRK / TransPRK). Numbers below are indicative Mumbai market ranges; your exact laser eye surgery Mumbai cost is confirmed only after corneal mapping, dry-eye assessment, and medical eligibility.\n\nFor a deeper LASIK-only breakdown, see our dedicated guide: https://www.eyesurgeonmumbai.com/post/lasik-surgery-cost-mumbai",
@@ -70,7 +70,7 @@ const post: BlogPost = {
     },
     {
       heading: "Book an Eligibility Assessment at I-Sight Eye Care",
-      body: "Dr. Nikhil Nasta evaluates candidacy with full corneal diagnostics and discusses which laser modality—or non-laser alternative—matches your eyes and lifestyle. Transparent laser eye surgery Mumbai cost is quoted only after those findings.\n\n👉 https://www.eyesurgeonmumbai.com/lasik-eye-surgery-mumbai",
+      body: "Dr. Nikhil Nasta evaluates candidacy with full corneal diagnostics and discusses which laser modality—or non-laser alternative—matches your eyes and lifestyle. Transparent laser eye surgery Mumbai cost is quoted only after those findings.\n\n👉 https://www.eyesurgeonmumbai.com/lasik-surgery-mumbai",
     },
   ],
   faqs: [
