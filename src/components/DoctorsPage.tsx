@@ -49,47 +49,57 @@ export default function DoctorsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(PHYSICIAN_JSON_LD) }}
       />
     <div className="min-h-screen bg-silver-100">
-      {/* Hero - full-bleed image (native img so it always loads from public/) */}
-      <section className="relative min-h-[70vh] flex flex-col justify-end overflow-hidden">
+      {/* Hero - photo-forward; copy in a glass panel so overlays stay light */}
+      <section className="relative min-h-[min(88vh,920px)] flex flex-col justify-end lg:justify-center overflow-hidden pt-24 pb-10 sm:pb-14 lg:py-28">
         <div className="absolute inset-0">
           <img
             src="/hero.webp"
             alt={ABOUT_IMAGES.hero.alt}
-            className="absolute inset-0 w-full h-full object-cover object-[center_30%]"
+            className="absolute inset-0 w-full h-full object-cover object-[22%_28%] sm:object-[center_30%] lg:object-[78%_28%]"
             fetchPriority="high"
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-navy-900/40 to-navy-900/95" aria-hidden />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/40 to-transparent" aria-hidden />
-        <div className="relative max-w-6xl mx-auto w-full px-4 sm:px-6 pb-12 lg:pb-16 pt-24 lg:pt-28">
-          <div className="flex flex-col md:flex-row md:items-end gap-8 md:gap-12">
-            <div className="text-white max-w-xl md:ml-auto md:mr-0">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-clinical-400 mb-2 [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_6px_rgba(0,0,0,0.7)]">Our Doctor</p>
-              <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight [text-shadow:0_1px_2px_rgba(0,0,0,0.9),0_2px_8px_rgba(0,0,0,0.8),0_4px_16px_rgba(0,0,0,0.6)]">
+        {/* Directional scrim: mobile = dark on right behind panel; lg+ = dark on left */}
+        <div
+          className="absolute inset-0 bg-[linear-gradient(100deg,rgba(10,15,26,0.12)_0%,transparent_42%,rgba(10,15,26,0.5)_68%,rgba(10,15,26,0.78)_100%)] lg:hidden"
+          aria-hidden
+        />
+        <div
+          className="absolute inset-0 hidden lg:block bg-[linear-gradient(260deg,rgba(10,15,26,0.82)_0%,rgba(10,15,26,0.48)_38%,transparent_58%,rgba(10,15,26,0.06)_100%)]"
+          aria-hidden
+        />
+        <div
+          className="absolute inset-0 bg-gradient-to-t from-navy-950/55 via-transparent to-navy-950/15 sm:from-navy-950/40 sm:via-transparent sm:to-transparent pointer-events-none"
+          aria-hidden
+        />
+        <div className="relative z-10 max-w-6xl mx-auto w-full px-4 sm:px-6">
+          <div className="flex flex-col items-stretch lg:items-start">
+            <div className="w-full max-w-lg rounded-2xl border border-white/15 bg-navy-950/40 p-6 sm:p-8 text-white shadow-[0_24px_48px_-12px_rgba(0,0,0,0.45)] backdrop-blur-md backdrop-saturate-150 ring-1 ring-white/5">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-clinical-300">Our Doctor</p>
+              <h1 className="font-display text-3xl sm:text-4xl lg:text-[2.75rem] font-bold leading-[1.1] mt-2">
                 Dr. Nikhil Nasta
               </h1>
-              <p className="mt-3 text-silver-200 text-lg sm:text-xl max-w-xl [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_6px_rgba(0,0,0,0.7)]">
+              <p className="mt-3 text-silver-200/95 text-base sm:text-lg leading-snug">
                 Award-winning ophthalmologist · Founder of iSight Eye Care · Over 15 years of experience
               </p>
-              <div className="mt-5 space-y-3 text-silver-100 text-base sm:text-lg leading-relaxed max-w-xl [text-shadow:0_1px_3px_rgba(0,0,0,0.85),0_2px_8px_rgba(0,0,0,0.65)]">
-                <p>
-                  <strong className="font-semibold text-white">Dr. Nikhil Nasta</strong>, MBBS, MS (Ophthalmology),
-                  and DNB, is a consultant eye surgeon in Mumbai and the founder of{" "}
-                  <strong className="font-semibold text-white">iSight Eye Care & Surgery</strong>. He leads
-                  NABH-accredited centres in <strong className="font-semibold text-white">Khar West</strong> and{" "}
-                  <strong className="font-semibold text-white">Dadar West</strong>, combining advanced technology with
-                  a patient-first approach.
-                </p>
-                <p>
-                  His practice spans <strong className="font-semibold text-white">cataract surgery</strong> with
-                  premium intraocular lenses, <strong className="font-semibold text-white">Contoura LASIK</strong>{" "}
-                  and refractive vision correction, <strong className="font-semibold text-white">retinal surgery</strong>{" "}
-                  and injections, medical and surgical <strong className="font-semibold text-white">glaucoma</strong>{" "}
-                  care, <strong className="font-semibold text-white">dry eye</strong> management,{" "}
-                  <strong className="font-semibold text-white">pediatric ophthalmology</strong> and squint surgery, and{" "}
-                  <strong className="font-semibold text-white">oculoplastic</strong> procedures—supported by training at
-                  respected institutions and recognition including the Ophthall Hall of Vision award.
-                </p>
+              <p className="mt-4 text-silver-100/90 text-sm sm:text-base leading-relaxed border-t border-white/10 pt-4">
+                Consultant ophthalmologist in Mumbai · NABH-accredited centres in Khar &amp; Dadar · Cataract, Contoura
+                LASIK, retina, glaucoma, and comprehensive eye care.
+              </p>
+              <div className="mt-6 flex flex-wrap items-center gap-3">
+                <Link
+                  href="/consult"
+                  className="inline-flex items-center gap-2 rounded-xl bg-clinical-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-navy-950/25 transition-colors hover:bg-clinical-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                >
+                  Book consultation
+                  <ArrowRight className="w-4 h-4 opacity-90" strokeWidth={2} aria-hidden />
+                </Link>
+                <a
+                  href="#about-dr"
+                  className="inline-flex items-center rounded-xl border border-white/25 bg-white/5 px-4 py-2.5 text-sm font-medium text-white/90 backdrop-blur-sm transition-colors hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                >
+                  Full biography
+                </a>
               </div>
             </div>
           </div>
@@ -97,12 +107,28 @@ export default function DoctorsPage() {
       </section>
 
       {/* About & iSight intro */}
-      <section className="py-14 lg:py-18 bg-silver-100">
+      <section id="about-dr" className="py-14 lg:py-18 bg-silver-100 scroll-mt-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-start">
             <div>
               <span className="text-xs font-semibold uppercase tracking-[0.2em] text-clinical-500">01</span>
-              <h2 className="font-display text-2xl sm:text-3xl font-bold text-navy-900 mt-2">
+              <div className="mt-4 space-y-4 text-navy-700 leading-relaxed text-base sm:text-lg">
+                <p>
+                  <strong className="font-semibold text-navy-900">Dr. Nikhil Nasta</strong>, MBBS, MS (Ophthalmology),
+                  and DNB, is a consultant eye surgeon in Mumbai and the founder of{" "}
+                  <strong className="font-semibold text-navy-900">iSight Eye Care &amp; Surgery</strong>. He leads
+                  NABH-accredited centres in <strong className="font-semibold text-navy-900">Khar West</strong> and{" "}
+                  <strong className="font-semibold text-navy-900">Dadar West</strong>, combining advanced technology with
+                  a patient-first approach.
+                </p>
+                <p>
+                  His practice spans cataract surgery with premium intraocular lenses, Contoura LASIK and refractive
+                  vision correction, retinal surgery and injections, medical and surgical glaucoma care, dry eye
+                  management, pediatric ophthalmology and squint surgery, and oculoplastic procedures—supported by
+                  training at respected institutions and recognition including the Ophthall Hall of Vision award.
+                </p>
+              </div>
+              <h2 className="font-display text-2xl sm:text-3xl font-bold text-navy-900 mt-10">
                 Empowering clear vision through innovation and compassion
               </h2>
               <p className="mt-5 text-navy-700 leading-relaxed text-base sm:text-lg">
