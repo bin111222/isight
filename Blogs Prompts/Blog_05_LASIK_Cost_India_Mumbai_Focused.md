@@ -170,5 +170,3 @@ Understanding what LASIK eye surgery costs in India is only the first step. The 
 ---
 
 *See also: [LASIK Cost in India — City by City Comparison](https://eyesurgeonmumbai.com/how-much-does-lasik-eye-surgery-cost-india) | [How Much Does LASIK Cost in Mumbai](https://eyesurgeonmumbai.com/how-much-does-lasik-cost-mumbai) | [Best LASIK Surgery in Mumbai](https://eyesurgeonmumbai.com/best-lasik-surgery-mumbai)*
-
-*Medically reviewed by Dr. Neha Kapoor, MS Ophthalmology, FRCS, Mumbai. Published April 30, 2026.*

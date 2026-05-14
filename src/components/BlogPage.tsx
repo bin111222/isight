@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { getBlogImageUrl } from "@/lib/blogImageUrl";
 import type { PageContent } from "@/types/content";
 import type { BlogPost } from "@/types/content";
 import { getPublishedPosts, getReadingTimeMinutes } from "@/lib/posts";
+import BlogPostCardThumbnail from "@/components/BlogPostCardThumbnail";
 
 type BlogPageProps = { content: PageContent };
 
@@ -17,46 +17,13 @@ function formatDate(dateStr: string): string {
 
 function PostThumbnail({ post }: { post: BlogPost }) {
   const readingMin = getReadingTimeMinutes(post);
-
-  if (post.image) {
-    return (
-      <div className="relative aspect-[16/10] w-full overflow-hidden bg-navy-800">
-        {/* Native img so CDN URLs (including blog thumbnails) load directly like on individual post page */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={getBlogImageUrl(post.image)}
-          alt={post.title}
-          className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-          loading="lazy"
-          decoding="async"
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-        />
-        <div className="absolute bottom-2 right-2 rounded bg-navy-900/80 px-2 py-0.5 text-xs font-medium text-white backdrop-blur-sm">
-          {readingMin} min read
-        </div>
-      </div>
-    );
-  }
-
-  const initial = (post.title || "A").charAt(0).toUpperCase();
-
   return (
-    <div
-      className="relative flex aspect-[16/10] w-full items-center justify-center overflow-hidden bg-gradient-to-br from-clinical-500/90 to-navy-700"
-      style={{
-        background: `linear-gradient(135deg, rgba(45, 90, 158, 0.95) 0%, rgba(15, 23, 41, 0.98) 100%)`,
-      }}
-    >
-      <span
-        className="text-5xl font-bold text-white/90 drop-shadow-md sm:text-6xl"
-        aria-hidden
-      >
-        {initial}
-      </span>
-      <div className="absolute bottom-2 right-2 rounded bg-navy-900/80 px-2 py-0.5 text-xs font-medium text-white backdrop-blur-sm">
-        {readingMin} min read
-      </div>
-    </div>
+    <BlogPostCardThumbnail
+      postSlug={post.slug}
+      imageSlug={post.image}
+      alt={post.title}
+      readingMin={readingMin}
+    />
   );
 }
 

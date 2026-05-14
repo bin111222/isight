@@ -144,6 +144,25 @@ import p_icl_surgery_cost_mumbai from "./icl-surgery-cost-mumbai";
 import p_laser_eye_surgery_mumbai_cost from "./laser-eye-surgery-mumbai-cost";
 import p_premium_iol_lens_cost_mumbai_2026 from "./premium-iol-lens-cost-mumbai-2026";
 import p_squint_eye_surgery_mumbai_cost from "./squint-eye-surgery-mumbai-cost";
+import p_can_lasik_be_repeated_enhancement from "./can-lasik-be-repeated-enhancement";
+import p_cataract_surgery_cost_mumbai_lenses from "./cataract-surgery-cost-mumbai-lenses";
+import p_cataract_surgery_diabetes_safety from "./cataract-surgery-diabetes-safety";
+import p_cataract_surgery_recovery_dos_donts from "./cataract-surgery-recovery-dos-donts";
+import p_contoura_vision_cost_mumbai_worth_it from "./contoura-vision-cost-mumbai-worth-it";
+import p_contoura_vision_recovery_return_work from "./contoura-vision-recovery-return-work";
+import p_contoura_vision_side_effects from "./contoura-vision-side-effects";
+import p_contoura_vision_vs_smile from "./contoura-vision-vs-smile";
+import p_flacs_vs_phaco_cataract_surgery from "./flacs-vs-phaco-cataract-surgery";
+import p_ideal_candidate_contoura_vision from "./ideal-candidate-contoura-vision";
+import p_is_lasik_eye_surgery_painful_mumbai from "./is-lasik-eye-surgery-painful-mumbai";
+import p_lasik_candidate_age_eligibility from "./lasik-candidate-age-eligibility";
+import p_lasik_recovery_time_day_by_day_mumbai from "./lasik-recovery-time-day-by-day-mumbai";
+import p_lasik_risks_side_effects from "./lasik-risks-side-effects";
+import p_lasik_vs_contact_lenses_mumbai from "./lasik-vs-contact-lenses-mumbai";
+import p_monofocal_vs_multifocal_iol from "./monofocal-vs-multifocal-iol";
+import p_secondary_cataract_pco_after_surgery from "./secondary-cataract-pco-after-surgery";
+import p_what_is_contoura_vision_vs_lasik from "./what-is-contoura-vision-vs-lasik";
+import p_when_to_have_cataract_surgery from "./when-to-have-cataract-surgery";
 
 const POSTS: Record<string, BlogPost> = {
   "advantages-edof-iol-mumbai": p_advantages_edof_iol_mumbai,
@@ -160,14 +179,23 @@ const POSTS: Record<string, BlogPost> = {
   "can-cataract-come-back-after-surgery": p_can_cataract_come_back_after_surgery,
   "can-dry-eye-cause-blurry-vision-permanently": p_can_dry_eye_cause_blurry_vision_permanently,
   "can-glaucoma-exist-without-symptoms": p_can_glaucoma_exist_without_symptoms,
+  "can-lasik-be-repeated-enhancement": p_can_lasik_be_repeated_enhancement,
   "cataract-surgery-cost-india-vs-usa-uk-uae": p_cataract_surgery_cost_india_vs_usa_uk_uae,
   "cataract-surgery-cost-mumbai": p_cataract_surgery_cost_mumbai,
+  "cataract-surgery-cost-mumbai-lenses": p_cataract_surgery_cost_mumbai_lenses,
+  "cataract-surgery-diabetes-safety": p_cataract_surgery_diabetes_safety,
   "cataract-surgery-mumbai": p_cataract_surgery_mumbai,
   "cataract-surgery-mumbai-guide": p_cataract_surgery_mumbai_guide,
   "cataract-surgery-navi-mumbai": p_cataract_surgery_navi_mumbai,
+  "cataract-surgery-recovery-dos-donts": p_cataract_surgery_recovery_dos_donts,
   "cataract-surgery-recovery-time-healing-aftercare-what-to-expect": p_cataract_surgery_recovery_time_healing_aftercare_what_to_expect,
   "common-eye-area-aesthetic-concerns-solutions": p_common_eye_area_aesthetic_concerns_solutions,
+  "contoura-vision-cost-mumbai-worth-it": p_contoura_vision_cost_mumbai_worth_it,
+  "contoura-vision-lasik-mumbai": p_contoura_vision_lasik_mumbai,
   "contoura-vision-mumbai-bandra-guide": p_contoura_vision_mumbai_bandra_guide,
+  "contoura-vision-recovery-return-work": p_contoura_vision_recovery_return_work,
+  "contoura-vision-side-effects": p_contoura_vision_side_effects,
+  "contoura-vision-vs-smile": p_contoura_vision_vs_smile,
   "digital-eye-strain-how-to-protect-your-vision-in-the-screen-age": p_digital_eye_strain_how_to_protect_your_vision_in_the_screen_age,
   "do-edof-lenses-cause-halos-or-glare": p_do_edof_lenses_cause_halos_or_glare,
   "dry-eye-disease-treatment-mumbai": p_dry_eye_disease_treatment_mumbai,
@@ -189,16 +217,20 @@ const POSTS: Record<string, BlogPost> = {
   "icl-surgery-mumbai-india-guide": p_icl_surgery_mumbai_india_guide,
   "icl-surgery-cost-mumbai": p_icl_surgery_cost_mumbai,
   "ideal-candidate-for-phaco-cataract-surgery": p_ideal_candidate_for_phaco_cataract_surgery,
+  "ideal-candidate-contoura-vision": p_ideal_candidate_contoura_vision,
   "ipl-and-morpheus-for-dry-eye-treatment-restoring-comfort-and-clarity-at-i-sight-eye-care-mumbai": p_ipl_and_morpheus_for_dry_eye_treatment_restoring_comfort_and_clarity_at_i_sight_eye_care_mumbai,
   "ipl-treatment-dry-eye-mumbai-guide": p_ipl_treatment_dry_eye_mumbai_guide,
   "is-dry-eye-dangerous": p_is_dry_eye_dangerous,
   "is-eye-surgery-in-india-safe-for-international-patients": p_is_eye_surgery_in_india_safe_for_international_patients,
+  "is-lasik-eye-surgery-painful-mumbai": p_is_lasik_eye_surgery_painful_mumbai,
   "is-lasik-safe-after-40": p_is_lasik_safe_after_40,
   "is-phaco-cataract-surgery-safe-for-elderly": p_is_phaco_cataract_surgery_safe_for_elderly,
   "laser-treatment-for-eyes-in-mumbai-who-it-s-for-how-it-works-and-what-to-expect": p_laser_treatment_for_eyes_in_mumbai_who_it_s_for_how_it_works_and_what_to_expect,
+  "lasik-candidate-age-eligibility": p_lasik_candidate_age_eligibility,
   "lasik-in-khar-mumbai": p_lasik_in_khar_mumbai,
   "lasik-surgery-bandra-mumbai-guide": p_lasik_surgery_bandra_mumbai_guide,
   "lasik-surgery-cost-mumbai": p_lasik_surgery_cost_mumbai,
+  "monofocal-vs-multifocal-iol": p_monofocal_vs_multifocal_iol,
   "morpheus-eye-rejuvenation-brighten-and-tighten-the-eyes-naturally": p_morpheus_eye_rejuvenation_brighten_and_tighten_the_eyes_naturally,
   "myopia-treatment-mumbai-guide": p_myopia_treatment_mumbai_guide,
   "myths-about-phaco-cataract-surgery": p_myths_about_phaco_cataract_surgery,
@@ -220,6 +252,7 @@ const POSTS: Record<string, BlogPost> = {
   "unlocking-clarity-understanding-the-cornea-of-the-eye-and-its-vital-role-in-vision": p_unlocking_clarity_understanding_the_cornea_of_the_eye_and_its_vital_role_in_vision,
   "vision-20-20-what-it-really-means-and-how-to-achieve-it-in-mumbai": p_vision_20_20_what_it_really_means_and_how_to_achieve_it_in_mumbai,
   "what-age-should-cataract-surgery-be-done": p_what_age_should_cataract_surgery_be_done,
+  "when-to-have-cataract-surgery": p_when_to_have_cataract_surgery,
   "when-floaters-mean-trouble-understanding-retina-health": p_when_floaters_mean_trouble_understanding_retina_health,
   "which-fruits-good-for-eyesight": p_which_fruits_good_for_eyesight,
   "who-should-perform-eye-aesthetic-treatments": p_who_should_perform_eye_aesthetic_treatments,
@@ -243,8 +276,10 @@ const POSTS: Record<string, BlogPost> = {
   "advanced-glaucoma-surgery-minimal-downtime-india": p_advanced_glaucoma_surgery_minimal_downtime_india,
   "hospitals-for-pediatric-advanced-eye-surgeries-india": p_hospitals_for_pediatric_advanced_eye_surgeries_india,
   "same-day-advanced-eye-surgery-procedures-india": p_same_day_advanced_eye_surgery_procedures_india,
+  "secondary-cataract-pco-after-surgery": p_secondary_cataract_pco_after_surgery,
   "squint-eye-surgery-mumbai-cost": p_squint_eye_surgery_mumbai_cost,
   "advanced-refractive-surgery-quick-recovery-centers-india": p_advanced_refractive_surgery_quick_recovery_centers_india,
+  "what-is-contoura-vision-vs-lasik": p_what_is_contoura_vision_vs_lasik,
   "what-is-lasik-eye-surgery-and-how-it-works": p_what_is_lasik_eye_surgery_and_how_it_works,
   "is-lasik-safe-risks-side-effects-and-expectations": p_is_lasik_safe_risks_side_effects_and_expectations,
   "is-lasik-safe-india-faq": p_is_lasik_safe_india_faq,
@@ -257,16 +292,18 @@ const POSTS: Record<string, BlogPost> = {
   "lasik-hospital-mumbai": p_lasik_hospital_mumbai,
   "lasik-navi-mumbai": p_lasik_navi_mumbai,
   "lasik-operation-mumbai": p_lasik_operation_mumbai,
+  "lasik-recovery-time-day-by-day-mumbai": p_lasik_recovery_time_day_by_day_mumbai,
   "lasik-recovery-timeline-work-drive-gym-travel": p_lasik_recovery_timeline_work_drive_gym_travel,
+  "lasik-risks-side-effects": p_lasik_risks_side_effects,
   "lasik-surgery-cost-mumbai-reddit": p_lasik_surgery_cost_mumbai_reddit,
   "best-lasik-surgery-mumbai": p_best_lasik_surgery_mumbai,
   "how-much-does-lasik-eye-surgery-cost-india": p_how_much_does_lasik_eye_surgery_cost_india,
   "what-is-lasik-eye-surgery-cost-india": p_what_is_lasik_eye_surgery_cost_india,
   "how-much-does-lasik-cost-mumbai": p_how_much_does_lasik_cost_mumbai,
-  "contoura-vision-lasik-mumbai": p_contoura_vision_lasik_mumbai,
   "smile-lasik-surgery-mumbai": p_smile_lasik_surgery_mumbai,
   "silk-lasik-mumbai": p_silk_lasik_mumbai,
   "femto-lasik-mumbai": p_femto_lasik_mumbai,
+  "flacs-vs-phaco-cataract-surgery": p_flacs_vs_phaco_cataract_surgery,
   "who-is-a-good-candidate-for-lasik-eligibility-tests": p_who_is_a_good_candidate_for_lasik_eligibility_tests,
   "lasik-for-high-power-thin-cornea-high-myopia": p_lasik_for_high_power_thin_cornea_high_myopia,
   "lasik-after-40-vs-lens-based-vision-correction": p_lasik_after_40_vs_lens_based_vision_correction,
@@ -283,6 +320,7 @@ const POSTS: Record<string, BlogPost> = {
   "best-lasik-surgeon-mumbai": p_best_lasik_surgeon_mumbai,
   "best-cataract-surgeon-mumbai": p_best_cataract_surgeon_mumbai,
   "best-lasik-clinic-in-bandra-and-mumbai-selection-guide": p_best_lasik_clinic_in_bandra_and_mumbai_selection_guide,
+  "lasik-vs-contact-lenses-mumbai": p_lasik_vs_contact_lenses_mumbai,
   "lasik-vs-icl-when-lens-based-correction-is-better": p_lasik_vs_icl_when_lens_based_correction_is_better,
   "free-lasik-eye-test-and-second-opinion-guide": p_free_lasik_eye_test_and_second_opinion_guide,
   "lasik-faq-most-asked-questions-answered": p_lasik_faq_most_asked_questions_answered,
