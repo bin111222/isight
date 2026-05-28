@@ -283,6 +283,17 @@ export default function LeadChatbot() {
     setSendError("");
   }
 
+  const stepLabel =
+    step === "symptom"
+      ? "Step 1 of 4 - Symptom"
+      : step === "procedure"
+      ? "Step 2 of 4 - Procedure"
+      : step === "name"
+      ? "Step 3 of 4 - Name"
+      : step === "phone"
+      ? "Step 4 of 4 - Phone"
+      : "Done";
+
   return (
     <div className="fixed bottom-5 right-5 z-[90]">
       {!isOpen ? (
@@ -299,14 +310,14 @@ export default function LeadChatbot() {
           Chat with us
         </button>
       ) : (
-        <section className="w-[340px] overflow-hidden rounded-2xl border border-clinical-200/40 bg-navy-950/95 shadow-2xl backdrop-blur">
+        <section className="w-[360px] overflow-hidden rounded-2xl border border-clinical-200/40 bg-navy-950/95 shadow-2xl backdrop-blur">
           <header className="flex items-center justify-between border-b border-navy-800 bg-gradient-to-r from-navy-900 to-navy-950 px-4 py-3">
             <div className="flex items-center gap-2">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={getImageUrl("/icon-logo.webp")}
                 alt="iSight Eye Care"
-                className="h-8 w-8 rounded-full border border-clinical-400/40 object-cover"
+                className="h-8 w-8 rounded-full border border-clinical-400/40 bg-white/95 object-cover object-left"
                 loading="eager"
                 decoding="async"
               />
@@ -338,12 +349,17 @@ export default function LeadChatbot() {
           </header>
 
           <div className="max-h-[360px] space-y-3 overflow-y-auto px-3 py-3">
+            {step !== "done" && (
+              <p className="inline-flex rounded-full border border-clinical-400/40 bg-clinical-500/10 px-2.5 py-1 text-[11px] font-semibold text-clinical-100">
+                {stepLabel}
+              </p>
+            )}
             {messages.map((message) => (
               <div
                 key={message.id}
-                className={`max-w-[85%] rounded-2xl px-3 py-2 text-sm leading-relaxed ${
+                className={`max-w-[88%] rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed ${
                   message.role === "bot"
-                    ? "bg-navy-900 text-silver-100"
+                    ? "bg-navy-900/95 text-silver-100"
                     : "ml-auto bg-clinical-500 text-white"
                 }`}
               >
@@ -361,7 +377,7 @@ export default function LeadChatbot() {
                       key={option.id}
                       type="button"
                       onClick={() => handleSymptomSelect(option.label)}
-                      className="w-full rounded-lg border border-navy-700 bg-navy-950 px-2 py-1.5 text-left text-xs text-silver-100 transition hover:border-clinical-400 hover:bg-navy-800"
+                      className="w-full rounded-lg border border-navy-700 bg-navy-950 px-2.5 py-2 text-left text-sm text-silver-100 transition hover:border-clinical-400 hover:bg-navy-800"
                     >
                       {option.label}
                     </button>
@@ -383,7 +399,7 @@ export default function LeadChatbot() {
                       key={option}
                       type="button"
                       onClick={() => handleProcedureSelect(option)}
-                      className={`w-full rounded-lg border px-2 py-1.5 text-left text-xs transition ${
+                      className={`w-full rounded-lg border px-2.5 py-2 text-left text-sm transition ${
                         selectedProcedure === option
                           ? "border-clinical-400 bg-navy-800 text-white"
                           : "border-navy-700 bg-navy-950 text-silver-100 hover:border-clinical-400 hover:bg-navy-800"
@@ -408,7 +424,7 @@ export default function LeadChatbot() {
           </div>
 
           <form onSubmit={handleSend} className="border-t border-navy-800 p-3">
-            <div className="flex items-center gap-2 rounded-xl border border-navy-700 bg-navy-900 px-2 py-1">
+            <div className="flex items-center gap-2 rounded-xl border border-navy-700 bg-navy-900/95 px-2 py-1">
               <input
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
