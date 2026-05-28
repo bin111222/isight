@@ -2,7 +2,7 @@
 
 import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
-import { MessageCircle, Send, X } from "lucide-react";
+import { MessageCircle, RotateCcw, Send, X } from "lucide-react";
 import { TREATMENT_LINKS } from "@/lib/sitemap";
 import { getImageUrl } from "@/lib/imageUrl";
 
@@ -310,20 +310,20 @@ export default function LeadChatbot() {
           Chat with us
         </button>
       ) : (
-        <section className="w-[360px] overflow-hidden rounded-2xl border border-clinical-200/40 bg-navy-950/95 shadow-2xl backdrop-blur">
-          <header className="flex items-center justify-between border-b border-navy-800 bg-gradient-to-r from-navy-900 to-navy-950 px-4 py-3">
+        <section className="w-[360px] overflow-hidden rounded-2xl border border-silver-300 bg-white/95 shadow-2xl backdrop-blur-sm">
+          <header className="flex items-center justify-between border-b border-silver-200 bg-gradient-to-r from-silver-100 to-white px-4 py-3">
             <div className="flex items-center gap-2">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={getImageUrl("/icon-logo.webp")}
                 alt="iSight Eye Care"
-                className="h-8 w-8 rounded-full border border-clinical-400/40 bg-white/95 object-cover object-left"
+                className="h-8 w-8 rounded-full border border-clinical-300 bg-white object-cover object-left"
                 loading="eager"
                 decoding="async"
               />
               <div>
-                <p className="text-sm font-semibold text-white">iSight Eye Care</p>
-                <p className="text-xs font-medium text-clinical-200">Vision Concierge</p>
+                <p className="text-sm font-semibold text-navy-900">iSight Eye Care</p>
+                <p className="text-xs font-medium text-clinical-600">Vision Concierge</p>
               </div>
             </div>
             <div className="flex items-center gap-2">
@@ -331,26 +331,28 @@ export default function LeadChatbot() {
                 <button
                   type="button"
                   onClick={resetFlow}
-                  className="rounded-lg border border-clinical-400/60 bg-clinical-500/15 px-2.5 py-1.5 text-xs font-semibold text-clinical-100 transition hover:bg-clinical-500/25"
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-clinical-300 bg-clinical-50 text-clinical-700 transition hover:bg-clinical-100"
+                  aria-label="Start over"
+                  title="Start over"
                 >
-                  Start over
+                  <RotateCcw className="h-4 w-4" />
                 </button>
               )}
               <button
                 type="button"
                 onClick={() => setIsOpen(false)}
-                className="inline-flex items-center gap-1.5 rounded-lg border border-navy-600 bg-navy-900/70 px-2.5 py-1.5 text-xs font-semibold text-silver-100 transition hover:border-navy-400 hover:bg-navy-800"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-silver-300 bg-white text-navy-700 transition hover:border-clinical-300 hover:bg-silver-100"
                 aria-label="Close chat assistant"
+                title="Close chat"
               >
                 <X className="h-3.5 w-3.5" />
-                Close chat
               </button>
             </div>
           </header>
 
-          <div className="max-h-[360px] space-y-3 overflow-y-auto px-3 py-3">
+          <div className="no-scrollbar max-h-[360px] space-y-3 overflow-y-auto bg-gradient-to-b from-silver-100 to-silver-100/70 px-3 py-3">
             {step !== "done" && (
-              <p className="inline-flex rounded-full border border-clinical-400/40 bg-clinical-500/10 px-2.5 py-1 text-[11px] font-semibold text-clinical-100">
+              <p className="inline-flex rounded-full border border-clinical-200 bg-clinical-50 px-2.5 py-1 text-[11px] font-semibold text-clinical-700">
                 {stepLabel}
               </p>
             )}
@@ -359,7 +361,7 @@ export default function LeadChatbot() {
                 key={message.id}
                 className={`max-w-[88%] rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed ${
                   message.role === "bot"
-                    ? "bg-navy-900/95 text-silver-100"
+                    ? "border border-silver-200 bg-white text-navy-900"
                     : "ml-auto bg-clinical-500 text-white"
                 }`}
               >
@@ -367,17 +369,17 @@ export default function LeadChatbot() {
               </div>
             ))}
             {step === "symptom" && (
-              <div className="rounded-xl border border-navy-800 bg-navy-900/70 p-2">
-                <p className="mb-2 px-1 text-[11px] font-semibold uppercase tracking-wide text-silver-100">
+              <div className="rounded-xl border border-silver-300 bg-white p-2">
+                <p className="mb-2 px-1 text-[11px] font-semibold uppercase tracking-wide text-navy-800">
                   Step 1: What symptom are you facing?
                 </p>
-                <div className="max-h-44 space-y-1 overflow-y-auto pr-1">
+                <div className="no-scrollbar max-h-44 space-y-1 overflow-y-auto pr-1">
                   {symptomFlows.map((option) => (
                     <button
                       key={option.id}
                       type="button"
                       onClick={() => handleSymptomSelect(option.label)}
-                      className="w-full rounded-lg border border-navy-700 bg-navy-950 px-2.5 py-2 text-left text-sm text-silver-100 transition hover:border-clinical-400 hover:bg-navy-800"
+                      className="w-full rounded-lg border border-silver-300 bg-white px-2.5 py-2 text-left text-sm text-navy-900 transition hover:border-clinical-400 hover:bg-clinical-50"
                     >
                       {option.label}
                     </button>
@@ -386,14 +388,14 @@ export default function LeadChatbot() {
               </div>
             )}
             {step === "procedure" && (
-              <div className="rounded-xl border border-navy-800 bg-navy-900/70 p-2">
-                <p className="mb-2 px-1 text-[11px] font-semibold uppercase tracking-wide text-silver-100">
+              <div className="rounded-xl border border-silver-300 bg-white p-2">
+                <p className="mb-2 px-1 text-[11px] font-semibold uppercase tracking-wide text-navy-800">
                   Step 2: Which procedure do you want to discuss?
                 </p>
-                <p className="mb-2 px-1 text-[11px] text-clinical-100/90">
+                <p className="mb-2 px-1 text-[11px] text-navy-600">
                   Recommended based on your symptom. You can also open the full treatment list.
                 </p>
-                <div className="max-h-44 space-y-1 overflow-y-auto pr-1">
+                <div className="no-scrollbar max-h-44 space-y-1 overflow-y-auto pr-1">
                   {procedureOptions.map((option) => (
                     <button
                       key={option}
@@ -401,8 +403,8 @@ export default function LeadChatbot() {
                       onClick={() => handleProcedureSelect(option)}
                       className={`w-full rounded-lg border px-2.5 py-2 text-left text-sm transition ${
                         selectedProcedure === option
-                          ? "border-clinical-400 bg-navy-800 text-white"
-                          : "border-navy-700 bg-navy-950 text-silver-100 hover:border-clinical-400 hover:bg-navy-800"
+                          ? "border-clinical-500 bg-clinical-500 text-white"
+                          : "border-silver-300 bg-white text-navy-900 hover:border-clinical-400 hover:bg-clinical-50"
                       }`}
                     >
                       {option}
@@ -413,18 +415,18 @@ export default function LeadChatbot() {
                   <button
                     type="button"
                     onClick={() => setShowAllProcedures(true)}
-                    className="mt-2 w-full rounded-lg border border-clinical-400/50 bg-clinical-500/15 px-2 py-1.5 text-xs font-medium text-clinical-100 transition hover:bg-clinical-500/25"
+                    className="mt-2 w-full rounded-lg border border-clinical-300 bg-clinical-50 px-2 py-1.5 text-xs font-medium text-clinical-700 transition hover:bg-clinical-100"
                   >
                     Show all treatments
                   </button>
                 )}
               </div>
             )}
-            {sendError && <p className="text-xs text-red-300">{sendError}</p>}
+            {sendError && <p className="text-xs text-red-600">{sendError}</p>}
           </div>
 
-          <form onSubmit={handleSend} className="border-t border-navy-800 p-3">
-            <div className="flex items-center gap-2 rounded-xl border border-navy-700 bg-navy-900/95 px-2 py-1">
+          <form onSubmit={handleSend} className="border-t border-silver-200 bg-white p-3">
+            <div className="flex items-center gap-2 rounded-xl border border-silver-300 bg-white px-2 py-1">
               <input
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
@@ -442,12 +444,12 @@ export default function LeadChatbot() {
                     : "Tell us what you need help with"
                 }
                 disabled={step === "done" || isSending}
-                className="w-full bg-transparent px-2 py-2 text-sm text-silver-100 placeholder:text-silver-400 focus:outline-none"
+                className="w-full bg-transparent px-2 py-2 text-sm text-navy-900 placeholder:text-navy-400 focus:outline-none"
               />
               <button
                 type="submit"
                 disabled={!input.trim() || step === "done" || isSending}
-                className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-clinical-500 text-white transition hover:bg-clinical-400 disabled:cursor-not-allowed disabled:opacity-50"
+                className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-clinical-500 text-white transition hover:bg-clinical-600 disabled:cursor-not-allowed disabled:opacity-50"
                 aria-label="Send message"
               >
                 <Send className="h-4 w-4" />

@@ -187,6 +187,18 @@
   pointer-events: none;
 }
 
+/* Hide scrollbars but keep scrolling available */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
 /* Home: section reveal */
 .section-reveal {
   opacity: 0;
