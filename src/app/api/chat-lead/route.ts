@@ -21,7 +21,12 @@ export async function POST(request: Request) {
     );
   }
 
-  const payload = (await request.json()) as LeadPayload;
+  let payload: LeadPayload;
+  try {
+    payload = (await request.json()) as LeadPayload;
+  } catch {
+    return NextResponse.json({ error: "Invalid request payload." }, { status: 400 });
+  }
   const name = payload.name?.trim();
   const phone = payload.phone?.trim();
   const intent = payload.intent?.trim();
@@ -42,22 +47,38 @@ export async function POST(request: Request) {
       ?.map((entry) => `${entry.role === "bot" ? "Bot" : "User"}: ${entry.text}`)
       .join("\n") || "No transcript provided";
 
-  await resend.emails.send({
-    from: fromEmail,
-    to: [toEmail],
-    subject: `New chatbot lead: ${name}`,
-    text: [
-      `Name: ${name}`,
-      `Phone: ${phone}`,
-      `Intent: ${intent}`,
-      `Page path: ${payload.pagePath || "Unknown"}`,
-      `Page title: ${payload.pageTitle || "Unknown"}`,
-      `Received at (IST): ${receivedAt}`,
-      "",
-      "Conversation transcript:",
-      transcriptLines,
-    ].join("\n"),
-  });
+  try {
+    const { data, error } = await resend.emails.send({
+      from: fromEmail,
+      to: [toEmail],
+      subject: `New chatbot lead: ${name}`,
+      text: [
+        `Name: ${name}`,
+        `Phone: ${phone}`,
+        `Intent: ${intent}`,
+        `Page path: ${payload.pagePath || "Unknown"}`,
+        `Page title: ${payload.pageTitle || "Unknown"}`,
+        `Received at (IST): ${receivedAt}`,
+        "",
+        "Conversation transcript:",
+        transcriptLines,
+      ].join("\n"),
+    });
 
-  return NextResponse.json({ ok: true });
+    if (error) {
+      console.error("Resend API error (chat lead):", error);
+      return NextResponse.json(
+        { error: "Email provider rejected the request.", details: error.message || "Unknown error" },
+        { status: 502 }
+      );
+    }
+
+    return NextResponse.json({ ok: true, id: data?.id || null });
+  } catch (error) {
+    console.error("Unexpected email send failure (chat lead):", error);
+    return NextResponse.json(
+      { error: "Unexpected error while sending email." },
+      { status: 500 }
+    );
+  }
 }

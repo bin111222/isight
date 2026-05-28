@@ -315,15 +315,26 @@ export default function LeadChatbot() {
                 <p className="text-xs font-medium text-clinical-200">Vision Concierge</p>
               </div>
             </div>
-            <button
-              type="button"
-              onClick={() => setIsOpen(false)}
-              className="inline-flex items-center gap-1.5 rounded-lg border border-navy-600 bg-navy-900/70 px-2.5 py-1.5 text-xs font-semibold text-silver-100 transition hover:border-navy-400 hover:bg-navy-800"
-              aria-label="Close chat assistant"
-            >
-              <X className="h-3.5 w-3.5" />
-              Close chat
-            </button>
+            <div className="flex items-center gap-2">
+              {step !== "done" && step !== "symptom" && (
+                <button
+                  type="button"
+                  onClick={resetFlow}
+                  className="rounded-lg border border-clinical-400/60 bg-clinical-500/15 px-2.5 py-1.5 text-xs font-semibold text-clinical-100 transition hover:bg-clinical-500/25"
+                >
+                  Start over
+                </button>
+              )}
+              <button
+                type="button"
+                onClick={() => setIsOpen(false)}
+                className="inline-flex items-center gap-1.5 rounded-lg border border-navy-600 bg-navy-900/70 px-2.5 py-1.5 text-xs font-semibold text-silver-100 transition hover:border-navy-400 hover:bg-navy-800"
+                aria-label="Close chat assistant"
+              >
+                <X className="h-3.5 w-3.5" />
+                Close chat
+              </button>
+            </div>
           </header>
 
           <div className="max-h-[360px] space-y-3 overflow-y-auto px-3 py-3">
@@ -394,15 +405,6 @@ export default function LeadChatbot() {
               </div>
             )}
             {sendError && <p className="text-xs text-red-300">{sendError}</p>}
-            {step !== "done" && step !== "symptom" && (
-              <button
-                type="button"
-                onClick={resetFlow}
-                className="w-full rounded-lg border border-navy-700 px-2 py-1.5 text-xs font-medium text-navy-200 transition hover:border-clinical-400 hover:text-white"
-              >
-                Start over
-              </button>
-            )}
           </div>
 
           <form onSubmit={handleSend} className="border-t border-navy-800 p-3">
@@ -424,7 +426,7 @@ export default function LeadChatbot() {
                     : "Tell us what you need help with"
                 }
                 disabled={step === "done" || isSending}
-                className="w-full bg-transparent px-2 py-2 text-sm text-white placeholder:text-navy-400 focus:outline-none"
+                className="w-full bg-transparent px-2 py-2 text-sm text-silver-100 placeholder:text-silver-400 focus:outline-none"
               />
               <button
                 type="submit"
