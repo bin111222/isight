@@ -2,8 +2,10 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import {
   getPostBySlug,
+  getPostTopic,
   getPublishedPostSlugs,
   getReadingTimeMinutes,
+  getRelatedPosts,
   isPostPublished,
 } from "@/lib/posts";
 import { LinkifiedText } from "@/lib/linkify";
@@ -12,6 +14,7 @@ import { BlogFAQAccordion } from "@/components/ui/blog-faq-accordion";
 import { SITE_URL } from "@/lib/sitemap";
 import { getBlogImageUrl } from "@/lib/blogImageUrl";
 import { formatTitleTag } from "@/lib/seoTitle";
+import { PHYSICIAN_JSON_LD } from "@/lib/physicianJsonLd";
 import { Twitter, Linkedin, Facebook, MessageCircle } from "lucide-react";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -63,6 +66,11 @@ export default async function PostPage({ params }: Props) {
   const canonical = `${SITE_URL}/post/${post.slug}`;
   const shareText = encodeURIComponent(post.title);
   const shareUrl = encodeURIComponent(canonical);
+  const dateModified = post.dateModified ?? post.date;
+  const heroImageUrl = post.image ? getBlogImageUrl(post.image) : `${SITE_URL}/og-image.webp`;
+  const heroAlt = post.description?.trim() || post.title;
+  const topic = getPostTopic(post.slug);
+  const relatedPosts = getRelatedPosts(post.slug, 4);
 
   return (
     <article className="min-h-screen bg-white -mt-16 pt-16 pb-16 lg:pb-24">
@@ -117,7 +125,7 @@ export default async function PostPage({ params }: Props) {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={getBlogImageUrl(post.image)}
-              alt={post.title}
+              alt={heroAlt}
               className="w-full object-cover"
               style={{ maxHeight: '600px' }}
               loading="lazy"
@@ -288,6 +296,34 @@ export default async function PostPage({ params }: Props) {
           </div>
         </div>
 
+        {/* Related articles – reinforces topic-cluster signals and keeps readers in-cluster */}
+        {relatedPosts.length > 0 && (
+          <div className="mt-16 pt-12 border-t border-silver-200">
+            <h2 className="font-display text-3xl font-bold text-navy-950 mb-8">
+              Related articles
+            </h2>
+            <ul className="grid gap-4 sm:grid-cols-2">
+              {relatedPosts.map((rp) => (
+                <li key={rp.slug}>
+                  <Link
+                    href={`/post/${rp.slug}`}
+                    className="block rounded-xl border border-silver-200 bg-white p-5 hover:border-clinical-300 hover:shadow-sm transition-all"
+                  >
+                    <h3 className="font-display text-lg font-semibold text-navy-950 leading-snug mb-2">
+                      {rp.title}
+                    </h3>
+                    {rp.description && (
+                      <p className="text-sm text-navy-600 leading-relaxed line-clamp-3">
+                        {rp.description}
+                      </p>
+                    )}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
         {/* 5. Seamless FAQ & CTA Integration */}
         {post.faqs && post.faqs.length > 0 && (
           <div className="mt-16 pt-12 border-t border-silver-200">
@@ -331,22 +367,93 @@ export default async function PostPage({ params }: Props) {
         />
       )}
 
+      {/* BreadcrumbList – earns breadcrumb display in SERPs */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Article",
-            headline: post.title,
-            description: post.description,
-            datePublished: post.date,
-            dateModified: post.date,
-            author: { "@type": "Person", name: "Dr. Nikhil Nasta" },
-            publisher: { "@type": "Organization", name: "iSight Eye Care", url: SITE_URL },
-            mainEntityOfPage: { "@id": canonical },
-            image: post.image ? getBlogImageUrl(post.image) : `${SITE_URL}/og-image.webp`,
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+              { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE_URL}/blog` },
+              { "@type": "ListItem", position: 3, name: post.title, item: canonical },
+            ],
           }),
         }}
+      />
+
+      {/*
+        MedicalWebPage – Google's preferred type for YMYL medical content.
+        References the canonical Physician entity via @id so credentials/awards
+        flow through without duplication, and exposes reviewedBy/lastReviewed
+        when the post declares a medical reviewer.
+      */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": ["MedicalWebPage", "Article"],
+            headline: post.title,
+            name: post.title,
+            description: post.description,
+            inLanguage: "en-IN",
+            datePublished: post.date,
+            dateModified,
+            url: canonical,
+            mainEntityOfPage: { "@type": "WebPage", "@id": canonical },
+            image: {
+              "@type": "ImageObject",
+              url: heroImageUrl,
+              width: 1200,
+              height: 630,
+            },
+            author: { "@id": PHYSICIAN_JSON_LD["@id"] },
+            ...(post.reviewedBy
+              ? {
+                  reviewedBy: { "@type": "Person", name: post.reviewedBy },
+                  lastReviewed: dateModified,
+                }
+              : {}),
+            publisher: {
+              "@type": "MedicalOrganization",
+              name: "iSight Eye Care & Surgery",
+              url: SITE_URL,
+              logo: {
+                "@type": "ImageObject",
+                url: `${SITE_URL}/og-image.webp`,
+              },
+            },
+            specialty: {
+              "@type": "MedicalSpecialty",
+              name: "Ophthalmology",
+            },
+            audience: {
+              "@type": "MedicalAudience",
+              audienceType: "Patient",
+            },
+            ...(topic
+              ? {
+                  about: {
+                    "@type": "MedicalProcedure",
+                    name: topic,
+                  },
+                }
+              : {}),
+            isPartOf: {
+              "@type": "Blog",
+              name: "iSight Eye Care Blog",
+              url: `${SITE_URL}/blog`,
+            },
+          }),
+        }}
+      />
+
+      {/* Physician graph node referenced by the article's author @id */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(PHYSICIAN_JSON_LD) }}
       />
     </article>
   );

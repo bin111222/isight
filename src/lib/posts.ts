@@ -174,6 +174,55 @@ export function getAllPosts(): BlogPost[] {
   );
 }
 
+/**
+ * Topic keywords used to group posts into clusters for related-article
+ * recommendations and schema topic mapping. Order matters: the first match
+ * wins, so list more specific topics (e.g., "contoura") before broader ones
+ * (e.g., "lasik").
+ */
+const TOPIC_KEYWORDS: Array<{ topic: string; pattern: RegExp }> = [
+  { topic: "smile", pattern: /\bsmile\b/ },
+  { topic: "silk", pattern: /\bsilk\b/ },
+  { topic: "contoura", pattern: /contoura/ },
+  { topic: "icl", pattern: /\bicl\b/ },
+  { topic: "lasik", pattern: /lasik|prk|refractive|laser-vision|laser-eye/ },
+  { topic: "edof", pattern: /\bedof\b/ },
+  { topic: "trifocal", pattern: /trifocal|multifocal/ },
+  { topic: "cataract", pattern: /cataract|phaco|iol|lens-implant/ },
+  { topic: "dry-eye", pattern: /dry-eye|tear|ipl|meibom/ },
+  { topic: "glaucoma", pattern: /glaucoma/ },
+  { topic: "retina", pattern: /retina|floater|diabetic-retin|injection/ },
+  { topic: "pediatric", pattern: /pediatric|kids|child/ },
+  { topic: "oculoplastic", pattern: /oculoplastic|blepharoplasty|eyelid|botox|aesthetic|cosmetic|morpheus/ },
+  { topic: "corneal", pattern: /corneal-transplant|keratoplasty|cornea-/ },
+  { topic: "squint", pattern: /squint|strabismus/ },
+];
+
+/** Primary topic for a post, derived from its slug. Returns null if no match. */
+export function getPostTopic(slug: string): string | null {
+  for (const { topic, pattern } of TOPIC_KEYWORDS) {
+    if (pattern.test(slug)) return topic;
+  }
+  return null;
+}
+
+/**
+ * Published posts sharing the same primary topic as `slug`, excluding the post
+ * itself. Used to render the "Related articles" block and reinforce topic-cluster
+ * signals for search. Returns at most `limit` posts.
+ */
+export function getRelatedPosts(
+  slug: string,
+  limit = 5,
+  asOf: Date = new Date()
+): BlogPost[] {
+  const topic = getPostTopic(slug);
+  if (!topic) return [];
+  return getPublishedPosts(asOf)
+    .filter((p) => p.slug !== slug && getPostTopic(p.slug) === topic)
+    .slice(0, limit);
+}
+
 /** Approximate reading time in minutes from word count */
 export function getReadingTimeMinutes(post: BlogPost): number {
   const text = [
