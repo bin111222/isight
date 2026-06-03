@@ -4,7 +4,6 @@ import { FormEvent, useCallback, useEffect, useMemo, useRef, useState } from "re
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { MessageCircle, RotateCcw, Send, X } from "lucide-react";
-import { TREATMENT_LINKS } from "@/lib/sitemap";
 import { getImageUrl } from "@/lib/imageUrl";
 
 const AUTO_OPEN_KEY = "isight-chat-opened-once";
@@ -16,10 +15,21 @@ type ChatMessage = {
   text: string;
 };
 
+type FollowUpOption = {
+  label: string;
+  note: string;
+};
+
 type SymptomFlow = {
   id: string;
   label: string;
-  procedureHints: string[];
+  keywords: string[];
+  careArea: string;
+  followUp?: {
+    question: string;
+    options: FollowUpOption[];
+  };
+  reassurance: string;
 };
 
 function inferPageIntent(pathname: string, title: string): string | null {
@@ -36,65 +46,151 @@ function inferPageIntent(pathname: string, title: string): string | null {
 
 function chatStarter(intent: string | null): string {
   if (intent) {
-    return `Hi there! Welcome to iSight Eye Care. Are you here for ${intent}? Pick the symptom that fits best, or type your own.`;
+    return `Hi! I'm the iSight Vision Concierge. It sounds like you may be dealing with ${intent}. Does that sound right? Tap what fits best, or describe it in your own words.`;
   }
-  return "Hi there! Welcome to iSight Eye Care. What eye symptom can we help you with today?";
+  return "Hi! I'm the iSight Vision Concierge. Tell me what's been bothering your eyes. Pick an option below or type it in your own words.";
 }
 
-function readableTreatmentLabel(label: string): string {
-  return label.replace(/\s+Mumbai$/i, "").trim();
+function findSymptomFlow(input: string): SymptomFlow | undefined {
+  const normalized = input.trim().toLowerCase();
+  const exact = symptomFlows.find(
+    (flow) => flow.label.toLowerCase() === normalized || flow.id === normalized
+  );
+  if (exact) return exact;
+
+  return symptomFlows.find((flow) =>
+    flow.keywords.some((keyword) => normalized.includes(keyword))
+  );
+}
+
+function buildLeadIntent(symptom: string, flow: SymptomFlow | undefined, followUpNote?: string): string {
+  const parts = [`Concern: ${symptom}`];
+  if (flow?.careArea) parts.push(`Likely care area: ${flow.careArea}`);
+  if (followUpNote) parts.push(`Detail: ${followUpNote}`);
+  return parts.join(" | ");
 }
 
 const symptomFlows: SymptomFlow[] = [
   {
     id: "dry-eye",
     label: "Dryness, burning, irritation or watering",
-    procedureHints: ["Dry Eye Treatment", "Oculoplastic Surgery & Botox"],
+    keywords: ["dry", "burning", "irritat", "watering", "gritty", "itch"],
+    careArea: "Dry eye & surface care",
+    followUp: {
+      question: "How often does this bother you?",
+      options: [
+        { label: "Once in a while", note: "Occasional symptoms" },
+        { label: "Most days", note: "Frequent daily symptoms" },
+        { label: "Almost constantly", note: "Persistent daily symptoms" },
+      ],
+    },
+    reassurance:
+      "Dry, irritated eyes are very common and very treatable. Our team will look at what's driving it and suggest a plan that actually fits your day-to-day life.",
   },
   {
     id: "vision-correction",
-    label: "Blurred vision / glasses removal",
-    procedureHints: ["LASIK Surgery", "ICL Surgery"],
+    label: "Blurred vision / wanting less dependence on glasses",
+    keywords: ["blur", "glasses", "contact", "lasik", "power", "spectacle"],
+    careArea: "Vision correction (LASIK / ICL evaluation)",
+    followUp: {
+      question: "What best describes your situation?",
+      options: [
+        { label: "I've worn glasses or contacts for years", note: "Long-term refractive correction" },
+        { label: "My prescription changed recently", note: "Recent prescription change" },
+        { label: "I'm exploring this for a family member", note: "Inquiry for family member" },
+      ],
+    },
+    reassurance:
+      "Many people come to us hoping for clearer vision with less reliance on glasses. We'll examine your eyes and explain whether LASIK, ICL, or another option makes sense. No pressure to decide today.",
   },
   {
     id: "cataract",
-    label: "Cloudy vision, glare, halos or night vision trouble",
-    procedureHints: [
-      "Cataract Surgery",
-      "Trifocal IOL Surgery",
-      "Multifocal IOL Surgery",
-      "EDOF IOL Surgery",
-    ],
+    label: "Cloudy vision, glare, halos or night driving trouble",
+    keywords: ["cloudy", "cataract", "glare", "halo", "night", "driving", "dim"],
+    careArea: "Cataract evaluation & lens options",
+    followUp: {
+      question: "What bothers you most day to day?",
+      options: [
+        { label: "Things look blurry or cloudy", note: "Primary blur/cloudiness" },
+        { label: "Glare or halos, especially at night", note: "Glare/halos, night driving" },
+        { label: "Both: vision feels unreliable", note: "Combined blur and glare" },
+        { label: "I'm not sure yet", note: "Unsure which symptom dominates" },
+      ],
+    },
+    reassurance:
+      "Cloudy vision and glare are common and often very treatable. Our cataract specialists will examine your eyes and walk you through options that match your lifestyle. You don't need to know which lens or surgery is right; that's what we're here for.",
   },
   {
     id: "retina",
-    label: "Floaters, flashes, diabetes-related vision changes",
-    procedureHints: ["Retinal Surgery", "Retinal Injections"],
+    label: "Floaters, flashes or sudden vision changes",
+    keywords: ["floater", "flash", "curtain", "sudden", "diabetes", "retina"],
+    careArea: "Retina & vitreous evaluation",
+    followUp: {
+      question: "When did you first notice this?",
+      options: [
+        { label: "Today or very recently", note: "Acute onset, recent" },
+        { label: "Over the past few weeks", note: "Subacute, weeks" },
+        { label: "It's been going on for a while", note: "Chronic, ongoing" },
+      ],
+    },
+    reassurance:
+      "Floaters and flashes can be harmless, but new or sudden changes should be checked promptly. Our retina team will advise whether you need an urgent visit or routine follow-up.",
   },
   {
     id: "glaucoma",
-    label: "High eye pressure / glaucoma concerns",
-    procedureHints: ["Glaucoma Treatment"],
+    label: "Eye pressure or glaucoma follow-up",
+    keywords: ["glaucoma", "pressure", "iop"],
+    careArea: "Glaucoma care",
+    followUp: {
+      question: "What brings you in today?",
+      options: [
+        { label: "Newly diagnosed or suspected glaucoma", note: "New diagnosis concern" },
+        { label: "Already on drops, need follow-up", note: "Existing treatment follow-up" },
+        { label: "Family history, want screening", note: "Family history screening" },
+      ],
+    },
+    reassurance:
+      "Glaucoma is manageable when caught early and monitored well. We'll review your history, check your eye pressure, and outline a clear follow-up plan.",
   },
   {
     id: "cornea",
-    label: "Cornea issues / persistent blurred or painful vision",
-    procedureHints: ["Corneal Transplant Surgery"],
+    label: "Cornea pain, redness or vision that won't clear up",
+    keywords: ["cornea", "painful", "redness", "ulcer", "kerat"],
+    careArea: "Cornea & anterior segment",
+    reassurance:
+      "Persistent cornea symptoms deserve a careful look. Our specialists will examine the surface of your eye and recommend the right next step.",
   },
   {
     id: "children",
-    label: "Child eye issues (squint, lazy eye, myopia)",
-    procedureHints: ["Pediatric Eye Care", "Squint Correction Surgery"],
+    label: "A child's eye concern (squint, lazy eye, myopia)",
+    keywords: ["child", "kid", "squint", "lazy", "myopia", "pediatric"],
+    careArea: "Pediatric eye care",
+    followUp: {
+      question: "How old is the patient?",
+      options: [
+        { label: "Under 5 years", note: "Pediatric, under 5" },
+        { label: "5 to 12 years", note: "Pediatric, 5 to 12" },
+        { label: "Teenager (13+)", note: "Pediatric, teen" },
+      ],
+    },
+    reassurance:
+      "Children's eye issues are best addressed early. Our pediatric team will make your child comfortable and explain the options clearly to you as a parent.",
   },
   {
     id: "aesthetics",
-    label: "Eyelid, under-eye or ocular aesthetics",
-    procedureHints: ["Oculoplastic Surgery & Botox", "Skin Type Ocular Aesthetics"],
+    label: "Eyelid, under-eye or cosmetic eye concerns",
+    keywords: ["eyelid", "under-eye", "aesthetic", "cosmetic", "droopy", "bag"],
+    careArea: "Oculoplastics & ocular aesthetics",
+    reassurance:
+      "We can discuss eyelid and periocular concerns in a consultation and outline realistic options, medical or aesthetic, based on your goals.",
   },
   {
     id: "other",
     label: "Not sure / something else",
-    procedureHints: [],
+    keywords: [],
+    careArea: "General ophthalmology consultation",
+    reassurance:
+      "That's completely okay. You don't need the right label to reach out. Share what you're experiencing and our team will guide you to the right specialist.",
   },
 ];
 
@@ -145,10 +241,9 @@ export default function LeadChatbot() {
   const [input, setInput] = useState("");
   const [leadIntent, setLeadIntent] = useState("");
   const [selectedSymptom, setSelectedSymptom] = useState("");
-  const [selectedProcedure, setSelectedProcedure] = useState("");
-  const [showAllProcedures, setShowAllProcedures] = useState(false);
+  const [activeFlow, setActiveFlow] = useState<SymptomFlow | null>(null);
   const [name, setName] = useState("");
-  const [step, setStep] = useState<"symptom" | "procedure" | "name" | "phone" | "done">("symptom");
+  const [step, setStep] = useState<"symptom" | "followup" | "name" | "phone" | "done">("symptom");
   const [isSending, setIsSending] = useState(false);
   const [isTyping, setIsTyping] = useState(false);
   const [sendError, setSendError] = useState("");
@@ -160,28 +255,6 @@ export default function LeadChatbot() {
     return document.title || "";
   }, [pathname]);
   const intentHint = useMemo(() => inferPageIntent(pathname, pageTitle), [pathname, pageTitle]);
-  const treatmentOptions = useMemo(
-    () => TREATMENT_LINKS.map((link) => readableTreatmentLabel(link.label)),
-    []
-  );
-  const recommendedProcedures = useMemo(() => {
-    if (!selectedSymptom || selectedSymptom === "Not sure / something else")
-      return treatmentOptions.slice(0, 4);
-    const symptomConfig = symptomFlows.find((flow) => flow.label === selectedSymptom);
-    if (!symptomConfig || symptomConfig.procedureHints.length === 0)
-      return treatmentOptions.slice(0, 4);
-    const prioritized = treatmentOptions.filter((treatment) =>
-      symptomConfig.procedureHints.some((hint) =>
-        treatment.toLowerCase().includes(hint.toLowerCase())
-      )
-    );
-    return prioritized.length > 0 ? prioritized : treatmentOptions.slice(0, 4);
-  }, [selectedSymptom, treatmentOptions]);
-  const procedureOptions = useMemo(() => {
-    if (!showAllProcedures) return recommendedProcedures;
-    const deduped = [...recommendedProcedures, ...treatmentOptions];
-    return deduped.filter((option, index) => deduped.indexOf(option) === index);
-  }, [recommendedProcedures, showAllProcedures, treatmentOptions]);
 
   const scrollToBottom = useCallback(() => {
     requestAnimationFrame(() => {
@@ -221,7 +294,41 @@ export default function LeadChatbot() {
 
   useEffect(() => {
     scrollToBottom();
-  }, [messages, isTyping, step, showAllProcedures, scrollToBottom]);
+  }, [messages, isTyping, step, scrollToBottom]);
+
+  const advanceAfterSymptom = useCallback(
+    async (symptomLabel: string) => {
+      const flow = findSymptomFlow(symptomLabel) ?? symptomFlows.find((f) => f.id === "other")!;
+      setActiveFlow(flow);
+      setSelectedSymptom(symptomLabel);
+      setLeadIntent(buildLeadIntent(symptomLabel, flow));
+
+      await queueBotReply("Thanks, that helps.");
+
+      if (flow.followUp) {
+        setStep("followup");
+        await queueBotReply(flow.followUp.question);
+        return;
+      }
+
+      setStep("name");
+      await queueBotReply(flow.reassurance);
+      await queueBotReply("I'd like to connect you with our team. May I have your name?");
+    },
+    [queueBotReply]
+  );
+
+  const advanceAfterFollowUp = useCallback(
+    async (option: FollowUpOption) => {
+      const flow = activeFlow ?? symptomFlows.find((f) => f.id === "other")!;
+      const intent = buildLeadIntent(selectedSymptom, flow, option.note);
+      setLeadIntent(intent);
+      setStep("name");
+      await queueBotReply(flow.reassurance);
+      await queueBotReply("I'd like to connect you with our team. May I have your name?");
+    },
+    [activeFlow, queueBotReply, selectedSymptom]
+  );
 
   async function submitLead(
     intentValue: string,
@@ -250,7 +357,9 @@ export default function LeadChatbot() {
         throw new Error("Unable to send");
       }
 
-      await queueBotReply("Perfect — thank you. Our team will reach out shortly.");
+      await queueBotReply(
+        "Thank you. We've got your details. Someone from our team will call you shortly to help with next steps."
+      );
       setStep("done");
       setInput("");
     } catch {
@@ -270,26 +379,25 @@ export default function LeadChatbot() {
     setInput("");
 
     if (step === "symptom") {
-      setSelectedSymptom(value);
-      setLeadIntent(`Symptom: ${value}`);
-      setShowAllProcedures(false);
-      setStep("procedure");
-      await queueBotReply("Thanks. Which treatment would you like to explore?");
+      await advanceAfterSymptom(value);
       return;
     }
 
-    if (step === "procedure") {
-      setSelectedProcedure(value);
-      setLeadIntent(`Symptom: ${selectedSymptom || "Not specified"} | Procedure interest: ${value}`);
-      setStep("name");
-      await queueBotReply("Great. May I have your name?");
+    if (step === "followup") {
+      const flow = activeFlow;
+      const matched = flow?.followUp?.options.find(
+        (opt) => opt.label.toLowerCase() === value.toLowerCase()
+      );
+      await advanceAfterFollowUp(
+        matched ?? { label: value, note: `Free text: ${value}` }
+      );
       return;
     }
 
     if (step === "name") {
       setName(value);
       setStep("phone");
-      await queueBotReply("Thanks. Please share your phone number.");
+      await queueBotReply("Thank you. What's the best phone number to reach you on?");
       return;
     }
 
@@ -301,31 +409,23 @@ export default function LeadChatbot() {
 
   async function handleSymptomSelect(option: string) {
     if (step !== "symptom" || isSending || isTyping) return;
-    setSelectedSymptom(option);
-    setLeadIntent(`Symptom: ${option}`);
-    setShowAllProcedures(false);
     setMessages((prev) => [...prev, { id: crypto.randomUUID(), role: "user", text: option }]);
-    setStep("procedure");
-    await queueBotReply("Got it. Here are treatments that usually help — pick one to discuss.");
+    await advanceAfterSymptom(option);
   }
 
-  async function handleProcedureSelect(option: string) {
-    if (step !== "procedure" || isSending || isTyping) return;
-    setSelectedProcedure(option);
-    setLeadIntent(`Symptom: ${selectedSymptom || "Not specified"} | Procedure interest: ${option}`);
-    setMessages((prev) => [...prev, { id: crypto.randomUUID(), role: "user", text: option }]);
-    setStep("name");
-    await queueBotReply("Great choice. May I have your name?");
+  async function handleFollowUpSelect(option: FollowUpOption) {
+    if (step !== "followup" || isSending || isTyping) return;
+    setMessages((prev) => [...prev, { id: crypto.randomUUID(), role: "user", text: option.label }]);
+    await advanceAfterFollowUp(option);
   }
 
   function resetFlow() {
     setMessages([]);
     setLeadIntent("");
     setSelectedSymptom("");
-    setSelectedProcedure("");
+    setActiveFlow(null);
     setName("");
     setInput("");
-    setShowAllProcedures(false);
     setStep("symptom");
     setSendError("");
     setIsTyping(false);
@@ -441,9 +541,9 @@ export default function LeadChatbot() {
                   </motion.div>
                 )}
 
-                {step === "procedure" && !isTyping && (
+                {step === "followup" && activeFlow?.followUp && !isTyping && (
                   <motion.div
-                    key="procedures"
+                    key="followup"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -6 }}
@@ -451,33 +551,20 @@ export default function LeadChatbot() {
                     className="rounded-xl border border-silver-300 bg-white p-2 shadow-sm"
                   >
                     <div className="no-scrollbar max-h-44 space-y-1 overflow-y-auto pr-1">
-                      {procedureOptions.map((option, index) => (
+                      {activeFlow.followUp.options.map((option, index) => (
                         <motion.button
-                          key={option}
+                          key={option.label}
                           type="button"
                           initial={{ opacity: 0, x: -6 }}
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ delay: index * 0.04, duration: 0.22 }}
-                          onClick={() => void handleProcedureSelect(option)}
-                          className={`w-full rounded-lg border px-2.5 py-2 text-left text-sm transition ${
-                            selectedProcedure === option
-                              ? "border-clinical-500 bg-clinical-500 text-white"
-                              : "border-silver-300 bg-white text-navy-900 hover:border-clinical-400 hover:bg-clinical-50"
-                          }`}
+                          onClick={() => void handleFollowUpSelect(option)}
+                          className="w-full rounded-lg border border-silver-300 bg-white px-2.5 py-2 text-left text-sm text-navy-900 transition hover:border-clinical-400 hover:bg-clinical-50"
                         >
-                          {option}
+                          {option.label}
                         </motion.button>
                       ))}
                     </div>
-                    {!showAllProcedures && (
-                      <button
-                        type="button"
-                        onClick={() => setShowAllProcedures(true)}
-                        className="mt-2 w-full rounded-lg border border-clinical-300 bg-clinical-50 px-2 py-1.5 text-xs font-medium text-clinical-700 transition hover:bg-clinical-100"
-                      >
-                        Show all treatments
-                      </button>
-                    )}
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -502,13 +589,13 @@ export default function LeadChatbot() {
                     step === "done"
                       ? "Conversation complete"
                       : step === "symptom"
-                      ? "Type your symptom..."
-                      : step === "procedure"
-                      ? "Or type a treatment..."
+                      ? "Describe your concern..."
+                      : step === "followup"
+                      ? "Or type your answer..."
                       : step === "name"
-                      ? "Enter your name"
+                      ? "Your name"
                       : step === "phone"
-                      ? "Enter your phone number"
+                      ? "Your phone number"
                       : "Message..."
                   }
                   disabled={step === "done" || isSending || isTyping}
