@@ -70,6 +70,42 @@ function buildLeadIntent(symptom: string, flow: SymptomFlow | undefined, followU
   return parts.join(" | ");
 }
 
+function appendToIntent(current: string, note: string): string {
+  return `${current} | User added: ${note}`;
+}
+
+function parseIndianPhone(input: string): string | null {
+  const digits = input.replace(/\D/g, "");
+  if (digits.length === 10 && /^[6-9]/.test(digits)) return digits;
+  if (digits.length === 12 && digits.startsWith("91") && /^91[6-9]/.test(digits)) return digits.slice(2);
+  if (digits.length === 11 && digits.startsWith("0") && /^0[6-9]/.test(digits)) return digits.slice(1);
+  return null;
+}
+
+// True when the text reads like a sentence, question, or concern rather than a name.
+function isLikelyRequestText(input: string): boolean {
+  const trimmed = input.trim();
+  if (/\?/.test(trimmed)) return true;
+  if (trimmed.split(/\s+/).length > 5) return true;
+  return /\b(please|recommend|suggest|give|help|want|need|concern|drops?|screen|hours?|protect|advice|tell|which|what|how|why|when|pain|hurt|problem|issue|use|using|frequently|symptom)\b/i.test(
+    trimmed
+  );
+}
+
+// Names are intentionally permissive: a single initial like "V" is valid.
+// We only reject phone numbers and obvious sentences/concerns.
+function looksLikeName(input: string): boolean {
+  const trimmed = input.trim();
+  if (trimmed.length < 1 || trimmed.length > 60) return false;
+  if (parseIndianPhone(trimmed)) return false;
+  if (isLikelyRequestText(trimmed)) return false;
+  return /^[a-zA-Z][a-zA-Z\s'.-]*$/.test(trimmed);
+}
+
+function formatPhoneForDisplay(digits: string): string {
+  return `+91 ${digits.slice(0, 5)} ${digits.slice(5)}`;
+}
+
 const symptomFlows: SymptomFlow[] = [
   {
     id: "dry-eye",
@@ -243,6 +279,7 @@ export default function LeadChatbot() {
   const [selectedSymptom, setSelectedSymptom] = useState("");
   const [activeFlow, setActiveFlow] = useState<SymptomFlow | null>(null);
   const [name, setName] = useState("");
+  const [pendingPhone, setPendingPhone] = useState("");
   const [step, setStep] = useState<"symptom" | "followup" | "name" | "phone" | "done">("symptom");
   const [isSending, setIsSending] = useState(false);
   const [isTyping, setIsTyping] = useState(false);
@@ -313,7 +350,9 @@ export default function LeadChatbot() {
 
       setStep("name");
       await queueBotReply(flow.reassurance);
-      await queueBotReply("I'd like to connect you with our team. May I have your name?");
+      await queueBotReply(
+        "I'd like to connect you with our team so we can give you personalised advice. May I have your name?"
+      );
     },
     [queueBotReply]
   );
@@ -325,7 +364,9 @@ export default function LeadChatbot() {
       setLeadIntent(intent);
       setStep("name");
       await queueBotReply(flow.reassurance);
-      await queueBotReply("I'd like to connect you with our team. May I have your name?");
+      await queueBotReply(
+        "I'd like to connect you with our team so we can give you personalised advice. May I have your name?"
+      );
     },
     [activeFlow, queueBotReply, selectedSymptom]
   );
@@ -395,15 +436,58 @@ export default function LeadChatbot() {
     }
 
     if (step === "name") {
+      const earlyPhone = parseIndianPhone(value);
+      if (earlyPhone && !looksLikeName(value)) {
+        setPendingPhone(formatPhoneForDisplay(earlyPhone));
+        await queueBotReply(
+          "Thanks — I've noted your number. What name should our team ask for when they call?"
+        );
+        return;
+      }
+
+      if (!looksLikeName(value)) {
+        setLeadIntent((prev) => appendToIntent(prev, value));
+        await queueBotReply(
+          "That's helpful — I've noted it. May I have your name so our team knows who to ask for?"
+        );
+        return;
+      }
+
       setName(value);
+
+      if (pendingPhone) {
+        const finalTranscript = [...messages, userMessage];
+        await submitLead(leadIntent, value, pendingPhone, finalTranscript);
+        return;
+      }
+
       setStep("phone");
-      await queueBotReply("Thank you. What's the best phone number to reach you on?");
+      await queueBotReply(
+        `Thank you, ${value.split(/\s+/)[0]}. What's the best mobile number to reach you on? (10 digits — our team will call with next steps.)`
+      );
       return;
     }
 
     if (step === "phone") {
+      const phone = parseIndianPhone(value);
+
+      if (!phone) {
+        if (/[a-zA-Z]/.test(value)) {
+          setLeadIntent((prev) => appendToIntent(prev, value));
+          await queueBotReply(
+            "That's really helpful — our team can walk you through options that fit your routine. To have someone call you, please share your 10-digit mobile number."
+          );
+          return;
+        }
+
+        await queueBotReply(
+          "That doesn't look like a valid mobile number. Please enter your 10-digit number (e.g. 98765 43210)."
+        );
+        return;
+      }
+
       const finalTranscript = [...messages, userMessage];
-      await submitLead(leadIntent, name || "Not provided", value, finalTranscript);
+      await submitLead(leadIntent, name || "Not provided", formatPhoneForDisplay(phone), finalTranscript);
     }
   }
 
@@ -425,6 +509,7 @@ export default function LeadChatbot() {
     setSelectedSymptom("");
     setActiveFlow(null);
     setName("");
+    setPendingPhone("");
     setInput("");
     setStep("symptom");
     setSendError("");
@@ -585,6 +670,9 @@ export default function LeadChatbot() {
                 <input
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
+                  type={step === "phone" ? "tel" : "text"}
+                  inputMode={step === "phone" ? "tel" : step === "name" ? "text" : undefined}
+                  autoComplete={step === "phone" ? "tel" : step === "name" ? "name" : "off"}
                   placeholder={
                     step === "done"
                       ? "Conversation complete"
@@ -593,9 +681,9 @@ export default function LeadChatbot() {
                       : step === "followup"
                       ? "Or type your answer..."
                       : step === "name"
-                      ? "Your name"
+                      ? "Your full name"
                       : step === "phone"
-                      ? "Your phone number"
+                      ? "10-digit mobile number"
                       : "Message..."
                   }
                   disabled={step === "done" || isSending || isTyping}

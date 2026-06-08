@@ -28,15 +28,29 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Invalid request payload." }, { status: 400 });
   }
   const name = payload.name?.trim();
-  const phone = payload.phone?.trim();
+  const phoneRaw = payload.phone?.trim();
   const intent = payload.intent?.trim();
 
-  if (!name || !phone || !intent) {
+  if (!name || !phoneRaw || !intent) {
     return NextResponse.json(
       { error: "Name, phone, and intent are required." },
       { status: 400 }
     );
   }
+
+  const phoneDigits = phoneRaw.replace(/\D/g, "");
+  const phone =
+    phoneDigits.length === 10 && /^[6-9]/.test(phoneDigits)
+      ? phoneDigits
+      : phoneDigits.length === 12 && phoneDigits.startsWith("91")
+      ? phoneDigits.slice(2)
+      : null;
+
+  if (!phone || phone.length !== 10 || !/^[6-9]/.test(phone)) {
+    return NextResponse.json({ error: "A valid 10-digit mobile number is required." }, { status: 400 });
+  }
+
+  const formattedPhone = `+91 ${phone.slice(0, 5)} ${phone.slice(5)}`;
 
   const toEmail = process.env.RESEND_LEAD_TO_EMAIL || "info@isighteyecare.com";
   const fromEmail = process.env.RESEND_FROM_EMAIL || "iSight Chatbot <onboarding@resend.dev>";
@@ -54,7 +68,7 @@ export async function POST(request: Request) {
       subject: `New chatbot lead: ${name}`,
       text: [
         `Name: ${name}`,
-        `Phone: ${phone}`,
+        `Phone: ${formattedPhone}`,
         `Intent: ${intent}`,
         `Page path: ${payload.pagePath || "Unknown"}`,
         `Page title: ${payload.pageTitle || "Unknown"}`,
