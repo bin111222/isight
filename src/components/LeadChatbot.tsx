@@ -7,6 +7,7 @@ import { MessageCircle, RotateCcw, Send, X } from "lucide-react";
 import { getImageUrl } from "@/lib/imageUrl";
 
 const AUTO_OPEN_KEY = "isight-chat-opened-once";
+const AUTO_OPEN_DELAY_MS = 10_000;
 const BOT_REPLY_DELAY_MS = 750;
 
 type ChatMessage = {
@@ -318,7 +319,7 @@ export default function LeadChatbot() {
     const timer = window.setTimeout(() => {
       setIsOpen(true);
       localStorage.setItem(AUTO_OPEN_KEY, "1");
-    }, 5000);
+    }, AUTO_OPEN_DELAY_MS);
 
     return () => window.clearTimeout(timer);
   }, []);
