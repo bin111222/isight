@@ -22,7 +22,7 @@ const DEFAULT_SUBTITLE_FULL = "Khar & Dadar, Mumbai. Call or WhatsApp to schedul
 
 export default function BookAppointmentCTA({
   variant = "card",
-  showWhatsApp = false,
+  showWhatsApp = true,
   subtitle,
   priority = false,
 }: BookAppointmentCTAProps) {

@@ -28,7 +28,7 @@ export default function AwardsPage() {
       </section>
 
       {/* Intro + awards brick gallery */}
-      <section className="py-14 lg:py-18 bg-silver-100">
+      <section className="py-14 lg:py-20 bg-silver-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           {content?.sections?.[0]?.body && (
             <p className="text-navy-700 text-lg leading-relaxed max-w-3xl mx-auto text-center">
@@ -43,7 +43,7 @@ export default function AwardsPage() {
       </section>
 
       {/* Media coverage - news brick gallery */}
-      <section className="py-14 lg:py-18 bg-white border-t border-silver-200">
+      <section className="py-14 lg:py-20 bg-white border-t border-silver-200">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <span className="inline-flex items-center gap-2 text-clinical-500 text-sm font-semibold uppercase tracking-[0.2em]">
             <Newspaper className="w-4 h-4" strokeWidth={2} aria-hidden />
@@ -65,7 +65,7 @@ export default function AwardsPage() {
         </div>
       </section>
 
-      <section className="py-14 lg:py-18">
+      <section className="py-14 lg:py-20">
         <BookAppointmentCTA variant="card" />
       </section>
 

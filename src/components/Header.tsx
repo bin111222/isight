@@ -156,12 +156,12 @@ export default function Header() {
                 setTreatmentMenuOpen={setTreatmentMenuOpen}
               />
             ))}
-            <a
-              href={`tel:+${PHONE}`}
+            <Link
+              href="/consultation"
               className="btn btn-sm btn-primary ml-1 xl:ml-2 rounded-full"
             >
               Book Consultation
-            </a>
+            </Link>
           </nav>
         </div>
       </div>

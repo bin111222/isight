@@ -22,11 +22,16 @@ const config: Config = {
           300: "#9eb8df",
           400: "#5c8bc9",
           500: "#2d5a9e",
+          600: "#1e407a",
         },
         silver: {
+          50: "#f8fafc",
           100: "#f5f7fa",
           200: "#e8ecf1",
           300: "#d1d9e4",
+          400: "#9ca3af",
+          500: "#6b7280",
+          600: "#4b5563",
         },
       },
       fontFamily: {

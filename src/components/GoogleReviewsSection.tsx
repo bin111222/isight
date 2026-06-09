@@ -49,9 +49,21 @@ export default function GoogleReviewsSection() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
           <div>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-navy-900">
-              What Our Patients Say
-            </h2>
+            <div className="flex items-center gap-3 flex-wrap">
+              <h2 className="font-display text-3xl sm:text-4xl font-bold text-navy-900">
+                What Our Patients Say
+              </h2>
+              <a
+                href={GOOGLE_MAPS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-sm font-semibold text-amber-700 hover:bg-amber-100 transition-colors shrink-0"
+                aria-label="See our Google rating"
+              >
+                <span className="text-amber-500">★★★★★</span>
+                <span>4.9 · Google</span>
+              </a>
+            </div>
             <p className="mt-2 text-navy-600">
               Real stories from iSight Eye Care. Read more on Google.
             </p>

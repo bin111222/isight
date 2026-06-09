@@ -3,11 +3,9 @@
 import { FormEvent, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
-import { MessageCircle, RotateCcw, Send, X } from "lucide-react";
+import { RotateCcw, Send } from "lucide-react";
 import { getImageUrl } from "@/lib/imageUrl";
 
-const AUTO_OPEN_KEY = "isight-chat-opened-once";
-const AUTO_OPEN_DELAY_MS = 10_000;
 const BOT_REPLY_DELAY_MS = 750;
 
 type ChatMessage = {
@@ -83,7 +81,6 @@ function parseIndianPhone(input: string): string | null {
   return null;
 }
 
-// True when the text reads like a sentence, question, or concern rather than a name.
 function isLikelyRequestText(input: string): boolean {
   const trimmed = input.trim();
   if (/\?/.test(trimmed)) return true;
@@ -93,8 +90,6 @@ function isLikelyRequestText(input: string): boolean {
   );
 }
 
-// Names are intentionally permissive: a single initial like "V" is valid.
-// We only reject phone numbers and obvious sentences/concerns.
 function looksLikeName(input: string): boolean {
   const trimmed = input.trim();
   if (trimmed.length < 1 || trimmed.length > 60) return false;
@@ -239,10 +234,10 @@ function MessageBubble({ message }: { message: ChatMessage }) {
       initial={{ opacity: 0, y: 12, scale: 0.96 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-      className={`max-w-[88%] rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed ${
+      className={`max-w-[88%] rounded-2xl px-4 py-3 text-base leading-relaxed shadow-sm ${
         isBot
-          ? "border border-silver-200 bg-white text-navy-900 shadow-sm"
-          : "ml-auto bg-clinical-500 text-white shadow-sm"
+          ? "border border-silver-200 bg-white text-navy-900"
+          : "ml-auto bg-clinical-500 text-white"
       }`}
     >
       {message.text}
@@ -256,7 +251,7 @@ function TypingIndicator() {
       initial={{ opacity: 0, y: 8 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 4 }}
-      className="inline-flex items-center gap-1 rounded-2xl border border-silver-200 bg-white px-3.5 py-3 shadow-sm"
+      className="inline-flex items-center gap-1.5 rounded-2xl border border-silver-200 bg-white px-4 py-3.5 shadow-sm"
       aria-label="Assistant is typing"
     >
       {[0, 1, 2].map((i) => (
@@ -271,9 +266,8 @@ function TypingIndicator() {
   );
 }
 
-export default function LeadChatbot() {
+export default function ConsultationQuiz() {
   const pathname = usePathname();
-  const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState("");
   const [leadIntent, setLeadIntent] = useState("");
@@ -313,22 +307,10 @@ export default function LeadChatbot() {
   );
 
   useEffect(() => {
-    const hasOpenedBefore = localStorage.getItem(AUTO_OPEN_KEY);
-    if (hasOpenedBefore) return;
-
-    const timer = window.setTimeout(() => {
-      setIsOpen(true);
-      localStorage.setItem(AUTO_OPEN_KEY, "1");
-    }, AUTO_OPEN_DELAY_MS);
-
-    return () => window.clearTimeout(timer);
-  }, []);
-
-  useEffect(() => {
-    if (!isOpen || hasPrompted.current) return;
+    if (hasPrompted.current) return;
     hasPrompted.current = true;
     void queueBotReply(chatStarter(intentHint));
-  }, [isOpen, intentHint, queueBotReply]);
+  }, [intentHint, queueBotReply]);
 
   useEffect(() => {
     scrollToBottom();
@@ -518,191 +500,149 @@ export default function LeadChatbot() {
     void queueBotReply(chatStarter(intentHint));
   }
 
-  function openChat() {
-    setIsOpen(true);
-    localStorage.setItem(AUTO_OPEN_KEY, "1");
-  }
-
   return (
-    <div className="fixed bottom-5 right-5 z-[90]">
-      <AnimatePresence mode="wait">
-        {!isOpen ? (
-          <motion.button
-            key="launcher"
-            type="button"
-            initial={{ opacity: 0, scale: 0.9, y: 8 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.9, y: 8 }}
-            transition={{ duration: 0.25 }}
-            onClick={openChat}
-            className="inline-flex items-center gap-2 rounded-full bg-clinical-500 px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-clinical-500/30 transition hover:bg-clinical-400"
-            aria-label="Open chat assistant"
-          >
-            <MessageCircle className="h-4 w-4" />
-            Chat with us
-          </motion.button>
-        ) : (
-          <motion.section
-            key="panel"
-            initial={{ opacity: 0, y: 20, scale: 0.94 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 16, scale: 0.96 }}
-            transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            className="w-[360px] overflow-hidden rounded-2xl border border-silver-300 bg-white/95 shadow-2xl backdrop-blur-sm"
-          >
-            <header className="flex items-center justify-between border-b border-silver-200 bg-gradient-to-r from-silver-100 to-white px-4 py-3">
-              <div className="flex items-center gap-2">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={getImageUrl("/icon-logo.webp")}
-                  alt="iSight Eye Care"
-                  className="h-8 w-8 rounded-full border border-clinical-300 bg-white object-cover object-left"
-                  loading="eager"
-                  decoding="async"
-                />
-                <div>
-                  <p className="text-sm font-semibold text-navy-900">iSight Eye Care</p>
-                  <p className="text-xs font-medium text-clinical-600">Vision Concierge</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-2">
-                {step !== "done" && step !== "symptom" && (
-                  <button
-                    type="button"
-                    onClick={resetFlow}
-                    className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-clinical-300 bg-clinical-50 text-clinical-700 transition hover:bg-clinical-100"
-                    aria-label="Start over"
-                    title="Start over"
-                  >
-                    <RotateCcw className="h-4 w-4" />
-                  </button>
-                )}
-                <button
-                  type="button"
-                  onClick={() => setIsOpen(false)}
-                  className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-silver-300 bg-white text-navy-700 transition hover:border-clinical-300 hover:bg-silver-100"
-                  aria-label="Close chat assistant"
-                  title="Close chat"
-                >
-                  <X className="h-3.5 w-3.5" />
-                </button>
-              </div>
-            </header>
-
-            <div
-              ref={scrollRef}
-              className="no-scrollbar max-h-[360px] space-y-3 overflow-y-auto bg-gradient-to-b from-silver-100 to-silver-100/70 px-3 py-3"
+    <div className="w-full max-w-2xl mx-auto overflow-hidden rounded-2xl border border-silver-300 bg-white shadow-2xl">
+      <header className="flex items-center justify-between border-b border-silver-200 bg-gradient-to-r from-silver-100 to-white px-6 py-4">
+        <div className="flex items-center gap-3">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={getImageUrl("/icon-logo.webp")}
+            alt="iSight Eye Care"
+            className="h-10 w-10 rounded-full border border-clinical-300 bg-white object-cover object-left"
+            loading="eager"
+            decoding="async"
+          />
+          <div>
+            <p className="text-base font-semibold text-navy-900">iSight Eye Care</p>
+            <p className="text-sm font-medium text-clinical-600">Vision Concierge</p>
+          </div>
+        </div>
+        <div className="flex items-center gap-2">
+          {step !== "done" && step !== "symptom" && (
+            <button
+              type="button"
+              onClick={resetFlow}
+              className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-clinical-300 bg-clinical-50 text-clinical-700 transition hover:bg-clinical-100"
+              aria-label="Start over"
+              title="Start over"
             >
-              {messages.map((message) => (
-                <MessageBubble key={message.id} message={message} />
-              ))}
+              <RotateCcw className="h-5 w-5" />
+            </button>
+          )}
+        </div>
+      </header>
 
-              <AnimatePresence>{isTyping && <TypingIndicator />}</AnimatePresence>
+      <div
+        ref={scrollRef}
+        className="no-scrollbar h-[500px] space-y-4 overflow-y-auto bg-gradient-to-b from-silver-100 to-silver-100/70 px-6 py-6"
+      >
+        {messages.map((message) => (
+          <MessageBubble key={message.id} message={message} />
+        ))}
 
-              <AnimatePresence mode="wait">
-                {step === "symptom" && !isTyping && (
-                  <motion.div
-                    key="symptoms"
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -6 }}
-                    transition={{ duration: 0.25 }}
-                    className="rounded-xl border border-silver-300 bg-white p-2 shadow-sm"
+        <AnimatePresence>{isTyping && <TypingIndicator />}</AnimatePresence>
+
+        <AnimatePresence mode="wait">
+          {step === "symptom" && !isTyping && (
+            <motion.div
+              key="symptoms"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -6 }}
+              transition={{ duration: 0.25 }}
+              className="rounded-xl border border-silver-300 bg-white p-3 shadow-sm"
+            >
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                {symptomFlows.map((option, index) => (
+                  <motion.button
+                    key={option.id}
+                    type="button"
+                    initial={{ opacity: 0, x: -6 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.04, duration: 0.22 }}
+                    onClick={() => void handleSymptomSelect(option.label)}
+                    className="w-full rounded-lg border border-silver-300 bg-white px-3 py-2.5 text-left text-sm text-navy-900 transition hover:border-clinical-400 hover:bg-clinical-50"
                   >
-                    <div className="no-scrollbar max-h-44 space-y-1 overflow-y-auto pr-1">
-                      {symptomFlows.map((option, index) => (
-                        <motion.button
-                          key={option.id}
-                          type="button"
-                          initial={{ opacity: 0, x: -6 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ delay: index * 0.04, duration: 0.22 }}
-                          onClick={() => void handleSymptomSelect(option.label)}
-                          className="w-full rounded-lg border border-silver-300 bg-white px-2.5 py-2 text-left text-sm text-navy-900 transition hover:border-clinical-400 hover:bg-clinical-50"
-                        >
-                          {option.label}
-                        </motion.button>
-                      ))}
-                    </div>
-                  </motion.div>
-                )}
-
-                {step === "followup" && activeFlow?.followUp && !isTyping && (
-                  <motion.div
-                    key="followup"
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -6 }}
-                    transition={{ duration: 0.25 }}
-                    className="rounded-xl border border-silver-300 bg-white p-2 shadow-sm"
-                  >
-                    <div className="no-scrollbar max-h-44 space-y-1 overflow-y-auto pr-1">
-                      {activeFlow.followUp.options.map((option, index) => (
-                        <motion.button
-                          key={option.label}
-                          type="button"
-                          initial={{ opacity: 0, x: -6 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ delay: index * 0.04, duration: 0.22 }}
-                          onClick={() => void handleFollowUpSelect(option)}
-                          className="w-full rounded-lg border border-silver-300 bg-white px-2.5 py-2 text-left text-sm text-navy-900 transition hover:border-clinical-400 hover:bg-clinical-50"
-                        >
-                          {option.label}
-                        </motion.button>
-                      ))}
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-
-              {sendError && (
-                <motion.p
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  className="text-xs text-red-600"
-                >
-                  {sendError}
-                </motion.p>
-              )}
-            </div>
-
-            <form onSubmit={handleSend} className="border-t border-silver-200 bg-white p-3">
-              <div className="flex items-center gap-2 rounded-xl border border-silver-300 bg-white px-2 py-1 shadow-sm">
-                <input
-                  value={input}
-                  onChange={(e) => setInput(e.target.value)}
-                  type={step === "phone" ? "tel" : "text"}
-                  inputMode={step === "phone" ? "tel" : step === "name" ? "text" : undefined}
-                  autoComplete={step === "phone" ? "tel" : step === "name" ? "name" : "off"}
-                  placeholder={
-                    step === "done"
-                      ? "Conversation complete"
-                      : step === "symptom"
-                      ? "Describe your concern..."
-                      : step === "followup"
-                      ? "Or type your answer..."
-                      : step === "name"
-                      ? "Your full name"
-                      : step === "phone"
-                      ? "10-digit mobile number"
-                      : "Message..."
-                  }
-                  disabled={step === "done" || isSending || isTyping}
-                  className="w-full bg-transparent px-2 py-2 text-sm text-navy-900 placeholder:text-navy-400 focus:outline-none"
-                />
-                <button
-                  type="submit"
-                  disabled={!input.trim() || step === "done" || isSending || isTyping}
-                  className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-clinical-500 text-white transition hover:bg-clinical-600 disabled:cursor-not-allowed disabled:opacity-50"
-                  aria-label="Send message"
-                >
-                  <Send className="h-4 w-4" />
-                </button>
+                    {option.label}
+                  </motion.button>
+                ))}
               </div>
-            </form>
-          </motion.section>
+            </motion.div>
+          )}
+
+          {step === "followup" && activeFlow?.followUp && !isTyping && (
+            <motion.div
+              key="followup"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -6 }}
+              transition={{ duration: 0.25 }}
+              className="rounded-xl border border-silver-300 bg-white p-3 shadow-sm"
+            >
+              <div className="grid grid-cols-1 gap-2">
+                {activeFlow.followUp.options.map((option, index) => (
+                  <motion.button
+                    key={option.label}
+                    type="button"
+                    initial={{ opacity: 0, x: -6 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.04, duration: 0.22 }}
+                    onClick={() => void handleFollowUpSelect(option)}
+                    className="w-full rounded-lg border border-silver-300 bg-white px-4 py-3 text-left text-base text-navy-900 transition hover:border-clinical-400 hover:bg-clinical-50"
+                  >
+                    {option.label}
+                  </motion.button>
+                ))}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {sendError && (
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="text-sm text-red-600 font-medium text-center"
+          >
+            {sendError}
+          </motion.p>
         )}
-      </AnimatePresence>
+      </div>
+
+      <form onSubmit={handleSend} className="border-t border-silver-200 bg-white p-4">
+        <div className="flex items-center gap-3 rounded-xl border border-silver-300 bg-white px-3 py-2 shadow-sm focus-within:border-clinical-400 focus-within:ring-1 focus-within:ring-clinical-400 transition-all">
+          <input
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            type={step === "phone" ? "tel" : "text"}
+            inputMode={step === "phone" ? "tel" : step === "name" ? "text" : undefined}
+            autoComplete={step === "phone" ? "tel" : step === "name" ? "name" : "off"}
+            placeholder={
+              step === "done"
+                ? "Conversation complete"
+                : step === "symptom"
+                ? "Describe your concern..."
+                : step === "followup"
+                ? "Or type your answer..."
+                : step === "name"
+                ? "Your full name"
+                : step === "phone"
+                ? "10-digit mobile number"
+                : "Message..."
+            }
+            disabled={step === "done" || isSending || isTyping}
+            className="w-full bg-transparent px-2 py-2 text-base text-navy-900 placeholder:text-navy-400 focus:outline-none"
+          />
+          <button
+            type="submit"
+            disabled={!input.trim() || step === "done" || isSending || isTyping}
+            className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-clinical-500 text-white transition hover:bg-clinical-600 disabled:cursor-not-allowed disabled:opacity-50"
+            aria-label="Send message"
+          >
+            <Send className="h-5 w-5" />
+          </button>
+        </div>
+      </form>
     </div>
   );
 }

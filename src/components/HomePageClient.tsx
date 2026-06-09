@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ImageWithFallback } from "@/components/ImageWithFallback";
 import TreatmentCardImage from "@/components/TreatmentCardImage";
-import { Phone, Stethoscope, ClipboardList, ArrowRight } from "lucide-react";
+import { Phone, MessageCircle, Stethoscope, ClipboardList, ArrowRight } from "lucide-react";
 import CountUpStat from "@/components/CountUpStat";
 import UnderstandYourEye from "@/components/UnderstandYourEye";
 import GoogleReviewsSection from "@/components/GoogleReviewsSection";
@@ -15,6 +15,7 @@ import { getImageUrl } from "@/lib/imageUrl";
 
 const PHONE = "918692986033";
 const PHONE_DISPLAY = "8692986033";
+const WHATSAPP_URL = `https://wa.me/${PHONE}`;
 const FALLBACK_IMAGE = getImageUrl("/hero.webp");
 const HOME_SEQUENCE_TOTAL_FRAMES = 151;
 const HOME_SEQUENCE_SCROLL_FRAMES = 120;
@@ -163,20 +164,22 @@ export default function HomePageClient({ images, faqs }: Props) {
                   dry eye. NABH-accredited centres in Khar and Dadar.
                 </p>
                 <div className="mt-5 flex flex-col sm:flex-row gap-3 justify-center items-center">
-                  <a
-                    href={`tel:+${PHONE}`}
+                  <Link
+                    href="/consult"
                     className="btn btn-lg btn-secondary group border-0 shadow-[0_10px_28px_-16px_rgba(0,0,0,0.9)] w-full sm:w-auto"
                   >
                     <Phone className="w-5 h-5 shrink-0" strokeWidth={2.25} aria-hidden />
                     Book Consultation
-                  </a>
-                  <Link
-                    href="/treatments"
+                  </Link>
+                  <a
+                    href={WHATSAPP_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="btn btn-lg group w-full sm:w-auto border border-white/55 bg-navy-950/45 text-white shadow-[0_10px_28px_-16px_rgba(0,0,0,0.85)] backdrop-blur-sm hover:bg-navy-900/60 hover:border-white/80 hover:-translate-y-0.5"
                   >
-                    <Stethoscope className="w-5 h-5 shrink-0 opacity-90" strokeWidth={2.25} aria-hidden />
-                    Explore Treatments
-                  </Link>
+                    <MessageCircle className="w-5 h-5 shrink-0 opacity-90" strokeWidth={2.25} aria-hidden />
+                    WhatsApp Us
+                  </a>
                 </div>
               </div>
             </div>
@@ -359,6 +362,21 @@ export default function HomePageClient({ images, faqs }: Props) {
             ))}
           </div>
 
+          <div className="mt-10 flex flex-col sm:flex-row gap-3 items-center">
+            <Link href="/consult" className="btn btn-lg btn-dark w-full sm:w-auto">
+              Book a consultation
+            </Link>
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-lg btn-primary w-full sm:w-auto"
+            >
+              <MessageCircle className="w-5 h-5 shrink-0" strokeWidth={2.25} aria-hidden />
+              WhatsApp Us
+            </a>
+          </div>
+
           <div className="mt-16 grid md:grid-cols-2 gap-8">
             <div className="group relative overflow-hidden rounded-3xl min-h-[320px] flex flex-col justify-end p-8 sm:p-10 text-white shadow-soft-lg hover:shadow-card-hover transition-all duration-300">
               <Image
@@ -512,14 +530,20 @@ export default function HomePageClient({ images, faqs }: Props) {
             Good vision matters for life. Contact us to book your next eye check-up.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href={`tel:+${PHONE}`}
+            <Link
+              href="/consult"
               className="btn btn-lg btn-secondary w-full sm:w-auto"
             >
-              Book now
-            </a>
-            <a href={`tel:+${PHONE}`} className="btn btn-lg btn-glass w-full sm:w-auto">
-              Call {PHONE_DISPLAY}
+              Book Appointment
+            </Link>
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-lg btn-glass w-full sm:w-auto"
+            >
+              <MessageCircle className="w-5 h-5 shrink-0" strokeWidth={2.25} aria-hidden />
+              WhatsApp Us
             </a>
           </div>
         </div>

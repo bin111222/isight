@@ -101,7 +101,7 @@ export default function AwardsBrickGallery({
                   Dr. Nikhil Nasta
                 </h3>
                 <p className="text-white/80 text-sm mt-1">
-                  Founder, iSight Eye Care · Over 15 years of experience
+                  Founder, iSight Eye Care · Over 20 years of experience
                 </p>
                 <p className="text-white/70 text-sm mt-3 leading-relaxed">
                   Award-winning ophthalmologist with expertise in cataract, glaucoma, refractive surgery, and paediatric eye care. Dr. Nasta founded iSight to bring quality, affordable eye care to Mumbai-with centres in Khar and Dadar and a team dedicated to your vision.

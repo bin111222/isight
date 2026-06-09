@@ -80,7 +80,7 @@ export default function DoctorsPage() {
                 Dr. Nikhil Nasta
               </h1>
               <p className="mt-3 text-silver-200/95 text-base sm:text-lg leading-snug">
-                Award-winning ophthalmologist · Founder of iSight Eye Care · Over 15 years of experience
+                Award-winning ophthalmologist · Founder of iSight Eye Care · Over 20 years of experience
               </p>
               <p className="mt-4 text-silver-100/90 text-sm sm:text-base leading-relaxed border-t border-white/10 pt-4">
                 Consultant ophthalmologist in Mumbai · NABH-accredited centres in Khar &amp; Dadar · Cataract, Contoura
@@ -107,7 +107,7 @@ export default function DoctorsPage() {
       </section>
 
       {/* About & iSight intro */}
-      <section id="about-dr" className="py-14 lg:py-18 bg-silver-100 scroll-mt-24">
+      <section id="about-dr" className="py-14 lg:py-20 bg-silver-100 scroll-mt-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-start">
             <div>
@@ -138,7 +138,7 @@ export default function DoctorsPage() {
               </p>
               <p className="mt-4 text-navy-700 leading-relaxed text-base sm:text-lg">
                 The aim of iSight is to provide quality eye care for all patients at affordable prices. Dr. Nikhil
-                Nasta is the founder and has over 15 years of experience with expertise across ophthalmology surgery,
+                Nasta is the founder and has over 20 years of experience with expertise across ophthalmology surgery,
                 establishing the centre to offer a full range of skilled services to the community.
               </p>
             </div>
@@ -224,7 +224,7 @@ export default function DoctorsPage() {
       </section>
 
       {/* Coffee Consultation */}
-      <section className="py-14 lg:py-18 bg-silver-100">
+      <section className="py-14 lg:py-20 bg-silver-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
             <div className="order-2 lg:order-1">
@@ -254,7 +254,7 @@ export default function DoctorsPage() {
       </section>
 
       {/* Pet Friendly */}
-      <section className="py-14 lg:py-18 bg-white">
+      <section className="py-14 lg:py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
             <div className="relative max-w-lg rounded-2xl overflow-hidden shadow-soft-lg ring-1 ring-black/5">
@@ -283,7 +283,7 @@ export default function DoctorsPage() {
       </section>
 
       {/* Gallery - Dr. Nikhil: OT, portrait, TEDx */}
-      <section className="py-14 lg:py-18 bg-silver-100">
+      <section className="py-14 lg:py-20 bg-silver-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-clinical-500">05</span>
           <h2 className="font-display text-2xl sm:text-3xl font-bold text-navy-900 mt-2">
@@ -313,7 +313,7 @@ export default function DoctorsPage() {
       </section>
 
       {/* Clinic photos - brick wall gallery */}
-      <section className="relative py-14 lg:py-18 overflow-hidden">
+      <section className="relative py-14 lg:py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-white via-silver-100/50 to-white pointer-events-none" aria-hidden />
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-clinical-500">06</span>
@@ -330,7 +330,7 @@ export default function DoctorsPage() {
       </section>
 
       {/* Staff & philosophy */}
-      <section className="py-14 lg:py-18 bg-silver-100">
+      <section className="py-14 lg:py-20 bg-silver-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-clinical-500">07</span>
           <h2 className="font-display text-2xl sm:text-3xl font-bold text-navy-900 mt-2">
@@ -344,7 +344,7 @@ export default function DoctorsPage() {
         </div>
       </section>
 
-      <section className="py-14 lg:py-18">
+      <section className="py-14 lg:py-20">
         <BookAppointmentCTA variant="card" />
       </section>
 

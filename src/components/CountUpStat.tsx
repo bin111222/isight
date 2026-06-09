@@ -25,7 +25,7 @@ const STATS: Stat[] = [
   {
     value: 20,
     suffix: "+",
-    label: "Years of experience",
+    label: "Years experience",
     icon: CalendarClock,
   },
   {

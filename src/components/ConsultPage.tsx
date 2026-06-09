@@ -33,7 +33,7 @@ const LOCATIONS = [
 
 const WHY_BOOK = [
   { text: "NABH accredited centres", Icon: Award },
-  { text: "Dr. Nikhil Nasta – over 15 years of experience", Icon: Building2 },
+  { text: "Dr. Nikhil Nasta – over 20 years of experience", Icon: Building2 },
   { text: "Two convenient locations in Mumbai", Icon: MapPin },
   { text: "Same-day and advance appointments", Icon: Clock },
   { text: "WhatsApp support for quick queries", Icon: MessageCircle },
@@ -314,7 +314,7 @@ export default function ConsultPage() {
         </div>
       </section>
 
-      <section className="py-14 lg:py-18">
+      <section className="py-14 lg:py-20">
         <BookAppointmentCTA variant="card" showWhatsApp />
       </section>
 

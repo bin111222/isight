@@ -305,7 +305,7 @@ export default function TreatmentPageLayout({ slug, content, imagePaths = [] }: 
                   Dr. Nikhil Nasta
                 </h3>
                 <p className="mt-3 text-white/85 text-sm sm:text-base leading-relaxed max-w-xl">
-                  Award-winning ophthalmologist. Over 15 years of experience in cataract surgery,
+                  Award-winning ophthalmologist. Over 20 years of experience in cataract surgery,
                   LASIK, retinal care, dry eye, and ocular aesthetics. NABH accredited centres in
                   Khar & Dadar, Mumbai.
                 </p>
