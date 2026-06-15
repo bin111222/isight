@@ -47,7 +47,7 @@ export default function BlogPage({ content }: BlogPageProps) {
             </p>
           )}
           {content.sections?.length ? (
-            <div className="mt-6 space-y-3 text-navy-200/90 leading-relaxed max-w-2xl">
+            <div className="mt-6 space-y-3 text-white/90 leading-relaxed max-w-2xl">
               {content.sections.map((section, i) => (
                 <div key={i}>
                   {section.heading && (

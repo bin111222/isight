@@ -162,4 +162,4 @@ Choosing the best LASIK surgery in Mumbai starts with a consultation where someo
 
 *See also: [LASIK Cost in Mumbai — Full Price Breakdown](https://eyesurgeonmumbai.com/how-much-does-lasik-cost-mumbai) | [Bladeless LASIK in Mumbai](https://eyesurgeonmumbai.com/bladeless-lasik-mumbai) | [LASIK Cost in India Compared](https://eyesurgeonmumbai.com/how-much-does-lasik-eye-surgery-cost-india)*
 
-*Medically reviewed by Dr. Priya Sharma, MS Ophthalmology, FRCS, Mumbai. Published April 22, 2026.*
+*Medically reviewed by Dr. Nikhil Nasta, MS Ophthalmology, FRCS, Mumbai. Published April 22, 2026.*

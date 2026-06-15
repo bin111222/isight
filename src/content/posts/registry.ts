@@ -163,6 +163,14 @@ import p_monofocal_vs_multifocal_iol from "./monofocal-vs-multifocal-iol";
 import p_secondary_cataract_pco_after_surgery from "./secondary-cataract-pco-after-surgery";
 import p_what_is_contoura_vision_vs_lasik from "./what-is-contoura-vision-vs-lasik";
 import p_when_to_have_cataract_surgery from "./when-to-have-cataract-surgery";
+import p_eye_specialist_doctor_mumbai from "./eye-specialist-doctor-mumbai";
+import p_eye_doctor_mumbai from "./eye-doctor-mumbai";
+import p_ophthalmologist_vs_optometrist_mumbai from "./ophthalmologist-vs-optometrist-mumbai";
+import p_signs_see_eye_specialist_mumbai from "./signs-see-eye-specialist-mumbai";
+import p_best_lasik_surgery_mumbai_procedure from "./best-lasik-surgery-mumbai-procedure";
+import p_best_eye_hospital_mumbai_lasik from "./best-eye-hospital-mumbai-lasik";
+import p_aesthetic_ophthalmology_mumbai from "./aesthetic-ophthalmology-mumbai";
+import p_aesthetic_eye_rejuvenation_mumbai from "./aesthetic-eye-rejuvenation-mumbai";
 
 const POSTS: Record<string, BlogPost> = {
   "advantages-edof-iol-mumbai": p_advantages_edof_iol_mumbai,
@@ -324,6 +332,14 @@ const POSTS: Record<string, BlogPost> = {
   "lasik-vs-icl-when-lens-based-correction-is-better": p_lasik_vs_icl_when_lens_based_correction_is_better,
   "free-lasik-eye-test-and-second-opinion-guide": p_free_lasik_eye_test_and_second_opinion_guide,
   "lasik-faq-most-asked-questions-answered": p_lasik_faq_most_asked_questions_answered,
+  "eye-specialist-doctor-mumbai": p_eye_specialist_doctor_mumbai,
+  "eye-doctor-mumbai": p_eye_doctor_mumbai,
+  "ophthalmologist-vs-optometrist-mumbai": p_ophthalmologist_vs_optometrist_mumbai,
+  "signs-see-eye-specialist-mumbai": p_signs_see_eye_specialist_mumbai,
+  "best-lasik-surgery-mumbai-procedure": p_best_lasik_surgery_mumbai_procedure,
+  "best-eye-hospital-mumbai-lasik": p_best_eye_hospital_mumbai_lasik,
+  "aesthetic-ophthalmology-mumbai": p_aesthetic_ophthalmology_mumbai,
+  "aesthetic-eye-rejuvenation-mumbai": p_aesthetic_eye_rejuvenation_mumbai,
 
 };
 

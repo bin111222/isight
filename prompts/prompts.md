@@ -444,3 +444,108 @@ These 6 image prompts correspond to the new Mumbai-specific LASIK content cluste
 **Prompt:**
 > Detailed femtosecond LASIK preparation scene with corneal flap planning visualization on monitor, surgeon discussing bladeless approach with patient in modern Mumbai clinic, clean and authoritative medical tone, photorealistic, no text, 8k.
 
+---
+
+## Eye Doctor / Specialist & Aesthetic Ophthalmology Series (June 2026)
+
+**8 blogs · 1 image each** (thumbnail on `/blog` + hero on `/post/<slug>`). Set `image` on the live `BlogPost` to the slug basename (no `.webp`). Upload to ImageKit: `{NEXT_PUBLIC_IMAGE_CDN_BASE}/blog/<slug>.webp`.
+
+| # | Blog prompt file | Live URL | Primary keyword | Image file |
+|---|------------------|----------|---------------|------------|
+| 24 | `Blogs Prompts/Blog_24_Best_Eye_Specialist_Doctor_Mumbai.md` | `/post/eye-specialist-doctor-mumbai` | mumbai eye specialist doctor | `eye-specialist-doctor-mumbai.webp` |
+| 25 | `Blogs Prompts/Blog_25_Eye_Doctor_Mumbai_When_To_See.md` | `/post/eye-doctor-mumbai` | eye doctor mumbai | `eye-doctor-mumbai.webp` |
+| 26 | `Blogs Prompts/Blog_26_Ophthalmologist_vs_Optometrist_Mumbai.md` | `/post/ophthalmologist-vs-optometrist-mumbai` | eye doctor mumbai | `ophthalmologist-vs-optometrist-mumbai.webp` |
+| 27 | `Blogs Prompts/Blog_27_Signs_See_Eye_Specialist_Mumbai.md` | `/post/signs-see-eye-specialist-mumbai` | mumbai eye specialist doctor | `signs-see-eye-specialist-mumbai.webp` |
+| 28 | `Blogs Prompts/Blog_28_Best_LASIK_Surgery_Mumbai_Choose_Procedure.md` | `/post/best-lasik-surgery-mumbai-procedure` | best lasik surgery mumbai | `best-lasik-surgery-mumbai-procedure.webp` |
+| 29 | `Blogs Prompts/Blog_29_Best_Eye_Hospital_Mumbai_LASIK.md` | `/post/best-eye-hospital-mumbai-lasik` | best lasik surgery mumbai | `best-eye-hospital-mumbai-lasik.webp` |
+| 30 | `Blogs Prompts/Blog_30_Aesthetic_Ophthalmology_Mumbai_Guide.md` | `/post/aesthetic-ophthalmology-mumbai` | aesthetic ophthalmology | `aesthetic-ophthalmology-mumbai.webp` |
+| 31 | `Blogs Prompts/Blog_31_Aesthetic_Eye_Rejuvenation_Mumbai.md` | `/post/aesthetic-eye-rejuvenation-mumbai` | aesthetic ophthalmology | `aesthetic-eye-rejuvenation-mumbai.webp` |
+
+---
+
+### Blog 24. Best Eye Specialist Doctor in Mumbai
+**Blog Slug:** `eye-specialist-doctor-mumbai`
+**Live URL:** `/post/eye-specialist-doctor-mumbai`
+**Primary Keyword:** `mumbai eye specialist doctor`
+**File Name:** `public/images/blog/eye-specialist-doctor-mumbai.webp`
+**Alt Text:** `Eye specialist doctor examining a patient on a slit lamp in a modern Mumbai clinic`
+**Prompt:**
+> Photorealistic editorial photo of an Indian ophthalmologist in a clean clinical coat examining a middle-aged patient on a slit-lamp biomicroscope, modern well-lit Mumbai eye clinic interior, soft natural window light, shallow depth of field, trustworthy and calm mood, photorealistic, no text, 8k.
+
+---
+
+### Blog 25. Eye Doctor in Mumbai: When to See One
+**Blog Slug:** `eye-doctor-mumbai`
+**Live URL:** `/post/eye-doctor-mumbai`
+**Primary Keyword:** `eye doctor mumbai`
+**File Name:** `public/images/blog/eye-doctor-mumbai.webp`
+**Alt Text:** `Eye doctor reviewing a retinal scan with a patient in a Mumbai clinic`
+**Prompt:**
+> Photorealistic editorial image of a friendly Indian eye doctor pointing to a retinal/OCT scan on a screen while explaining to a seated patient, modern Mumbai eye clinic, soft daylight, reassuring professional mood, navy/teal brand accents, photorealistic, no readable text, 8k.
+
+---
+
+### Blog 26. Ophthalmologist vs Optometrist in Mumbai
+**Blog Slug:** `ophthalmologist-vs-optometrist-mumbai`
+**Live URL:** `/post/ophthalmologist-vs-optometrist-mumbai`
+**Primary Keyword:** `eye doctor mumbai`
+**File Name:** `public/images/blog/ophthalmologist-vs-optometrist-mumbai.webp`
+**Alt Text:** `Split image comparing an ophthalmologist examining an eye and an optometrist fitting glasses`
+**Prompt:**
+> Photorealistic split-panel editorial image: left side an ophthalmologist examining a patient on a slit lamp, right side an optometrist helping a patient try on glasses frames, modern Mumbai clinic, soft daylight, clean navy/teal accents, professional and clear mood, photorealistic, no readable text, 8k.
+
+---
+
+### Blog 27. 12 Signs You Should See an Eye Specialist in Mumbai
+**Blog Slug:** `signs-see-eye-specialist-mumbai`
+**Live URL:** `/post/signs-see-eye-specialist-mumbai`
+**Primary Keyword:** `mumbai eye specialist doctor`
+**File Name:** `public/images/blog/signs-see-eye-specialist-mumbai.webp`
+**Alt Text:** `Close-up of a concerned person rubbing their eye, suggesting vision discomfort`
+**Prompt:**
+> Photorealistic editorial close-up of an adult gently pressing the bridge of their nose with eyes closed, suggesting eye strain or discomfort, soft moody natural light, neutral background, empathetic and calm tone, photorealistic, no readable text, 8k.
+
+---
+
+### Blog 28. Best LASIK Surgery in Mumbai: Pick the Right Procedure
+**Blog Slug:** `best-lasik-surgery-mumbai-procedure`
+**Live URL:** `/post/best-lasik-surgery-mumbai-procedure`
+**Primary Keyword:** `best lasik surgery mumbai`
+**File Name:** `public/images/blog/best-lasik-surgery-mumbai-procedure.webp`
+**Alt Text:** `Modern laser vision correction suite at a Mumbai eye surgery centre`
+**Prompt:**
+> Photorealistic editorial photo of a clean, modern refractive laser suite with an excimer/femtosecond laser platform and ambient blue-teal lighting, calm and high-tech mood, no patient face visible, premium clinical feel, photorealistic, no readable text, 8k.
+
+---
+
+### Blog 29. Best Eye Hospital in Mumbai for LASIK & Advanced Surgery
+**Blog Slug:** `best-eye-hospital-mumbai-lasik`
+**Live URL:** `/post/best-eye-hospital-mumbai-lasik`
+**Primary Keyword:** `best lasik surgery mumbai`
+**File Name:** `public/images/blog/best-eye-hospital-mumbai-lasik.webp`
+**Alt Text:** `Modern lobby of an advanced eye hospital in Mumbai`
+**Prompt:**
+> Photorealistic image of a modern, premium eye hospital reception/lobby with clean lines, warm professional lighting, plants, and subtle navy/teal branding, welcoming and trustworthy atmosphere, photorealistic, no readable signage text, 8k.
+
+---
+
+### Blog 30. Aesthetic Ophthalmology in Mumbai: Complete Guide
+**Blog Slug:** `aesthetic-ophthalmology-mumbai`
+**Live URL:** `/post/aesthetic-ophthalmology-mumbai`
+**Primary Keyword:** `aesthetic ophthalmology`
+**File Name:** `public/images/blog/aesthetic-ophthalmology-mumbai.webp`
+**Alt Text:** `Close-up of bright, rejuvenated eyes after aesthetic ophthalmology treatment`
+**Prompt:**
+> Photorealistic premium beauty-medical close-up of a person's rested, bright eye area (eyebrow to upper cheek), natural healthy skin, soft flattering studio light, elegant and clean aesthetic-clinic mood, diverse Indian subject, photorealistic, no text, 8k.
+
+---
+
+### Blog 31. Aesthetic Eye Rejuvenation: Surgical vs Non-Surgical
+**Blog Slug:** `aesthetic-eye-rejuvenation-mumbai`
+**Live URL:** `/post/aesthetic-eye-rejuvenation-mumbai`
+**Primary Keyword:** `aesthetic ophthalmology`
+**File Name:** `public/images/blog/aesthetic-eye-rejuvenation-mumbai.webp`
+**Alt Text:** `Refreshed, rejuvenated eye area after aesthetic eye treatment`
+**Prompt:**
+> Photorealistic premium aesthetic-medical hero showing a rested, naturally refreshed eye area in flattering soft light, elegant clinical-beauty mood, diverse Indian adult, clean neutral background, photorealistic, no readable text, 8k.
+
