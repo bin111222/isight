@@ -7,7 +7,7 @@ import { MessageCircle, RotateCcw, Send, X } from "lucide-react";
 import { getImageUrl } from "@/lib/imageUrl";
 
 const AUTO_OPEN_KEY = "isight-chat-opened-once";
-const AUTO_OPEN_DELAY_MS = 10_000;
+const AUTO_OPEN_DELAY_MS = 4_000;
 const BOT_REPLY_DELAY_MS = 750;
 
 type ChatMessage = {
@@ -287,6 +287,23 @@ export default function LeadChatbot() {
   const [sendError, setSendError] = useState("");
   const scrollRef = useRef<HTMLDivElement>(null);
   const hasPrompted = useRef(false);
+  const autoOpenTimerRef = useRef<number | null>(null);
+
+  const markChatSeen = useCallback(() => {
+    try {
+      localStorage.setItem(AUTO_OPEN_KEY, "1");
+    } catch {
+      // localStorage may be unavailable in private browsing
+    }
+  }, []);
+
+  const hasSeenChatBefore = useCallback(() => {
+    try {
+      return Boolean(localStorage.getItem(AUTO_OPEN_KEY));
+    } catch {
+      return false;
+    }
+  }, []);
 
   const pageTitle = useMemo(() => {
     if (typeof document === "undefined") return "";
@@ -313,16 +330,20 @@ export default function LeadChatbot() {
   );
 
   useEffect(() => {
-    const hasOpenedBefore = localStorage.getItem(AUTO_OPEN_KEY);
-    if (hasOpenedBefore) return;
+    if (hasSeenChatBefore()) return;
 
-    const timer = window.setTimeout(() => {
+    autoOpenTimerRef.current = window.setTimeout(() => {
       setIsOpen(true);
-      localStorage.setItem(AUTO_OPEN_KEY, "1");
+      markChatSeen();
     }, AUTO_OPEN_DELAY_MS);
 
-    return () => window.clearTimeout(timer);
-  }, []);
+    return () => {
+      if (autoOpenTimerRef.current) {
+        window.clearTimeout(autoOpenTimerRef.current);
+        autoOpenTimerRef.current = null;
+      }
+    };
+  }, [hasSeenChatBefore, markChatSeen]);
 
   useEffect(() => {
     if (!isOpen || hasPrompted.current) return;
@@ -519,8 +540,12 @@ export default function LeadChatbot() {
   }
 
   function openChat() {
+    if (autoOpenTimerRef.current) {
+      window.clearTimeout(autoOpenTimerRef.current);
+      autoOpenTimerRef.current = null;
+    }
     setIsOpen(true);
-    localStorage.setItem(AUTO_OPEN_KEY, "1");
+    markChatSeen();
   }
 
   return (
