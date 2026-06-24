@@ -171,6 +171,16 @@ import p_best_lasik_surgery_mumbai_procedure from "./best-lasik-surgery-mumbai-p
 import p_best_eye_hospital_mumbai_lasik from "./best-eye-hospital-mumbai-lasik";
 import p_aesthetic_ophthalmology_mumbai from "./aesthetic-ophthalmology-mumbai";
 import p_aesthetic_eye_rejuvenation_mumbai from "./aesthetic-eye-rejuvenation-mumbai";
+import p_affordable_lasik_surgery_near_me_india from "./affordable-lasik-surgery-near-me-india";
+import p_hospitals_advanced_lasik_technology_india from "./hospitals-advanced-lasik-technology-india";
+import p_is_lasik_covered_by_insurance_india from "./is-lasik-covered-by-insurance-india";
+import p_laser_eye_surgery_cost_major_indian_cities from "./laser-eye-surgery-cost-major-indian-cities";
+import p_laser_eye_surgery_reviews_mumbai from "./laser-eye-surgery-reviews-mumbai";
+import p_lasik_financing_emi_options_india from "./lasik-financing-emi-options-india";
+import p_lasik_surgery_reviews_bangalore from "./lasik-surgery-reviews-bangalore";
+import p_refractive_surgery_eligibility_criteria_india from "./refractive-surgery-eligibility-criteria-india";
+import p_top_eye_clinics_vision_correction_delhi from "./top-eye-clinics-vision-correction-delhi";
+import p_top_rated_lasik_surgeons_mumbai from "./top-rated-lasik-surgeons-mumbai";
 
 const POSTS: Record<string, BlogPost> = {
   "advantages-edof-iol-mumbai": p_advantages_edof_iol_mumbai,
@@ -340,6 +350,16 @@ const POSTS: Record<string, BlogPost> = {
   "best-eye-hospital-mumbai-lasik": p_best_eye_hospital_mumbai_lasik,
   "aesthetic-ophthalmology-mumbai": p_aesthetic_ophthalmology_mumbai,
   "aesthetic-eye-rejuvenation-mumbai": p_aesthetic_eye_rejuvenation_mumbai,
+  "affordable-lasik-surgery-near-me-india": p_affordable_lasik_surgery_near_me_india,
+  "hospitals-advanced-lasik-technology-india": p_hospitals_advanced_lasik_technology_india,
+  "is-lasik-covered-by-insurance-india": p_is_lasik_covered_by_insurance_india,
+  "laser-eye-surgery-cost-major-indian-cities": p_laser_eye_surgery_cost_major_indian_cities,
+  "laser-eye-surgery-reviews-mumbai": p_laser_eye_surgery_reviews_mumbai,
+  "lasik-financing-emi-options-india": p_lasik_financing_emi_options_india,
+  "lasik-surgery-reviews-bangalore": p_lasik_surgery_reviews_bangalore,
+  "refractive-surgery-eligibility-criteria-india": p_refractive_surgery_eligibility_criteria_india,
+  "top-eye-clinics-vision-correction-delhi": p_top_eye_clinics_vision_correction_delhi,
+  "top-rated-lasik-surgeons-mumbai": p_top_rated_lasik_surgeons_mumbai,
 
 };
 

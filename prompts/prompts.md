@@ -549,3 +549,115 @@ These 6 image prompts correspond to the new Mumbai-specific LASIK content cluste
 **Prompt:**
 > Photorealistic premium aesthetic-medical hero showing a rested, naturally refreshed eye area in flattering soft light, elegant clinical-beauty mood, diverse Indian adult, clean neutral background, photorealistic, no readable text, 8k.
 
+---
+
+## SEO LASIK Ranking Blogs (June 2026) — Blogs 32–41
+
+### Blog 32. Laser Eye Surgery Cost in Major Indian Cities
+**Blog Slug:** `laser-eye-surgery-cost-major-indian-cities`
+**Live URL:** `/post/laser-eye-surgery-cost-major-indian-cities`
+**Primary Keyword:** `average cost of laser eye surgery in major Indian cities`
+**File Name:** `public/images/blog/laser-eye-surgery-cost-major-indian-cities.webp`
+**Alt Text:** `Indian city skyline with modern eye care clinic concept`
+**Prompt:**
+> Photorealistic editorial composite mood showing a clean modern Indian metro cityscape at golden hour blended subtly with a premium eye clinic interior, professional and trustworthy tone, navy and teal accents, photorealistic, no readable text or signage, 8k.
+
+---
+
+### Blog 33. Affordable LASIK Surgery Near Me in India
+**Blog Slug:** `affordable-lasik-surgery-near-me-india`
+**Live URL:** `/post/affordable-lasik-surgery-near-me-india`
+**Primary Keyword:** `affordable LASIK surgery options near me`
+**File Name:** `public/images/blog/affordable-lasik-surgery-near-me-india.webp`
+**Alt Text:** `Patient reviewing LASIK pricing options at a friendly eye clinic`
+**Prompt:**
+> Photorealistic image of a patient and counsellor at a modern Indian eye clinic discussing treatment options at a desk, warm welcoming lighting, clean clinical environment, diverse subjects, photorealistic, no readable text, 8k.
+
+---
+
+### Blog 34. Top Eye Clinics for Vision Correction in Delhi
+**Blog Slug:** `top-eye-clinics-vision-correction-delhi`
+**Live URL:** `/post/top-eye-clinics-vision-correction-delhi`
+**Primary Keyword:** `top-rated eye clinics for vision correction in Delhi`
+**File Name:** `public/images/blog/top-eye-clinics-vision-correction-delhi.webp`
+**Alt Text:** `Modern eye clinic reception in Delhi NCR`
+**Prompt:**
+> Photorealistic premium eye clinic lobby with contemporary architecture, warm professional lighting, plants, subtle Indian metropolitan feel, welcoming and high-trust atmosphere, photorealistic, no readable signage, 8k.
+
+---
+
+### Blog 35. Top-Rated LASIK Surgeons in Mumbai
+**Blog Slug:** `top-rated-lasik-surgeons-mumbai`
+**Live URL:** `/post/top-rated-lasik-surgeons-mumbai`
+**Primary Keyword:** `top-rated LASIK surgeons in Mumbai`
+**File Name:** `public/images/blog/top-rated-lasik-surgeons-mumbai.webp`
+**Alt Text:** `Experienced refractive surgeon in a Mumbai laser suite`
+**Prompt:**
+> Photorealistic editorial photo of an experienced ophthalmologist in scrubs beside advanced refractive laser equipment in a clean Mumbai-style clinic, confident and professional mood, no patient face, photorealistic, no readable text, 8k.
+
+---
+
+### Blog 36. Refractive Surgery Eligibility Criteria in India
+**Blog Slug:** `refractive-surgery-eligibility-criteria-india`
+**Live URL:** `/post/refractive-surgery-eligibility-criteria-india`
+**Primary Keyword:** `eligibility criteria for refractive surgery`
+**File Name:** `public/images/blog/refractive-surgery-eligibility-criteria-india.webp`
+**Alt Text:** `Corneal topography scan during LASIK eligibility testing`
+**Prompt:**
+> Photorealistic close-up of advanced corneal topography diagnostic screen and eye examination setup in a modern clinic, clinical blue-teal lighting, precise and scientific mood, photorealistic, no readable text on screens, 8k.
+
+---
+
+### Blog 37. LASIK Financing & EMI Options in India
+**Blog Slug:** `lasik-financing-emi-options-india`
+**Live URL:** `/post/lasik-financing-emi-options-india`
+**Primary Keyword:** `financing options for vision correction procedures`
+**File Name:** `public/images/blog/lasik-financing-emi-options-india.webp`
+**Alt Text:** `Patient discussing LASIK payment plans at an eye clinic`
+**Prompt:**
+> Photorealistic scene of a patient reviewing payment plan options with clinic staff at a modern Indian eye care centre, calm and reassuring atmosphere, clean desk setup, photorealistic, no readable text or numbers, 8k.
+
+---
+
+### Blog 38. LASIK Surgery Reviews in Bangalore
+**Blog Slug:** `lasik-surgery-reviews-bangalore`
+**Live URL:** `/post/lasik-surgery-reviews-bangalore`
+**Primary Keyword:** `reviews of LASIK surgery services in Bangalore`
+**File Name:** `public/images/blog/lasik-surgery-reviews-bangalore.webp`
+**Alt Text:** `Happy patient after LASIK at a Bangalore eye centre`
+**Prompt:**
+> Photorealistic editorial portrait of a relaxed young Indian professional post-vision correction, bright natural light, subtle modern clinic background, positive and authentic mood, photorealistic, no readable text, 8k.
+
+---
+
+### Blog 39. Laser Eye Surgery Reviews Near Mumbai
+**Blog Slug:** `laser-eye-surgery-reviews-mumbai`
+**Live URL:** `/post/laser-eye-surgery-reviews-mumbai`
+**Primary Keyword:** `reviews of laser eye surgery centers near Mumbai`
+**File Name:** `public/images/blog/laser-eye-surgery-reviews-mumbai.webp`
+**Alt Text:** `Patient testimonial setting at a Mumbai laser eye surgery centre`
+**Prompt:**
+> Photorealistic warm scene in a premium Mumbai eye clinic waiting area with a satisfied patient speaking with staff, coastal-metropolitan clean design, trustworthy mood, photorealistic, no readable text, 8k.
+
+---
+
+### Blog 40. Hospitals with Advanced LASIK Technology in India
+**Blog Slug:** `hospitals-advanced-lasik-technology-india`
+**Live URL:** `/post/hospitals-advanced-lasik-technology-india`
+**Primary Keyword:** `which hospitals offer advanced LASIK technology`
+**File Name:** `public/images/blog/hospitals-advanced-lasik-technology-india.webp`
+**Alt Text:** `Advanced femtosecond laser platform in an Indian eye hospital`
+**Prompt:**
+> Photorealistic high-tech refractive laser suite with femtosecond and excimer laser platforms, ambient blue clinical lighting, premium hospital feel, no people visible, photorealistic, no readable text, 8k.
+
+---
+
+### Blog 41. Is LASIK Covered by Insurance in India?
+**Blog Slug:** `is-lasik-covered-by-insurance-india`
+**Live URL:** `/post/is-lasik-covered-by-insurance-india`
+**Primary Keyword:** `is LASIK surgery covered by insurance in India`
+**File Name:** `public/images/blog/is-lasik-covered-by-insurance-india.webp`
+**Alt Text:** `Health insurance documents alongside eye care consultation materials`
+**Prompt:**
+> Photorealistic flat-lay of health insurance paperwork, eyeglasses, and a clinic consultation card on a clean desk, soft natural light, professional and informative mood, photorealistic, no readable text or policy numbers, 8k.
+
