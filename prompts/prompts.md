@@ -661,3 +661,113 @@ These 6 image prompts correspond to the new Mumbai-specific LASIK content cluste
 **Prompt:**
 > Photorealistic flat-lay of health insurance paperwork, eyeglasses, and a clinic consultation card on a clean desk, soft natural light, professional and informative mood, photorealistic, no readable text or policy numbers, 8k.
 
+
+---
+
+### Blog 42. Mumbai Eye Specialist Doctor Guide
+**Blog Slug:** `mumbai-eye-specialist-doctor-guide`
+**Live URL:** `/post/mumbai-eye-specialist-doctor-guide`
+**Primary Keyword:** `mumbai eye specialist doctor`
+**File Name:** `public/images/blog/mumbai-eye-specialist-doctor-guide.webp`
+**Alt Text:** `Professional eye specialist doctor examining a patient in a modern Mumbai clinic`
+**Prompt:**
+> A highly professional, photorealistic image of a modern eye clinic in Mumbai. A sophisticated slit-lamp microscope in focus with soft, warm clinical lighting. The background is slightly blurred showing a high-end medical office. Trustworthy, clean, 8k resolution, cinematic lighting, no readable text.
+
+---
+
+### Blog 43. When to Visit an Eye Doctor in Mumbai
+**Blog Slug:** `when-to-visit-eye-doctor-mumbai`
+**Live URL:** `/post/when-to-visit-eye-doctor-mumbai`
+**Primary Keyword:** `eye doctor mumbai`
+**File Name:** `public/images/blog/when-to-visit-eye-doctor-mumbai.webp`
+**Alt Text:** `Close up of a healthy eye reflecting a bright future`
+**Prompt:**
+> A beautiful, photorealistic close-up of a bright, healthy human eye looking towards a bright, clear horizon. The lighting is natural and optimistic, like a gentle morning sun. Professional medical photography style, 8k, highly detailed, soft cinematic lighting, trustworthy and safe atmosphere.
+
+---
+
+### Blog 44. Best LASIK Eye Surgery in Mumbai Guide
+**Blog Slug:** `best-lasik-eye-surgery-in-mumbai-guide`
+**Live URL:** `/post/best-lasik-eye-surgery-in-mumbai-guide`
+**Primary Keyword:** `best lasik eye surgery in mumbai`
+**File Name:** `public/images/blog/best-lasik-eye-surgery-in-mumbai-guide.webp`
+**Alt Text:** `Advanced LASIK eye surgery laser technology in a Mumbai clinic`
+**Prompt:**
+> A high-tech, futuristic but realistic medical illustration showing the precision of laser eye surgery. A gentle, glowing blue or green laser beam interacting with a translucent, stylized cornea. The background is a clean, dark, high-tech medical environment. 3D render, hyper-detailed, glowing effects, clinical and professional, 8k.
+
+---
+
+### Blog 45. Multifocal Lens Price in India
+**Blog Slug:** `multifocal-lens-price-in-india`
+**Live URL:** `/post/multifocal-lens-price-in-india`
+**Primary Keyword:** `multifocal lens price`
+**File Name:** `public/images/blog/multifocal-lens-price-in-india.webp`
+**Alt Text:** `Premium multifocal intraocular lens for cataract surgery`
+**Prompt:**
+> A macro, photorealistic shot of a premium multifocal intraocular lens (IOL) resting on a sterile, reflective surface. The lens catches the light, showing its concentric rings. Soft blue and silver clinical lighting, highly detailed, 8k resolution, conveying advanced medical technology and premium quality.
+
+---
+
+### Blog 46. Choosing Mumbai Eye Specialist Doctor for Cataract
+**Blog Slug:** `choosing-mumbai-eye-specialist-doctor-for-cataract`
+**Live URL:** `/post/choosing-mumbai-eye-specialist-doctor-for-cataract`
+**Primary Keyword:** `mumbai eye specialist doctor`
+**File Name:** `public/images/blog/choosing-mumbai-eye-specialist-doctor-for-cataract.webp`
+**Alt Text:** `Senior patient smiling after successful cataract surgery in Mumbai`
+**Prompt:**
+> A heartwarming, photorealistic image of a happy senior patient looking out of a window with clear, bright eyes. Soft, natural sunlight illuminating their face. The mood is joyful, relieved, and optimistic. High-end lifestyle photography, 8k, highly detailed, no text.
+
+---
+
+### Blog 47. Eye Doctor Mumbai Pediatric Care
+**Blog Slug:** `eye-doctor-mumbai-pediatric-care`
+**Live URL:** `/post/eye-doctor-mumbai-pediatric-care`
+**Primary Keyword:** `eye doctor mumbai`
+**File Name:** `public/images/blog/eye-doctor-mumbai-pediatric-care.webp`
+**Alt Text:** `Child smiling during an eye exam at a pediatric eye clinic in Mumbai`
+**Prompt:**
+> A cheerful, photorealistic image of a young child wearing colorful trial frames (phoropter) during an eye exam. The child is smiling and relaxed. The background is a bright, welcoming pediatric eye clinic. Warm, inviting lighting, 8k resolution, highly detailed, conveying safety and expert care.
+
+---
+
+### Blog 48. Best LASIK Eye Surgery in Mumbai Cost and Reviews
+**Blog Slug:** `best-lasik-eye-surgery-in-mumbai-cost-and-reviews`
+**Live URL:** `/post/best-lasik-eye-surgery-in-mumbai-cost-and-reviews`
+**Primary Keyword:** `best lasik eye surgery in mumbai`
+**File Name:** `public/images/blog/best-lasik-eye-surgery-in-mumbai-cost-and-reviews.webp`
+**Alt Text:** `Patient leaving a 5-star review for LASIK surgery in Mumbai`
+**Prompt:**
+> A conceptual, photorealistic image showing a modern smartphone displaying a 5-star review with a blurred background of a high-end eye clinic. Soft, warm lighting, conveying trust, satisfaction, and premium quality. 8k resolution, highly detailed, no readable text other than the 5 golden stars.
+
+---
+
+### Blog 49. Multifocal Lens Price vs Monofocal Cost
+**Blog Slug:** `multifocal-lens-price-vs-monofocal-cost`
+**Live URL:** `/post/multifocal-lens-price-vs-monofocal-cost`
+**Primary Keyword:** `multifocal lens price`
+**File Name:** `public/images/blog/multifocal-lens-price-vs-monofocal-cost.webp`
+**Alt Text:** `Comparison of multifocal and monofocal intraocular lenses`
+**Prompt:**
+> A sleek, photorealistic macro shot comparing two intraocular lenses (IOLs) side-by-side on a dark, reflective surface. One is a smooth monofocal lens, the other is a multifocal lens with visible concentric rings. Dramatic, high-contrast studio lighting highlighting the optical engineering. 8k, highly detailed.
+
+---
+
+### Blog 50. Top Treatments by Mumbai Eye Specialist Doctor
+**Blog Slug:** `top-treatments-by-mumbai-eye-specialist-doctor`
+**Live URL:** `/post/top-treatments-by-mumbai-eye-specialist-doctor`
+**Primary Keyword:** `mumbai eye specialist doctor`
+**File Name:** `public/images/blog/top-treatments-by-mumbai-eye-specialist-doctor.webp`
+**Alt Text:** `Advanced diagnostic equipment used by top eye specialist in Mumbai`
+**Prompt:**
+> A photorealistic image of a state-of-the-art Optical Coherence Tomography (OCT) machine in a premium eye clinic. The machine has glowing blue accents, set against a clean, modern medical background. Conveying cutting-edge technology and expert diagnosis. 8k resolution, cinematic clinical lighting.
+
+---
+
+### Blog 51. How to Find the Best Eye Doctor Mumbai
+**Blog Slug:** `how-to-find-the-best-eye-doctor-mumbai`
+**Live URL:** `/post/how-to-find-the-best-eye-doctor-mumbai`
+**Primary Keyword:** `eye doctor mumbai`
+**File Name:** `public/images/blog/how-to-find-the-best-eye-doctor-mumbai.webp`
+**Alt Text:** `Patient researching the best eye doctor in Mumbai on a laptop`
+**Prompt:**
+> A photorealistic, over-the-shoulder shot of a person looking at a modern laptop screen. The screen displays a blurred, professional medical website. A pair of stylish eyeglasses rests on the desk next to a cup of coffee. Warm, natural indoor lighting, conveying research and informed decision-making. 8k resolution, highly detailed.

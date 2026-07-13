@@ -181,6 +181,16 @@ import p_lasik_surgery_reviews_bangalore from "./lasik-surgery-reviews-bangalore
 import p_refractive_surgery_eligibility_criteria_india from "./refractive-surgery-eligibility-criteria-india";
 import p_top_eye_clinics_vision_correction_delhi from "./top-eye-clinics-vision-correction-delhi";
 import p_top_rated_lasik_surgeons_mumbai from "./top-rated-lasik-surgeons-mumbai";
+import p_mumbai_eye_specialist_doctor_guide from "./mumbai-eye-specialist-doctor-guide";
+import p_when_to_visit_eye_doctor_mumbai from "./when-to-visit-eye-doctor-mumbai";
+import p_best_lasik_eye_surgery_in_mumbai_guide from "./best-lasik-eye-surgery-in-mumbai-guide";
+import p_multifocal_lens_price_in_india from "./multifocal-lens-price-in-india";
+import p_choosing_mumbai_eye_specialist_doctor_for_cataract from "./choosing-mumbai-eye-specialist-doctor-for-cataract";
+import p_eye_doctor_mumbai_pediatric_care from "./eye-doctor-mumbai-pediatric-care";
+import p_best_lasik_eye_surgery_in_mumbai_cost_and_reviews from "./best-lasik-eye-surgery-in-mumbai-cost-and-reviews";
+import p_multifocal_lens_price_vs_monofocal_cost from "./multifocal-lens-price-vs-monofocal-cost";
+import p_top_treatments_by_mumbai_eye_specialist_doctor from "./top-treatments-by-mumbai-eye-specialist-doctor";
+import p_how_to_find_the_best_eye_doctor_mumbai from "./how-to-find-the-best-eye-doctor-mumbai";
 
 const POSTS: Record<string, BlogPost> = {
   "advantages-edof-iol-mumbai": p_advantages_edof_iol_mumbai,
@@ -361,6 +371,16 @@ const POSTS: Record<string, BlogPost> = {
   "top-eye-clinics-vision-correction-delhi": p_top_eye_clinics_vision_correction_delhi,
   "top-rated-lasik-surgeons-mumbai": p_top_rated_lasik_surgeons_mumbai,
 
+  "mumbai-eye-specialist-doctor-guide": p_mumbai_eye_specialist_doctor_guide,
+  "when-to-visit-eye-doctor-mumbai": p_when_to_visit_eye_doctor_mumbai,
+  "best-lasik-eye-surgery-in-mumbai-guide": p_best_lasik_eye_surgery_in_mumbai_guide,
+  "multifocal-lens-price-in-india": p_multifocal_lens_price_in_india,
+  "choosing-mumbai-eye-specialist-doctor-for-cataract": p_choosing_mumbai_eye_specialist_doctor_for_cataract,
+  "eye-doctor-mumbai-pediatric-care": p_eye_doctor_mumbai_pediatric_care,
+  "best-lasik-eye-surgery-in-mumbai-cost-and-reviews": p_best_lasik_eye_surgery_in_mumbai_cost_and_reviews,
+  "multifocal-lens-price-vs-monofocal-cost": p_multifocal_lens_price_vs_monofocal_cost,
+  "top-treatments-by-mumbai-eye-specialist-doctor": p_top_treatments_by_mumbai_eye_specialist_doctor,
+  "how-to-find-the-best-eye-doctor-mumbai": p_how_to_find_the_best_eye_doctor_mumbai,
 };
 
 export default POSTS;
