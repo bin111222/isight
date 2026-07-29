@@ -191,6 +191,10 @@ import p_best_lasik_eye_surgery_in_mumbai_cost_and_reviews from "./best-lasik-ey
 import p_multifocal_lens_price_vs_monofocal_cost from "./multifocal-lens-price-vs-monofocal-cost";
 import p_top_treatments_by_mumbai_eye_specialist_doctor from "./top-treatments-by-mumbai-eye-specialist-doctor";
 import p_how_to_find_the_best_eye_doctor_mumbai from "./how-to-find-the-best-eye-doctor-mumbai";
+import p_qualities_mumbai_eye_specialist_doctor from "./qualities-mumbai-eye-specialist-doctor";
+import p_comprehensive_eye_doctor_mumbai_services from "./comprehensive-eye-doctor-mumbai-services";
+import p_lasik_eye_surgery_mumbai_procedure_benefits from "./lasik-eye-surgery-mumbai-procedure-benefits";
+import p_cost_of_lasik_eye_surgery_mumbai_worth_it from "./cost-of-lasik-eye-surgery-mumbai-worth-it";
 
 const POSTS: Record<string, BlogPost> = {
   "advantages-edof-iol-mumbai": p_advantages_edof_iol_mumbai,
@@ -381,6 +385,10 @@ const POSTS: Record<string, BlogPost> = {
   "multifocal-lens-price-vs-monofocal-cost": p_multifocal_lens_price_vs_monofocal_cost,
   "top-treatments-by-mumbai-eye-specialist-doctor": p_top_treatments_by_mumbai_eye_specialist_doctor,
   "how-to-find-the-best-eye-doctor-mumbai": p_how_to_find_the_best_eye_doctor_mumbai,
+  "qualities-mumbai-eye-specialist-doctor": p_qualities_mumbai_eye_specialist_doctor,
+  "comprehensive-eye-doctor-mumbai-services": p_comprehensive_eye_doctor_mumbai_services,
+  "lasik-eye-surgery-mumbai-procedure-benefits": p_lasik_eye_surgery_mumbai_procedure_benefits,
+  "cost-of-lasik-eye-surgery-mumbai-worth-it": p_cost_of_lasik_eye_surgery_mumbai_worth_it,
 };
 
 export default POSTS;

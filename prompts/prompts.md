@@ -771,3 +771,47 @@ These 6 image prompts correspond to the new Mumbai-specific LASIK content cluste
 **Alt Text:** `Patient researching the best eye doctor in Mumbai on a laptop`
 **Prompt:**
 > A photorealistic, over-the-shoulder shot of a person looking at a modern laptop screen. The screen displays a blurred, professional medical website. A pair of stylish eyeglasses rests on the desk next to a cup of coffee. Warm, natural indoor lighting, conveying research and informed decision-making. 8k resolution, highly detailed.
+
+---
+
+### Blog 52. Qualities of a Mumbai Eye Specialist Doctor
+**Blog Slug:** `qualities-mumbai-eye-specialist-doctor`
+**Live URL:** `/post/qualities-mumbai-eye-specialist-doctor`
+**Primary Keyword:** `mumbai eye specialist doctor`
+**File Name:** `public/images/blog/qualities-mumbai-eye-specialist-doctor.webp`
+**Alt Text:** `Expert Mumbai eye specialist doctor discussing treatment plans with a patient`
+**Prompt:**
+> A photorealistic, professional image of a distinguished eye specialist doctor in a modern Mumbai clinic, warmly discussing a treatment plan with a patient. The doctor is wearing a white coat, and high-tech ophthalmic equipment is visible in the softly blurred background. Trustworthy, compassionate, 8k resolution, cinematic lighting.
+
+---
+
+### Blog 53. Comprehensive Eye Doctor Mumbai Services
+**Blog Slug:** `comprehensive-eye-doctor-mumbai-services`
+**Live URL:** `/post/comprehensive-eye-doctor-mumbai-services`
+**Primary Keyword:** `eye doctor mumbai`
+**File Name:** `public/images/blog/comprehensive-eye-doctor-mumbai-services.webp`
+**Alt Text:** `Eye doctor in Mumbai performing a comprehensive slit-lamp eye examination`
+**Prompt:**
+> A close-up, photorealistic image of a patient undergoing a comprehensive eye examination using a modern slit-lamp microscope. The glowing light of the machine illuminates the patient's eye. The setting is a clean, advanced medical clinic. High detail, 8k resolution, clinical and professional atmosphere.
+
+---
+
+### Blog 54. LASIK Eye Surgery Mumbai Procedure & Benefits
+**Blog Slug:** `lasik-eye-surgery-mumbai-procedure-benefits`
+**Live URL:** `/post/lasik-eye-surgery-mumbai-procedure-benefits`
+**Primary Keyword:** `lasik eye surgery mumbai`
+**File Name:** `public/images/blog/lasik-eye-surgery-mumbai-procedure-benefits.webp`
+**Alt Text:** `Patient experiencing clear vision immediately after LASIK eye surgery in Mumbai`
+**Prompt:**
+> A joyful, photorealistic image of a person holding their old eyeglasses in their hand while looking out at a stunning, crystal-clear city skyline. The expression on their face is one of relief and happiness. Soft, golden hour lighting, 8k resolution, highly detailed, conveying visual freedom and success.
+
+---
+
+### Blog 55. Cost of LASIK Eye Surgery in Mumbai Worth It
+**Blog Slug:** `cost-of-lasik-eye-surgery-mumbai-worth-it`
+**Live URL:** `/post/cost-of-lasik-eye-surgery-mumbai-worth-it`
+**Primary Keyword:** `lasik eye surgery mumbai`
+**File Name:** `public/images/blog/cost-of-lasik-eye-surgery-mumbai-worth-it.webp`
+**Alt Text:** `Comparing the cost of LASIK eye surgery in Mumbai with lifetime glasses expenses`
+**Prompt:**
+> A conceptual, photorealistic flat-lay image on a clean wooden desk. On one side, a pile of broken or old eyeglasses, contact lens boxes, and receipts. On the other side, a sleek, modern LASIK clinic brochure and a single pair of stylish sunglasses. Soft natural lighting, 8k resolution, conveying financial investment and lifestyle upgrade.
