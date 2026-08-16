@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ImageWithFallback } from "@/components/ImageWithFallback";
@@ -19,10 +19,42 @@ const WHATSAPP_URL = `https://wa.me/${PHONE}`;
 const FALLBACK_IMAGE = getImageUrl("/hero.webp");
 const HOME_SEQUENCE_TOTAL_FRAMES = 151;
 const HOME_SEQUENCE_SCROLL_FRAMES = 120;
-/** How many neighboring frames to keep warm around the active frame. */
-const HOME_SEQUENCE_PRELOAD_RADIUS = 10;
-/** Cap concurrent frame downloads so the hero does not flood the network on first paint. */
-const HOME_SEQUENCE_MAX_CONCURRENT = 4;
+/** How many neighboring frames to keep warm around the active frame (desktop only). */
+const HOME_SEQUENCE_PRELOAD_RADIUS = 8;
+/** Cap concurrent frame downloads so the hero does not flood the network. */
+const HOME_SEQUENCE_MAX_CONCURRENT = 3;
+/** Desktop + fine pointer only — mobile sticky scroll-sequences feel broken and waste data. */
+const SEQUENCE_MQ = "(pointer: fine) and (min-width: 768px)";
+const REDUCE_MOTION_MQ = "(prefers-reduced-motion: reduce)";
+
+function subscribeSequencePreference(onChange: () => void) {
+  const sequenceMq = window.matchMedia(SEQUENCE_MQ);
+  const motionMq = window.matchMedia(REDUCE_MOTION_MQ);
+  sequenceMq.addEventListener("change", onChange);
+  motionMq.addEventListener("change", onChange);
+  const connection = (navigator as Navigator & { connection?: EventTarget }).connection;
+  connection?.addEventListener?.("change", onChange);
+  return () => {
+    sequenceMq.removeEventListener("change", onChange);
+    motionMq.removeEventListener("change", onChange);
+    connection?.removeEventListener?.("change", onChange);
+  };
+}
+
+function getSequencePreference(): boolean {
+  if (typeof window === "undefined") return false;
+  if (!window.matchMedia(SEQUENCE_MQ).matches) return false;
+  if (window.matchMedia(REDUCE_MOTION_MQ).matches) return false;
+  const connection = (navigator as Navigator & { connection?: { saveData?: boolean; effectiveType?: string } })
+    .connection;
+  if (connection?.saveData) return false;
+  if (typeof connection?.effectiveType === "string" && /2g/.test(connection.effectiveType)) return false;
+  return true;
+}
+
+function useDesktopScrollSequence() {
+  return useSyncExternalStore(subscribeSequencePreference, getSequencePreference, () => false);
+}
 
 const FEATURED_TREATMENTS = [
   { title: "LASIK Surgery", excerpt: "Freedom from glasses with Contoura LASIK. Quick, precise, life-changing.", href: "/lasik-surgery-mumbai", tag: "Refractive" },
@@ -58,7 +90,7 @@ export default function HomePageClient({ images, faqs }: Props) {
   const targetFrameRef = useRef(1);
   const displayedFrameRef = useRef(1);
   const [displayedFrame, setDisplayedFrame] = useState(1);
-  const [sequenceEnabled, setSequenceEnabled] = useState(true);
+  const sequenceEnabled = useDesktopScrollSequence();
   const sequenceFrameUrls = useMemo(
     () =>
       Array.from({ length: HOME_SEQUENCE_TOTAL_FRAMES }, (_, index) => {
@@ -67,6 +99,7 @@ export default function HomePageClient({ images, faqs }: Props) {
       }),
     [],
   );
+  const firstFrameSrc = sequenceFrameUrls[0];
 
   useEffect(() => {
     displayedFrameRef.current = displayedFrame;
@@ -74,26 +107,14 @@ export default function HomePageClient({ images, faqs }: Props) {
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-
-    const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const connection = (navigator as Navigator & { connection?: { saveData?: boolean; effectiveType?: string } })
-      .connection;
-    const saveData = Boolean(connection?.saveData);
-    const slowNetwork = typeof connection?.effectiveType === "string" && /2g/.test(connection.effectiveType);
-
-    const computeEnabled = () => !motionQuery.matches && !saveData && !slowNetwork;
-    setSequenceEnabled(computeEnabled());
-
-    const onMotionChange = () => setSequenceEnabled(computeEnabled());
-    motionQuery.addEventListener("change", onMotionChange);
-    return () => motionQuery.removeEventListener("change", onMotionChange);
-  }, []);
-
-  useEffect(() => {
-    if (typeof window === "undefined") return;
     if (!sequenceEnabled) {
       targetFrameRef.current = 1;
       setDisplayedFrame(1);
+      inflightRef.current.forEach((img) => {
+        img.onload = null;
+        img.onerror = null;
+      });
+      inflightRef.current.clear();
       return;
     }
 
@@ -102,7 +123,6 @@ export default function HomePageClient({ images, faqs }: Props) {
 
     let rafId = 0;
     let cancelled = false;
-
     const wantedOrderRef = { current: [] as number[] };
 
     const markLoaded = (frame: number) => {
@@ -159,8 +179,8 @@ export default function HomePageClient({ images, faqs }: Props) {
       // Hold the last good frame so scrubbing never flashes blank while neighbors load.
       let nearest = displayedFrameRef.current;
       for (let distance = 1; distance < HOME_SEQUENCE_SCROLL_FRAMES; distance += 1) {
-        const ahead = desired + distance;
         const behind = desired - distance;
+        const ahead = desired + distance;
         if (behind >= 1 && loadedFramesRef.current.has(behind)) {
           nearest = behind;
           break;
@@ -196,7 +216,6 @@ export default function HomePageClient({ images, faqs }: Props) {
       });
     };
 
-    // Warm the first frame and a small lookahead window only — never all 120 at once.
     preloadWindow(1);
     updateFrameFromScroll();
     window.addEventListener("scroll", onScrollOrResize, { passive: true });
@@ -220,39 +239,41 @@ export default function HomePageClient({ images, faqs }: Props) {
     return images.serviceImages[slug] ?? FALLBACK_IMAGE;
   };
 
-  const heroFrameSrc = sequenceFrameUrls[displayedFrame - 1] ?? sequenceFrameUrls[0];
+  const heroFrameSrc = sequenceEnabled
+    ? sequenceFrameUrls[displayedFrame - 1] ?? firstFrameSrc
+    : firstFrameSrc;
 
   return (
     <>
-      {/* Scroll-sequence hero: first 120 frames scrub on scroll before next section */}
+      {/* Desktop (fine pointer): CSS keeps 220vh sticky scrub. Mobile: normal one-screen hero, no frame storm. */}
       <section
         ref={heroRef}
-        className={`relative -mt-16 bg-[var(--navy-950)] ${sequenceEnabled ? "h-[220vh]" : "h-[100dvh]"}`}
+        className="relative -mt-16 min-h-[100dvh] bg-[var(--navy-950)] [@media(pointer:fine)_and_(min-width:768px)_and_(prefers-reduced-motion:no-preference)]:h-[220vh] [@media(pointer:fine)_and_(min-width:768px)_and_(prefers-reduced-motion:no-preference)]:min-h-0"
       >
-        <div className="sticky top-0 h-[100dvh] overflow-hidden pt-16">
+        <div className="relative min-h-[100dvh] overflow-hidden pt-16 [@media(pointer:fine)_and_(min-width:768px)_and_(prefers-reduced-motion:no-preference)]:sticky [@media(pointer:fine)_and_(min-width:768px)_and_(prefers-reduced-motion:no-preference)]:top-0 [@media(pointer:fine)_and_(min-width:768px)_and_(prefers-reduced-motion:no-preference)]:h-[100dvh]">
           <img
             src={heroFrameSrc}
             alt=""
             className="absolute inset-0 h-full w-full object-cover"
             decoding="async"
-            fetchPriority={displayedFrame === 1 ? "high" : "auto"}
+            fetchPriority="high"
             aria-hidden
           />
           <div className="absolute inset-0 bg-gradient-to-b from-navy-950/60 via-navy-950/45 to-navy-950/70" aria-hidden />
           <div className="absolute inset-0 hero-grain" aria-hidden />
-          <div className="absolute top-1/4 left-1/4 w-[420px] h-[420px] rounded-full bg-clinical-400/12 blur-[100px] animate-float pointer-events-none" />
-          <div className="absolute bottom-1/4 right-1/5 w-[380px] h-[380px] rounded-full bg-clinical-500/10 blur-[90px] animate-float pointer-events-none" style={{ animationDelay: "2s" }} />
+          <div className="absolute top-1/4 left-1/4 w-[420px] h-[420px] rounded-full bg-clinical-400/12 blur-[100px] animate-float pointer-events-none max-md:hidden" />
+          <div className="absolute bottom-1/4 right-1/5 w-[380px] h-[380px] rounded-full bg-clinical-500/10 blur-[90px] animate-float pointer-events-none max-md:hidden" style={{ animationDelay: "2s" }} />
 
-          <div className="relative h-full max-w-5xl mx-auto px-4 sm:px-6 pt-16 sm:pt-20 pb-10 sm:pb-14 text-center flex items-center justify-center">
+          <div className="relative h-full max-w-5xl mx-auto px-4 sm:px-6 pt-10 sm:pt-20 pb-10 sm:pb-14 text-center flex items-center justify-center">
             <div className="w-full max-w-3xl">
               <p className="inline-flex items-center rounded-full border border-white/20 bg-navy-950/40 px-4 py-1.5 font-display text-xs sm:text-sm font-semibold uppercase tracking-[0.32em] text-clinical-200/95 shadow-[0_8px_24px_-14px_rgba(0,0,0,0.8)] backdrop-blur-sm">
                 iSight Eye Care · Mumbai
               </p>
               <h1 className="mt-4 font-display font-extrabold text-white tracking-tight drop-shadow-[0_10px_28px_rgba(0,0,0,0.58)]">
-                <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-white/95 leading-tight mb-2 sm:mb-3">
+                <span className="block text-xl sm:text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-white/95 leading-tight mb-2 sm:mb-3">
                   Dr. Nikhil Nasta
                 </span>
-                <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.95]">
+                <span className="block text-4xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.95]">
                   Vision
                   <br />
                   <span className="bg-gradient-to-r from-clinical-100 via-clinical-300 to-clinical-200 bg-clip-text text-transparent bg-[length:200%_auto] drop-shadow-[0_8px_18px_rgba(0,0,0,0.42)] animate-gradient-shift">
@@ -260,12 +281,12 @@ export default function HomePageClient({ images, faqs }: Props) {
                   </span>
                 </span>
               </h1>
-              <div className="mt-5 sm:mt-7 max-w-2xl mx-auto rounded-[26px] border border-white/20 bg-gradient-to-b from-white/14 via-white/9 to-white/6 px-5 py-5 sm:px-7 sm:py-6 shadow-[0_20px_52px_-34px_rgba(0,0,0,0.95)] backdrop-blur-lg ring-1 ring-white/10">
-                <p className="text-base sm:text-lg text-white/95 max-w-xl mx-auto leading-relaxed text-balance drop-shadow-[0_8px_22px_rgba(0,0,0,0.75)]">
+              <div className="mt-4 sm:mt-7 max-w-2xl mx-auto rounded-[22px] sm:rounded-[26px] border border-white/20 bg-gradient-to-b from-white/14 via-white/9 to-white/6 px-4 py-4 sm:px-7 sm:py-6 shadow-[0_20px_52px_-34px_rgba(0,0,0,0.95)] backdrop-blur-lg ring-1 ring-white/10">
+                <p className="text-sm sm:text-lg text-white/95 max-w-xl mx-auto leading-relaxed text-balance drop-shadow-[0_8px_22px_rgba(0,0,0,0.75)]">
                   Leading eye surgeon in Mumbai at iSight Eye Care & Surgery - LASIK, cataract, retina, glaucoma, and
                   dry eye. NABH-accredited centres in Khar and Dadar.
                 </p>
-                <div className="mt-5 flex flex-col sm:flex-row gap-3 justify-center items-center">
+                <div className="mt-4 sm:mt-5 flex flex-col sm:flex-row gap-3 justify-center items-center">
                   <Link
                     href="/consult"
                     className="btn btn-lg btn-secondary group border-0 shadow-[0_10px_28px_-16px_rgba(0,0,0,0.9)] w-full sm:w-auto"
