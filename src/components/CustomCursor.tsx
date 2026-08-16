@@ -14,6 +14,9 @@ export default function CustomCursor() {
   }, [pos]);
 
   useEffect(() => {
+    const finePointer = window.matchMedia("(pointer: fine)");
+    if (!finePointer.matches) return;
+
     setMounted(true);
     const handleMove = (e: MouseEvent) => {
       setPos({ x: e.clientX, y: e.clientY });

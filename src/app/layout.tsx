@@ -71,7 +71,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`min-h-screen flex flex-col cursor-none ${plusJakarta.variable}`}>
+      <body className={`min-h-screen flex flex-col ${plusJakarta.variable}`}>
         <GoogleAnalytics />
         <CustomCursor />
         <Header />

@@ -19,6 +19,10 @@ const WHATSAPP_URL = `https://wa.me/${PHONE}`;
 const FALLBACK_IMAGE = getImageUrl("/hero.webp");
 const HOME_SEQUENCE_TOTAL_FRAMES = 151;
 const HOME_SEQUENCE_SCROLL_FRAMES = 120;
+/** How many neighboring frames to keep warm around the active frame. */
+const HOME_SEQUENCE_PRELOAD_RADIUS = 10;
+/** Cap concurrent frame downloads so the hero does not flood the network on first paint. */
+const HOME_SEQUENCE_MAX_CONCURRENT = 4;
 
 const FEATURED_TREATMENTS = [
   { title: "LASIK Surgery", excerpt: "Freedom from glasses with Contoura LASIK. Quick, precise, life-changing.", href: "/lasik-surgery-mumbai", tag: "Refractive" },
@@ -49,7 +53,12 @@ type Props = {
 
 export default function HomePageClient({ images, faqs }: Props) {
   const heroRef = useRef<HTMLElement | null>(null);
-  const [activeFrame, setActiveFrame] = useState(1);
+  const loadedFramesRef = useRef<Set<number>>(new Set([1]));
+  const inflightRef = useRef<Map<number, HTMLImageElement>>(new Map());
+  const targetFrameRef = useRef(1);
+  const displayedFrameRef = useRef(1);
+  const [displayedFrame, setDisplayedFrame] = useState(1);
+  const [sequenceEnabled, setSequenceEnabled] = useState(true);
   const sequenceFrameUrls = useMemo(
     () =>
       Array.from({ length: HOME_SEQUENCE_TOTAL_FRAMES }, (_, index) => {
@@ -60,24 +69,123 @@ export default function HomePageClient({ images, faqs }: Props) {
   );
 
   useEffect(() => {
+    displayedFrameRef.current = displayedFrame;
+  }, [displayedFrame]);
+
+  useEffect(() => {
     if (typeof window === "undefined") return;
+
+    const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const connection = (navigator as Navigator & { connection?: { saveData?: boolean; effectiveType?: string } })
+      .connection;
+    const saveData = Boolean(connection?.saveData);
+    const slowNetwork = typeof connection?.effectiveType === "string" && /2g/.test(connection.effectiveType);
+
+    const computeEnabled = () => !motionQuery.matches && !saveData && !slowNetwork;
+    setSequenceEnabled(computeEnabled());
+
+    const onMotionChange = () => setSequenceEnabled(computeEnabled());
+    motionQuery.addEventListener("change", onMotionChange);
+    return () => motionQuery.removeEventListener("change", onMotionChange);
+  }, []);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (!sequenceEnabled) {
+      targetFrameRef.current = 1;
+      setDisplayedFrame(1);
+      return;
+    }
 
     const section = heroRef.current;
     if (!section) return;
 
     let rafId = 0;
+    let cancelled = false;
+
+    const wantedOrderRef = { current: [] as number[] };
+
+    const markLoaded = (frame: number) => {
+      loadedFramesRef.current.add(frame);
+      inflightRef.current.delete(frame);
+      if (frame === targetFrameRef.current) {
+        setDisplayedFrame((current) => (current === frame ? current : frame));
+      }
+      pumpQueue();
+    };
+
+    const enqueueWindow = (center: number) => {
+      const ordered: number[] = [center];
+      for (let offset = 1; offset <= HOME_SEQUENCE_PRELOAD_RADIUS; offset += 1) {
+        ordered.push(center + offset, center - offset);
+      }
+      wantedOrderRef.current = ordered.filter(
+        (frame) => frame >= 1 && frame <= HOME_SEQUENCE_SCROLL_FRAMES,
+      );
+    };
+
+    const pumpQueue = () => {
+      for (const frame of wantedOrderRef.current) {
+        if (inflightRef.current.size >= HOME_SEQUENCE_MAX_CONCURRENT) break;
+        if (loadedFramesRef.current.has(frame) || inflightRef.current.has(frame)) continue;
+
+        const img = new window.Image();
+        inflightRef.current.set(frame, img);
+        img.decoding = "async";
+        img.onload = () => {
+          if (!cancelled) markLoaded(frame);
+        };
+        img.onerror = () => {
+          inflightRef.current.delete(frame);
+          if (!cancelled) pumpQueue();
+        };
+        img.src = sequenceFrameUrls[frame - 1];
+        if (img.complete && img.naturalWidth > 0) markLoaded(frame);
+      }
+    };
+
+    const preloadWindow = (center: number) => {
+      enqueueWindow(center);
+      pumpQueue();
+    };
+
+    const syncDisplayedFrame = (desired: number) => {
+      targetFrameRef.current = desired;
+      if (loadedFramesRef.current.has(desired)) {
+        setDisplayedFrame((current) => (current === desired ? current : desired));
+        return;
+      }
+
+      // Hold the last good frame so scrubbing never flashes blank while neighbors load.
+      let nearest = displayedFrameRef.current;
+      for (let distance = 1; distance < HOME_SEQUENCE_SCROLL_FRAMES; distance += 1) {
+        const ahead = desired + distance;
+        const behind = desired - distance;
+        if (behind >= 1 && loadedFramesRef.current.has(behind)) {
+          nearest = behind;
+          break;
+        }
+        if (ahead <= HOME_SEQUENCE_SCROLL_FRAMES && loadedFramesRef.current.has(ahead)) {
+          nearest = ahead;
+          break;
+        }
+      }
+      setDisplayedFrame((current) => (current === nearest ? current : nearest));
+    };
 
     const updateFrameFromScroll = () => {
       const scrollDistance = section.offsetHeight - window.innerHeight;
       if (scrollDistance <= 0) {
-        setActiveFrame(1);
+        syncDisplayedFrame(1);
+        preloadWindow(1);
         return;
       }
 
       const rect = section.getBoundingClientRect();
       const progress = Math.min(Math.max(-rect.top / scrollDistance, 0), 1);
       const nextFrame = 1 + Math.round(progress * (HOME_SEQUENCE_SCROLL_FRAMES - 1));
-      setActiveFrame((current) => (current === nextFrame ? current : nextFrame));
+      syncDisplayedFrame(nextFrame);
+      preloadWindow(nextFrame);
     };
 
     const onScrollOrResize = () => {
@@ -88,52 +196,46 @@ export default function HomePageClient({ images, faqs }: Props) {
       });
     };
 
+    // Warm the first frame and a small lookahead window only — never all 120 at once.
+    preloadWindow(1);
     updateFrameFromScroll();
     window.addEventListener("scroll", onScrollOrResize, { passive: true });
     window.addEventListener("resize", onScrollOrResize);
 
     return () => {
+      cancelled = true;
       window.removeEventListener("scroll", onScrollOrResize);
       window.removeEventListener("resize", onScrollOrResize);
-      if (rafId) {
-        window.cancelAnimationFrame(rafId);
-      }
+      if (rafId) window.cancelAnimationFrame(rafId);
+      inflightRef.current.forEach((img) => {
+        img.onload = null;
+        img.onerror = null;
+      });
+      inflightRef.current.clear();
     };
-  }, []);
-
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    const preloadCount = HOME_SEQUENCE_SCROLL_FRAMES;
-    const preloadedImages: HTMLImageElement[] = [];
-
-    for (let index = 0; index < preloadCount; index += 1) {
-      const img = new window.Image();
-      img.src = sequenceFrameUrls[index];
-      preloadedImages.push(img);
-    }
-
-    return () => {
-      preloadedImages.length = 0;
-    };
-  }, [sequenceFrameUrls]);
+  }, [sequenceEnabled, sequenceFrameUrls]);
 
   const getServiceImage = (href: string) => {
     const slug = href.replace(/^\//, "");
     return images.serviceImages[slug] ?? FALLBACK_IMAGE;
   };
 
+  const heroFrameSrc = sequenceFrameUrls[displayedFrame - 1] ?? sequenceFrameUrls[0];
+
   return (
     <>
       {/* Scroll-sequence hero: first 120 frames scrub on scroll before next section */}
       <section
         ref={heroRef}
-        className="relative -mt-16 h-[220vh] bg-[var(--navy-950)]"
+        className={`relative -mt-16 bg-[var(--navy-950)] ${sequenceEnabled ? "h-[220vh]" : "h-[100dvh]"}`}
       >
-        <div className="sticky top-0 h-screen overflow-hidden pt-16">
+        <div className="sticky top-0 h-[100dvh] overflow-hidden pt-16">
           <img
-            src={sequenceFrameUrls[activeFrame - 1] ?? sequenceFrameUrls[0]}
+            src={heroFrameSrc}
             alt=""
             className="absolute inset-0 h-full w-full object-cover"
+            decoding="async"
+            fetchPriority={displayedFrame === 1 ? "high" : "auto"}
             aria-hidden
           />
           <div className="absolute inset-0 bg-gradient-to-b from-navy-950/60 via-navy-950/45 to-navy-950/70" aria-hidden />
@@ -143,10 +245,10 @@ export default function HomePageClient({ images, faqs }: Props) {
 
           <div className="relative h-full max-w-5xl mx-auto px-4 sm:px-6 pt-16 sm:pt-20 pb-10 sm:pb-14 text-center flex items-center justify-center">
             <div className="w-full max-w-3xl">
-              <p className="inline-flex items-center rounded-full border border-white/20 bg-navy-950/40 px-4 py-1.5 font-display text-xs sm:text-sm font-semibold uppercase tracking-[0.32em] text-clinical-200/95 shadow-[0_8px_24px_-14px_rgba(0,0,0,0.8)] backdrop-blur-sm animate-fade-in opacity-0 [animation-fill-mode:forwards]">
+              <p className="inline-flex items-center rounded-full border border-white/20 bg-navy-950/40 px-4 py-1.5 font-display text-xs sm:text-sm font-semibold uppercase tracking-[0.32em] text-clinical-200/95 shadow-[0_8px_24px_-14px_rgba(0,0,0,0.8)] backdrop-blur-sm">
                 iSight Eye Care · Mumbai
               </p>
-              <h1 className="mt-4 font-display font-extrabold text-white tracking-tight drop-shadow-[0_10px_28px_rgba(0,0,0,0.58)] animate-fade-in opacity-0 [animation-fill-mode:forwards] [animation-delay:0.08s]">
+              <h1 className="mt-4 font-display font-extrabold text-white tracking-tight drop-shadow-[0_10px_28px_rgba(0,0,0,0.58)]">
                 <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-white/95 leading-tight mb-2 sm:mb-3">
                   Dr. Nikhil Nasta
                 </span>
@@ -158,7 +260,7 @@ export default function HomePageClient({ images, faqs }: Props) {
                   </span>
                 </span>
               </h1>
-              <div className="mt-5 sm:mt-7 max-w-2xl mx-auto rounded-[26px] border border-white/20 bg-gradient-to-b from-white/14 via-white/9 to-white/6 px-5 py-5 sm:px-7 sm:py-6 shadow-[0_20px_52px_-34px_rgba(0,0,0,0.95)] backdrop-blur-lg ring-1 ring-white/10 animate-fade-in opacity-0 stagger-1 [animation-fill-mode:forwards]">
+              <div className="mt-5 sm:mt-7 max-w-2xl mx-auto rounded-[26px] border border-white/20 bg-gradient-to-b from-white/14 via-white/9 to-white/6 px-5 py-5 sm:px-7 sm:py-6 shadow-[0_20px_52px_-34px_rgba(0,0,0,0.95)] backdrop-blur-lg ring-1 ring-white/10">
                 <p className="text-base sm:text-lg text-white/95 max-w-xl mx-auto leading-relaxed text-balance drop-shadow-[0_8px_22px_rgba(0,0,0,0.75)]">
                   Leading eye surgeon in Mumbai at iSight Eye Care & Surgery - LASIK, cataract, retina, glaucoma, and
                   dry eye. NABH-accredited centres in Khar and Dadar.
