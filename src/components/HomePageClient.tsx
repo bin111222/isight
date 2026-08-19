@@ -1,10 +1,11 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
+import { useRef, useSyncExternalStore } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ImageWithFallback } from "@/components/ImageWithFallback";
 import TreatmentCardImage from "@/components/TreatmentCardImage";
+import HeroSequenceBackground from "@/components/HeroSequenceBackground";
 import { Phone, MessageCircle, Stethoscope, ClipboardList, ArrowRight } from "lucide-react";
 import CountUpStat from "@/components/CountUpStat";
 import UnderstandYourEye from "@/components/UnderstandYourEye";
@@ -17,12 +18,7 @@ const PHONE = "918692986033";
 const PHONE_DISPLAY = "8692986033";
 const WHATSAPP_URL = `https://wa.me/${PHONE}`;
 const FALLBACK_IMAGE = getImageUrl("/hero.webp");
-const HOME_SEQUENCE_TOTAL_FRAMES = 151;
-const HOME_SEQUENCE_SCROLL_FRAMES = 120;
-/** How many neighboring frames to keep warm around the active frame (desktop only). */
-const HOME_SEQUENCE_PRELOAD_RADIUS = 8;
-/** Cap concurrent frame downloads so the hero does not flood the network. */
-const HOME_SEQUENCE_MAX_CONCURRENT = 3;
+const FIRST_FRAME_SRC = getImageUrl("/homesequence2/ezgif-frame-001.jpg");
 /** Desktop + fine pointer only — mobile sticky scroll-sequences feel broken and waste data. */
 const SEQUENCE_MQ = "(pointer: fine) and (min-width: 768px)";
 const REDUCE_MOTION_MQ = "(prefers-reduced-motion: reduce)";
@@ -56,6 +52,7 @@ function useDesktopScrollSequence() {
   return useSyncExternalStore(subscribeSequencePreference, getSequencePreference, () => false);
 }
 
+
 const FEATURED_TREATMENTS = [
   { title: "LASIK Surgery", excerpt: "Freedom from glasses with Contoura LASIK. Quick, precise, life-changing.", href: "/lasik-surgery-mumbai", tag: "Refractive" },
   { title: "Cataract Surgery", excerpt: "No patch, no stitch, no injection. Back to life in 24–48 hours.", href: "/cataract-surgery-mumbai", tag: "Surgery" },
@@ -85,163 +82,12 @@ type Props = {
 
 export default function HomePageClient({ images, faqs }: Props) {
   const heroRef = useRef<HTMLElement | null>(null);
-  const loadedFramesRef = useRef<Set<number>>(new Set([1]));
-  const inflightRef = useRef<Map<number, HTMLImageElement>>(new Map());
-  const targetFrameRef = useRef(1);
-  const displayedFrameRef = useRef(1);
-  const [displayedFrame, setDisplayedFrame] = useState(1);
   const sequenceEnabled = useDesktopScrollSequence();
-  const sequenceFrameUrls = useMemo(
-    () =>
-      Array.from({ length: HOME_SEQUENCE_TOTAL_FRAMES }, (_, index) => {
-        const frame = String(index + 1).padStart(3, "0");
-        return getImageUrl(`/homesequence2/ezgif-frame-${frame}.jpg`);
-      }),
-    [],
-  );
-  const firstFrameSrc = sequenceFrameUrls[0];
-
-  useEffect(() => {
-    displayedFrameRef.current = displayedFrame;
-  }, [displayedFrame]);
-
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    if (!sequenceEnabled) {
-      targetFrameRef.current = 1;
-      setDisplayedFrame(1);
-      inflightRef.current.forEach((img) => {
-        img.onload = null;
-        img.onerror = null;
-      });
-      inflightRef.current.clear();
-      return;
-    }
-
-    const section = heroRef.current;
-    if (!section) return;
-
-    let rafId = 0;
-    let cancelled = false;
-    const wantedOrderRef = { current: [] as number[] };
-
-    const markLoaded = (frame: number) => {
-      loadedFramesRef.current.add(frame);
-      inflightRef.current.delete(frame);
-      if (frame === targetFrameRef.current) {
-        setDisplayedFrame((current) => (current === frame ? current : frame));
-      }
-      pumpQueue();
-    };
-
-    const enqueueWindow = (center: number) => {
-      const ordered: number[] = [center];
-      for (let offset = 1; offset <= HOME_SEQUENCE_PRELOAD_RADIUS; offset += 1) {
-        ordered.push(center + offset, center - offset);
-      }
-      wantedOrderRef.current = ordered.filter(
-        (frame) => frame >= 1 && frame <= HOME_SEQUENCE_SCROLL_FRAMES,
-      );
-    };
-
-    const pumpQueue = () => {
-      for (const frame of wantedOrderRef.current) {
-        if (inflightRef.current.size >= HOME_SEQUENCE_MAX_CONCURRENT) break;
-        if (loadedFramesRef.current.has(frame) || inflightRef.current.has(frame)) continue;
-
-        const img = new window.Image();
-        inflightRef.current.set(frame, img);
-        img.decoding = "async";
-        img.onload = () => {
-          if (!cancelled) markLoaded(frame);
-        };
-        img.onerror = () => {
-          inflightRef.current.delete(frame);
-          if (!cancelled) pumpQueue();
-        };
-        img.src = sequenceFrameUrls[frame - 1];
-        if (img.complete && img.naturalWidth > 0) markLoaded(frame);
-      }
-    };
-
-    const preloadWindow = (center: number) => {
-      enqueueWindow(center);
-      pumpQueue();
-    };
-
-    const syncDisplayedFrame = (desired: number) => {
-      targetFrameRef.current = desired;
-      if (loadedFramesRef.current.has(desired)) {
-        setDisplayedFrame((current) => (current === desired ? current : desired));
-        return;
-      }
-
-      // Hold the last good frame so scrubbing never flashes blank while neighbors load.
-      let nearest = displayedFrameRef.current;
-      for (let distance = 1; distance < HOME_SEQUENCE_SCROLL_FRAMES; distance += 1) {
-        const behind = desired - distance;
-        const ahead = desired + distance;
-        if (behind >= 1 && loadedFramesRef.current.has(behind)) {
-          nearest = behind;
-          break;
-        }
-        if (ahead <= HOME_SEQUENCE_SCROLL_FRAMES && loadedFramesRef.current.has(ahead)) {
-          nearest = ahead;
-          break;
-        }
-      }
-      setDisplayedFrame((current) => (current === nearest ? current : nearest));
-    };
-
-    const updateFrameFromScroll = () => {
-      const scrollDistance = section.offsetHeight - window.innerHeight;
-      if (scrollDistance <= 0) {
-        syncDisplayedFrame(1);
-        preloadWindow(1);
-        return;
-      }
-
-      const rect = section.getBoundingClientRect();
-      const progress = Math.min(Math.max(-rect.top / scrollDistance, 0), 1);
-      const nextFrame = 1 + Math.round(progress * (HOME_SEQUENCE_SCROLL_FRAMES - 1));
-      syncDisplayedFrame(nextFrame);
-      preloadWindow(nextFrame);
-    };
-
-    const onScrollOrResize = () => {
-      if (rafId) return;
-      rafId = window.requestAnimationFrame(() => {
-        updateFrameFromScroll();
-        rafId = 0;
-      });
-    };
-
-    preloadWindow(1);
-    updateFrameFromScroll();
-    window.addEventListener("scroll", onScrollOrResize, { passive: true });
-    window.addEventListener("resize", onScrollOrResize);
-
-    return () => {
-      cancelled = true;
-      window.removeEventListener("scroll", onScrollOrResize);
-      window.removeEventListener("resize", onScrollOrResize);
-      if (rafId) window.cancelAnimationFrame(rafId);
-      inflightRef.current.forEach((img) => {
-        img.onload = null;
-        img.onerror = null;
-      });
-      inflightRef.current.clear();
-    };
-  }, [sequenceEnabled, sequenceFrameUrls]);
 
   const getServiceImage = (href: string) => {
     const slug = href.replace(/^\//, "");
     return images.serviceImages[slug] ?? FALLBACK_IMAGE;
   };
-
-  const heroFrameSrc = sequenceEnabled
-    ? sequenceFrameUrls[displayedFrame - 1] ?? firstFrameSrc
-    : firstFrameSrc;
 
   return (
     <>
@@ -251,14 +97,18 @@ export default function HomePageClient({ images, faqs }: Props) {
         className="relative -mt-16 min-h-[100dvh] bg-[var(--navy-950)] [@media(pointer:fine)_and_(min-width:768px)_and_(prefers-reduced-motion:no-preference)]:h-[220vh] [@media(pointer:fine)_and_(min-width:768px)_and_(prefers-reduced-motion:no-preference)]:min-h-0"
       >
         <div className="relative min-h-[100dvh] overflow-hidden pt-16 [@media(pointer:fine)_and_(min-width:768px)_and_(prefers-reduced-motion:no-preference)]:sticky [@media(pointer:fine)_and_(min-width:768px)_and_(prefers-reduced-motion:no-preference)]:top-0 [@media(pointer:fine)_and_(min-width:768px)_and_(prefers-reduced-motion:no-preference)]:h-[100dvh]">
-          <img
-            src={heroFrameSrc}
-            alt=""
-            className="absolute inset-0 h-full w-full object-cover"
-            decoding="async"
-            fetchPriority="high"
-            aria-hidden
-          />
+          {sequenceEnabled ? (
+            <HeroSequenceBackground sectionRef={heroRef} />
+          ) : (
+            <img
+              src={FIRST_FRAME_SRC}
+              alt=""
+              className="absolute inset-0 h-full w-full object-cover"
+              decoding="async"
+              fetchPriority="high"
+              aria-hidden
+            />
+          )}
           <div className="absolute inset-0 bg-gradient-to-b from-navy-950/60 via-navy-950/45 to-navy-950/70" aria-hidden />
           <div className="absolute inset-0 hero-grain" aria-hidden />
           <div className="absolute top-1/4 left-1/4 w-[420px] h-[420px] rounded-full bg-clinical-400/12 blur-[100px] animate-float pointer-events-none max-md:hidden" />
