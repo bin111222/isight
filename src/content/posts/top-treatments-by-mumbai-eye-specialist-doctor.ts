@@ -35,7 +35,7 @@ const post: BlogPost = {
     },
     {
       heading: "Experience World-Class Eye Care",
-      body: "Don't settle for outdated treatments. Consult with Dr. Nikhil Nasta, a highly respected Mumbai eye specialist doctor at iSight Eye Care, to access the latest in ophthalmic technology.\n\nBook your consultation at https://www.eyesurgeonmumbai.com/consultation",
+      body: "Don't settle for outdated treatments. Consult with Dr. Nikhil Nasta, a highly respected Mumbai eye specialist doctor at iSight Eye Care, to access the latest in ophthalmic technology.\n\nBook your consultation at https://www.eyesurgeonmumbai.com/consult",
     },
   ],
   faqs: [

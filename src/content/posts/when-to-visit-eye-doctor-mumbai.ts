@@ -42,7 +42,7 @@ const post: BlogPost = {
     },
     {
       heading: "Take Action for Your Eye Health",
-      body: "Don't wait for a problem to become severe. Proactive eye care is the best way to maintain clear vision for life. Schedule your comprehensive eye exam with a trusted eye doctor in Mumbai today.\n\nBook your consultation at https://www.eyesurgeonmumbai.com/consultation",
+      body: "Don't wait for a problem to become severe. Proactive eye care is the best way to maintain clear vision for life. Schedule your comprehensive eye exam with a trusted eye doctor in Mumbai today.\n\nBook your consultation at https://www.eyesurgeonmumbai.com/consult",
     },
   ],
   faqs: [

@@ -100,7 +100,7 @@ const post: BlogPost = {
     },
     {
       heading: "Book an Appointment With an Eye Doctor in Mumbai",
-      body: "Whether you're overdue for a check-up, managing diabetes, or noticing a change in your vision, a thorough examination is the right first step. At I-Sight Eye Care, Mumbai, led by Dr. Nikhil Nasta, you'll get a complete assessment with modern diagnostics and a clear, honest explanation of what's going on.\n\nBook your appointment at https://www.eyesurgeonmumbai.com/consultation",
+      body: "Whether you're overdue for a check-up, managing diabetes, or noticing a change in your vision, a thorough examination is the right first step. At I-Sight Eye Care, Mumbai, led by Dr. Nikhil Nasta, you'll get a complete assessment with modern diagnostics and a clear, honest explanation of what's going on.\n\nBook your appointment at https://www.eyesurgeonmumbai.com/consult",
     },
   ],
   faqs: [

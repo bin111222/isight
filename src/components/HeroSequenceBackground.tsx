@@ -4,8 +4,8 @@ import { useEffect, useRef, type RefObject } from "react";
 import { getImageUrl } from "@/lib/imageUrl";
 
 const SCROLL_FRAMES = 120;
-const PRELOAD_RADIUS = 8;
-const MAX_CONCURRENT = 3;
+const PRELOAD_RADIUS = 4;
+const MAX_CONCURRENT = 2;
 
 const SEQUENCE_URLS = Array.from({ length: SCROLL_FRAMES }, (_, index) => {
   const frame = String(index + 1).padStart(3, "0");
@@ -187,7 +187,20 @@ export default function HeroSequenceBackground({ sectionRef }: Props) {
       pumpQueue();
     };
 
+    let sequenceArmed = false;
+
+    const armSequence = () => {
+      if (sequenceArmed) return;
+      sequenceArmed = true;
+      updateFromScroll();
+    };
+
     const onScroll = () => {
+      if (!sequenceArmed) {
+        // Defer multi-frame network storm until the user actually scrolls the sticky hero.
+        if (Math.abs(section.getBoundingClientRect().top) < 8) return;
+        armSequence();
+      }
       if (rafId) return;
       rafId = window.requestAnimationFrame(() => {
         rafId = 0;
@@ -200,13 +213,17 @@ export default function HeroSequenceBackground({ sectionRef }: Props) {
       rafId = window.requestAnimationFrame(() => {
         rafId = 0;
         syncSize();
-        updateFromScroll();
+        if (sequenceArmed) updateFromScroll();
+        else paint(0);
       });
     };
 
-    preloadWindow(0);
+    // Warm only the first frame for LCP; remaining frames load after scroll.
+    enqueueWindow(0);
+    wantedOrder = wantedOrder.slice(0, 1);
+    pumpQueue();
     syncSize();
-    updateFromScroll();
+    paint(0);
 
     const resizeObserver = new ResizeObserver(onResize);
     if (canvas.parentElement) resizeObserver.observe(canvas.parentElement);

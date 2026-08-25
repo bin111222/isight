@@ -31,7 +31,7 @@ const post: BlogPost = {
     },
     {
       heading: "Book Your Appointment",
-      body: "Don't compromise on your eye health. If you're looking for an experienced Mumbai eye specialist doctor, schedule a consultation with Dr. Nikhil Nasta at iSight Eye Care to receive personalized, state-of-the-art treatment.\n\nBook your consultation at https://www.eyesurgeonmumbai.com/consultation",
+      body: "Don't compromise on your eye health. If you're looking for an experienced Mumbai eye specialist doctor, schedule a consultation with Dr. Nikhil Nasta at iSight Eye Care to receive personalized, state-of-the-art treatment.\n\nBook your consultation at https://www.eyesurgeonmumbai.com/consult",
     },
   ],
   faqs: [

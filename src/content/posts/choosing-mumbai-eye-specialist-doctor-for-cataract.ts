@@ -30,7 +30,7 @@ const post: BlogPost = {
     },
     {
       heading: "Schedule Your Cataract Assessment",
-      body: "Restore your clear vision with confidence. Trust your eyes to Dr. Nikhil Nasta, a leading Mumbai eye specialist doctor renowned for his expertise in advanced cataract surgery.\n\nBook your consultation at https://www.eyesurgeonmumbai.com/consultation",
+      body: "Restore your clear vision with confidence. Trust your eyes to Dr. Nikhil Nasta, a leading Mumbai eye specialist doctor renowned for his expertise in advanced cataract surgery.\n\nBook your consultation at https://www.eyesurgeonmumbai.com/consult",
     },
   ],
   faqs: [

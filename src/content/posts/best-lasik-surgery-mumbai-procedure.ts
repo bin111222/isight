@@ -72,7 +72,7 @@ const post: BlogPost = {
     },
     {
       heading: "Find the Best LASIK Procedure for Your Eyes",
-      body: "The right answer starts with measuring your eyes - not reading a price list. At I-Sight Eye Care, Mumbai, led by Dr. Nikhil Nasta, every patient gets a full refractive work-up and an honest recommendation on which procedure truly fits, with no pressure to upgrade.\n\nBook a free LASIK consultation at https://www.eyesurgeonmumbai.com/consultation",
+      body: "The right answer starts with measuring your eyes - not reading a price list. At I-Sight Eye Care, Mumbai, led by Dr. Nikhil Nasta, every patient gets a full refractive work-up and an honest recommendation on which procedure truly fits, with no pressure to upgrade.\n\nBook a free LASIK consultation at https://www.eyesurgeonmumbai.com/consult",
     },
   ],
   faqs: [

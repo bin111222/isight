@@ -44,7 +44,7 @@ const post: BlogPost = {
     },
     {
       heading: "Prioritize Your Vision",
-      body: "Don't wait for your vision to deteriorate before seeking help. For comprehensive, state-of-the-art eye care, consult with Dr. Nikhil Nasta, a leading eye doctor in Mumbai at iSight Eye Care.\n\nBook your comprehensive exam at https://www.eyesurgeonmumbai.com/consultation",
+      body: "Don't wait for your vision to deteriorate before seeking help. For comprehensive, state-of-the-art eye care, consult with Dr. Nikhil Nasta, a leading eye doctor in Mumbai at iSight Eye Care.\n\nBook your comprehensive exam at https://www.eyesurgeonmumbai.com/consult",
     },
   ],
   faqs: [

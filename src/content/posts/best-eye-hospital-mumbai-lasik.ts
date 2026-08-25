@@ -92,7 +92,7 @@ const post: BlogPost = {
     },
     {
       heading: "Book at a Leading Eye Centre in Mumbai",
-      body: "The best LASIK and eye surgery results come from the right combination of technology, an experienced surgeon, and a thorough, honest process. At I-Sight Eye Care, Mumbai, led by Dr. Nikhil Nasta, you'll get a complete pre-op assessment, modern laser platforms, and a transparent recommendation built around your eyes.\n\nBook a consultation at https://www.eyesurgeonmumbai.com/consultation",
+      body: "The best LASIK and eye surgery results come from the right combination of technology, an experienced surgeon, and a thorough, honest process. At I-Sight Eye Care, Mumbai, led by Dr. Nikhil Nasta, you'll get a complete pre-op assessment, modern laser platforms, and a transparent recommendation built around your eyes.\n\nBook a consultation at https://www.eyesurgeonmumbai.com/consult",
     },
   ],
   faqs: [

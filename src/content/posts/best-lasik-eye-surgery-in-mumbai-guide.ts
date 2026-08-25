@@ -34,7 +34,7 @@ const post: BlogPost = {
     },
     {
       heading: "Ready for Clear Vision?",
-      body: "Experience the freedom of clear sight with the best LASIK eye surgery in Mumbai. At iSight Eye Care, Dr. Nikhil Nasta and his team use the latest technology to deliver exceptional results.\n\nBook your LASIK consultation at https://www.eyesurgeonmumbai.com/consultation",
+      body: "Experience the freedom of clear sight with the best LASIK eye surgery in Mumbai. At iSight Eye Care, Dr. Nikhil Nasta and his team use the latest technology to deliver exceptional results.\n\nBook your LASIK consultation at https://www.eyesurgeonmumbai.com/consult",
     },
   ],
   faqs: [

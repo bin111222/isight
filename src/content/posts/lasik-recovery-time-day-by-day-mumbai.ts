@@ -35,7 +35,7 @@ const post: BlogPost = {
     },
     {
       "heading": "Book your LASIK follow-up pathway in Mumbai",
-      "body": "Recovery is safest when your screening is thorough and your aftercare plan is explicit.\n\nBook a free LASIK consultation at [eyesurgeonmumbai.com](https://eyesurgeonmumbai.com)"
+      "body": "Recovery is safest when your screening is thorough and your aftercare plan is explicit.\n\nBook a free LASIK consultation at [eyesurgeonmumbai.com](https://www.eyesurgeonmumbai.com/consult)"
     }
   ],
   "faqs": [

@@ -32,7 +32,7 @@ const post: BlogPost = {
     },
     {
       heading: "Protect Your Child's Vision",
-      body: "Don't wait for your child to complain about their vision. Schedule a comprehensive pediatric eye exam with a trusted eye doctor in Mumbai today to ensure their eyes are healthy and developing correctly.\n\nBook your child's consultation at https://www.eyesurgeonmumbai.com/consultation",
+      body: "Don't wait for your child to complain about their vision. Schedule a comprehensive pediatric eye exam with a trusted eye doctor in Mumbai today to ensure their eyes are healthy and developing correctly.\n\nBook your child's consultation at https://www.eyesurgeonmumbai.com/consult",
     },
   ],
   faqs: [

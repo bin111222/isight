@@ -75,7 +75,7 @@ const post: BlogPost = {
     },
     {
       heading: "Why Choose I-Sight Eye Care, Mumbai?",
-      body: "At I-Sight Eye Care, we believe in combining prevention with precision treatments. While nutrition lays the foundation, our advanced surgical and non-surgical options help restore and protect vision for life.\n\nhttps://www.eyesurgeonmumbai.com/consult",
+      body: "At I-Sight Eye Care, we believe in combining prevention with precision treatments. While nutrition lays the foundation, our advanced surgical and non-surgical options help restore and protect vision for life.\n\nExplore dry eye and vision care: https://www.eyesurgeonmumbai.com/dry-eye-treatment-mumbai\nBook a consultation: https://www.eyesurgeonmumbai.com/consult",
     },
   ],
   faqs: [

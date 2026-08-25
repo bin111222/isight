@@ -2,35 +2,46 @@
 
 import { useEffect, useRef, useState } from "react";
 
+/**
+ * Desktop-only custom cursor. Uses DOM transforms (not React state per frame)
+ * so mousemove does not thrash re-renders / INP on desktop.
+ */
 export default function CustomCursor() {
-  const [pos, setPos] = useState({ x: -100, y: -100 });
-  const [trail, setTrail] = useState({ x: -100, y: -100 });
-  const [hover, setHover] = useState(false);
   const [mounted, setMounted] = useState(false);
-  const posRef = useRef(pos);
-
-  useEffect(() => {
-    posRef.current = pos;
-  }, [pos]);
+  const ringRef = useRef<HTMLDivElement>(null);
+  const dotRef = useRef<HTMLDivElement>(null);
+  const posRef = useRef({ x: -100, y: -100 });
+  const trailRef = useRef({ x: -100, y: -100 });
+  const hoverRef = useRef(false);
 
   useEffect(() => {
     const finePointer = window.matchMedia("(pointer: fine)");
     if (!finePointer.matches) return;
 
     setMounted(true);
+    let rafId = 0;
+
     const handleMove = (e: MouseEvent) => {
-      setPos({ x: e.clientX, y: e.clientY });
+      posRef.current = { x: e.clientX, y: e.clientY };
+      const dot = dotRef.current;
+      if (dot) {
+        dot.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;
+      }
     };
-    let rafId: number;
+
     const tick = () => {
       const { x: px, y: py } = posRef.current;
-      setTrail((prev) => ({
-        x: prev.x + (px - prev.x) * 0.15,
-        y: prev.y + (py - prev.y) * 0.15,
-      }));
+      const trail = trailRef.current;
+      trail.x += (px - trail.x) * 0.15;
+      trail.y += (py - trail.y) * 0.15;
+      const ring = ringRef.current;
+      if (ring) {
+        ring.style.transform = `translate(${trail.x}px, ${trail.y}px) translate(-50%, -50%)`;
+      }
       rafId = requestAnimationFrame(tick);
     };
-    window.addEventListener("mousemove", handleMove);
+
+    window.addEventListener("mousemove", handleMove, { passive: true });
     rafId = requestAnimationFrame(tick);
     return () => {
       window.removeEventListener("mousemove", handleMove);
@@ -39,12 +50,21 @@ export default function CustomCursor() {
   }, []);
 
   useEffect(() => {
+    if (!mounted) return;
     const selector = "a, button, [role='button'], input, textarea, [data-cursor-hover]";
+    const applyHover = (next: boolean) => {
+      if (hoverRef.current === next) return;
+      hoverRef.current = next;
+      const ring = ringRef.current;
+      if (!ring) return;
+      ring.style.width = next ? "56px" : "32px";
+      ring.style.height = next ? "56px" : "32px";
+    };
     const onOver = (e: MouseEvent) => {
-      if ((e.target as Element).closest(selector)) setHover(true);
+      if ((e.target as Element).closest(selector)) applyHover(true);
     };
     const onOut = (e: MouseEvent) => {
-      if (!(e.relatedTarget as Element)?.closest(selector)) setHover(false);
+      if (!(e.relatedTarget as Element)?.closest(selector)) applyHover(false);
     };
     document.addEventListener("mouseover", onOver);
     document.addEventListener("mouseout", onOut);
@@ -52,37 +72,37 @@ export default function CustomCursor() {
       document.removeEventListener("mouseover", onOver);
       document.removeEventListener("mouseout", onOut);
     };
-  }, []);
+  }, [mounted]);
 
   if (!mounted) return null;
 
   return (
     <>
-      {/* Outer ring – smooth trail */}
       <div
+        ref={ringRef}
         className="pointer-events-none fixed left-0 top-0 z-[9999]"
         style={{
-          transform: `translate(${trail.x}px, ${trail.y}px) translate(-50%, -50%)`,
-          width: hover ? 56 : 32,
-          height: hover ? 56 : 32,
+          transform: "translate(-100px, -100px) translate(-50%, -50%)",
+          width: 32,
+          height: 32,
           borderRadius: "50%",
           border: "2px solid rgba(92, 139, 201, 0.6)",
           boxShadow: "0 0 20px rgba(92, 139, 201, 0.25)",
-          transition: "width 0.2s ease, height 0.2s ease, border-color 0.2s ease",
+          transition: "width 0.2s ease, height 0.2s ease",
+          willChange: "transform",
         }}
         aria-hidden
       />
-      {/* Inner dot – snappy */}
       <div
+        ref={dotRef}
         className="pointer-events-none fixed left-0 top-0 z-[9999]"
         style={{
-          transform: `translate(${pos.x}px, ${pos.y}px) translate(-50%, -50%)`,
+          transform: "translate(-100px, -100px) translate(-50%, -50%)",
           width: 8,
           height: 8,
           borderRadius: "50%",
-          background: "radial-gradient(circle, #5c8bc9 0%, #2d5a9e 100%)",
-          boxShadow: "0 0 12px rgba(92, 139, 201, 0.6)",
-          transition: "transform 0.05s ease-out",
+          backgroundColor: "rgba(92, 139, 201, 0.95)",
+          willChange: "transform",
         }}
         aria-hidden
       />

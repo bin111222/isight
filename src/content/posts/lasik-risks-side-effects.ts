@@ -27,7 +27,7 @@ const post: BlogPost = {
     },
     {
       "heading": "Book a safety-first LASIK evaluation in Mumbai",
-      "body": "If you want an honest suitability assessment - not a one-size-fits-all sales pitch - we are here.\n\nBook a free LASIK consultation at [eyesurgeonmumbai.com](https://eyesurgeonmumbai.com)"
+      "body": "If you want an honest suitability assessment - not a one-size-fits-all sales pitch - we are here.\n\nBook a free LASIK consultation at [eyesurgeonmumbai.com](https://www.eyesurgeonmumbai.com/consult)"
     }
   ],
   "faqs": [

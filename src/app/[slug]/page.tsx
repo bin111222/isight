@@ -70,7 +70,51 @@ export default async function SlugPage({ params }: Props) {
   }
 
   if (slug === "consult") {
-    return <ConsultPage />;
+    const consultJsonLd = {
+      "@context": "https://schema.org",
+      "@type": ["MedicalClinic", "LocalBusiness"],
+      name: "iSight Eye Care & Surgery",
+      url: `${SITE_URL}/consult`,
+      telephone: "+918692986033",
+      image: `${SITE_URL}/og-image.webp`,
+      priceRange: "₹₹",
+      medicalSpecialty: "Ophthalmology",
+      address: [
+        {
+          "@type": "PostalAddress",
+          streetAddress: "Sapphire, 402, Swami Vivekanand Rd, Khar West",
+          addressLocality: "Mumbai",
+          addressRegion: "Maharashtra",
+          postalCode: "400052",
+          addressCountry: "IN",
+        },
+        {
+          "@type": "PostalAddress",
+          streetAddress: "Earth Galaxy, 102, Dr Babasaheb Ambedkar Rd, Dadar East",
+          addressLocality: "Mumbai",
+          addressRegion: "Maharashtra",
+          postalCode: "400014",
+          addressCountry: "IN",
+        },
+      ],
+      openingHoursSpecification: [
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          opens: "09:00",
+          closes: "19:00",
+        },
+      ],
+    };
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(consultJsonLd) }}
+        />
+        <ConsultPage />
+      </>
+    );
   }
 
   if (slug === "treatments") {

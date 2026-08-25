@@ -61,7 +61,7 @@ const post: BlogPost = {
     },
     {
       "heading": "Let measurements choose between Contoura and SMILE",
-      "body": "Book a free LASIK consultation at [eyesurgeonmumbai.com](https://eyesurgeonmumbai.com)"
+      "body": "Book a free LASIK consultation at [eyesurgeonmumbai.com](https://www.eyesurgeonmumbai.com/consult)"
     }
   ],
   "faqs": [

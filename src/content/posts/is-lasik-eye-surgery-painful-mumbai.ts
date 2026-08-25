@@ -23,7 +23,7 @@ const post: BlogPost = {
     },
     {
       "heading": "Book a LASIK consultation in Mumbai",
-      "body": "The fastest way to reduce anxiety is a proper screening: your corneal thickness, dry eye status, and prescription stability determine candidacy - not internet rumours about pain.\n\nBook a free LASIK consultation at [eyesurgeonmumbai.com](https://eyesurgeonmumbai.com)"
+      "body": "The fastest way to reduce anxiety is a proper screening: your corneal thickness, dry eye status, and prescription stability determine candidacy - not internet rumours about pain.\n\nBook a free LASIK consultation at [eyesurgeonmumbai.com](https://www.eyesurgeonmumbai.com/consult)"
     }
   ],
   "faqs": [

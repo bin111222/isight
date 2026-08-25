@@ -23,7 +23,7 @@ const post: BlogPost = {
     },
     {
       "heading": "Book a topography-guided LASIK assessment in Mumbai",
-      "body": "Book a free LASIK consultation at [eyesurgeonmumbai.com](https://eyesurgeonmumbai.com)"
+      "body": "Book a free LASIK consultation at [eyesurgeonmumbai.com](https://www.eyesurgeonmumbai.com/consult)"
     }
   ],
   "faqs": [

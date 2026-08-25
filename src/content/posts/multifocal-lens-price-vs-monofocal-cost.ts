@@ -31,7 +31,7 @@ const post: BlogPost = {
     },
     {
       heading: "Consult an Expert",
-      body: "The best way to decide if the multifocal lens price is worth it for you is to undergo a comprehensive eye exam. Dr. Nikhil Nasta at iSight Eye Care can evaluate your eye health and lifestyle to recommend the perfect lens.\n\nBook your consultation at https://www.eyesurgeonmumbai.com/consultation",
+      body: "The best way to decide if the multifocal lens price is worth it for you is to undergo a comprehensive eye exam. Dr. Nikhil Nasta at iSight Eye Care can evaluate your eye health and lifestyle to recommend the perfect lens.\n\nBook your consultation at https://www.eyesurgeonmumbai.com/consult",
     },
   ],
   faqs: [

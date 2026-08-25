@@ -85,7 +85,7 @@ const post: BlogPost = {
     },
     {
       heading: "Not Sure Who You Need? Start With a Consultation",
-      body: "If you're unsure whether you need a glasses check or a medical eye examination, the safest path is a comprehensive consultation with an ophthalmologist who can do both. At I-Sight Eye Care, Mumbai, led by Dr. Nikhil Nasta, you'll get a full assessment and clear guidance on exactly what your eyes need.\n\nBook your consultation at https://www.eyesurgeonmumbai.com/consultation",
+      body: "If you're unsure whether you need a glasses check or a medical eye examination, the safest path is a comprehensive consultation with an ophthalmologist who can do both. At I-Sight Eye Care, Mumbai, led by Dr. Nikhil Nasta, you'll get a full assessment and clear guidance on exactly what your eyes need.\n\nBook your consultation at https://www.eyesurgeonmumbai.com/consult",
     },
   ],
   faqs: [

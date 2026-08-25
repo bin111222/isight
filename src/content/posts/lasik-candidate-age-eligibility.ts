@@ -27,7 +27,7 @@ const post: BlogPost = {
     },
     {
       "heading": "Find out if LASIK is right for your eyes",
-      "body": "Book a free LASIK consultation at [eyesurgeonmumbai.com](https://eyesurgeonmumbai.com)"
+      "body": "Book a free LASIK consultation at [eyesurgeonmumbai.com](https://www.eyesurgeonmumbai.com/consult)"
     }
   ],
   "faqs": [

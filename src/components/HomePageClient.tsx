@@ -119,10 +119,15 @@ export default function HomePageClient({ images, faqs }: Props) {
               <p className="inline-flex items-center rounded-full border border-white/20 bg-navy-950/40 px-4 py-1.5 font-display text-xs sm:text-sm font-semibold uppercase tracking-[0.32em] text-clinical-200/95 shadow-[0_8px_24px_-14px_rgba(0,0,0,0.8)] backdrop-blur-sm">
                 iSight Eye Care · Mumbai
               </p>
-              <h1 className="mt-4 font-display font-extrabold text-white tracking-tight drop-shadow-[0_10px_28px_rgba(0,0,0,0.58)]">
-                <span className="block text-xl sm:text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-white/95 leading-tight mb-2 sm:mb-3">
-                  Dr. Nikhil Nasta
-                </span>
+              <p className="mt-4">
+                <Link
+                  href="/isight-eye-care-doctors"
+                  className="inline-block font-display text-xl sm:text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-white/95 leading-tight hover:text-clinical-200 transition-colors"
+                >
+                  Dr Nikhil Nasta
+                </Link>
+              </p>
+              <h1 className="mt-2 sm:mt-3 font-display font-extrabold text-white tracking-tight drop-shadow-[0_10px_28px_rgba(0,0,0,0.58)]">
                 <span className="block text-4xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.95]">
                   Vision
                   <br />

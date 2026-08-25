@@ -27,7 +27,7 @@ const post: BlogPost = {
     },
     {
       "heading": "Book an evaluation for cloudy vision after cataract surgery",
-      "body": "Book a consultation at [eyesurgeonmumbai.com](https://eyesurgeonmumbai.com)"
+      "body": "Book a consultation at [eyesurgeonmumbai.com](https://www.eyesurgeonmumbai.com/consult)"
     }
   ],
   "faqs": [

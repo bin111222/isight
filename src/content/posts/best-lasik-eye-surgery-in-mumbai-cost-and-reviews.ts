@@ -32,7 +32,7 @@ const post: BlogPost = {
     },
     {
       heading: "Make an Informed Decision",
-      body: "Your eyes deserve the highest standard of care. For transparent pricing, stellar patient reviews, and the best LASIK eye surgery in Mumbai, consult with Dr. Nikhil Nasta at iSight Eye Care.\n\nBook your LASIK evaluation at https://www.eyesurgeonmumbai.com/consultation",
+      body: "Your eyes deserve the highest standard of care. For transparent pricing, stellar patient reviews, and the best LASIK eye surgery in Mumbai, consult with Dr. Nikhil Nasta at iSight Eye Care.\n\nBook your LASIK evaluation at https://www.eyesurgeonmumbai.com/consult",
     },
   ],
   faqs: [

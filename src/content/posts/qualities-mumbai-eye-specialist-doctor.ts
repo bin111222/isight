@@ -35,7 +35,7 @@ const post: BlogPost = {
     },
     {
       heading: "Consult with an Expert",
-      body: "Your eyes deserve the highest standard of care. If you are looking for a trusted Mumbai eye specialist doctor who embodies all these qualities, schedule an evaluation with Dr. Nikhil Nasta at iSight Eye Care.\n\nBook your appointment at https://www.eyesurgeonmumbai.com/consultation",
+      body: "Your eyes deserve the highest standard of care. If you are looking for a trusted Mumbai eye specialist doctor who embodies all these qualities, schedule an evaluation with Dr. Nikhil Nasta at iSight Eye Care.\n\nBook your appointment at https://www.eyesurgeonmumbai.com/consult",
     },
   ],
   faqs: [

@@ -27,7 +27,7 @@ const post: BlogPost = {
     },
     {
       "heading": "Choose clarity with informed consent",
-      "body": "Book a free LASIK consultation at [eyesurgeonmumbai.com](https://eyesurgeonmumbai.com)"
+      "body": "Book a free LASIK consultation at [eyesurgeonmumbai.com](https://www.eyesurgeonmumbai.com/consult)"
     }
   ],
   "faqs": [

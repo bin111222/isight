@@ -93,7 +93,7 @@ const post: BlogPost = {
     },
     {
       heading: "Book an Eye Rejuvenation Consultation in Mumbai",
-      body: "The best eye rejuvenation starts by identifying what's actually causing your concern - then choosing the lightest effective treatment. At I-Sight Eye Care, Mumbai, led by Dr. Nikhil Nasta, your options are guided by eye-trained expertise so results look natural and your eyes stay safe.\n\nBook your consultation at https://www.eyesurgeonmumbai.com/consultation",
+      body: "The best eye rejuvenation starts by identifying what's actually causing your concern - then choosing the lightest effective treatment. At I-Sight Eye Care, Mumbai, led by Dr. Nikhil Nasta, your options are guided by eye-trained expertise so results look natural and your eyes stay safe.\n\nBook your consultation at https://www.eyesurgeonmumbai.com/consult",
     },
   ],
   faqs: [

@@ -97,7 +97,7 @@ const post: BlogPost = {
     },
     {
       heading: "Book an Aesthetic Ophthalmology Consultation in Mumbai",
-      body: "If you'd like a refreshed, natural look around your eyes - with eye safety as the priority - start with a consultation that assesses both appearance and eye health. At I-Sight Eye Care, Mumbai, led by Dr. Nikhil Nasta, treatments around the eyes are guided by eye-trained expertise.\n\nBook your consultation at https://www.eyesurgeonmumbai.com/consultation",
+      body: "If you'd like a refreshed, natural look around your eyes - with eye safety as the priority - start with a consultation that assesses both appearance and eye health. At I-Sight Eye Care, Mumbai, led by Dr. Nikhil Nasta, treatments around the eyes are guided by eye-trained expertise.\n\nBook your consultation at https://www.eyesurgeonmumbai.com/consult",
     },
   ],
   faqs: [

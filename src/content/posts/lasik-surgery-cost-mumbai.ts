@@ -96,6 +96,10 @@ const post: BlogPost = {
  body: "Spectacles, contact lenses, lens solutions, and annual eye examinations add up considerably over a lifetime. A conservative estimate for a 30-year-old Mumbai professional who wears daily disposable contacts: ₹15,000–₹25,000 per year in lens and solution costs alone. Over 20 years that is ₹3,00,000–₹5,00,000, before accounting for frame replacements, prescription changes, and the inconvenience cost. A one-time LASIK investment of ₹80,000–₹1,20,000 for both eyes often pays for itself within four to six years and then represents pure savings for decades of clear vision.",
  },
  {
+ heading: "How Much Does LASIK Cost Across India vs Mumbai?",
+ body: "Nationally, LASIK often ranges from about ₹15,000 to ₹1,00,000+ per eye. Mumbai sits in the metro band: you pay for denser surgeon experience, newer platforms (Contoura, SMILE, SILK), and deeper diagnostics—not for a different physics of laser. If a quote from another city is dramatically cheaper, compare inclusions (topography, pachymetry, dry-eye workup, follow-ups, enhancement policy) before assuming it is a better deal. For a Mumbai itemised estimate after candidacy testing, book at https://www.eyesurgeonmumbai.com/consult.",
+ },
+ {
  heading: "How to Get an Accurate LASIK Cost Estimate in Mumbai",
  body: "The most accurate estimate comes only after a full eligibility workup. Online price guides, including this one, give you a planning range, not a personal quote. Your actual price will depend on your prescription, corneal thickness, dry eye status, and which procedure you are eligible for. Book a detailed consultation at a reputable Mumbai centre, bring your current spectacle prescription, and ask for a written itemised quote. Many leading centres in Mumbai, including eyesurgeonmumbai.com, offer a free initial LASIK assessment. Schedule yours at https://www.eyesurgeonmumbai.com/consult and explore LASIK options at https://www.eyesurgeonmumbai.com/lasik-surgery-mumbai.",
  },

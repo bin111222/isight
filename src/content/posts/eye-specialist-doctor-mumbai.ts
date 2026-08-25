@@ -125,7 +125,7 @@ const post: BlogPost = {
     },
     {
       heading: "Book a Consultation With an Eye Specialist in Mumbai",
-      body: "The right eye specialist starts with a thorough examination, an honest diagnosis, and a plan that fits your eyes and lifestyle. At I-Sight Eye Care, Mumbai, led by Dr. Nikhil Nasta, every patient gets a complete assessment with modern diagnostics before any treatment is recommended.\n\nBook your consultation at https://www.eyesurgeonmumbai.com/consultation",
+      body: "The right eye specialist starts with a thorough examination, an honest diagnosis, and a plan that fits your eyes and lifestyle. At I-Sight Eye Care, Mumbai, led by Dr. Nikhil Nasta, every patient gets a complete assessment with modern diagnostics before any treatment is recommended.\n\nBook your consultation at https://www.eyesurgeonmumbai.com/consult",
     },
   ],
   faqs: [

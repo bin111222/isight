@@ -27,7 +27,7 @@ const post: BlogPost = {
     },
     {
       "heading": "Book IOL counselling before cataract surgery",
-      "body": "Book a consultation at [eyesurgeonmumbai.com](https://eyesurgeonmumbai.com)"
+      "body": "Book a consultation at [eyesurgeonmumbai.com](https://www.eyesurgeonmumbai.com/consult)"
     }
   ],
   "faqs": [

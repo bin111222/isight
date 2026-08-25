@@ -157,7 +157,7 @@ export default function Header() {
               />
             ))}
             <Link
-              href="/consultation"
+              href="/consult"
               className="btn btn-sm btn-primary ml-1 xl:ml-2 rounded-full"
             >
               Book Consultation
@@ -223,9 +223,16 @@ export default function Header() {
                 </Link>
               );
             })}
+            <Link
+              href="/consult"
+              onClick={() => setOpen(false)}
+              className="btn btn-md btn-primary w-full mt-2"
+            >
+              Book Consultation
+            </Link>
             <a
               href={`tel:+${PHONE}`}
-              className="btn btn-md btn-primary w-full mt-2"
+              className="btn btn-md btn-secondary w-full mt-2"
             >
               Call {PHONE_DISPLAY}
             </a>

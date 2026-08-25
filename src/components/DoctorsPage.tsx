@@ -77,7 +77,7 @@ export default function DoctorsPage() {
             <div className="w-full max-w-lg rounded-2xl border border-white/15 bg-navy-950/40 p-6 sm:p-8 text-white shadow-[0_24px_48px_-12px_rgba(0,0,0,0.45)] backdrop-blur-md backdrop-saturate-150 ring-1 ring-white/5">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-clinical-300">Our Doctor</p>
               <h1 className="font-display text-3xl sm:text-4xl lg:text-[2.75rem] font-bold leading-[1.1] mt-2">
-                Dr. Nikhil Nasta
+                Dr Nikhil Nasta
               </h1>
               <p className="mt-3 text-silver-200/95 text-base sm:text-lg leading-snug">
                 Award-winning ophthalmologist · Founder of iSight Eye Care · Over 20 years of experience

@@ -12,6 +12,10 @@ export const cataractSurgeryMumbai: PageContent = {
     { heading: "Advanced Technology: Alcon Laureate World Phaco System", list: ["Precise ultrasonic energy delivery", "Superior chamber stability", "Advanced fluidics control", "Enhanced safety features", "Optimal visual outcomes"] },
     { heading: "The Surgery Process", body: "Pre-Surgery: Comprehensive eye examination, Advanced IOL Formulae on Lenstar, Customized surgical planning, Intraocular lens selection.\n\nDuring Surgery: Topical anesthetic application, Micro-incision creation (2.2mm or less), Ultrasonic phacoemulsification, Premium lens implantation, Self-sealing wound closure.\n\nPost-Surgery: Same-day return home, Clear vision within 24-48 hours, Minimal follow-up required, Quick return to normal activities." },
     { heading: "Why Choose I-Sight Eye Care?", list: WHY_CHOOSE },
+    {
+      heading: "Cataract surgery cost in Mumbai",
+      body: "Transparent pricing depends on technique (phaco vs laser-assisted) and lens choice (monofocal to premium multifocal/EDOF). See our full cost breakdown: https://www.eyesurgeonmumbai.com/post/cataract-surgery-cost-mumbai — then book a lens counselling visit at https://www.eyesurgeonmumbai.com/consult",
+    },
   ],
   faqs: [
     { q: "When should cataract surgery be done?", a: "When cloudy vision affects reading, driving, glare, or daily tasks and glasses no longer help surgery offers the best, lasting solution." },

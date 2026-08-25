@@ -66,7 +66,7 @@ const post: BlogPost = {
     },
     {
       heading: "Noticing Any of These? Book an Eye Specialist in Mumbai",
-      body: "If any sign on this list sounds familiar, the right move is a thorough examination - not waiting to see if it passes. At I-Sight Eye Care, Mumbai, led by Dr. Nikhil Nasta, you'll get a complete assessment with modern diagnostics and a clear plan, whether the answer is reassurance, treatment, or urgent care.\n\nBook your consultation at https://www.eyesurgeonmumbai.com/consultation",
+      body: "If any sign on this list sounds familiar, the right move is a thorough examination - not waiting to see if it passes. At I-Sight Eye Care, Mumbai, led by Dr. Nikhil Nasta, you'll get a complete assessment with modern diagnostics and a clear plan, whether the answer is reassurance, treatment, or urgent care.\n\nBook your consultation at https://www.eyesurgeonmumbai.com/consult",
     },
   ],
   faqs: [

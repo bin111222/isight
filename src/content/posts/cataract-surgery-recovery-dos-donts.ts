@@ -23,7 +23,7 @@ const post: BlogPost = {
     },
     {
       "heading": "Book post-cataract care questions",
-      "body": "Book a consultation at [eyesurgeonmumbai.com](https://eyesurgeonmumbai.com)"
+      "body": "Book a consultation at [eyesurgeonmumbai.com](https://www.eyesurgeonmumbai.com/consult)"
     }
   ],
   "faqs": [

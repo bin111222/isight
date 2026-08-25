@@ -168,6 +168,10 @@ const post: BlogPost = {
     {
       body: "Delaying surgery may cause the cataract to harden, making surgery more complex.",
     },
+    {
+      heading: "Lens counselling before you choose",
+      body: "IOL choice usually dominates the bill. Monofocal lenses remain the insurance-friendly baseline for sharp distance vision. Toric monofocals address meaningful corneal astigmatism. Multifocal, trifocal, and EDOF lenses aim for broader spectacle independence with different night-vision trade-offs. Ask for an itemised quote that separates workup, surgery technique (phaco vs FLACS), lens, and follow-up so you can compare centres fairly.\n\nFor procedure details and technology, see our cataract surgery page: https://www.eyesurgeonmumbai.com/cataract-surgery-mumbai\n\nBook a lens counselling visit: https://www.eyesurgeonmumbai.com/consult",
+    },
   ],
   faqs: [
     {
@@ -185,6 +189,14 @@ const post: BlogPost = {
     {
       q: "How long does cataract surgery take?",
       a: "The procedure itself typically takes 12–15 minutes per eye. Total time at the centre, including preparation and recovery observation, is usually 2–3 hours.",
+    },
+    {
+      q: "Is the most expensive lens always best?",
+      a: "Not necessarily. Night driving tolerance, profession, residual astigmatism, and eye measurements matter more than marketing tiers. Toric lenses help when corneal astigmatism would leave meaningful blur with a non-toric IOL; multifocal/EDOF options suit carefully counselled patients seeking less spectacle dependence.",
+    },
+    {
+      q: "Does the quoted cataract surgery cost include both eyes?",
+      a: "Quotes are usually per eye. Always confirm whether diagnostics, facility fees, drops, and follow-ups are bundled, and whether the second eye is priced the same.",
     },
   ],
 };

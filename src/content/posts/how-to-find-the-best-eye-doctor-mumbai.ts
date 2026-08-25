@@ -30,7 +30,7 @@ const post: BlogPost = {
     },
     {
       heading: "Schedule a Consultation",
-      body: "The final step is to meet the doctor. A good specialist will listen to your concerns, perform a thorough exam, and explain your options clearly. Trust your vision to the experts at iSight Eye Care, led by Dr. Nikhil Nasta, a premier eye doctor in Mumbai.\n\nBook your appointment at https://www.eyesurgeonmumbai.com/consultation",
+      body: "The final step is to meet the doctor. A good specialist will listen to your concerns, perform a thorough exam, and explain your options clearly. Trust your vision to the experts at iSight Eye Care, led by Dr. Nikhil Nasta, a premier eye doctor in Mumbai.\n\nBook your appointment at https://www.eyesurgeonmumbai.com/consult",
     },
   ],
   faqs: [

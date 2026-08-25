@@ -31,7 +31,7 @@ const post: BlogPost = {
     },
     {
       heading: "Are You a Candidate?",
-      body: "Not everyone is suited for LASIK. A thorough pre-operative evaluation is essential. If you are considering LASIK eye surgery in Mumbai, schedule a comprehensive assessment with Dr. Nikhil Nasta at iSight Eye Care to find out if you are an ideal candidate.\n\nBook your LASIK evaluation at https://www.eyesurgeonmumbai.com/consultation",
+      body: "Not everyone is suited for LASIK. A thorough pre-operative evaluation is essential. If you are considering LASIK eye surgery in Mumbai, schedule a comprehensive assessment with Dr. Nikhil Nasta at iSight Eye Care to find out if you are an ideal candidate.\n\nBook your LASIK evaluation at https://www.eyesurgeonmumbai.com/consult",
     },
   ],
   faqs: [

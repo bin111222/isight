@@ -42,7 +42,7 @@ const post: BlogPost = {
     },
     {
       heading: "Invest in Your Vision",
-      body: "Ready to make a smart investment in your quality of life? Discuss the cost of LASIK eye surgery in Mumbai and explore financing options with Dr. Nikhil Nasta at iSight Eye Care.\n\nBook your consultation at https://www.eyesurgeonmumbai.com/consultation",
+      body: "Ready to make a smart investment in your quality of life? Discuss the cost of LASIK eye surgery in Mumbai and explore financing options with Dr. Nikhil Nasta at iSight Eye Care.\n\nBook your consultation at https://www.eyesurgeonmumbai.com/consult",
     },
   ],
   faqs: [

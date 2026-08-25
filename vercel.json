@@ -1,0 +1,20 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "eyesurgeonmumbai.com" }],
+      "destination": "https://www.eyesurgeonmumbai.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/consultation",
+      "destination": "/consult",
+      "permanent": true
+    },
+    {
+      "source": "/consultation/",
+      "destination": "/consult",
+      "permanent": true
+    }
+  ]
+}

@@ -35,7 +35,7 @@ const post: BlogPost = {
     },
     {
       heading: "Discuss Your Options",
-      body: "To get an accurate estimate of the multifocal lens price for your specific needs, consult with an expert. Dr. Nikhil Nasta at iSight Eye Care will help you choose the best lens for your lifestyle.\n\nBook your cataract consultation at https://www.eyesurgeonmumbai.com/consultation",
+      body: "To get an accurate estimate of the multifocal lens price for your specific needs, consult with an expert. Dr. Nikhil Nasta at iSight Eye Care will help you choose the best lens for your lifestyle.\n\nBook your cataract consultation at https://www.eyesurgeonmumbai.com/consult",
     },
   ],
   faqs: [

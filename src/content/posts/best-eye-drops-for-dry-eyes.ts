@@ -187,7 +187,7 @@ const post: BlogPost = {
     },
     {
       heading: "Conclusion",
-      body: "The best eye drops for dry eyes depend entirely on your diagnosis. With the right drop and a structured treatment plan, most patients experience significant improvement in comfort and clarity within weeks.",
+      body: "The best eye drops for dry eyes depend entirely on your diagnosis. With the right drop and a structured treatment plan, most patients experience significant improvement in comfort and clarity within weeks.\n\nFor advanced dry eye therapy beyond drops: https://www.eyesurgeonmumbai.com/dry-eye-treatment-mumbai\nBook a consultation: https://www.eyesurgeonmumbai.com/consult",
     },
   ],
   faqs: [

@@ -23,7 +23,7 @@ const post: BlogPost = {
     },
     {
       "heading": "Book a candidacy-first consultation",
-      "body": "We will not “sell LASIK” - we will map your cornea, dry eye status, and goals, then recommend the safest option.\n\nBook a free LASIK consultation at [eyesurgeonmumbai.com](https://eyesurgeonmumbai.com)"
+      "body": "We will not “sell LASIK” - we will map your cornea, dry eye status, and goals, then recommend the safest option.\n\nBook a free LASIK consultation at [eyesurgeonmumbai.com](https://www.eyesurgeonmumbai.com/consult)"
     }
   ],
   "faqs": [

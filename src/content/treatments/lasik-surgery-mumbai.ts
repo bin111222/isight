@@ -10,6 +10,10 @@ export const lasikSurgeryMumbai: PageContent = {
     { heading: "Who is a Good Candidate for Lasik?", list: ["Adults 18 years or older with stable vision", "Patients with myopia up to -8.00D", "Patients with astigmatism up to -3.00D", "Healthy corneas with adequate thickness", "No active eye diseases or autoimmune conditions"] },
     { heading: "The Contoura LASIK Procedure at I-Sight Eye Care", body: "Our state-of-the-art eye care center in Mumbai offers Contoura LASIK under the expertise of Dr. Nikhil Nasta, a LASIK surgeon with over 15 years of experience. The procedure includes:\n\n1. Detailed pre-operative assessment and corneal mapping\n2. Customized treatment planning using Contoura topography\n3. Bladeless flap creation using advanced femtosecond laser\n4. Precise corneal reshaping guided by topographic data\n5. Quick 15-minute procedure under topical anesthesia\n6. Same-day return to normal activities\n\nContoura LASIK has an excellent safety profile with very high patient satisfaction rates. Most patients experience:", list: ["Minimal discomfort during recovery", "Clear vision within 24-48 hours", "Complete healing within 1-2 weeks", "Long-lasting results", "Significantly reduced dependence on glasses/contacts"] },
     { heading: "Why Choose I-Sight Eye Care?", list: WHY_CHOOSE },
+    {
+      heading: "LASIK surgery cost in Mumbai",
+      body: "Package price depends on technology (standard, bladeless, Contoura, SMILE, SILK) and what the workup includes. Full 2026 price guide: https://www.eyesurgeonmumbai.com/post/lasik-surgery-cost-mumbai — book a free eligibility assessment at https://www.eyesurgeonmumbai.com/consult",
+    },
   ],
   faqs: [
     { q: "What is the lasik laser eye surgery cost in India, particularly in Mumbai?", a: "The average lasik laser cost in India ranges from ₹35,000 to ₹1,00,000 or more, depending on the technology used, surgeon's expertise, and clinic facilities. We offer competitive and transparent pricing for top-tier bladeless and Contoura LASIK in Mumbai." },

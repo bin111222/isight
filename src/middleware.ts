@@ -42,11 +42,11 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  const url = request.nextUrl.clone();
-  url.protocol = "https:";
-  url.hostname = CANONICAL_HOST;
+  // Absolute Location so apex/HTTP → https://www is a single permanent hop (301).
+  const { pathname, search } = request.nextUrl;
+  const destination = `https://${CANONICAL_HOST}${pathname}${search}`;
 
-  return NextResponse.redirect(url, 301);
+  return NextResponse.redirect(destination, 301);
 }
 
 export const config = {
