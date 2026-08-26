@@ -815,3 +815,115 @@ These 6 image prompts correspond to the new Mumbai-specific LASIK content cluste
 **Alt Text:** `Comparing the cost of LASIK eye surgery in Mumbai with lifetime glasses expenses`
 **Prompt:**
 > A conceptual, photorealistic flat-lay image on a clean wooden desk. On one side, a pile of broken or old eyeglasses, contact lens boxes, and receipts. On the other side, a sleek, modern LASIK clinic brochure and a single pair of stylish sunglasses. Soft natural lighting, 8k resolution, conveying financial investment and lifestyle upgrade.
+
+---
+
+## New 2026 SEO Keywords Series (August 2026) — Blogs 56–65
+
+### Blog 56. Pediatric Eye Doctor in Mumbai Guide
+**Blog Slug:** `pediatric-eye-doctor-mumbai-guide`
+**Live URL:** `/post/pediatric-eye-doctor-mumbai-guide`
+**Primary Keyword:** `pediatric eye doctor`
+**File Name:** `public/images/blog/pediatric-eye-doctor-mumbai-guide.webp`
+**Alt Text:** `Friendly pediatric eye doctor examining a child in a Mumbai clinic`
+**Prompt:**
+> A heartwarming, photorealistic image of a friendly Indian pediatric eye doctor in a white coat examining a smiling young child in a colorful, welcoming clinic. The doctor is holding a small, child-friendly vision testing tool. Warm, soft lighting, conveying trust, safety, and expert pediatric care, 8k resolution, highly detailed.
+
+---
+
+### Blog 57. Early Signs of Glaucoma Specialist Mumbai
+**Blog Slug:** `signs-of-glaucoma-specialist-mumbai`
+**Live URL:** `/post/signs-of-glaucoma-specialist-mumbai`
+**Primary Keyword:** `signs of glaucoma`
+**File Name:** `public/images/blog/signs-of-glaucoma-specialist-mumbai.webp`
+**Alt Text:** `Glaucoma specialist reviewing an optic nerve scan with a patient`
+**Prompt:**
+> A professional, photorealistic image of a glaucoma specialist in a modern Mumbai clinic, pointing to a detailed, glowing 3D scan of an optic nerve on a large monitor while explaining it to an attentive patient. The clinic has a high-tech, clean aesthetic with soft blue and white lighting, conveying advanced diagnostic capabilities, 8k resolution.
+
+---
+
+### Blog 58. When to See a Retina Specialist Mumbai
+**Blog Slug:** `when-to-see-retina-specialist-mumbai`
+**Live URL:** `/post/when-to-see-retina-specialist-mumbai`
+**Primary Keyword:** `retina specialist`
+**File Name:** `public/images/blog/when-to-see-retina-specialist-mumbai.webp`
+**Alt Text:** `Advanced retinal imaging at a specialist eye clinic in Mumbai`
+**Prompt:**
+> A highly detailed, photorealistic macro shot of a state-of-the-art Optical Coherence Tomography (OCT) machine capturing a scan of a retina. The screen displays a colorful, high-resolution cross-section of the retinal layers. The setting is a darkened, premium medical examination room, emphasizing precision and advanced technology, 8k resolution.
+
+---
+
+### Blog 59. When is Cataract Surgery Necessary Guide
+**Blog Slug:** `when-is-cataract-surgery-necessary-guide`
+**Live URL:** `/post/when-is-cataract-surgery-necessary-guide`
+**Primary Keyword:** `when is cataract surgery necessary`
+**File Name:** `public/images/blog/when-is-cataract-surgery-necessary-guide.webp`
+**Alt Text:** `Senior patient discussing cataract surgery timing with an eye doctor`
+**Prompt:**
+> A compassionate, photorealistic image of an experienced ophthalmologist having a reassuring conversation with a senior patient in a bright, modern eye clinic. The doctor is holding a physical model of the human eye, explaining the cataract process. Soft, natural sunlight filtering through a window, conveying clarity and informed decision-making, 8k resolution.
+
+---
+
+### Blog 60. How to Choose Best Eye Clinic Near Me Mumbai
+**Blog Slug:** `how-to-choose-best-eye-clinic-near-me-mumbai`
+**Live URL:** `/post/how-to-choose-best-eye-clinic-near-me-mumbai`
+**Primary Keyword:** `eye clinic near me`
+**File Name:** `public/images/blog/how-to-choose-best-eye-clinic-near-me-mumbai.webp`
+**Alt Text:** `Welcoming reception area of the best eye clinic in Mumbai`
+**Prompt:**
+> A wide-angle, architectural photography style image of a luxurious, state-of-the-art eye clinic reception area in Mumbai. Clean lines, modern furniture, subtle indoor plants, and a glowing reception desk. The atmosphere is pristine, professional, and highly trustworthy. Soft, balanced interior lighting, photorealistic, no readable text, 8k resolution.
+
+---
+
+### Blog 61. Advanced Dry Eye Treatment Mumbai
+**Blog Slug:** `advanced-dry-eye-treatment-mumbai`
+**Live URL:** `/post/advanced-dry-eye-treatment-mumbai`
+**Primary Keyword:** `dry eye treatment`
+**File Name:** `public/images/blog/advanced-dry-eye-treatment-mumbai.webp`
+**Alt Text:** `Patient receiving advanced IPL dry eye treatment in a clinic`
+**Prompt:**
+> A clinical, photorealistic image of a patient relaxing in a medical chair while receiving an advanced dry eye treatment, such as an IPL (Intense Pulsed Light) therapy device positioned near the eyes. The practitioner is wearing protective gear and carefully administering the treatment. Clean, sterile, and modern medical environment, 8k resolution.
+
+---
+
+### Blog 62. Optometrist vs Ophthalmologist Mumbai
+**Blog Slug:** `optometrist-vs-ophthalmologist-mumbai`
+**Live URL:** `/post/optometrist-vs-ophthalmologist-mumbai`
+**Primary Keyword:** `optometrist vs ophthalmologist`
+**File Name:** `public/images/blog/optometrist-vs-ophthalmologist-mumbai.webp`
+**Alt Text:** `Split view comparing an optometrist fitting glasses and an ophthalmologist in surgery`
+**Prompt:**
+> A photorealistic split-screen conceptual image. On the left, an optometrist in a bright room helping a patient try on stylish eyeglasses. On the right, an ophthalmologist in surgical scrubs operating a high-tech laser machine in a sterile, blue-lit operation theater. Both sides convey professionalism and expert care, 8k resolution.
+
+---
+
+### Blog 63. Affordable LASIK Surgery Mumbai Options
+**Blog Slug:** `affordable-lasik-surgery-mumbai-options`
+**Live URL:** `/post/affordable-lasik-surgery-mumbai-options`
+**Primary Keyword:** `affordable lasik`
+**File Name:** `public/images/blog/affordable-lasik-surgery-mumbai-options.webp`
+**Alt Text:** `Patient reviewing affordable LASIK financing options on a tablet`
+**Prompt:**
+> A photorealistic, over-the-shoulder shot of a patient and a clinic coordinator looking at a sleek tablet screen displaying a clear, easy-to-understand EMI payment plan for LASIK surgery. The setting is a comfortable consultation room in a modern Mumbai eye clinic. Warm, inviting lighting, conveying transparency and accessibility, 8k resolution.
+
+---
+
+### Blog 64. Importance of Regular Eye Exams Mumbai
+**Blog Slug:** `importance-of-regular-eye-exams-mumbai`
+**Live URL:** `/post/importance-of-regular-eye-exams-mumbai`
+**Primary Keyword:** `eye exam near me`
+**File Name:** `public/images/blog/importance-of-regular-eye-exams-mumbai.webp`
+**Alt Text:** `Patient undergoing a comprehensive eye exam using a phoropter`
+**Prompt:**
+> A close-up, photorealistic image of a patient looking through a modern, metallic phoropter (vision testing device) during a comprehensive eye exam. The eye doctor's hands are visible, making precise adjustments to the dials. The background is a softly blurred clinical setting. High detail, conveying precision and proactive health care, 8k resolution.
+
+---
+
+### Blog 65. Diabetic Retinopathy Eye Doctor Mumbai
+**Blog Slug:** `diabetic-retinopathy-eye-doctor-mumbai`
+**Live URL:** `/post/diabetic-retinopathy-eye-doctor-mumbai`
+**Primary Keyword:** `eye doctor near me`
+**File Name:** `public/images/blog/diabetic-retinopathy-eye-doctor-mumbai.webp`
+**Alt Text:** `Eye doctor examining a diabetic patient's retina`
+**Prompt:**
+> A serious, professional photorealistic image of an eye doctor using a specialized ophthalmoscope lens and a slit lamp to carefully examine the retina of a patient. The lighting is focused on the patient's eye, highlighting the medical precision required for diabetic eye care. The mood is attentive and highly specialized, 8k resolution.

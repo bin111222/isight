@@ -177,6 +177,16 @@ import p_how_to_find_the_best_eye_doctor_mumbai from "./how-to-find-the-best-eye
 import p_qualities_mumbai_eye_specialist_doctor from "./qualities-mumbai-eye-specialist-doctor";
 import p_comprehensive_eye_doctor_mumbai_services from "./comprehensive-eye-doctor-mumbai-services";
 import p_lasik_eye_surgery_mumbai_procedure_benefits from "./lasik-eye-surgery-mumbai-procedure-benefits";
+import p_pediatric_eye_doctor_mumbai_guide from "./pediatric-eye-doctor-mumbai-guide";
+import p_signs_of_glaucoma_specialist_mumbai from "./signs-of-glaucoma-specialist-mumbai";
+import p_when_to_see_retina_specialist_mumbai from "./when-to-see-retina-specialist-mumbai";
+import p_when_is_cataract_surgery_necessary_guide from "./when-is-cataract-surgery-necessary-guide";
+import p_how_to_choose_best_eye_clinic_near_me_mumbai from "./how-to-choose-best-eye-clinic-near-me-mumbai";
+import p_advanced_dry_eye_treatment_mumbai from "./advanced-dry-eye-treatment-mumbai";
+import p_optometrist_vs_ophthalmologist_mumbai from "./optometrist-vs-ophthalmologist-mumbai";
+import p_affordable_lasik_surgery_mumbai_options from "./affordable-lasik-surgery-mumbai-options";
+import p_importance_of_regular_eye_exams_mumbai from "./importance-of-regular-eye-exams-mumbai";
+import p_diabetic_retinopathy_eye_doctor_mumbai from "./diabetic-retinopathy-eye-doctor-mumbai";
 
 const POSTS: Record<string, BlogPost> = {
   "advantages-edof-iol-mumbai": p_advantages_edof_iol_mumbai,
@@ -353,6 +363,16 @@ const POSTS: Record<string, BlogPost> = {
   "qualities-mumbai-eye-specialist-doctor": p_qualities_mumbai_eye_specialist_doctor,
   "comprehensive-eye-doctor-mumbai-services": p_comprehensive_eye_doctor_mumbai_services,
   "lasik-eye-surgery-mumbai-procedure-benefits": p_lasik_eye_surgery_mumbai_procedure_benefits,
+  "pediatric-eye-doctor-mumbai-guide": p_pediatric_eye_doctor_mumbai_guide,
+  "signs-of-glaucoma-specialist-mumbai": p_signs_of_glaucoma_specialist_mumbai,
+  "when-to-see-retina-specialist-mumbai": p_when_to_see_retina_specialist_mumbai,
+  "when-is-cataract-surgery-necessary-guide": p_when_is_cataract_surgery_necessary_guide,
+  "how-to-choose-best-eye-clinic-near-me-mumbai": p_how_to_choose_best_eye_clinic_near_me_mumbai,
+  "advanced-dry-eye-treatment-mumbai": p_advanced_dry_eye_treatment_mumbai,
+  "optometrist-vs-ophthalmologist-mumbai": p_optometrist_vs_ophthalmologist_mumbai,
+  "affordable-lasik-surgery-mumbai-options": p_affordable_lasik_surgery_mumbai_options,
+  "importance-of-regular-eye-exams-mumbai": p_importance_of_regular_eye_exams_mumbai,
+  "diabetic-retinopathy-eye-doctor-mumbai": p_diabetic_retinopathy_eye_doctor_mumbai,
 };
 
 export default POSTS;
