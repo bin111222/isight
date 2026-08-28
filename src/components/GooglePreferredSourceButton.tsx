@@ -48,7 +48,7 @@ export default function GooglePreferredSourceButton({
       <Script 
         src="https://news.google.com/swg/js/v1/publisher.js" 
         strategy="lazyOnload"
-        attributes={{ "preferred-sources-control": "manual" }}
+        {...({ "preferred-sources-control": "manual" } as any)}
       />
       <button 
         onClick={handleClick}
