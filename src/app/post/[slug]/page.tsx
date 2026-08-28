@@ -16,6 +16,7 @@ import { getBlogImageUrl } from "@/lib/blogImageUrl";
 import { formatTitleTag } from "@/lib/seoTitle";
 import { PHYSICIAN_JSON_LD } from "@/lib/physicianJsonLd";
 import { Twitter, Linkedin, Facebook, MessageCircle } from "lucide-react";
+import GooglePreferredSourceButton from "@/components/GooglePreferredSourceButton";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -278,6 +279,20 @@ export default async function PostPage({ params }: Props) {
                 <MessageCircle className="w-5 h-5" />
               </a>
             </div>
+          </div>
+        </div>
+
+        <div className="mt-12">
+          <div className="bg-gradient-to-r from-silver-50 to-white rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row gap-6 items-center justify-between border border-silver-100 shadow-sm">
+            <div className="flex-1">
+              <h3 className="font-display text-xl font-bold text-navy-950 mb-2">
+                Want our latest updates?
+              </h3>
+              <p className="text-navy-700 text-sm sm:text-base">
+                Add iSight Eye Care as a preferred source on Google to see our newest articles in your Top Stories and AI Overviews.
+              </p>
+            </div>
+            <GooglePreferredSourceButton variant="solid" />
           </div>
         </div>
 

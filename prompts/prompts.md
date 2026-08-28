@@ -133,7 +133,7 @@ Use this section to create 20 new LASIK-focused blogs and matching landing pages
 **Primary Keyword:** `is lasik safe`
 **Secondary Keywords Covered:** `are lasik surgeries safe`, `lasik side effects`, `lasik complications`, `is lasik dangerous`, `lasik safety standards`
 **Nano Banana Prompt:**
-> Reassuring consultation between experienced eye surgeon and patient discussing LASIK safety report on tablet, modern eye clinic setting, calm facial expressions, subtle medical equipment in background, soft natural lighting, photorealistic, no text, 8k.
+> Reassuring consultation between experienced eye surgeon and patient discussing LASIK safety report on tablet, modern eye clinic setting, calm facial expressions, subtle medical equipment in background, dianetoc natural lighting, photorealistic, no text, 8k.
 
 ### 3. LASIK Cost in Mumbai: Packages, EMI, and What Impacts Price
 **Blog Slug:** `lasik-cost-in-mumbai-packages-emi-and-pricing-factors`

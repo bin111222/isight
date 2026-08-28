@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Instagram, Youtube, Linkedin } from "lucide-react";
 import { getImageUrl } from "@/lib/imageUrl";
 import { NAV_LINKS, TREATMENT_LINKS } from "@/lib/sitemap";
+import GooglePreferredSourceButton from "./GooglePreferredSourceButton";
 
 const PHONE = "918692986033";
 const PHONE_DISPLAY = "8692986033";
@@ -48,6 +49,9 @@ export default function Footer() {
                   <Icon className="h-5 w-5" strokeWidth={1.5} />
                 </a>
               ))}
+            </div>
+            <div className="pt-2">
+              <GooglePreferredSourceButton variant="solid" />
             </div>
           </div>
 
