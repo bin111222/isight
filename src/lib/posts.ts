@@ -191,7 +191,7 @@ const TOPIC_KEYWORDS: Array<{ topic: string; pattern: RegExp }> = [
   { topic: "cataract", pattern: /cataract|phaco|iol|lens-implant/ },
   { topic: "dry-eye", pattern: /dry-eye|tear|ipl|meibom/ },
   { topic: "glaucoma", pattern: /glaucoma/ },
-  { topic: "retina", pattern: /retina|floater|diabetic-retin|injection/ },
+  { topic: "retina", pattern: /retina|floater|diabetic-retin|injection|barrage-laser/ },
   { topic: "pediatric", pattern: /pediatric|kids|child/ },
   { topic: "oculoplastic", pattern: /oculoplastic|blepharoplasty|eyelid|botox|aesthetic|cosmetic|morpheus/ },
   { topic: "corneal", pattern: /corneal-transplant|keratoplasty|cornea-/ },

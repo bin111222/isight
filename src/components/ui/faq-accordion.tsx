@@ -6,6 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { LinkifiedText } from "@/lib/linkify";
 import { cn } from "@/lib/utils";
 
 export type FAQItem = { q: string; a: string };
@@ -52,7 +53,11 @@ export function FAQAccordion({ faqs, defaultValue, className }: FAQAccordionProp
               </div>
             </AccordionTrigger>
             <AccordionContent className="text-navy-700 pb-6 pl-6 md:pl-14 md:pr-20 text-base leading-relaxed">
-              {faq.a}
+              <LinkifiedText
+                text={faq.a}
+                className="whitespace-pre-line"
+                linkClassName="text-clinical-500 font-medium underline underline-offset-2 hover:text-clinical-600"
+              />
             </AccordionContent>
           </AccordionItem>
         ))}

@@ -187,6 +187,16 @@ import p_optometrist_vs_ophthalmologist_mumbai from "./optometrist-vs-ophthalmol
 import p_affordable_lasik_surgery_mumbai_options from "./affordable-lasik-surgery-mumbai-options";
 import p_importance_of_regular_eye_exams_mumbai from "./importance-of-regular-eye-exams-mumbai";
 import p_diabetic_retinopathy_eye_doctor_mumbai from "./diabetic-retinopathy-eye-doctor-mumbai";
+import p_lasik_eye_surgery_full_form from "./lasik-eye-surgery-full-form";
+import p_how_to_improve_eyesight from "./how-to-improve-eyesight";
+import p_how_to_improve_vision_naturally from "./how-to-improve-vision-naturally";
+import p_hospital_for_eye from "./hospital-for-eye";
+import p_barrage_laser_treatment from "./barrage-laser-treatment";
+import p_why_do_eyes_blink from "./why-do-eyes-blink";
+import p_long_sightedness_vs_short_sightedness from "./long-sightedness-vs-short-sightedness";
+import p_function_of_an_eye from "./function-of-an-eye";
+import p_how_to_increase_eyesight from "./how-to-increase-eyesight";
+import p_eye_hospital_mumbai_guide from "./eye-hospital-mumbai-guide";
 
 const POSTS: Record<string, BlogPost> = {
   "advantages-edof-iol-mumbai": p_advantages_edof_iol_mumbai,
@@ -373,6 +383,16 @@ const POSTS: Record<string, BlogPost> = {
   "affordable-lasik-surgery-mumbai-options": p_affordable_lasik_surgery_mumbai_options,
   "importance-of-regular-eye-exams-mumbai": p_importance_of_regular_eye_exams_mumbai,
   "diabetic-retinopathy-eye-doctor-mumbai": p_diabetic_retinopathy_eye_doctor_mumbai,
+  "lasik-eye-surgery-full-form": p_lasik_eye_surgery_full_form,
+  "how-to-improve-eyesight": p_how_to_improve_eyesight,
+  "how-to-improve-vision-naturally": p_how_to_improve_vision_naturally,
+  "hospital-for-eye": p_hospital_for_eye,
+  "barrage-laser-treatment": p_barrage_laser_treatment,
+  "why-do-eyes-blink": p_why_do_eyes_blink,
+  "long-sightedness-vs-short-sightedness": p_long_sightedness_vs_short_sightedness,
+  "function-of-an-eye": p_function_of_an_eye,
+  "how-to-increase-eyesight": p_how_to_increase_eyesight,
+  "eye-hospital-mumbai-guide": p_eye_hospital_mumbai_guide,
 };
 
 export default POSTS;

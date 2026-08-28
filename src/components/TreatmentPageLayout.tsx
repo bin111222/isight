@@ -3,9 +3,13 @@ import Image from "next/image";
 import type { PageContent } from "@/lib/content";
 import { getImageUrl } from "@/lib/imageUrl";
 import { TREATMENT_LINKS, SITE_URL } from "@/lib/sitemap";
+import { LinkifiedText } from "@/lib/linkify";
 import { FAQAccordion } from "@/components/ui/faq-accordion";
 import BookAppointmentCTA from "@/components/BookAppointmentCTA";
 import TreatmentCardImage from "@/components/TreatmentCardImage";
+
+const TREATMENT_LINK_CLASS =
+  "text-clinical-500 font-medium underline underline-offset-2 hover:text-clinical-600";
 
 const HERO_FALLBACK = getImageUrl("/hero.webp");
 
@@ -78,7 +82,7 @@ function SectionContent({
               : "text-navy-700 leading-relaxed whitespace-pre-line text-[15px] sm:text-base"
           }
         >
-          {section.body}
+          <LinkifiedText text={section.body} linkClassName={TREATMENT_LINK_CLASS} />
         </div>
       )}
       {section.list && (
@@ -89,7 +93,9 @@ function SectionContent({
               className="flex gap-3 text-navy-700 text-[15px] sm:text-base leading-relaxed"
             >
               <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-clinical-400 mt-2" />
-              <span>{item}</span>
+              <span>
+                <LinkifiedText text={item} linkClassName={TREATMENT_LINK_CLASS} />
+              </span>
             </li>
           ))}
         </ul>

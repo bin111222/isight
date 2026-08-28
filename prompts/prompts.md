@@ -927,3 +927,134 @@ These 6 image prompts correspond to the new Mumbai-specific LASIK content cluste
 **Alt Text:** `Eye doctor examining a diabetic patient's retina`
 **Prompt:**
 > A serious, professional photorealistic image of an eye doctor using a specialized ophthalmoscope lens and a slit lamp to carefully examine the retina of a patient. The lighting is focused on the patient's eye, highlighting the medical precision required for diabetic eye care. The mood is attentive and highly specialized, 8k resolution.
+
+---
+
+## High-Volume Informational Keywords Series (August 2026) — Blogs 66–75
+
+**10 blogs · 1 image each** (thumbnail on `/blog` + hero on `/post/<slug>`). Set `image` on the live `BlogPost` to the slug basename (no `.webp`). Upload to ImageKit: `{NEXT_PUBLIC_IMAGE_CDN_BASE}/blog/<slug>.webp`.
+
+These posts target the remaining high-volume, low-difficulty keywords (LASIK full form, vision improvement, barrage laser, blinking, long/short sightedness, eye function, and hospital-for-eye intent). Similar searches are clustered so pages do not cannibalise each other.
+
+| # | Live URL | Primary keyword | Secondary keywords | Image file |
+|---|----------|-----------------|--------------------|------------|
+| 66 | `/post/lasik-eye-surgery-full-form` | lasik eye surgery full form | what is lasik, LASIK meaning, laser assisted in situ keratomileusis | `lasik-eye-surgery-full-form.webp` |
+| 67 | `/post/how-to-improve-eyesight` | how to improve eyesight | how to improve eye vision | `how-to-improve-eyesight.webp` |
+| 68 | `/post/how-to-improve-vision-naturally` | how to improve vision naturally | how to improve vision | `how-to-improve-vision-naturally.webp` |
+| 69 | `/post/hospital-for-eye` | hospital for eye | hospital eye | `hospital-for-eye.webp` |
+| 70 | `/post/barrage-laser-treatment` | barrage laser | barrage laser retina, retinal laser | `barrage-laser-treatment.webp` |
+| 71 | `/post/why-do-eyes-blink` | eye blinking | blink eyes, blinking eye, blink eye | `why-do-eyes-blink.webp` |
+| 72 | `/post/long-sightedness-vs-short-sightedness` | long sightedness | long and short sightedness, short sightedness and long sightedness, long sightedness short sightedness, short sightedness long sightedness | `long-sightedness-vs-short-sightedness.webp` |
+| 73 | `/post/function-of-an-eye` | function of an eye | eyes function | `function-of-an-eye.webp` |
+| 74 | `/post/how-to-increase-eyesight` | how to increase eyesight | increase eyesight power, can eyesight improve | `how-to-increase-eyesight.webp` |
+| 75 | `/post/eye-hospital-mumbai-guide` | hospital eye | eye hospital, hospital for eye mumbai | `eye-hospital-mumbai-guide.webp` |
+
+---
+
+### Blog 66. LASIK Eye Surgery Full Form
+**Blog Slug:** `lasik-eye-surgery-full-form`
+**Live URL:** `/post/lasik-eye-surgery-full-form`
+**Primary Keyword:** `lasik eye surgery full form`
+**File Name:** `public/images/blog/lasik-eye-surgery-full-form.webp`
+**Alt Text:** `LASIK eye surgery full form explained with a modern laser vision correction suite`
+**Prompt:**
+> Photorealistic editorial image of a premium refractive laser suite with a femtosecond laser platform softly glowing in cool blue clinical light, a translucent stylized cornea concept in the mid-ground, clean sterile Mumbai eye clinic interior, trustworthy high-tech medical mood, no readable text, 8k.
+
+---
+
+### Blog 67. How to Improve Eyesight
+**Blog Slug:** `how-to-improve-eyesight`
+**Live URL:** `/post/how-to-improve-eyesight`
+**Primary Keyword:** `how to improve eyesight`
+**File Name:** `public/images/blog/how-to-improve-eyesight.webp`
+**Alt Text:** `Patient seeing clearly after an eyesight improvement consultation in Mumbai`
+**Prompt:**
+> Photorealistic lifestyle-medical image of a young Indian adult stepping outdoors into bright Mumbai morning light with crystal-clear vision, old eyeglasses held loosely in one hand, optimistic natural golden-hour lighting, subtle modern eye clinic in the soft background, no readable text, 8k.
+
+---
+
+### Blog 68. How to Improve Vision Naturally
+**Blog Slug:** `how-to-improve-vision-naturally`
+**Live URL:** `/post/how-to-improve-vision-naturally`
+**Primary Keyword:** `how to improve vision naturally`
+**File Name:** `public/images/blog/how-to-improve-vision-naturally.webp`
+**Alt Text:** `Natural vision care with leafy greens, citrus fruit and an eye exam in the background`
+**Prompt:**
+> Photorealistic editorial flat-lay and lifestyle hybrid: fresh spinach, oranges, walnuts and a glass of water on a wooden table beside stylish eyeglasses, a softly blurred slit-lamp exam in the background, warm natural window light, honest health-and-prevention mood, no readable text, 8k.
+
+---
+
+### Blog 69. Hospital for Eye
+**Blog Slug:** `hospital-for-eye`
+**Live URL:** `/post/hospital-for-eye`
+**Primary Keyword:** `hospital for eye`
+**File Name:** `public/images/blog/hospital-for-eye.webp`
+**Alt Text:** `Modern hospital for eye care with a welcoming ophthalmology reception`
+**Prompt:**
+> Wide photorealistic architectural shot of a premium eye hospital reception and waiting lounge, clean white and soft navy-teal tones, indoor plants, warm professional lighting, a specialist consultation room visible through glass, welcoming and trustworthy atmosphere, no readable signage, 8k.
+
+---
+
+### Blog 70. Barrage Laser Treatment
+**Blog Slug:** `barrage-laser-treatment`
+**Live URL:** `/post/barrage-laser-treatment`
+**Primary Keyword:** `barrage laser`
+**File Name:** `public/images/blog/barrage-laser-treatment.webp`
+**Alt Text:** `Retina specialist performing barrage laser treatment on a retinal tear`
+**Prompt:**
+> Photorealistic close-up of a retina specialist delivering precise retinal laser treatment in a darkened examination room, green aiming beam on a high-resolution retinal image displayed on a monitor, focused clinical lighting on the patient's eye, advanced and calm medical atmosphere, no readable text, 8k.
+
+---
+
+### Blog 71. Why Do Eyes Blink
+**Blog Slug:** `why-do-eyes-blink`
+**Live URL:** `/post/why-do-eyes-blink`
+**Primary Keyword:** `eye blinking`
+**File Name:** `public/images/blog/why-do-eyes-blink.webp`
+**Alt Text:** `Close-up of a healthy human eye mid-blink showing the tear film`
+**Prompt:**
+> Extreme photorealistic macro of a healthy human eye captured mid-blink, visible tear film sheen on the cornea, natural catchlights, soft studio lighting, medical-editorial photography style, calm and scientific mood, no readable text, 8k.
+
+---
+
+### Blog 72. Long Sightedness vs Short Sightedness
+**Blog Slug:** `long-sightedness-vs-short-sightedness`
+**Live URL:** `/post/long-sightedness-vs-short-sightedness`
+**Primary Keyword:** `long sightedness`
+**File Name:** `public/images/blog/long-sightedness-vs-short-sightedness.webp`
+**Alt Text:** `Comparison of long sightedness and short sightedness using an eye anatomy model`
+**Prompt:**
+> Photorealistic consultation scene with an ophthalmologist holding a clear anatomical eye model, two softly blurred vision examples in the background — a distant street sign and a near reading page — premium Mumbai clinic, warm trustworthy lighting, educational medical mood, no readable text, 8k.
+
+---
+
+### Blog 73. Function of an Eye
+**Blog Slug:** `function-of-an-eye`
+**Live URL:** `/post/function-of-an-eye`
+**Primary Keyword:** `function of an eye`
+**File Name:** `public/images/blog/function-of-an-eye.webp`
+**Alt Text:** `Anatomical model showing the function of an eye from cornea to retina`
+**Prompt:**
+> Photorealistic medical illustration-meets-photography of a translucent human eye in cross-section, light entering through the cornea and focusing on the retina, clean dark clinical background with subtle blue glow, hyper-detailed, educational and premium, no readable labels or text, 8k.
+
+---
+
+### Blog 74. How to Increase Eyesight
+**Blog Slug:** `how-to-increase-eyesight`
+**Live URL:** `/post/how-to-increase-eyesight`
+**Primary Keyword:** `how to increase eyesight`
+**File Name:** `public/images/blog/how-to-increase-eyesight.webp`
+**Alt Text:** `Eye doctor explaining how to increase eyesight and reduce spectacle power`
+**Prompt:**
+> Photorealistic scene of an Indian ophthalmologist explaining spectacle power and vision correction options to a patient using a corneal scan on a large monitor, modern Mumbai refractive clinic, hopeful and clear educational mood, soft natural light, no readable text, 8k.
+
+---
+
+### Blog 75. Eye Hospital in Mumbai Guide
+**Blog Slug:** `eye-hospital-mumbai-guide`
+**Live URL:** `/post/eye-hospital-mumbai-guide`
+**Primary Keyword:** `hospital eye`
+**File Name:** `public/images/blog/eye-hospital-mumbai-guide.webp`
+**Alt Text:** `Specialist eye hospital in Mumbai with advanced diagnostic and surgical facilities`
+**Prompt:**
+> Photorealistic wide interior of a specialist eye hospital in Mumbai at golden hour, advanced diagnostic corridor leading to a laser theatre, professional staff consulting a patient in mid-ground, coastal-metropolitan architecture through large windows, premium trustworthy healthcare atmosphere, no logos or readable text, 8k.

@@ -14,7 +14,7 @@ export const cataractSurgeryMumbai: PageContent = {
     { heading: "Why Choose I-Sight Eye Care?", list: WHY_CHOOSE },
     {
       heading: "Cataract surgery cost in Mumbai",
-      body: "Transparent pricing depends on technique (phaco vs laser-assisted) and lens choice (monofocal to premium multifocal/EDOF). See our full cost breakdown: https://www.eyesurgeonmumbai.com/post/cataract-surgery-cost-mumbai — then book a lens counselling visit at https://www.eyesurgeonmumbai.com/consult",
+      body: "Transparent pricing depends on technique (phaco vs laser-assisted) and lens choice (monofocal to premium multifocal/EDOF). See our [full cost breakdown](https://www.eyesurgeonmumbai.com/post/cataract-surgery-cost-mumbai), then [book a lens counselling visit](https://www.eyesurgeonmumbai.com/consult).",
     },
   ],
   faqs: [

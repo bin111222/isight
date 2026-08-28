@@ -12,7 +12,7 @@ export const lasikSurgeryMumbai: PageContent = {
     { heading: "Why Choose I-Sight Eye Care?", list: WHY_CHOOSE },
     {
       heading: "LASIK surgery cost in Mumbai",
-      body: "Package price depends on technology (standard, bladeless, Contoura, SMILE, SILK) and what the workup includes. Full 2026 price guide: https://www.eyesurgeonmumbai.com/post/lasik-surgery-cost-mumbai — book a free eligibility assessment at https://www.eyesurgeonmumbai.com/consult",
+      body: "Package price depends on technology (standard, bladeless, Contoura, SMILE, SILK) and what the workup includes. See the [2026 price guide](https://www.eyesurgeonmumbai.com/post/lasik-surgery-cost-mumbai), then [book a free eligibility assessment](https://www.eyesurgeonmumbai.com/consult).",
     },
   ],
   faqs: [
