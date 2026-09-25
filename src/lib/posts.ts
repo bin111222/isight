@@ -188,13 +188,13 @@ const TOPIC_KEYWORDS: Array<{ topic: string; pattern: RegExp }> = [
   { topic: "lasik", pattern: /lasik|prk|refractive|laser-vision|laser-eye/ },
   { topic: "edof", pattern: /\bedof\b/ },
   { topic: "trifocal", pattern: /trifocal|multifocal/ },
-  { topic: "cataract", pattern: /cataract|phaco|iol|lens-implant/ },
+  { topic: "cataract", pattern: /cataract|phaco|iol|lens-implant|presbyopia|glasses-after-cataract/ },
   { topic: "dry-eye", pattern: /dry-eye|tear|ipl|meibom/ },
   { topic: "glaucoma", pattern: /glaucoma/ },
   { topic: "retina", pattern: /retina|floater|diabetic-retin|injection|barrage-laser/ },
   { topic: "pediatric", pattern: /pediatric|kids|child/ },
   { topic: "oculoplastic", pattern: /oculoplastic|blepharoplasty|eyelid|botox|aesthetic|cosmetic|morpheus/ },
-  { topic: "corneal", pattern: /corneal-transplant|keratoplasty|cornea-/ },
+  { topic: "corneal", pattern: /corneal-transplant|keratoplasty|cornea-|keratoconus/ },
   { topic: "squint", pattern: /squint|strabismus/ },
 ];
 

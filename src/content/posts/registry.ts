@@ -197,6 +197,16 @@ import p_long_sightedness_vs_short_sightedness from "./long-sightedness-vs-short
 import p_function_of_an_eye from "./function-of-an-eye";
 import p_how_to_increase_eyesight from "./how-to-increase-eyesight";
 import p_eye_hospital_mumbai_guide from "./eye-hospital-mumbai-guide";
+import p_is_cataract_surgery_painful from "./is-cataract-surgery-painful";
+import p_will_i_need_glasses_after_cataract_surgery from "./will-i-need-glasses-after-cataract-surgery";
+import p_is_cataract_surgery_covered_by_insurance_india from "./is-cataract-surgery-covered-by-insurance-india";
+import p_can_i_get_lasik_while_pregnant from "./can-i-get-lasik-while-pregnant";
+import p_what_is_keratoconus_symptoms_treatment from "./what-is-keratoconus-symptoms-treatment";
+import p_what_is_presbyopia_reading_glasses_after_40 from "./what-is-presbyopia-reading-glasses-after-40";
+import p_when_is_red_eye_an_emergency from "./when-is-red-eye-an-emergency";
+import p_what_does_6_6_vision_mean from "./what-does-6-6-vision-mean";
+import p_how_long_does_icl_last from "./how-long-does-icl-last";
+import p_can_i_fly_after_eye_surgery from "./can-i-fly-after-eye-surgery";
 
 const POSTS: Record<string, BlogPost> = {
   "advantages-edof-iol-mumbai": p_advantages_edof_iol_mumbai,
@@ -393,6 +403,16 @@ const POSTS: Record<string, BlogPost> = {
   "function-of-an-eye": p_function_of_an_eye,
   "how-to-increase-eyesight": p_how_to_increase_eyesight,
   "eye-hospital-mumbai-guide": p_eye_hospital_mumbai_guide,
+  "is-cataract-surgery-painful": p_is_cataract_surgery_painful,
+  "will-i-need-glasses-after-cataract-surgery": p_will_i_need_glasses_after_cataract_surgery,
+  "is-cataract-surgery-covered-by-insurance-india": p_is_cataract_surgery_covered_by_insurance_india,
+  "can-i-get-lasik-while-pregnant": p_can_i_get_lasik_while_pregnant,
+  "what-is-keratoconus-symptoms-treatment": p_what_is_keratoconus_symptoms_treatment,
+  "what-is-presbyopia-reading-glasses-after-40": p_what_is_presbyopia_reading_glasses_after_40,
+  "when-is-red-eye-an-emergency": p_when_is_red_eye_an_emergency,
+  "what-does-6-6-vision-mean": p_what_does_6_6_vision_mean,
+  "how-long-does-icl-last": p_how_long_does_icl_last,
+  "can-i-fly-after-eye-surgery": p_can_i_fly_after_eye_surgery,
 };
 
 export default POSTS;

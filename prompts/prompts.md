@@ -1058,3 +1058,134 @@ These posts target the remaining high-volume, low-difficulty keywords (LASIK ful
 **Alt Text:** `Specialist eye hospital in Mumbai with advanced diagnostic and surgical facilities`
 **Prompt:**
 > Photorealistic wide interior of a specialist eye hospital in Mumbai at golden hour, advanced diagnostic corridor leading to a laser theatre, professional staff consulting a patient in mid-ground, coastal-metropolitan architecture through large windows, premium trustworthy healthcare atmosphere, no logos or readable text, 8k.
+
+---
+
+## AEO Converting Questions Series (September 2026) — Blogs 76–85
+
+**10 blogs · 1 image each** (thumbnail on `/blog` + hero on `/post/<slug>`). Set `image` on the live `BlogPost` to the slug basename (no `.webp`). Upload to ImageKit: `{NEXT_PUBLIC_IMAGE_CDN_BASE}/blog/<slug>.webp`.
+
+These posts target **Answer Engine Optimisation** queries: People Also Ask, AI Overviews, and voice questions that sit one step before a consult. Each page leads with a 40–60 word direct answer, then converts to a booking. Topics were chosen for high commercial or urgency intent and do not duplicate existing LASIK-cost, eligibility, floaters, or dry-eye posts.
+
+| # | Live URL | Primary AEO question | Why it converts | Image file |
+|---|----------|----------------------|-----------------|------------|
+| 76 | `/post/is-cataract-surgery-painful` | is cataract surgery painful | Anxiety blocker before booking | `is-cataract-surgery-painful.webp` |
+| 77 | `/post/will-i-need-glasses-after-cataract-surgery` | will I need glasses after cataract surgery | Premium IOL counselling | `will-i-need-glasses-after-cataract-surgery.webp` |
+| 78 | `/post/is-cataract-surgery-covered-by-insurance-india` | is cataract surgery covered by insurance | Cost/insurance decision | `is-cataract-surgery-covered-by-insurance-india.webp` |
+| 79 | `/post/can-i-get-lasik-while-pregnant` | can I get LASIK while pregnant | Timed LASIK pipeline | `can-i-get-lasik-while-pregnant.webp` |
+| 80 | `/post/what-is-keratoconus-symptoms-treatment` | what is keratoconus | Topography / CXL / no-LASIK consult | `what-is-keratoconus-symptoms-treatment.webp` |
+| 81 | `/post/what-is-presbyopia-reading-glasses-after-40` | what is presbyopia | Lens surgery after 40 | `what-is-presbyopia-reading-glasses-after-40.webp` |
+| 82 | `/post/when-is-red-eye-an-emergency` | when is red eye an emergency | Same-day visit | `when-is-red-eye-an-emergency.webp` |
+| 83 | `/post/what-does-6-6-vision-mean` | what is 6/6 vision | Exam booking (India chart) | `what-does-6-6-vision-mean.webp` |
+| 84 | `/post/how-long-does-icl-last` | how long does ICL last | High-ticket ICL consult | `how-long-does-icl-last.webp` |
+| 85 | `/post/can-i-fly-after-eye-surgery` | can I fly after cataract surgery | Travel + surgery timing | `can-i-fly-after-eye-surgery.webp` |
+
+---
+
+### Blog 76. Is Cataract Surgery Painful?
+**Blog Slug:** `is-cataract-surgery-painful`
+**Live URL:** `/post/is-cataract-surgery-painful`
+**Primary Keyword:** `is cataract surgery painful`
+**File Name:** `public/images/blog/is-cataract-surgery-painful.webp`
+**Alt Text:** `Calm cataract surgery with topical anaesthetic drops, no injection`
+**Prompt:**
+> Photorealistic reassuring cataract pre-op scene: an Indian senior patient relaxed on a procedure chair while a surgeon instils numbing eye drops, modern sterile Mumbai theatre with soft ambient lighting, no needle visible, calm and pain-free mood, no readable text, 8k.
+
+---
+
+### Blog 77. Will I Need Glasses After Cataract Surgery?
+**Blog Slug:** `will-i-need-glasses-after-cataract-surgery`
+**Live URL:** `/post/will-i-need-glasses-after-cataract-surgery`
+**Primary Keyword:** `will I need glasses after cataract surgery`
+**File Name:** `public/images/blog/will-i-need-glasses-after-cataract-surgery.webp`
+**Alt Text:** `Cataract lens options explained so patients know if they will still need glasses`
+**Prompt:**
+> Photorealistic consultation of an ophthalmologist showing premium intraocular lens models to a senior Indian couple, reading glasses set aside on the desk, bright modern clinic, hopeful lifestyle-after-surgery mood, no readable text, 8k.
+
+---
+
+### Blog 78. Is Cataract Surgery Covered by Insurance in India?
+**Blog Slug:** `is-cataract-surgery-covered-by-insurance-india`
+**Live URL:** `/post/is-cataract-surgery-covered-by-insurance-india`
+**Primary Keyword:** `is cataract surgery covered by insurance`
+**File Name:** `public/images/blog/is-cataract-surgery-covered-by-insurance-india.webp`
+**Alt Text:** `Patient reviewing health insurance coverage for cataract surgery in India`
+**Prompt:**
+> Photorealistic desk scene of a patient and clinic coordinator reviewing a health insurance card and treatment estimate for cataract surgery, clean Mumbai clinic office, trustworthy and practical mood, no readable policy numbers or text, 8k.
+
+---
+
+### Blog 79. Can I Get LASIK While Pregnant?
+**Blog Slug:** `can-i-get-lasik-while-pregnant`
+**Live URL:** `/post/can-i-get-lasik-while-pregnant`
+**Primary Keyword:** `can I get LASIK while pregnant`
+**File Name:** `public/images/blog/can-i-get-lasik-while-pregnant.webp`
+**Alt Text:** `Pregnant woman discussing LASIK timing with an eye surgeon`
+**Prompt:**
+> Photorealistic warm consultation between an Indian ophthalmologist and a pregnant woman in her second trimester, corneal scan on a muted monitor in the background, compassionate medical office, natural window light, no readable text, 8k.
+
+---
+
+### Blog 80. What Is Keratoconus?
+**Blog Slug:** `what-is-keratoconus-symptoms-treatment`
+**Live URL:** `/post/what-is-keratoconus-symptoms-treatment`
+**Primary Keyword:** `what is keratoconus`
+**File Name:** `public/images/blog/what-is-keratoconus-symptoms-treatment.webp`
+**Alt Text:** `Corneal topography map used to diagnose keratoconus`
+**Prompt:**
+> Photorealistic close-up of a corneal topography / Pentacam scan on a large clinical monitor showing a cone-shaped cornea heatmap, ophthalmologist explaining to a young adult patient, advanced diagnostics suite, precise scientific mood, no readable screen text, 8k.
+
+---
+
+### Blog 81. What Is Presbyopia?
+**Blog Slug:** `what-is-presbyopia-reading-glasses-after-40`
+**Live URL:** `/post/what-is-presbyopia-reading-glasses-after-40`
+**Primary Keyword:** `what is presbyopia`
+**File Name:** `public/images/blog/what-is-presbyopia-reading-glasses-after-40.webp`
+**Alt Text:** `Person over 40 holding a phone at arm’s length because of presbyopia`
+**Prompt:**
+> Photorealistic lifestyle image of an Indian professional in their mid-40s holding a smartphone at arm’s length trying to read a message, warm indoor cafe-office light, subtle reading glasses on the table, relatable and slightly frustrated but dignified mood, no readable text, 8k.
+
+---
+
+### Blog 82. When Is Red Eye an Emergency?
+**Blog Slug:** `when-is-red-eye-an-emergency`
+**Live URL:** `/post/when-is-red-eye-an-emergency`
+**Primary Keyword:** `when is red eye an emergency`
+**File Name:** `public/images/blog/when-is-red-eye-an-emergency.webp`
+**Alt Text:** `Eye specialist examining a painful red eye on a slit lamp`
+**Prompt:**
+> Photorealistic urgent but controlled clinical scene of an ophthalmologist examining a patient’s red, watery eye on a slit lamp, focused beam of light, concerned but professional atmosphere, modern Mumbai eye clinic, no readable text, 8k.
+
+---
+
+### Blog 83. What Does 6/6 Vision Mean?
+**Blog Slug:** `what-does-6-6-vision-mean`
+**Live URL:** `/post/what-does-6-6-vision-mean`
+**Primary Keyword:** `what is 6/6 vision`
+**File Name:** `public/images/blog/what-does-6-6-vision-mean.webp`
+**Alt Text:** `Patient reading a Snellen 6/6 eye chart during a vision test`
+**Prompt:**
+> Photorealistic editorial photo of a patient reading a classic Snellen eye chart in a bright clinic, ophthalmologist’s hand pointing toward the chart from the side, clean clinical whites and navy, educational and precise mood, chart letters slightly out of focus so they are not readable, 8k.
+
+---
+
+### Blog 84. How Long Does ICL Last?
+**Blog Slug:** `how-long-does-icl-last`
+**Live URL:** `/post/how-long-does-icl-last`
+**Primary Keyword:** `how long does ICL last`
+**File Name:** `public/images/blog/how-long-does-icl-last.webp`
+**Alt Text:** `Implantable collamer lens held beside an eye model showing long-term ICL vision correction`
+**Prompt:**
+> Photorealistic macro of a thin flexible implantable collamer lens next to a clear anatomical eye model, premium refractive clinic lighting, silver-blue clinical palette, conveying permanence and precision, no readable text, 8k.
+
+---
+
+### Blog 85. Can I Fly After Eye Surgery?
+**Blog Slug:** `can-i-fly-after-eye-surgery`
+**Live URL:** `/post/can-i-fly-after-eye-surgery`
+**Primary Keyword:** `can I fly after cataract surgery`
+**File Name:** `public/images/blog/can-i-fly-after-eye-surgery.webp`
+**Alt Text:** `Post-surgery patient at an airport after LASIK or cataract clearance to fly`
+**Prompt:**
+> Photorealistic lifestyle image of a relaxed Indian traveller at a bright airport lounge looking out at a runway with clear comfortable vision, subtle protective sunglasses in hand, optimistic travel-after-surgery mood, no airline logos or readable text, 8k.
