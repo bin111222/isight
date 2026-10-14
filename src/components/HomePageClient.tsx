@@ -96,7 +96,7 @@ export default function HomePageClient({ images, faqs }: Props) {
         ref={heroRef}
         className="relative -mt-16 min-h-[100dvh] bg-[var(--navy-950)] [@media(pointer:fine)_and_(min-width:768px)_and_(prefers-reduced-motion:no-preference)]:h-[220vh] [@media(pointer:fine)_and_(min-width:768px)_and_(prefers-reduced-motion:no-preference)]:min-h-0"
       >
-        <div className="relative min-h-[100dvh] overflow-hidden pt-16 [@media(pointer:fine)_and_(min-width:768px)_and_(prefers-reduced-motion:no-preference)]:sticky [@media(pointer:fine)_and_(min-width:768px)_and_(prefers-reduced-motion:no-preference)]:top-0 [@media(pointer:fine)_and_(min-width:768px)_and_(prefers-reduced-motion:no-preference)]:h-[100dvh]">
+        <div className="relative min-h-[100dvh] overflow-hidden pt-16 [contain:paint] [@media(pointer:fine)_and_(min-width:768px)_and_(prefers-reduced-motion:no-preference)]:sticky [@media(pointer:fine)_and_(min-width:768px)_and_(prefers-reduced-motion:no-preference)]:top-0 [@media(pointer:fine)_and_(min-width:768px)_and_(prefers-reduced-motion:no-preference)]:h-[100dvh]">
           {sequenceEnabled ? (
             <HeroSequenceBackground sectionRef={heroRef} />
           ) : (
@@ -111,12 +111,12 @@ export default function HomePageClient({ images, faqs }: Props) {
           )}
           <div className="absolute inset-0 bg-gradient-to-b from-navy-950/60 via-navy-950/45 to-navy-950/70" aria-hidden />
           <div className="absolute inset-0 hero-grain" aria-hidden />
-          <div className="absolute top-1/4 left-1/4 w-[420px] h-[420px] rounded-full bg-clinical-400/12 blur-[100px] animate-float pointer-events-none max-md:hidden" />
-          <div className="absolute bottom-1/4 right-1/5 w-[380px] h-[380px] rounded-full bg-clinical-500/10 blur-[90px] animate-float pointer-events-none max-md:hidden" style={{ animationDelay: "2s" }} />
+          <div className="absolute top-1/4 left-1/4 w-[420px] h-[420px] rounded-full pointer-events-none max-md:hidden animate-float bg-[radial-gradient(circle,rgba(92,139,201,0.28)_0%,rgba(92,139,201,0.08)_45%,transparent_70%)]" />
+          <div className="absolute bottom-1/4 right-1/5 w-[380px] h-[380px] rounded-full pointer-events-none max-md:hidden animate-float bg-[radial-gradient(circle,rgba(45,90,158,0.24)_0%,rgba(45,90,158,0.06)_48%,transparent_72%)]" style={{ animationDelay: "2s" }} />
 
           <div className="relative h-full max-w-5xl mx-auto px-4 sm:px-6 pt-10 sm:pt-20 pb-10 sm:pb-14 text-center flex items-center justify-center">
             <div className="w-full max-w-3xl">
-              <p className="inline-flex items-center rounded-full border border-white/20 bg-navy-950/40 px-4 py-1.5 font-display text-xs sm:text-sm font-semibold uppercase tracking-[0.32em] text-clinical-200/95 shadow-[0_8px_24px_-14px_rgba(0,0,0,0.8)] backdrop-blur-sm">
+              <p className="inline-flex items-center rounded-full border border-white/20 bg-navy-950/70 px-4 py-1.5 font-display text-xs sm:text-sm font-semibold uppercase tracking-[0.32em] text-clinical-200/95 shadow-[0_8px_24px_-14px_rgba(0,0,0,0.8)]">
                 iSight Eye Care · Mumbai
               </p>
               <p className="mt-4">
@@ -136,7 +136,7 @@ export default function HomePageClient({ images, faqs }: Props) {
                   </span>
                 </span>
               </h1>
-              <div className="mt-4 sm:mt-7 max-w-2xl mx-auto rounded-[22px] sm:rounded-[26px] border border-white/20 bg-gradient-to-b from-white/14 via-white/9 to-white/6 px-4 py-4 sm:px-7 sm:py-6 shadow-[0_20px_52px_-34px_rgba(0,0,0,0.95)] backdrop-blur-lg ring-1 ring-white/10">
+              <div className="mt-4 sm:mt-7 max-w-2xl mx-auto rounded-[22px] sm:rounded-[26px] border border-white/20 bg-[linear-gradient(180deg,rgba(255,255,255,0.16),rgba(10,15,26,0.78))] px-4 py-4 sm:px-7 sm:py-6 shadow-[0_20px_52px_-34px_rgba(0,0,0,0.95)] ring-1 ring-white/10">
                 <p className="text-sm sm:text-lg text-white/95 max-w-xl mx-auto leading-relaxed text-balance drop-shadow-[0_8px_22px_rgba(0,0,0,0.75)]">
                   Leading eye surgeon in Mumbai at iSight Eye Care & Surgery - LASIK, cataract, retina, glaucoma, and
                   dry eye. NABH-accredited centres in Khar and Dadar.
@@ -153,7 +153,7 @@ export default function HomePageClient({ images, faqs }: Props) {
                     href={WHATSAPP_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn btn-lg group w-full sm:w-auto border border-white/55 bg-navy-950/45 text-white shadow-[0_10px_28px_-16px_rgba(0,0,0,0.85)] backdrop-blur-sm hover:bg-navy-900/60 hover:border-white/80 hover:-translate-y-0.5"
+                    className="btn btn-lg group w-full sm:w-auto border border-white/55 bg-navy-950/70 text-white shadow-[0_10px_28px_-16px_rgba(0,0,0,0.85)] hover:bg-navy-900/80 hover:border-white/80 hover:-translate-y-0.5"
                   >
                     <MessageCircle className="w-5 h-5 shrink-0 opacity-90" strokeWidth={2.25} aria-hidden />
                     WhatsApp Us

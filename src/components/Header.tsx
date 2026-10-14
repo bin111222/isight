@@ -86,7 +86,7 @@ export default function Header() {
   const [mobileTreatmentsOpen, setMobileTreatmentsOpen] = useState(false);
 
   return (
-    <header className="fixed top-3 left-3 right-3 sm:top-4 sm:left-6 sm:right-6 z-50 max-w-[1600px] mx-auto rounded-2xl bg-navy-950/50 backdrop-blur-xl border border-white/10 shadow-xl shadow-black/20 overflow-visible">
+    <header className="fixed top-3 left-3 right-3 sm:top-4 sm:left-6 sm:right-6 z-50 max-w-[1600px] mx-auto rounded-2xl bg-navy-950/80 backdrop-blur-md border border-white/10 shadow-xl shadow-black/20 overflow-visible">
       <div className="w-full px-4 sm:px-6 lg:px-8 flex items-center justify-between lg:grid lg:grid-cols-[1fr_auto_1fr] lg:gap-x-10 lg:gap-y-0 h-16 overflow-visible">
         {/* Left: mobile hamburger | desktop left nav */}
         <div className="flex flex-1 lg:flex-initial items-center justify-start lg:justify-end min-w-0">
