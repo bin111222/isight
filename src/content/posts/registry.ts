@@ -207,6 +207,16 @@ import p_when_is_red_eye_an_emergency from "./when-is-red-eye-an-emergency";
 import p_what_does_6_6_vision_mean from "./what-does-6-6-vision-mean";
 import p_how_long_does_icl_last from "./how-long-does-icl-last";
 import p_can_i_fly_after_eye_surgery from "./can-i-fly-after-eye-surgery";
+import p_how_long_to_stop_contact_lenses_before_lasik from "./how-long-to-stop-contact-lenses-before-lasik";
+import p_can_i_use_my_phone_after_lasik from "./can-i-use-my-phone-after-lasik";
+import p_can_i_shower_after_cataract_surgery from "./can-i-shower-after-cataract-surgery";
+import p_can_i_wear_kajal_after_eye_surgery from "./can-i-wear-kajal-after-eye-surgery";
+import p_why_do_my_eyes_itch_in_mumbai from "./why-do-my-eyes-itch-in-mumbai";
+import p_can_both_eyes_be_operated_same_day from "./can-both-eyes-be-operated-same-day";
+import p_what_happens_if_i_rub_my_eyes_after_lasik from "./what-happens-if-i-rub-my-eyes-after-lasik";
+import p_eye_power_vs_cylinder_explained from "./eye-power-vs-cylinder-explained";
+import p_can_i_take_local_train_after_eye_surgery from "./can-i-take-local-train-after-eye-surgery";
+import p_festive_eye_injury_gulal_cracker_what_to_do from "./festive-eye-injury-gulal-cracker-what-to-do";
 
 const POSTS: Record<string, BlogPost> = {
   "advantages-edof-iol-mumbai": p_advantages_edof_iol_mumbai,
@@ -413,6 +423,16 @@ const POSTS: Record<string, BlogPost> = {
   "what-does-6-6-vision-mean": p_what_does_6_6_vision_mean,
   "how-long-does-icl-last": p_how_long_does_icl_last,
   "can-i-fly-after-eye-surgery": p_can_i_fly_after_eye_surgery,
+  "how-long-to-stop-contact-lenses-before-lasik": p_how_long_to_stop_contact_lenses_before_lasik,
+  "can-i-use-my-phone-after-lasik": p_can_i_use_my_phone_after_lasik,
+  "can-i-shower-after-cataract-surgery": p_can_i_shower_after_cataract_surgery,
+  "can-i-wear-kajal-after-eye-surgery": p_can_i_wear_kajal_after_eye_surgery,
+  "why-do-my-eyes-itch-in-mumbai": p_why_do_my_eyes_itch_in_mumbai,
+  "can-both-eyes-be-operated-same-day": p_can_both_eyes_be_operated_same_day,
+  "what-happens-if-i-rub-my-eyes-after-lasik": p_what_happens_if_i_rub_my_eyes_after_lasik,
+  "eye-power-vs-cylinder-explained": p_eye_power_vs_cylinder_explained,
+  "can-i-take-local-train-after-eye-surgery": p_can_i_take_local_train_after_eye_surgery,
+  "festive-eye-injury-gulal-cracker-what-to-do": p_festive_eye_injury_gulal_cracker_what_to_do,
 };
 
 export default POSTS;

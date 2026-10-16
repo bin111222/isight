@@ -1189,3 +1189,134 @@ These posts target **Answer Engine Optimisation** queries: People Also Ask, AI O
 **Alt Text:** `Post-surgery patient at an airport after LASIK or cataract clearance to fly`
 **Prompt:**
 > Photorealistic lifestyle image of a relaxed Indian traveller at a bright airport lounge looking out at a runway with clear comfortable vision, subtle protective sunglasses in hand, optimistic travel-after-surgery mood, no airline logos or readable text, 8k.
+
+---
+
+## Mumbai Patient FAQ Series (October 2026) — Blogs 86–95
+
+**10 blogs · 1 image each** (thumbnail on `/blog` + hero on `/post/<slug>`). Set `image` on the live `BlogPost` to the slug basename (no `.webp`). Upload to ImageKit: `{NEXT_PUBLIC_IMAGE_CDN_BASE}/blog/<slug>.webp`.
+
+These posts answer the questions Mumbai patients actually ask before they book: contact-lens timing, screens, bathing, kajal, seasonal itch, same-day surgery, eye rubbing, sphere versus cylinder, the local train, and festive eye injuries. Each page opens with a direct answer, then a practical table, and closes on a consult.
+
+| # | Live URL | Primary question | Why it converts | Image file |
+|---|----------|------------------|-----------------|------------|
+| 86 | `/post/how-long-to-stop-contact-lenses-before-lasik` | how long to stop contact lenses before LASIK | Unblocks the LASIK workup | `how-long-to-stop-contact-lenses-before-lasik.webp` |
+| 87 | `/post/can-i-use-my-phone-after-lasik` | can I use my phone after LASIK | Office-worker anxiety | `can-i-use-my-phone-after-lasik.webp` |
+| 88 | `/post/can-i-shower-after-cataract-surgery` | can I shower after cataract surgery | Family ask the night before | `can-i-shower-after-cataract-surgery.webp` |
+| 89 | `/post/can-i-wear-kajal-after-eye-surgery` | can I wear kajal after eye surgery | Navratri and wedding calendar | `can-i-wear-kajal-after-eye-surgery.webp` |
+| 90 | `/post/why-do-my-eyes-itch-in-mumbai` | why do my eyes itch in Mumbai | Same-week clinic visit | `why-do-my-eyes-itch-in-mumbai.webp` |
+| 91 | `/post/can-both-eyes-be-operated-same-day` | can both eyes be operated the same day | LASIK vs cataract scheduling | `can-both-eyes-be-operated-same-day.webp` |
+| 92 | `/post/what-happens-if-i-rub-my-eyes-after-lasik` | what happens if I rub my eyes after LASIK | Removes the main LASIK fear | `what-happens-if-i-rub-my-eyes-after-lasik.webp` |
+| 93 | `/post/eye-power-vs-cylinder-explained` | what is eye power vs cylinder | Exam and LASIK counselling | `eye-power-vs-cylinder-explained.webp` |
+| 94 | `/post/can-i-take-local-train-after-eye-surgery` | can I take the local train after LASIK | Mumbai commute is the real constraint | `can-i-take-local-train-after-eye-surgery.webp` |
+| 95 | `/post/festive-eye-injury-gulal-cracker-what-to-do` | cracker or gulal in the eye what to do | Same-hour festive emergency | `festive-eye-injury-gulal-cracker-what-to-do.webp` |
+
+---
+
+### Blog 86. How Long to Stop Contact Lenses Before LASIK
+**Blog Slug:** `how-long-to-stop-contact-lenses-before-lasik`
+**Live URL:** `/post/how-long-to-stop-contact-lenses-before-lasik`
+**Primary Keyword:** `how long to stop contact lenses before LASIK`
+**File Name:** `public/images/blog/how-long-to-stop-contact-lenses-before-lasik.webp`
+**Alt Text:** `Contact lens case set aside beside spectacles before a LASIK corneal scan`
+**Prompt:**
+> Photorealistic editorial still life on a clean clinic tray: an open contact lens case and a pair of soft lenses beside everyday spectacles, a corneal topography monitor softly blurred in the background of a modern Mumbai refractive clinic, cool navy and teal light, precise and trustworthy mood, no readable text, 8k.
+
+---
+
+### Blog 87. Can I Use My Phone After LASIK?
+**Blog Slug:** `can-i-use-my-phone-after-lasik`
+**Live URL:** `/post/can-i-use-my-phone-after-lasik`
+**Primary Keyword:** `can I use my phone after LASIK`
+**File Name:** `public/images/blog/can-i-use-my-phone-after-lasik.webp`
+**Alt Text:** `Young professional using a phone with lubricating eye drops after LASIK`
+**Prompt:**
+> Photorealistic lifestyle image of a young Indian professional at a bright Mumbai apartment window, phone held a comfortable distance away, a small bottle of lubricating eye drops on the table, relaxed post-LASIK morning light, no night-shield drama, hopeful and practical mood, no readable screen text, 8k.
+
+---
+
+### Blog 88. Can I Shower After Cataract Surgery?
+**Blog Slug:** `can-i-shower-after-cataract-surgery`
+**Live URL:** `/post/can-i-shower-after-cataract-surgery`
+**Primary Keyword:** `can I shower after cataract surgery`
+**File Name:** `public/images/blog/can-i-shower-after-cataract-surgery.webp`
+**Alt Text:** `Senior keeping water away from the eyes while showering after cataract surgery`
+**Prompt:**
+> Photorealistic calm bathroom scene of an Indian senior showering with eyes gently closed and face turned slightly away from the spray, a family member nearby holding a clean towel, bright clean tiles, reassuring recovery mood, no readable text, 8k.
+
+---
+
+### Blog 89. Can I Wear Kajal After Eye Surgery?
+**Blog Slug:** `can-i-wear-kajal-after-eye-surgery`
+**Live URL:** `/post/can-i-wear-kajal-after-eye-surgery`
+**Primary Keyword:** `can I wear kajal after eye surgery`
+**File Name:** `public/images/blog/can-i-wear-kajal-after-eye-surgery.webp`
+**Alt Text:** `Kajal pencil and mascara left aside during recovery after eye surgery`
+**Prompt:**
+> Photorealistic beauty-medical still life: a kajal pencil, mascara tube, and eyelash curler resting unused beside a clean mirror, an Indian woman in soft window light with a fresh, makeup-free eye area, festive bangles subtly out of focus, elegant and calm mood, no readable brand text, 8k.
+
+---
+
+### Blog 90. Why Do My Eyes Itch in Mumbai?
+**Blog Slug:** `why-do-my-eyes-itch-in-mumbai`
+**Live URL:** `/post/why-do-my-eyes-itch-in-mumbai`
+**Primary Keyword:** `why do my eyes itch in Mumbai`
+**File Name:** `public/images/blog/why-do-my-eyes-itch-in-mumbai.webp`
+**Alt Text:** `Office worker with itchy watery eyes in Mumbai air conditioning`
+**Prompt:**
+> Photorealistic editorial portrait of an Indian office worker at a glass desk rubbing the bridge of the nose, air-conditioning vent overhead, hazy Mumbai city light through the window, watery tired eyes, empathetic and clinical mood, no readable text, 8k.
+
+---
+
+### Blog 91. Can Both Eyes Be Operated the Same Day?
+**Blog Slug:** `can-both-eyes-be-operated-same-day`
+**Live URL:** `/post/can-both-eyes-be-operated-same-day`
+**Primary Keyword:** `can both eyes be operated the same day`
+**File Name:** `public/images/blog/can-both-eyes-be-operated-same-day.webp`
+**Alt Text:** `Surgeon explaining same-day LASIK versus staged cataract surgery to a patient`
+**Prompt:**
+> Photorealistic consultation in a premium Mumbai eye clinic: an ophthalmologist explaining a two-eye treatment plan with a clear anatomical eye model on the desk, patient and adult child listening, soft daylight, trustworthy scheduling conversation, no readable text, 8k.
+
+---
+
+### Blog 92. What If I Rub My Eyes After LASIK?
+**Blog Slug:** `what-happens-if-i-rub-my-eyes-after-lasik`
+**Live URL:** `/post/what-happens-if-i-rub-my-eyes-after-lasik`
+**Primary Keyword:** `what happens if I rub my eyes after LASIK`
+**File Name:** `public/images/blog/what-happens-if-i-rub-my-eyes-after-lasik.webp`
+**Alt Text:** `Patient wearing a clear protective eye shield at night after LASIK`
+**Prompt:**
+> Photorealistic close portrait of a young Indian adult resting at home wearing a transparent protective eye shield taped gently in place, soft bedside lamp, calm night-after-LASIK mood, hands folded away from the face, no readable text, 8k.
+
+---
+
+### Blog 93. Eye Power vs Cylinder
+**Blog Slug:** `eye-power-vs-cylinder-explained`
+**Live URL:** `/post/eye-power-vs-cylinder-explained`
+**Primary Keyword:** `eye power vs cylinder`
+**File Name:** `public/images/blog/eye-power-vs-cylinder-explained.webp`
+**Alt Text:** `Eye doctor explaining sphere and cylinder on a prescription to a patient`
+**Prompt:**
+> Photorealistic clinic scene of an Indian ophthalmologist showing a patient a glasses prescription and a trial frame, phoropter softly blurred behind them, warm educational lighting in a Mumbai eye clinic, clear and reassuring mood, prescription writing out of focus so it is not readable, 8k.
+
+---
+
+### Blog 94. Can I Take the Mumbai Local After Eye Surgery?
+**Blog Slug:** `can-i-take-local-train-after-eye-surgery`
+**Live URL:** `/post/can-i-take-local-train-after-eye-surgery`
+**Primary Keyword:** `can I take the local train after LASIK`
+**File Name:** `public/images/blog/can-i-take-local-train-after-eye-surgery.webp`
+**Alt Text:** `Mumbai commuter in sunglasses travelling calmly after eye surgery clearance`
+**Prompt:**
+> Photorealistic Mumbai commute scene: a young Indian adult in sunglasses standing on a breezy suburban railway platform at off-peak, city local train softly blurred, clear comfortable vision, practical recovery mood, no station-name text or logos, 8k.
+
+---
+
+### Blog 95. Gulal, Sparkler, or Cracker in the Eye
+**Blog Slug:** `festive-eye-injury-gulal-cracker-what-to-do`
+**Live URL:** `/post/festive-eye-injury-gulal-cracker-what-to-do`
+**Primary Keyword:** `cracker in eye what to do`
+**File Name:** `public/images/blog/festive-eye-injury-gulal-cracker-what-to-do.webp`
+**Alt Text:** `Eye surgeon examining a festive-season eye injury on a slit lamp`
+**Prompt:**
+> Photorealistic urgent but controlled scene in a Mumbai eye clinic at night: an ophthalmologist examining a patient’s eye on a slit lamp, a paper eye shield on the desk, warm indoor light against a dark window, serious and competent mood, no blood, no readable text, 8k.
