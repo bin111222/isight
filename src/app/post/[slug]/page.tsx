@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import {
@@ -17,6 +18,8 @@ import { formatTitleTag } from "@/lib/seoTitle";
 import { PHYSICIAN_JSON_LD } from "@/lib/physicianJsonLd";
 import { Twitter, Linkedin, Facebook, MessageCircle } from "lucide-react";
 import GooglePreferredSourceButton from "@/components/GooglePreferredSourceButton";
+import DoctorPullQuote from "@/components/DoctorPullQuote";
+import { DOCTOR_PULL_QUOTES } from "@/content/doctorPullQuotes";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -72,6 +75,8 @@ export default async function PostPage({ params }: Props) {
   const heroAlt = post.description?.trim() || post.title;
   const topic = getPostTopic(post.slug);
   const relatedPosts = getRelatedPosts(post.slug, 4);
+  const pullQuote = DOCTOR_PULL_QUOTES[post.slug];
+  let pullQuotePlaced = false;
 
   return (
     <article className="min-h-screen bg-white -mt-16 pt-16 pb-16 lg:pb-24">
@@ -92,17 +97,25 @@ export default async function PostPage({ params }: Props) {
           </h1>
 
           <div className="flex items-center gap-4">
-            {/* Author Avatar */}
-            <div className="h-12 w-12 rounded-full overflow-hidden bg-silver-200 shrink-0">
+            <Link
+              href="/isight-eye-care-doctors"
+              className="h-12 w-12 rounded-full overflow-hidden bg-silver-200 shrink-0"
+              aria-label="About Dr. Nikhil Nasta"
+            >
               <img
                 src="/hero.webp"
-                alt="Dr. Nikhil Nasta"
+                alt=""
                 className="h-full w-full object-cover"
               />
-            </div>
+            </Link>
             
             <div className="flex flex-col">
-              <span className="font-semibold text-navy-900">Dr. Nikhil Nasta</span>
+              <Link
+                href="/isight-eye-care-doctors"
+                className="font-semibold text-navy-900 hover:text-clinical-600 transition-colors"
+              >
+                Dr. Nikhil Nasta
+              </Link>
               <div className="flex items-center gap-2 text-sm text-navy-500">
                 <time dateTime={post.date}>
                   {new Date(post.date).toLocaleDateString("en-US", {
@@ -163,8 +176,12 @@ export default async function PostPage({ params }: Props) {
             
             if (!hasContent) return null;
 
+            const showPullQuote = Boolean(pullQuote) && !pullQuotePlaced;
+            if (showPullQuote) pullQuotePlaced = true;
+
             return (
-              <section key={i} className="scroll-mt-24">
+              <Fragment key={i}>
+              <section className="scroll-mt-24">
                 {headingText && (
                   <h2 className="font-display text-2xl md:text-3xl font-bold text-navy-950 mt-12 mb-6 leading-tight">
                     {headingText}
@@ -223,6 +240,8 @@ export default async function PostPage({ params }: Props) {
                     </div>
                   )}
               </section>
+              {showPullQuote && pullQuote ? <DoctorPullQuote quote={pullQuote} /> : null}
+              </Fragment>
             );
           })}
         </div>
@@ -298,15 +317,24 @@ export default async function PostPage({ params }: Props) {
 
         {/* 3. Author Bio Box */}
         <div className="mt-12 bg-silver-50 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row gap-6 items-start sm:items-center border border-silver-100">
-          <div className="h-20 w-20 rounded-full overflow-hidden shrink-0 bg-navy-100 text-navy-800 flex items-center justify-center font-bold font-display text-2xl">
-            <img src="/hero.webp" alt="Dr. Nikhil Nasta" className="h-full w-full object-cover" />
-          </div>
+          <Link
+            href="/isight-eye-care-doctors"
+            className="h-20 w-20 rounded-full overflow-hidden shrink-0 bg-navy-100"
+            aria-label="About Dr. Nikhil Nasta"
+          >
+            <img src="/hero.webp" alt="" className="h-full w-full object-cover" />
+          </Link>
           <div>
             <h3 className="font-display text-xl font-bold text-navy-950 mb-2">
-              Dr. Nikhil Nasta
+              <Link href="/isight-eye-care-doctors" className="hover:text-clinical-600 transition-colors">
+                Dr. Nikhil Nasta
+              </Link>
             </h3>
             <p className="text-navy-700 leading-relaxed text-sm sm:text-base">
-              Dr. Nikhil Nasta is the Founder & Lead Surgeon at iSight Eye Care. With over two decades of experience, he specializes in advanced cataract surgery and comprehensive eye care, dedicated to restoring vision and improving patients' quality of life.
+              <Link href="/isight-eye-care-doctors" className="font-semibold text-navy-900 hover:text-clinical-600 transition-colors">
+                Dr. Nikhil Nasta
+              </Link>{" "}
+              is the Founder & Lead Surgeon at iSight Eye Care. With over two decades of experience, he specializes in advanced cataract surgery and comprehensive eye care, dedicated to restoring vision and improving patients&apos; quality of life.
             </p>
           </div>
         </div>
