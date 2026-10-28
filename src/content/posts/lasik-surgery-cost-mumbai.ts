@@ -4,7 +4,7 @@ const post: BlogPost = {
  slug: "lasik-surgery-cost-mumbai",
  title: "LASIK Eye Surgery Cost in Mumbai (2026): Complete Price Guide",
  description:
- "Transparent breakdown of LASIK surgery cost in Mumbai: procedure types, price ranges, what's included, EMI options, and how to compare clinics fairly. Book a free estimate.",
+ "Transparent breakdown of LASIK surgery cost in Mumbai: procedure types, price ranges, what's included, EMI options, and how to compare clinics fairly. Book an estimate.",
  date: "2026-04-12",
  image: "lasik-surgery-cost-mumbai",
  sections: [
@@ -123,7 +123,7 @@ const post: BlogPost = {
  },
  {
  q: "How much does LASIK eye surgery cost at eyesurgeonmumbai.com?",
- a: "Pricing at eyesurgeonmumbai.com is personalised based on your corneal profile and the procedure recommended. A free consultation will give you a transparent, itemised estimate. Book at https://www.eyesurgeonmumbai.com/consult.",
+ a: "Pricing at eyesurgeonmumbai.com is personalised based on your corneal profile and the procedure recommended. A consultation will give you a transparent, itemised estimate. Book at https://www.eyesurgeonmumbai.com/consult.",
  },
  {
  q: "Is LASIK in Mumbai worth the cost?",

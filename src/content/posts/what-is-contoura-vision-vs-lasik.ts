@@ -27,7 +27,7 @@ const post: BlogPost = {
     },
     {
       "heading": "See if Contoura matches your cornea - not only your budget",
-      "body": "Book a free LASIK consultation at [eyesurgeonmumbai.com](https://www.eyesurgeonmumbai.com/consult)"
+      "body": "Book a LASIK consultation at [eyesurgeonmumbai.com](https://www.eyesurgeonmumbai.com/consult)"
     }
   ],
   "faqs": [

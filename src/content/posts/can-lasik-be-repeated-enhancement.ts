@@ -27,7 +27,7 @@ const post: BlogPost = {
     },
     {
       "heading": "Ask for a data-driven enhancement decision",
-      "body": "If you are unhappy with clarity after LASIK, start with a proper refraction and topography review - not a quick “laser again” suggestion.\n\nBook a free LASIK consultation at [eyesurgeonmumbai.com](https://www.eyesurgeonmumbai.com/consult)"
+      "body": "If you are unhappy with clarity after LASIK, start with a proper refraction and topography review - not a quick “laser again” suggestion.\n\nBook a LASIK consultation at [eyesurgeonmumbai.com](https://www.eyesurgeonmumbai.com/consult)"
     }
   ],
   "faqs": [

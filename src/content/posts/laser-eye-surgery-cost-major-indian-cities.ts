@@ -39,7 +39,7 @@ const post: BlogPost = {
     },
     {
       heading: "Is It Worth Travelling to Mumbai for LASIK?",
-      body: "Many patients from across India travel to Mumbai for laser vision correction because of surgeon density, technology access, and transparent second-opinion culture. If your local quote is significantly cheaper but skips key diagnostics—or if your prescription is complex (high myopia, thin cornea, irregular astigmatism)—a Mumbai evaluation with an experienced refractive surgeon like Dr. Nikhil Nasta at iSight Eye Care can be worthwhile even after factoring travel costs.\n\nBook a free eligibility assessment: https://www.eyesurgeonmumbai.com/consult",
+      body: "Many patients from across India travel to Mumbai for laser vision correction because of surgeon density, technology access, and transparent second-opinion culture. If your local quote is significantly cheaper but skips key diagnostics—or if your prescription is complex (high myopia, thin cornea, irregular astigmatism)—a Mumbai evaluation with an experienced refractive surgeon like Dr. Nikhil Nasta at iSight Eye Care can be worthwhile even after factoring travel costs.\n\nBook an eligibility assessment: https://www.eyesurgeonmumbai.com/consult",
     },
   ],
   faqs: [

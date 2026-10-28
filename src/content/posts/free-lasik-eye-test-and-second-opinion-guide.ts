@@ -20,7 +20,7 @@ const post: BlogPost = {
     { q: "Can surgery be finalized after a free eye camp?", a: "Usually no. Full diagnostic testing is still required." },
     { q: "Is second opinion worth the extra time?", a: "Yes, especially for high-power or borderline-cornea cases." },
     { q: "Will second opinion delay surgery a lot?", a: "Typically no, and it often prevents avoidable mistakes." },
-    { q: "Are free consultations always marketing-only?", a: "Not always, but scope is often limited compared to complete workup." },
+    { q: "Are promotional consultations always marketing-only?", a: "Not always, but scope is often limited compared to complete workup." },
   ],
 };
 
